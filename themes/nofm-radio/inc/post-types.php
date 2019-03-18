@@ -65,7 +65,7 @@
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 5,
-			'taxonomies'         => array( 'category' ),
+			'taxonomies'         => array(  ),
 			'supports'           => array( 'title', 'editor', 'thumbnail' )
 		);
 		register_post_type( 'programas', $args );
@@ -98,7 +98,7 @@
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 6,
-			'taxonomies'         => array( 'category' ),
+			'taxonomies'         => array(  ),
 			'supports'           => array( 'title', 'editor', 'thumbnail' )
 		);
 		register_post_type( 'podcasts', $args );
