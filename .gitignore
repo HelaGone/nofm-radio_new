@@ -10,6 +10,8 @@ wp-content/uploads/
 wp-content/mu-plugins/
 wp-content/wp-cache-config.php
 wp-content/plugins/hello.php
+wp-content/themes/nofm-radio/node_modules/
+wp-content/themes/nofm-radio/dist/
 
 /.htaccess
 /license.txt
