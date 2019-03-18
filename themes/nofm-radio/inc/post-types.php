@@ -4,19 +4,19 @@
 
 	add_action('init', function(){
 
-		// Especiales
+		// ARCHIVO
 		$labels = array(
-			'name'          => 'Especiales',
-			'singular_name' => 'Especial',
-			'add_new'       => 'Nuevo Especial',
-			'add_new_item'  => 'Nuevo Especial',
-			'edit_item'     => 'Editar Especial',
-			'new_item'      => 'Nuevo Especial',
-			'all_items'     => 'Todas',
-			'view_item'     => 'Ver Especial',
-			'search_items'  => 'Buscar Especial',
+			'name'          => 'Archivo',
+			'singular_name' => 'Archivo',
+			'add_new'       => 'Nuevo Archivo',
+			'add_new_item'  => 'Nuevo Archivo',
+			'edit_item'     => 'Editar Archivo',
+			'new_item'      => 'Nuevo Archivo',
+			'all_items'     => 'Todos',
+			'view_item'     => 'Ver Archivo',
+			'search_items'  => 'Buscar Archivo',
 			'not_found'     => 'No se encontro',
-			'menu_name'     => 'Especiales'
+			'menu_name'     => 'Archivo'
 		);
 
 		$args = array(
@@ -25,9 +25,75 @@
 			'publicly_queryable' => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
-			'show_in_rest'		 => true,
+			'show_in_rest'		 	 => true,
 			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'especiales' ),
+			'rewrite'            => array( 'slug' => 'arhcivo' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => 4,
+			'taxonomies'         => array( 'category' ),
+			'supports'           => array( 'title', 'editor' )
+		);
+		register_post_type( 'archivo', $args );
+
+		// Programas
+		$labels = array(
+			'name'          => 'Programas',
+			'singular_name' => 'Programa',
+			'add_new'       => 'Nuevo Programa',
+			'add_new_item'  => 'Nuevo Programa',
+			'edit_item'     => 'Editar Programa',
+			'new_item'      => 'Nuevo Programa',
+			'all_items'     => 'Todos',
+			'view_item'     => 'Ver Programa',
+			'search_items'  => 'Buscar Programa',
+			'not_found'     => 'No se encontro',
+			'menu_name'     => 'Programas'
+		);
+
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'show_in_rest'		   => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'programas' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => 5,
+			'taxonomies'         => array( 'category' ),
+			'supports'           => array( 'title', 'editor', 'thumbnail' )
+		);
+		register_post_type( 'programas', $args );
+
+		// Podcasts
+		$labels = array(
+			'name'          => 'Podcasts',
+			'singular_name' => 'Podcast',
+			'add_new'       => 'Nuevo Podcast',
+			'add_new_item'  => 'Nuevo Podcast',
+			'edit_item'     => 'Editar Podcast',
+			'new_item'      => 'Nuevo Podcast',
+			'all_items'     => 'Todos',
+			'view_item'     => 'Ver Podcast',
+			'search_items'  => 'Buscar Podcast',
+			'not_found'     => 'No se encontro',
+			'menu_name'     => 'Podcasts'
+		);
+
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'show_in_rest'		   => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'podcasts' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
@@ -35,6 +101,6 @@
 			'taxonomies'         => array( 'category' ),
 			'supports'           => array( 'title', 'editor', 'thumbnail' )
 		);
-		register_post_type( 'noticia', $args );
+		register_post_type( 'podcasts', $args );
 
 	});
