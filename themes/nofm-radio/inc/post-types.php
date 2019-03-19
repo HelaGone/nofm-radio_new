@@ -33,7 +33,7 @@
 			'hierarchical'       => false,
 			'menu_position'      => 4,
 			'taxonomies'         => array( 'category' ),
-			'supports'           => array( 'title', 'editor' )
+			'supports'           => array( 'title', 'editor', 'custom-fields' )
 		);
 		register_post_type( 'archivo', $args );
 
@@ -66,7 +66,7 @@
 			'hierarchical'       => false,
 			'menu_position'      => 5,
 			'taxonomies'         => array(  ),
-			'supports'           => array( 'title', 'editor', 'thumbnail' )
+			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
 		);
 		register_post_type( 'programas', $args );
 
@@ -99,7 +99,7 @@
 			'hierarchical'       => false,
 			'menu_position'      => 6,
 			'taxonomies'         => array(  ),
-			'supports'           => array( 'title', 'editor', 'thumbnail' )
+			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
 		);
 		register_post_type( 'podcasts', $args );
 
