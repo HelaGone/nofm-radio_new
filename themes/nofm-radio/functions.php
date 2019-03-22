@@ -31,7 +31,12 @@
 		wp_register_script('base-theme-author', get_template_directory_uri().'/dist/author.js', array(), '1.0.0');
 		wp_register_script('base-theme-tag', get_template_directory_uri().'/dist/tag.js', array(), '1.0.0');
 		wp_register_script('base-theme-archive', get_template_directory_uri().'/dist/archive.js', array(), '1.0.0');
+		wp_register_script('base-theme-archive-archivo', get_template_directory_uri().'/dist/archive_archivo.js', array(), '1.0.0');
+		wp_register_script('base-theme-archive-podcasts', get_template_directory_uri().'/dist/archive_podcasts.js', array(), '1.0.0');
+		wp_register_script('base-theme-archive-programas', get_template_directory_uri().'/dist/archive_programas.js', array(), '1.0.0');
 		wp_register_script('base-theme-single', get_template_directory_uri().'/dist/single.js', array(), '1.0.0');
+		wp_register_script('base-theme-single', get_template_directory_uri().'/dist/single_programas.js', array(), '1.0.0');
+		wp_register_script('base-theme-single', get_template_directory_uri().'/dist/single_podcasts.js', array(), '1.0.0');
 
 		if(is_front_page()){
 			wp_enqueue_style('base-theme-home-style', get_template_directory_uri().'/dist/home.css', array(), '1.0.0.' );
@@ -46,8 +51,19 @@
 			wp_enqueue_style('base-theme-category-style', get_template_directory_uri().'/dist/category.css', array(), '1.0.0.' );
 			wp_enqueue_script('base-theme-category');
 		}elseif(is_archive()){
-			wp_enqueue_style('base-theme-archive-style', get_template_directory_uri().'/dist/archive.css', array(), '1.0.0.' );
-			wp_enqueue_script('base-theme-archive');
+			if(is_post_type_archive('programas')){
+				wp_enqueue_style('base-theme-category-style', get_template_directory_uri().'/dist/archive_programas.css', array(), '1.0.0.' );
+				wp_enqueue_script('base-theme-archive-programas');
+			}elseif(is_post_type_archive('podcasts')){
+				wp_enqueue_style('base-theme-category-style', get_template_directory_uri().'/dist/archive_programas.css', array(), '1.0.0.' );
+				wp_enqueue_script('base-theme-archive-podcasts');
+			}elseif(is_post_type_archive('archivo')){
+				wp_enqueue_style('base-theme-category-style', get_template_directory_uri().'/dist/archive_archivo.css', array(), '1.0.0.' );
+				wp_enqueue_script('base-theme-archive-archivo');
+			}else{
+				wp_enqueue_style('base-theme-archive-style', get_template_directory_uri().'/dist/archive.css', array(), '1.0.0.' );
+				wp_enqueue_script('base-theme-archive');
+			}
 		}elseif(is_single()){
 			wp_enqueue_style('base-theme-single-style', get_template_directory_uri().'/dist/single.css', array(), '1.0.0.' );
 			wp_enqueue_script('base-theme-single');
@@ -58,7 +74,7 @@
 
 	});
 
-	function include_custom_jquery() {
+	function bt_include_custom_jquery() {
 
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', array(), null, true);
@@ -66,7 +82,7 @@
 
 	}
 
-	add_action('wp_enqueue_scripts', 'include_custom_jquery');
+	add_action('wp_enqueue_scripts', 'bt_include_custom_jquery');
 
 
 // ADMIN SCRIPTS AND STYLES //////////////////////////////////////////////////////////
@@ -95,7 +111,7 @@
 // CAMBIAR EL CONTENIDO DEL FOOTER EN EL DASHBOARD ///////////////////////////////////
 
 	add_filter( 'admin_footer_text', function() {
-		echo 'Creado por <a href="http://lisa.com.mx">TLJ</a>. ';
+		echo 'Creado por <a href="https://cubeinthebox.com">Cubeinthebox®</a>. ';
 		echo 'Powered by <a href="http://www.wordpress.org">WordPress</a>';
 	});
 
@@ -166,6 +182,10 @@
 
 	add_action( 'pre_get_posts', function($query){
 		if ( $query->is_main_query() and ! is_admin() ) {
+			//30 posts para el archivo
+			if(is_post_type_archive('archivo')){
+				$query->set('posts_per_page', 30);
+			}
 			// $query->set( 'cat', '123' );
 		}
 		return $query;
@@ -178,7 +198,10 @@
 	});
 
 	add_filter('excerpt_more', function(){
-		return ' ...';
+		global $post;
+		$permalink = get_the_permalink($post->ID);
+		$title = $post->post_title;
+		return "<a href='$permalink' title='$title' class='li-link'></a>";
 	});
 
 // REMOVE ACCENTS AND THE LETTER Ñ FROM FILE NAMES ///////////////////////////////////
@@ -235,4 +258,24 @@
 		    'src' => $attachment->guid,
 		    'title' => $attachment->post_title
 		);
+	}
+
+	/**
+	 * Custom pagination
+	*/
+	function bt_print_pagination(){
+		global $wp_query;
+		$big  = 999999999; // need an unlikely integer
+		$total = $wp_query->max_num_pages;
+		$args = array(
+			'base'      => str_replace( $big, '%#%', esc_url(get_pagenum_link($big)) ),
+			'current'   => max( 1, get_query_var('paged') ),
+			'prev_next' => true,
+			'prev_text' => __('&lt;'),
+			'next_text' => __('&gt'),
+			'total'     => $total,
+			'mid_size'  => 3,
+			'type'      => 'list',
+		);
+		return paginate_links($args);
 	}

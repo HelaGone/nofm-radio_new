@@ -1,0 +1,8 @@
+/*#section_archivo{}*/
+.page-numbers{display:flex;flex-direction: row;justify-content: space-around;width:70%;margin:0 auto;font-size: 18px;}
+.page-numbers li{flex-shrink: 0;padding:8px;}
+#section_archivo .archivo_item{border-bottom:2px solid grey;padding:8px 4px;margin:8px 4px;position:relative;}
+#section_archivo .archivo_item time{color:#444;}
+#section_archivo .archivo_item h2{font-size: 150%;font-weight: 700;}
+#section_archivo .archivo_item p{margin-top:8px;color:#333;}
+#section_archivo .li-link{position:absolute;top:0;left:0;right:0;bottom:0;}

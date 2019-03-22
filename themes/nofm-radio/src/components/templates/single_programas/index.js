@@ -2,7 +2,7 @@
 import '../../../css/style.css';
 
 /*Local Styles*/
-import './archive-programas-styles.css';
+import './single-programas-styles.css';
 
 /*Components*/
 import '../../parts/header/index';
