@@ -186,6 +186,11 @@
 			if(is_post_type_archive('archivo')){
 				$query->set('posts_per_page', 30);
 			}
+
+			if(is_post_type_archive('programas')){
+				$query->set('orderby', 'name');
+				$query->set('order', 'ASC');
+			}
 			// $query->set( 'cat', '123' );
 		}
 		return $query;
