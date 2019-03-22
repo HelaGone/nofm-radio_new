@@ -9,11 +9,17 @@ module.exports = {
 		main: './src/index', 
 		home: './src/components/templates/home/index.js',
 		single: './src/components/templates/single/index.js',
+		single_programas: './src/components/templates/single_programas/index.js',
+		single_podcasts: './src/components/templates/single_podcasts/index.js',
 		archive: './src/components/templates/archive/index.js',
+		archive_programas: './src/components/templates/archive_programas/index.js',
+		archive_podcasts: './src/components/templates/archive_podcasts/index.js',
+		archive_archivo: './src/components/templates/archive_archivo/index.js',
 		category: './src/components/templates/category/index.js',
 		author: './src/components/templates/author/index.js',
 		image: './src/components/templates/image/index.js',
-		tag: './src/components/templates/tag/index.js'
+		tag: './src/components/templates/tag/index.js',
+		page: './src/components/templates/page/index.js',
 	},
 	output: {
 		filename: '[name].js',
