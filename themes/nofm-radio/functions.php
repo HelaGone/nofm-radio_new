@@ -1,4 +1,40 @@
 <?php
+// LIMPIAR EL HEADER DE CÓDIGO INNECESARIO ///////////////////////////////////////////
+	remove_action('wp_head', 'wp_generator');
+	remove_action('wp_head', 'wlwmanifest_link');
+	remove_action( 'wp_head', 'wp_shortlink_wp_head');
+	remove_action ('wp_head', 'rsd_link');
+
+	/**
+	 * Disable the emoji's
+	 */
+	function disable_emojis() {
+		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+		remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+		remove_action( 'wp_print_styles', 'print_emoji_styles' );
+		remove_action( 'admin_print_styles', 'print_emoji_styles' );	
+		remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+		remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );	
+		remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+		add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+	}
+	add_action( 'init', 'disable_emojis' );
+
+	/**
+	 * Filter function used to remove the tinymce emoji plugin.
+	 * 
+	 * @param    array  $plugins  
+	 * @return   array             Difference betwen the two arrays
+	 */
+	function disable_emojis_tinymce( $plugins ) {
+		if ( is_array( $plugins ) ) {
+			return array_diff( $plugins, array( 'wpemoji' ) );
+		} else {
+			return array();
+		}
+	}
+
+
 
 // DEFINIR LOS PATHS A LOS DIRECTORIOS DE JAVASCRIPT Y CSS ///////////////////////////
 
@@ -14,6 +50,7 @@
 		// scripts
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), null, false );
 		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('jquery'), null, false );
+		// wp_enqueue_script( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', null, false);
 
 		// localize scripts
 		wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
@@ -75,38 +112,51 @@
 	});
 
 	function bt_include_custom_jquery() {
-
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', array(), null, true);
 		wp_enqueue_script('jquery');
-
 	}
-
 	add_action('wp_enqueue_scripts', 'bt_include_custom_jquery');
 
 
 // ADMIN SCRIPTS AND STYLES //////////////////////////////////////////////////////////
 
 	add_action( 'admin_enqueue_scripts', function(){
-
 		// scripts
 		wp_enqueue_script( 'admin-js', JSPATH.'admin.js', array('jquery'), '1.0', true );
-
 		// localize scripts
 		wp_localize_script( 'admin-js', 'ajax_url', admin_url('admin-ajax.php') );
-
 		// styles
 		wp_enqueue_style( 'admin-css', CSSPATH.'admin.css' );
-
 	});
+
+	function bt_load_material_icons(){ ?>
+		<script type="text/javascript">
+			WebFontConfig = {
+				google: {
+					families: ['Lora:400,400i,700', 'Teko:300,400,500,600,700', 'Roboto:300,300i,400,400i,500,500i,700,700i', 'Montserrat:400,700']
+				}
+			};
+
+			(function(d){
+				var wf = d.createElement('script'), s = d.scripts[0];
+				wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+				wf.async = true;
+				s.parentNode.insertBefore(wf, s);
+			})(document);
+		</script>
+<?php
+	}
+	add_action('wp_head', 'bt_load_material_icons');
 
 	/**
 	 * Menu Widget
 	*/
-	function bt_custom_new_menu() {
-	  register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
+	function bt_register_custom_menu() {
+	  register_nav_menu('main-menu',__( 'Main Menu' ));
+	  register_nav_menu('type-menu',__( 'Type Menu' ));
 	}
-	add_action( 'init', 'bt_custom_new_menu' );
+	add_action( 'init', 'bt_register_custom_menu' );
 
 // CAMBIAR EL CONTENIDO DEL FOOTER EN EL DASHBOARD ///////////////////////////////////
 

@@ -8,62 +8,61 @@
 	<meta name="HandheldFriendly" content="true"/>
 	<meta http-equiv="cleartype" content="on"/>
 	<meta name="theme-color" content="#000"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!-- Start wp_head -->
 	<?php wp_head(); ?>
-	<script>
-		WebFontConfig = {
-			google:{
-				families: [
-					'Roboto:300,400,500,700',
-					'Roboto+Condensed',
-					'Teko:300,400,500,600,700',
-					'Source+Sans+Pro:300,400,600,700,900'
-				]
-			}
-		};
-
-		(function(d){
-			var wf = d.createElement('script'), s = d.scripts[0];
-			wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-			wf.async = true;
-			s.parentNode.insertBefore(wf, s);
-		})(document);
-	</script>
+	<!-- End wp_head -->
 </head>
 <body <?php body_class(); ?>>
 	<header id="main_site_header">
-		<div id="btn_menu" class="btn_menu_container">
-			<div class="bar1"></div>
-			<div class="bar2"></div>
-			<div class="bar3"></div>
+		<div class="social_network_header">
+			<div id="social_subheader">
+				<h2>Conecta con nosotros</h2>
+				<button class="">X</button>
+			</div>
+				<ul>
+					<li>
+						<a href="https://www.facebook.com/todomenosmiedo/">
+							<div id="facebook" class="social_logos"></div>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/nofm_radio">
+							<div id="twitter" class="social_logos"></div>
+						</a>
+					</li>
+					<li>
+						<a href="http://feeds.feedburner.com/nofm-radio/HgNX">
+							<div id="feedburner" class="social_logos"></div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/nofm_radio/">
+							<div id="instagram" class="social_logos"></div>
+						</a>
+					</li>
+				</ul>
 		</div>
-		<div id="logo">
-			<a href="<?php echo esc_url(home_url()); ?>"></a>
+
+		<div id="central_header">
+			<div id="btn_menu" class="btn_menu_container header_item">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+			<div id="logo" class="header_item">
+				<a href="<?php echo esc_url(home_url()); ?>"></a>
+			</div>
+			<div id="header_player" class="header_item">
+				<i class="material-icons md-48">play_arrow</i>
+				<span>En vivo</span>
+			</div>
 		</div>
-		<div class="social_network">
-			<ul>
-				<li>
-					<a href="">
-						<div id="facebook" class="social_logos"></div>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<div id="twitter" class="social_logos"></div>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<div id="youtube" class="social_logos"></div>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<div id="instagram" class="social_logos"></div>
-					</a>
-				</li>
-			</ul>
-		</div>
+
+		<nav id="type_menu">
+			<?php wp_nav_menu( array( 'theme_location' => 'type-menu' ) ); ?>
+		</nav>
 	</header>
 	<!-- <nav class="main_navigation">
 		<?php //wp_nav_menu( array( 'theme_location' => 'my-custom-menu', 'container_class' => 'custom-menu-class' ) ); ?>

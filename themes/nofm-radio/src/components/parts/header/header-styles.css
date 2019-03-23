@@ -1,5 +1,17 @@
-#main_site_header{display: flex;justify-content: space-between; flex-wrap: wrap;padding:8px 24px;margin:0 0 24px 0;box-shadow: 1px 1px 5px rgba(0,0,0,0.1);}
-#main_site_header div.social_network ul{display: flex;justify-content: space-between;flex-wrap: wrap;}
+#central_header, #menu-type-menu, #social_subheader, #main_site_header div.social_network_header ul{display: flex;justify-content: space-between;flex-wrap: wrap;}
+#social_subheader{justify-content: center;}
+#central_header{padding:0 8px;}
+#type_menu{padding:8px;font-family: Montserrat;}
+#main_site_header{margin:0 0 24px 0;box-shadow: 1px 1px 5px rgba(0,0,0,0.1);}
+#main_site_header div.social_network_header{background-color: #000;padding: 8px 8px 24px 8px;color:#eee;}
+#main_site_header div.social_network_header h2{text-align: center;}
+#main_site_header div.social_network_header ul{padding:0 8px;}
+#central_header .header_item{vertical-align: middle;}
+.md-48{font-size: 48px;line-height: 70px;}
+
+
+#social_subheader{padding:8px 0 16px;}
+#social_subheader button{color:#eee;}
 
 /*Main Navigation*/
 .menu-main-menu{width:0;border:1px solid blue;position: relative;}
