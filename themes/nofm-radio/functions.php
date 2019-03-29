@@ -50,6 +50,7 @@
 		// scripts
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), null, false );
 		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('jquery'), null, false );
+		// wp_enqueue_script( 'howler', JSPATH.'/howler/howler.js', array('jquery'), null, false );
 		// wp_enqueue_script( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', null, false);
 
 		// localize scripts
