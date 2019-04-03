@@ -10,7 +10,7 @@ module.exports = {
 		home: './src/components/templates/home/index.js',
 		single: './src/components/templates/single/index.js',
 		single_programas: './src/components/templates/single_programas/index.js',
-		single_podcasts: './src/components/templates/single_podcasts/index.js',
+		single_episodios: './src/components/templates/single_episodios/index.js',
 		archive: './src/components/templates/archive/index.js',
 		archive_programas: './src/components/templates/archive_programas/index.js',
 		archive_episodios: './src/components/templates/archive_episodios/index.js',

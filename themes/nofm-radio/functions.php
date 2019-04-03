@@ -50,7 +50,7 @@
 		// scripts
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), null, false );
 		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('jquery'), null, false );
-		// wp_enqueue_script( 'howler', JSPATH.'/howler/howler.js', array('jquery'), null, false );
+		wp_enqueue_script( 'howler', JSPATH.'/howler/dist/howler.js', array('jquery'), null, false );
 		// wp_enqueue_script( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', null, false);
 
 		// localize scripts
@@ -70,10 +70,10 @@
 		wp_register_script('base-theme-tag', get_template_directory_uri().'/dist/tag.js', array('jquery'), '1.0.0');
 		wp_register_script('base-theme-archive', get_template_directory_uri().'/dist/archive.js', array('jquery'), '1.0.0');
 		wp_register_script('base-theme-archive-archivo', get_template_directory_uri().'/dist/archive_archivo.js', array('jquery'), '1.0.0');
-		wp_register_script('base-theme-archive-episodios', get_template_directory_uri().'/dist/archive_episodios.js', array('jquery'), '1.0.0');
 		wp_register_script('base-theme-archive-programas', get_template_directory_uri().'/dist/archive_programas.js', array('jquery'), '1.0.0');
+		wp_register_script('base-theme-archive-episodios', get_template_directory_uri().'/dist/archive_episodios.js', array('jquery'), '1.0.0');
 		wp_register_script('base-theme-single', get_template_directory_uri().'/dist/single.js', array('jquery'), '1.0.0');
-		wp_register_script('base-theme-programs', get_template_directory_uri().'/dist/single_programas.js', array('jquery'), '1.0.0');
+		wp_register_script('base-theme-programas', get_template_directory_uri().'/dist/single_programas.js', array('jquery'), '1.0.0');
 		wp_register_script('base-theme-episodios', get_template_directory_uri().'/dist/single_episodios.js', array('jquery'), '1.0.0');
 		wp_register_script('base-theme-page', get_template_directory_uri().'/dist/page.js', array('jquery'), '1.0.0');
 
@@ -103,9 +103,15 @@
 				wp_enqueue_style('base-theme-archive-style', get_template_directory_uri().'/dist/archive.css', array(), '1.0.0.' );
 				wp_enqueue_script('base-theme-archive');
 			}
-		}elseif(is_single()){
+		}elseif( is_singular( array('post', 'archivo') ) ){
 			wp_enqueue_style('base-theme-single-style', get_template_directory_uri().'/dist/single.css', array(), '1.0.0.' );
 			wp_enqueue_script('base-theme-single');
+		}elseif(is_singular('episodios')){
+			wp_enqueue_style('base-theme-episodios-style', get_template_directory_uri().'/dist/single_episodios.css', array(), '1.0.0.' );
+			wp_enqueue_script('base-theme-episodios');
+		}elseif(is_singular('programas')){
+			wp_enqueue_style('base-theme-programas-style', get_template_directory_uri().'/dist/single_programas.css', array(), '1.0.0.' );
+			wp_enqueue_script('base-theme-programas');
 		}elseif( is_page()&&!is_front_page() ){
 			wp_enqueue_style('base-theme-page-style', get_template_directory_uri().'/dist/page.css', array(), '1.0.0.' );
 			wp_enqueue_script('base-theme-page');
@@ -139,7 +145,7 @@
 		<script type="text/javascript">
 			WebFontConfig = {
 				google: {
-					families: ['Lora:400,400i,700', 'Teko:300,400,500,600,700', 'Roboto:300,300i,400,400i,500,500i,700,700i', 'Montserrat:400,700']
+					families: ['Lora:400,400i,700', 'Teko:300,400,500,600,700', 'Roboto+Condensed:300,400,500,700', 'Montserrat:400,700']
 				}
 			};
 

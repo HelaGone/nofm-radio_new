@@ -1,0 +1,7 @@
+.single_episode_figure{position: relative;}
+.single_episode_figure img{width:100%;height: auto;object-fit: cover;}
+.single_episode_figure figcaption{position:absolute;bottom:0;left:0;}
+.single_episode_figure figcaption h2{font-size:4.5em;font-weight: 700;color:#fff;background-color: rgba(0,0,0,0.5);padding:0 8px;}
+
+.episode_info{background-color:rgba(0,0,0,0.5);padding:24px 8px;display: flex;flex-direction: row;justify-content: center;}
+.episode_info .ep_info_item{padding:0px 8px;}
