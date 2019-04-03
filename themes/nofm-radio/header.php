@@ -55,8 +55,8 @@
 				<a href="<?php echo esc_url(home_url()); ?>"></a>
 			</div>
 			<div id="header_player" class="header_item">
-				<a href="https://localhost/nofm/player/" target="_blank" rel="noopener follow">Play</a>
-				<!-- <button id="btn_open_player">PLAY</button> -->
+				<!-- <a href="<?php echo bloginfo('url').'/player/'; ?>" target="_blank" rel="noopener follow">Play</a> -->
+				<button id="btn_open_player">PLAY</button>
 
 				<?php 
 					//echo do_shortcode("[lbg_audio6_html5_shoutcast settings_id='2']");

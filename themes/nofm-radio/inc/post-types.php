@@ -70,19 +70,19 @@
 		);
 		register_post_type( 'programas', $args );
 
-		// Podcasts
+		// Episodios
 		$labels = array(
-			'name'          => 'Podcasts',
-			'singular_name' => 'Podcast',
-			'add_new'       => 'Nuevo Podcast',
-			'add_new_item'  => 'Nuevo Podcast',
-			'edit_item'     => 'Editar Podcast',
-			'new_item'      => 'Nuevo Podcast',
+			'name'          => 'Episodios',
+			'singular_name' => 'Episodio',
+			'add_new'       => 'Nuevo Episodio',
+			'add_new_item'  => 'Nuevo Episodio',
+			'edit_item'     => 'Editar Episodio',
+			'new_item'      => 'Nuevo Episodio',
 			'all_items'     => 'Todos',
-			'view_item'     => 'Ver Podcast',
-			'search_items'  => 'Buscar Podcast',
+			'view_item'     => 'Ver Episodio',
+			'search_items'  => 'Buscar Episodio',
 			'not_found'     => 'No se encontro',
-			'menu_name'     => 'Podcasts'
+			'menu_name'     => 'Episodios'
 		);
 
 		$args = array(
@@ -93,7 +93,7 @@
 			'show_in_menu'       => true,
 			'show_in_rest'		   => true,
 			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'podcasts' ),
+			'rewrite'            => array( 'slug' => 'episodios' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
@@ -101,6 +101,6 @@
 			'taxonomies'         => array(  ),
 			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
 		);
-		register_post_type( 'podcasts', $args );
+		register_post_type( 'episodios', $args );
 
 	});

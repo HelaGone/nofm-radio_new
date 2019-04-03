@@ -13,7 +13,7 @@ module.exports = {
 		single_podcasts: './src/components/templates/single_podcasts/index.js',
 		archive: './src/components/templates/archive/index.js',
 		archive_programas: './src/components/templates/archive_programas/index.js',
-		archive_podcasts: './src/components/templates/archive_podcasts/index.js',
+		archive_episodios: './src/components/templates/archive_episodios/index.js',
 		archive_archivo: './src/components/templates/archive_archivo/index.js',
 		category: './src/components/templates/category/index.js',
 		author: './src/components/templates/author/index.js',

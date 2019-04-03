@@ -7,5 +7,8 @@ $(document).ready(function(){
 		// $('#main_site_header').css({position:'fixed'});
 	});
 
+	$('btn_open_player').on('click', function(){
+		console.log('click');
+	});
 
 });

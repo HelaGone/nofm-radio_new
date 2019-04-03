@@ -2,7 +2,8 @@
 import '../../../css/style.css';
 
 /*Local Styles*/
-import './archive-podcasts-styles.css';
+import './archive-episodios-styles.css';
+import './archive-episodios-scripts';
 
 /*Components*/
 import '../../parts/header/index';
