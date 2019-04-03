@@ -7,4 +7,4 @@
 			endwhile;
 		endif;
 	?>
-<?php get_foter(); ?>
+<?php get_footer(); ?>

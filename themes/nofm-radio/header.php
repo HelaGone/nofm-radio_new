@@ -55,7 +55,7 @@
 				<a href="<?php echo esc_url(home_url()); ?>"></a>
 			</div>
 			<div id="header_player" class="header_item">
-				<a href="http://localhost/~cube/nofm-radio.com/player/" target="_blank" rel="noopener follow">Play</a>
+				<a href="https://localhost/nofm/player/" target="_blank" rel="noopener follow">Play</a>
 				<!-- <button id="btn_open_player">PLAY</button> -->
 
 				<?php 
