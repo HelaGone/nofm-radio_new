@@ -220,7 +220,10 @@
 	 * Define custom image sizes for wordpress media images
 	*/
 	if ( function_exists('add_image_size') ){
-		// add_image_size( 'poster_big', 570, 380, true );
+		add_image_size( 'square_big', 1024, 1024, true );
+		add_image_size( 'square_mid', 768, 768, true );
+		add_image_size( 'square_small', 420, 420, true );
+		add_image_size( 'square_xsmall', 80, 80, true );
 		// add_image_size( 'poster', 300, 200, true );
 	}
 

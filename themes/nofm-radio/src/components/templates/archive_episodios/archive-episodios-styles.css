@@ -1,0 +1,10 @@
+#archive_episodios{}
+#archive_episodios h1{text-transform: uppercase;word-break: break-all;font-weight: 700;color:#fff;text-shadow: 1px 1px 3px rgba(0,0,0,0.5);}
+#archive_episodios .category_figure{position: relative;}
+#archive_episodios .category_figure img{width:100%;object-fit: cover;}
+#archive_episodios .category_figure figcaption{position: absolute;left:0;bottom: 0;right: 0;}
+
+.episode_list{padding:8px;}
+.episode_list .episode_item{display: flex;flex-direction: row;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.3);}
+.episode_list .episode_item img{margin-right:8px;border-radius: 3px;}
+.episode_list .episode_item a{display:block;vertical-align: middle;flex-wrap: wrap;}
