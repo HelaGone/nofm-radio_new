@@ -22,7 +22,7 @@ h6{font-size: 1rem;}
 .black_parr{color:#222;}
 /*#wpadminbar {z-index:999999999;}*/
 
-#logo{background-image:url(../img/logo_nofm.png);background-size: contain;width: 200px;height: auto;background-position: center;background-repeat: no-repeat;position: relative;}
+#logo{background-image:url(../img/logo_nofm.png);background-size: contain;width: 200px;height: auto;background-position: center;background-repeat: no-repeat;position: relative;margin-left:24px;}
 #logo a{position: absolute;top: 0;left: 0;bottom: 0;right: 0;}
 #facebook{background-image: url(../img/picons06.png);background-size: contain;background-position: center;background-repeat: no-repeat; }
 #twitter{background-image: url(../img/picons03.png);background-size: contain;background-position: center;background-repeat: no-repeat; }
@@ -31,3 +31,12 @@ h6{font-size: 1rem;}
 
 .social_network{padding: 24px 0;}
 .social_logos{width:24px; height: 24px;}
+
+
+.fig_object{position:relative;}
+.fig_object img{width:100%;height: auto;}
+.fig_object .fig_caption{position: absolute;left: 0; right: 0; bottom: 0;background-image:linear-gradient(transparent, black);padding:8px;color:#fff;}
+.fig_object .fig_caption .fig_title{text-transform: uppercase;font-weight: 700;text-shadow: 1px 1px 3px rgba(0,0,0,0.5);}
+
+
+

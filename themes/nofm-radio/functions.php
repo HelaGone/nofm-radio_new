@@ -305,10 +305,22 @@
 	 * @param  string  $size
 	 * @return string  url de la imagen
 	 */
-	function bt_attachment_image_url($post_id, $size){
+	function bt_post_attachment_image_url($post_id, $size){
 		$image_id   = get_post_thumbnail_id($post_id);
 		$image_data = wp_get_attachment_image_src($image_id, $size, true);
 		echo isset($image_data[0]) ? $image_data[0] : '';
+	}
+
+	/**
+	 * Regresa la url del attachment de la publicación 
+	 * especificando POST ID & TAMAÑO
+	 * @param  int     $att_id
+	 * @param  string  $size
+	 * @return string  url de la imagen
+	 */
+	function bt_get_imageby_id($att_id, $size){
+		$image_data = wp_get_attachment_image_src($att_id, $size, true);
+		return isset($image_data[0]) ? $image_data[0] : '';
 	}
 
 	/*
@@ -354,4 +366,21 @@
 	*/
 	function bt_seconds_to_human_readable($secs){
 		return gmdate("H:i:s", $secs);
+	}
+
+	/**
+	 * COVER OPTIONS
+	 * co_banner_option
+	 * co_barra_a_option
+	 * co_barra_b_option
+	 * co_barra_c_option
+	*/
+	function bt_get_co_posts($option_bar = 'co_barra_a_option'){
+		$ft_posts = get_option($option_bar);
+		$posts_object = array();
+		foreach ($ft_posts as $key => $post_id) {
+			$post = get_post($post_id);
+			array_push($posts_object, $post);
+		}
+		return $posts_object;
 	}

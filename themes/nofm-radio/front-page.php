@@ -1,23 +1,17 @@
 <?php get_header(); ?>
-	
-<?php get_template_part('templates/barra', 'a'); ?>
 
 <section id="home_section">
-	<div>
-		<h2>Esta es una sección aparte dentro de front page</h2>
-		<!--VosCast.com Playlist Files-->
-		<script type="text/javascript" src="//cdn.voscast.com/resources/?key=d3b9d948ce2a095ad198b852a44fa999&c=playlist"></script>
-		<!--End Playlist Files-->
-
-		<!--VosCast.com SHOUTcast Server Stats-->
-		<!-- <script type="text/javascript" src="//cdn.voscast.com/stats/display.js?key=d3b9d948ce2a095ad198b852a44fa999&stats=currentlisteners,songhistory"></script> -->
-		<!--End SHOUTcast Server Stats-->
-	</div>
+	<figure id="envivo_figure" class="fig_object">
+		<img src="<?php echo esc_url(bt_get_imageby_id(30967, 'square_small')); ?>" alt="EN VIVO">
+		<figcaption class="fig_caption">
+			<h1 class="fig_title">EN VIVO</h1>
+		</figcaption>
+	</figure>
 </section>
 
+<?php get_template_part('templates/barra', 'a'); ?>
+<?php get_template_part('templates/barra', 'b'); ?>
+<?php get_template_part('templates/barra', 'c'); ?>
+
 <?php get_sidebar(); ?>
-
-<?php //get_template_part('templates/barra', 'b'); ?>
-<?php //get_template_part('templates/barra', 'c'); ?>
-
 <?php get_footer(); ?>

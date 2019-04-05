@@ -9,12 +9,12 @@
 */
 	if(have_posts()): 
 		$type = $wp_query->queried_object->label; 
-		$attach = wp_get_attachment_image_src(30994, 'square_small'); ?>
+		$attach = bt_get_imageby_id(30994, 'square_small'); ?>
 		<section id="archive_episodios">
-			<figure class="category_figure">
-				<img src="<?php echo $attach[0]; ?>" alt="category cover">
-				<figcaption>
-					<h1><?php echo esc_html($type); ?></h1>
+			<figure class="fig_object">
+				<img src="<?php echo $attach; ?>" alt="category cover">
+				<figcaption class="fig_caption">
+					<h1 class="fig_title"><?php echo esc_html($type); ?></h1>
 				</figcaption>
 			</figure>
 			<ul class="episode_list">

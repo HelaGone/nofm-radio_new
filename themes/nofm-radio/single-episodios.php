@@ -15,18 +15,21 @@
 				?>
 				<article id="<?php echo esc_attr($post->ID); ?>" class="single_article">
 					<!-- Image and post title -->
-					<figure class="single_episode_figure">
+					<figure class="fig_object">
 						<?php the_post_thumbnail(); ?>
-						<figcaption>
-							<button id="btn_ep_play" data-source="<?php echo esc_attr($episode_url); ?>">PLAY</button>
+						<figcaption class="fig_caption">
 							<!-- <button id="btn_ep_pause">PAUSE</button> -->
-							<h2><?php the_title(); ?></h2>	
+							<h2 class="fig_title"><?php the_title(); ?></h2>	
 						</figcaption>
 					</figure>
 					<!-- Episode Info -->
 					<div class="episode_info">
 						<time class="ep_info_item"><?php echo esc_html(get_the_date()); ?></time>
 						<span class="ep_info_item">Duración: <?php echo esc_html(bt_seconds_to_human_readable($episode_duration)); ?> </span>
+					</div>
+					<!-- Player -->
+					<div>
+						<button id="btn_ep_play" data-source="<?php echo esc_attr($episode_url); ?>">PLAY</button>
 					</div>
 					<!-- Show info -->
 					<div class="show_info">

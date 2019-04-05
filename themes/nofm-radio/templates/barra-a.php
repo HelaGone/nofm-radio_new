@@ -1,30 +1,25 @@
-<section>
-	<?php 
-		global $post; 
-		if(have_posts()): ?>
-			<section class="barra_a_section">
-			<?php		
-					while(have_posts()):
-						the_post();
-						setup_postdata($post); ?>
-						<figure class="barra_a_figure">
-							<a href="<?php the_permalink(); ?>">
-								<?php the_post_thumbnail(); ?>
-							</a>
-							<figcaption class="barra_a_caption">
-								<h2 class="barra_a_h2">
-									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-										<?php the_title(); ?>
-									</a>
-								</h2>
-								<p><?php the_excerpt(); ?></p>
-							</figcaption>
-						</figure>
-			<?php				
-					endwhile; 
-					wp_reset_postdata(); ?>
-			</section>
-	<?php		
-		endif;	
-		?>
-</section>
+<?php 
+	global $post;
+	$cover_posts_a = bt_get_co_posts();
+	if(is_array($cover_posts_a)&&!empty($cover_posts_a)): ?>
+		<section id="barra_a_section">
+		<?php		
+				foreach($cover_posts_a as $post): ?>
+					<figure class="fig_object">
+						<a href="<?php echo get_permalink($post->ID); ?>">
+							<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>">
+						</a>
+						<figcaption class="fig_caption">
+							<h2 class="fig_title">
+								<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+									<?php echo esc_html($post->post_title); ?>
+								</a>
+							</h2>
+							<p><?php echo get_the_excerpt($post->ID); ?></p>
+						</figcaption>
+					</figure>
+		<?php				
+				endforeach; ?>
+		</section>
+<?php		
+	endif;?>

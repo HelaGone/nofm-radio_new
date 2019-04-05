@@ -21,28 +21,37 @@
 				<h2>Conecta con nosotros</h2>
 				<button id="close_social" class="">X</button>
 			</div>
-				<ul>
-					<li>
-						<a href="https://www.facebook.com/todomenosmiedo/">
-							<div id="facebook" class="social_logos"></div>
-						</a>
-					</li>
-					<li>
-						<a href="https://twitter.com/nofm_radio">
-							<div id="twitter" class="social_logos"></div>
-						</a>
-					</li>
-					<li>
-						<a href="http://feeds.feedburner.com/nofm-radio/HgNX">
-							<div id="feedburner" class="social_logos"></div>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.instagram.com/nofm_radio/">
-							<div id="instagram" class="social_logos"></div>
-						</a>
-					</li>
-				</ul>
+			<ul>
+				<li>
+					<a href="https://www.facebook.com/todomenosmiedo/">
+						<div id="facebook" class="social_logos"></div>
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/nofm_radio">
+						<div id="twitter" class="social_logos"></div>
+					</a>
+				</li>
+				<li>
+					<a href="http://feeds.feedburner.com/nofm-radio/HgNX">
+						<div id="feedburner" class="social_logos"></div>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/nofm_radio/">
+						<div id="instagram" class="social_logos"></div>
+					</a>
+				</li>
+			</ul>
+			<div class="voscast_script_players">
+				<!--VosCast.com Playlist Files-->
+				<script type="text/javascript" src="//cdn.voscast.com/resources/?key=d3b9d948ce2a095ad198b852a44fa999&c=playlist"></script>
+				<!--End Playlist Files-->
+
+				<!--VosCast.com SHOUTcast Server Stats-->
+				<!-- <script type="text/javascript" src="//cdn.voscast.com/stats/display.js?key=d3b9d948ce2a095ad198b852a44fa999&stats=currentlisteners,songhistory"></script> -->
+				<!--End SHOUTcast Server Stats-->
+			</div>
 		</div>
 
 		<div id="central_header">
@@ -53,15 +62,6 @@
 			</div>
 			<div id="logo" class="header_item">
 				<a href="<?php echo esc_url(home_url()); ?>"></a>
-			</div>
-			<div id="header_player" class="header_item">
-				<!-- <a href="<?php echo bloginfo('url').'/player/'; ?>" target="_blank" rel="noopener follow">Play</a> -->
-				<button id="btn_open_player">PLAY</button>
-
-				<?php 
-					//echo do_shortcode("[lbg_audio6_html5_shoutcast settings_id='2']");
-				?>
-
 			</div>
 		</div>
 
