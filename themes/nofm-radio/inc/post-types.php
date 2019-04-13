@@ -98,7 +98,7 @@
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 6,
-			'taxonomies'         => array(  ),
+			'taxonomies'         => array( 'proyecto' ),
 			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
 		);
 		register_post_type( 'episodios', $args );

@@ -299,6 +299,26 @@
 		}
 	}
 
+	function register_rest_images(){
+	    register_rest_field( array('post'),
+	        'fimg_url',
+	        array(
+	            'get_callback'    => 'get_rest_featured_image',
+	            'update_callback' => null,
+	            'schema'          => null,
+	        )
+	    );
+	}
+	add_action('rest_api_init', 'register_rest_images' );
+	
+	function get_rest_featured_image( $object, $field_name, $request ) {
+	    if( $object['featured_media'] ){
+	        $img = wp_get_attachment_image_src( $object['featured_media'], 'app-thumb' );
+	        return $img[0];
+	    }
+	    return false;
+	}
+
 	/**
 	 * Regresa la url del attachment especificado
 	 * @param  int     $post_id
@@ -384,3 +404,19 @@
 		}
 		return $posts_object;
 	}
+
+	/**
+	 * Filter Restricted Site Access to allow REST API requests.
+	 * @param bool   $is_restricted Whether access is restricted.
+	 * @param object $wp The WordPress object.
+	 * @return bool Whether access should be restricted.
+	 */
+	function pn_unrestrict_rest_api( $is_restricted, $wp ) {
+
+	    if ( ! empty( $wp->query_vars['rest_route'] ) ) {
+	        return false;
+	    }
+
+	    return $is_restricted;
+	}
+	add_filter( 'restricted_site_access_is_restricted', 'pn_unrestrict_rest_api', 10, 2 );

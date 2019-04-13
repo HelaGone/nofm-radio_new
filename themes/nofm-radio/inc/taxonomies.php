@@ -7,18 +7,18 @@
 	function custom_taxonomies_callback(){
 
 		// AUTORES
-		/*if( ! taxonomy_exists('autores')){
+		if( ! taxonomy_exists('autores')){
 
 			$labels = array(
-				'name'              => 'Autores',
-				'singular_name'     => 'Autor',
+				'name'              => 'Proyectos',
+				'singular_name'     => 'Proyecto',
 				'search_items'      => 'Buscar',
 				'all_items'         => 'Todos',
-				'edit_item'         => 'Editar Autor',
-				'update_item'       => 'Actualizar Autor',
-				'add_new_item'      => 'Nuevo Autor',
-				'new_item_name'     => 'Nombre Nuevo Autor',
-				'menu_name'         => 'Autores'
+				'edit_item'         => 'Editar Proyecto',
+				'update_item'       => 'Actualizar Proyecto',
+				'add_new_item'      => 'Nuevo Proyecto',
+				'new_item_name'     => 'Nombre Nuevo Proyecto',
+				'menu_name'         => 'Proyectos'
 			);
 
 			$args = array(
@@ -27,12 +27,14 @@
 				'show_ui'           => true,
 				'show_admin_column' => true,
 				'show_in_nav_menus' => true,
+				'show_in_rest'			=> true,
+				'public'						=> true,
 				'query_var'         => true,
-				'rewrite'           => array( 'slug' => 'autores' ),
+				'rewrite'           => array( 'slug' => 'proyectos' ),
 			);
 
-			register_taxonomy( 'autor', 'libro', $args );
-		}*/
+			register_taxonomy( 'proyecto', 'episodios', $args );
+		}
 		
 		
 		// TERMS
