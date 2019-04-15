@@ -241,6 +241,9 @@
 	if(!validate_file('inc/pages.php')){
 		require_once('inc/pages.php');
 	}
+	if(!validate_file('inc/services.php')){
+		require_once('inc/services.php');
+	}
 	
 // MODIFICAR EL MAIN QUERY ///////////////////////////////////////////////////////////
 
@@ -411,7 +414,7 @@
 	 * @param object $wp The WordPress object.
 	 * @return bool Whether access should be restricted.
 	 */
-	function pn_unrestrict_rest_api( $is_restricted, $wp ) {
+	function bt_unrestrict_rest_api( $is_restricted, $wp ) {
 
 	    if ( ! empty( $wp->query_vars['rest_route'] ) ) {
 	        return false;
@@ -419,4 +422,12 @@
 
 	    return $is_restricted;
 	}
-	add_filter( 'restricted_site_access_is_restricted', 'pn_unrestrict_rest_api', 10, 2 );
+	add_filter( 'restricted_site_access_is_restricted', 'bt_unrestrict_rest_api', 10, 2 );
+
+	/*
+	 *  Resister rest route for ReactApp
+	*/
+	function register_feed_api(){
+	  	register_rest_route('react/v2','/desigualdad/', array('methods'=>'GET','callback'=>'bt_feed_for_react'));
+	}
+	add_action('rest_api_init', 'register_feed_api');

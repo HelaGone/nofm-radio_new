@@ -99,7 +99,7 @@
 			'hierarchical'       => false,
 			'menu_position'      => 6,
 			'taxonomies'         => array( 'proyecto' ),
-			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
+			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'excerpt')
 		);
 		register_post_type( 'episodios', $args );
 
