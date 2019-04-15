@@ -27,9 +27,10 @@
 	        $large = get_the_post_thumbnail_url($post->ID, 'large');
 	        $thumbnail = get_the_post_thumbnail_url($post->ID, 'thumbnail');
 	        $post_item = array(
-	            'r_id'        => $post->ID,
-	            'r_date'      => $post->post_date,
-	            'r_name'      => $post->post_title,
+	            'r_id'=>$post->ID,
+	            'r_date'=>$post->post_date,
+	            'r_name'=>$post->post_title,
+	            'r_content'=>wp_strip_all_tags($post->post_content, false),
 	            'r_thumbnails'=> array(
 	            	'square_xsmall'=>$square_xsmall,
 	            	'square_small'=>$square_small,
@@ -39,9 +40,10 @@
 	            	'large'=>$large,
 	            	'thumbnail'=>$thumbnail
 	            ),
-	            'r_excerpt'   => get_the_excerpt($post->ID),
-	            'r_link_to'   => get_the_permalink($post->ID),
-	            'r_meta'			=> array(
+	            'r_excerpt'=> get_the_excerpt($post->ID),
+	            'r_slug'=>get_post_field('post_name', $post->ID, 'raw'),
+	            'r_link_to'=>get_the_permalink($post->ID),
+	            'r_meta'=>array(
 	            	'_episodio_url'=>get_post_meta($post->ID, '_episodio_url', true),
 	            	'_episodio_show'=>get_post_meta($post->ID, '_episodio_show', true),
 	            	'_episodio_duration'=>get_post_meta($post->ID, '_episodio_duration', true)
