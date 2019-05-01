@@ -32,6 +32,7 @@
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 4,
+			'menu_icon'					 => 'dashicons-archive',
 			'taxonomies'         => array( 'category' ),
 			'supports'           => array( 'title', 'editor', 'custom-fields' )
 		);
@@ -65,6 +66,7 @@
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 5,
+			'menu_icon'					 => 'dashicons-microphone',
 			'taxonomies'         => array(  ),
 			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
 		);
@@ -98,9 +100,43 @@
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 6,
+			'menu_icon'					 => 'dashicons-megaphone',
 			'taxonomies'         => array( 'proyecto' ),
 			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'excerpt')
 		);
 		register_post_type( 'episodios', $args );
 
+		// Glosario
+		$labels = array(
+			'name'          => 'Glosario',
+			'singular_name' => 'Glosario',
+			'add_new'       => 'Nuevo Glosario',
+			'add_new_item'  => 'Nuevo Glosario',
+			'edit_item'     => 'Editar Glosario',
+			'new_item'      => 'Nuevo Glosario',
+			'all_items'     => 'Todos',
+			'view_item'     => 'Ver Glosario',
+			'search_items'  => 'Buscar Glosario',
+			'not_found'     => 'No se encontro',
+			'menu_name'     => 'Glosario'
+		);
+
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'show_in_rest'		   => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'glosario' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => 7,
+			'menu_icon'					 => 'dashicons-playlist-audio',
+			'taxonomies'         => array(),
+			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'excerpt')
+		);
+		register_post_type( 'glosario', $args );
 	});
