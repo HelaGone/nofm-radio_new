@@ -3,6 +3,7 @@ import '../../../css/style.css';
 
 /*Local Styles*/
 import './home-styles.css';
+import './home-scripts.js';
 
 /*Components*/
 import '../../parts/header/index';

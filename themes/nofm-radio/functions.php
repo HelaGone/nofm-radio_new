@@ -145,7 +145,7 @@
 		<script type="text/javascript">
 			WebFontConfig = {
 				google: {
-					families: ['Lora:400,400i,700', 'Teko:300,400,500,600,700', 'Roboto+Condensed:300,400,500,700', 'Montserrat:400,700']
+					families: ['Lora:400,400i,700', 'Nanum+Gothic:300,300,i,400,400i,500,500i,600,600i,700,700i']
 				}
 			};
 
@@ -410,7 +410,7 @@
 
 	/**
 	 * Filter Restricted Site Access to allow REST API requests.
-	 * @param bool   $is_restricted Whether access is restricted.
+	 * @param bool $is_restricted Whether access is restricted.
 	 * @param object $wp The WordPress object.
 	 * @return bool Whether access should be restricted.
 	 */
