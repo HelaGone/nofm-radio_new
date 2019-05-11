@@ -429,5 +429,6 @@
 	*/
 	function register_feed_api(){
 	  	register_rest_route('react/v2','/desigualdad/', array('methods'=>'GET','callback'=>'bt_feed_for_react'));
+	  	register_rest_route('react/v2','/glosario/', array('methods'=>'GET','callback'=>'bt_feed_for_react_glosario'));
 	}
 	add_action('rest_api_init', 'register_feed_api');
