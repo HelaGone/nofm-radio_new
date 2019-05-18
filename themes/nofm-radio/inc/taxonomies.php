@@ -7,7 +7,7 @@
 	function custom_taxonomies_callback(){
 
 		// AUTORES
-		if( ! taxonomy_exists('autores')){
+		if( ! taxonomy_exists('proyecto')){
 
 			$labels = array(
 				'name'              => 'Proyectos',
