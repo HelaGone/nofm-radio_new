@@ -1,4 +1,4 @@
-#menu-type-menu, #social_subheader, #main_site_header div.social_network_header ul{display: flex;justify-content: space-between;flex-wrap: wrap;}
+#menu-type_menu, #social_subheader, #main_site_header div.social_network_header ul{display: flex;justify-content: space-between;flex-wrap: wrap;}
 #central_header{display: flex;justify-content: flex-start;flex-wrap: wrap;}
 #social_subheader{justify-content: center;}
 #central_header{padding:0 8px;}

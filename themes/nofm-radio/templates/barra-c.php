@@ -6,8 +6,15 @@
 		<?php		
 				foreach($cover_posts_c as $post): ?>
 					<figure class="fig_object">
-						<a href="">
-							<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>">
+						<a href="<?php echo get_permalink($post->ID); ?>">
+							<?php 
+								if(has_post_thumbnail($post->ID)): ?>
+									<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'square_small'); ?>">
+							<?php 
+								else: ?>
+									<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>">
+							<?php		
+								endif; ?>
 						</a>
 						<figcaption class="fig_caption">
 							<h2 class="fig_title">
