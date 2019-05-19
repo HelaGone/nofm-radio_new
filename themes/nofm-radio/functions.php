@@ -271,6 +271,10 @@
 
 	add_filter('excerpt_more', function(){
 		global $post;
+		if(!$post){
+			return "...";
+		}
+		
 		$permalink = get_the_permalink($post->ID);
 		$title = $post->post_title;
 		return "<a href='$permalink' title='$title' class='li-link'></a>";
