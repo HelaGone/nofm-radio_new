@@ -37,6 +37,3 @@ h6{font-size: 1rem;}
 .fig_object img{width:100%;height: auto;}
 .fig_object .fig_caption{position: absolute;left: 0; right: 0; bottom: 0;background-image:linear-gradient(transparent, black);color:#fff;padding:8px;}
 .fig_object .fig_caption .fig_title{text-transform: uppercase;font-weight: 700;text-shadow: 1px 1px 3px rgba(0,0,0,0.5);}
-
-
-

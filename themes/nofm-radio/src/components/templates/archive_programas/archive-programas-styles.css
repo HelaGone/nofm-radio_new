@@ -1,3 +1,7 @@
 /*.attachment-post-thumbnail{width: 100%;filter: hue-rotate(-25deg) contrast(1.5) saturate(3) grayscale(0.4) opacity(1);}*/
 
 #archive_programas figure{margin:16px 0px;padding:8px;box-shadow: 1px 2px 5px rgba(0,0,0,0.2);}
+
+/*PAGINATION LINKS*/
+.page-numbers{display: flex;flex-direction: row;justify-content: center;}
+.page-numbers li{margin: 0 8px;padding:8px;}

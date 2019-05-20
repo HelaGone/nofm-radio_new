@@ -1,5 +1,6 @@
-<?php get_header(); ?>
+<?php get_header(); global $wp_query; ?>
 <section id="archive_programas">
+	<h1><?php echo esc_html(ucfirst($wp_query->query["post_type"])); ?></h1>
 <?php
 	if(have_posts()):
 		while(have_posts()):
@@ -15,7 +16,12 @@
 			</figure>
 <?php			
 		endwhile;
-	endif; ?>
+	endif; 
+
+	echo bt_print_pagination();
+
+	?>
+
 </section>
 
 <?php get_footer(); ?>
