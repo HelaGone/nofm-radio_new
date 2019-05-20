@@ -35,7 +35,6 @@
 	}
 
 
-
 // DEFINIR LOS PATHS A LOS DIRECTORIOS DE JAVASCRIPT Y CSS ///////////////////////////
 
 	define( 'JSPATH', get_template_directory_uri() . '/js/' );
@@ -76,10 +75,13 @@
 		wp_register_script('base-theme-programas', get_template_directory_uri().'/dist/single_programas.js', array('jquery'), '1.0.0');
 		wp_register_script('base-theme-episodios', get_template_directory_uri().'/dist/single_episodios.js', array('jquery'), '1.0.0');
 		wp_register_script('base-theme-page', get_template_directory_uri().'/dist/page.js', array('jquery'), '1.0.0');
+		wp_register_script('bx-slider-scripts', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array('jquery'), '4.2.12');
 
 		if(is_front_page()){
 			wp_enqueue_style('base-theme-home-style', get_template_directory_uri().'/dist/home.css', array(), '1.0.0.' );
 			wp_enqueue_script('base-theme-home');
+			wp_enqueue_style('bx-slider-style', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css', array(), '4.2.12');
+			wp_enqueue_script('bx-slider-scripts');
 		}elseif(is_author()){
 			wp_enqueue_style('base-theme-author-style', get_template_directory_uri().'/dist/author.css', array(), '1.0.0.' );
 			wp_enqueue_script('base-theme-author');

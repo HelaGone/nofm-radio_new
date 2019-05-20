@@ -14,7 +14,7 @@
 	</figure>
 
 </section>
-
+<?php get_template_part('templates/barra', 'episodios'); ?>
 <?php get_template_part('templates/barra', 'a'); ?>
 <?php get_template_part('templates/barra', 'b'); ?>
 <?php get_template_part('templates/barra', 'c'); ?>
