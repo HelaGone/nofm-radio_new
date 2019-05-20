@@ -6,6 +6,7 @@
 
 #envivo_figure .btn_play_live{width:120px; height: 120px;background-color: transparent;border:none; background-size: contain;background-repeat: no-repeat;background-position: center;}
 
-/*.barra_a_section{background-color: rgba(0,0,0,0.1);display: grid;grid-template-columns:auto auto auto auto;justify-content: space-between;grid-gap: 24px;}
-.barra_a_section figure.barra_a_figure{max-width: calc(100% / 4)}
-.barra_a_section figure.barra_a_figure img{width:100%;height: auto;}*/
+#barra_episodios{padding:60px 0;}
+#barra_episodios h2{padding:0 8px;}
+.bx-wrapper{margin-top:60px;}
+.episodios_list .episodio_list_item{margin-right:12px;}

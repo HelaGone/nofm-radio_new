@@ -4,7 +4,7 @@ $(document).ready(function(){
 	const dom_figure = document.getElementById('envivo_figure');
 	const dom_logo_day = document.querySelector('.logo_day');
 	const dom_day_btn = document.querySelector('.btn_play_live');
-	console.log(dom_day_btn);
+	//console.log(dom_day_btn);
 
 	const setLiveImages = ()=>{
 		const weekdays = [
@@ -50,4 +50,13 @@ $(document).ready(function(){
 	$(dom_logo_day).attr("src", setLiveImages()[1]);
 	$(dom_day_btn).css("background-image", `url(${setLiveImages()[2]})`);
 
+	$(".episodios_list_carousel").bxSlider({
+		pager: false,
+		auto: true,
+		minSlides: 2,
+		maxSlides: 12,
+		moveSlides: 2,
+		slideWidth: 150,
+		touchEnabled: false
+	});
 });
