@@ -33,7 +33,7 @@
 			'hierarchical'       => false,
 			'menu_position'      => 4,
 			'menu_icon'					 => 'dashicons-archive',
-			'taxonomies'         => array( 'category' ),
+			'taxonomies'         => array(),
 			'supports'           => array( 'title', 'editor', 'custom-fields' )
 		);
 		register_post_type( 'archivo', $args );
@@ -59,15 +59,15 @@
 			'publicly_queryable' => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
-			'show_in_rest'		   => true,
+			'show_in_rest'		 => true,
 			'query_var'          => true,
 			'rewrite'            => array( 'slug' => 'programas' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 5,
-			'menu_icon'					 => 'dashicons-microphone',
-			'taxonomies'         => array(  ),
+			'menu_icon'			 => 'dashicons-microphone',
+			'taxonomies'         => array( 'temas' ),
 			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
 		);
 		register_post_type( 'programas', $args );
@@ -100,8 +100,8 @@
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 6,
-			'menu_icon'					 => 'dashicons-megaphone',
-			'taxonomies'         => array( 'proyecto' ),
+			'menu_icon'			 => 'dashicons-megaphone',
+			'taxonomies'         => array('proyecto', 'category'),
 			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'excerpt')
 		);
 		register_post_type( 'episodios', $args );

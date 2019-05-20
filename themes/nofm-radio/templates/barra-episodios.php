@@ -3,7 +3,7 @@
 	$episodios = new WP_Query($args);
 	$queryed_obj_post_type = ucfirst($episodios->query_vars["post_type"]);
 	if($episodios->have_posts()): ?>
-		<section id="barra_episodios">
+		<section id="barra_episodios" class="home_section">
 			<h2><?php echo esc_html($queryed_obj_post_type); ?></h2>
 			<ul class="episodios_list_carousel">
 			<?php	
