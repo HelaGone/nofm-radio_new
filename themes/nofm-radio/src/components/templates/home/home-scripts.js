@@ -53,10 +53,11 @@ $(document).ready(function(){
 	$(".episodios_list_carousel").bxSlider({
 		pager: false,
 		auto: true,
-		minSlides: 2,
+		minSlides: 1,
 		maxSlides: 12,
-		moveSlides: 2,
+		moveSlides: 1,
 		slideWidth: 150,
-		touchEnabled: false
+		touchEnabled: false,
+		keyboardEnabled:true
 	});
 });

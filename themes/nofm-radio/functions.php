@@ -406,9 +406,13 @@
 	function bt_get_co_posts($option_bar = 'co_barra_a_option'){
 		$ft_posts = get_option($option_bar);
 		$posts_object = array();
-		foreach ($ft_posts as $key => $post_id) {
-			$post = get_post($post_id);
-			array_push($posts_object, $post);
+		if(is_array($ft_posts)&&!empty($ft_posts)){
+			foreach($ft_posts as $key => $post_id){
+				if($post_id != 0){
+					$post = get_post($post_id);
+					array_push($posts_object, $post);
+				}
+			}
 		}
 		return $posts_object;
 	}

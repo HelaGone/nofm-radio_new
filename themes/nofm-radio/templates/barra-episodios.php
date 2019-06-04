@@ -4,7 +4,7 @@
 	$queryed_obj_post_type = ucfirst($episodios->query_vars["post_type"]);
 	if($episodios->have_posts()): ?>
 		<section id="barra_episodios" class="home_section">
-			<h2><?php echo esc_html($queryed_obj_post_type); ?></h2>
+			<h2 class="section_title"><?php echo esc_html($queryed_obj_post_type); ?></h2>
 			<ul class="episodios_list_carousel">
 			<?php	
 				while($episodios->have_posts()):
@@ -28,7 +28,7 @@
 								</h5>
 							</figcaption>
 						</figure>
-						<p><?php the_excerpt(); ?></p>
+						<!-- <p><?php the_excerpt(); ?></p> -->
 					</li>
 				<?php
 				endwhile; ?>
