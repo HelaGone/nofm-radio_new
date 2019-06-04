@@ -5,13 +5,13 @@
 		$cat = get_the_category($cover_posts_a[0]->ID); ?>
 		<section id="barra_a_section" class="home_section">
 			<h2 class="section_title">
-				<a href="<?php echo get_category_link($cat[0]->term_id); ?>">
-					Noticias
-				</a>
+				<a href="<?php echo get_category_link($cat[0]->term_id); ?>">Noticias</a>
 			</h2>
 		<?php
 				$count=0;
 				foreach($cover_posts_a as $post):
+					$p_cat = get_the_category($post->ID);
+					$cat_link = get_category_link($p_cat[0]->term_id);
 					if($count==0): ?>
 						<figure class="fig_object">
 							<a href="<?php echo get_permalink($post->ID); ?>">
@@ -84,6 +84,9 @@
 					endif;
 					$count++;			
 				endforeach; ?>
+				<div class="see_more">
+					<a href="<?php echo esc_url($cat_link); ?>">Ver más</a>
+				</div>
 		</section>
 <?php		
 	endif;?>

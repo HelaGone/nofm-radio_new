@@ -12,6 +12,8 @@
 		<?php		
 				$count=0;
 				foreach($cover_posts_b as $post):
+					$p_cat = get_the_category($post->ID);
+					$cat_link = get_category_link($p_cat[0]->term_id);
 					if($count==0): ?>
 						<figure class="fig_object">
 							<a href="<?php echo get_permalink($post->ID); ?>">
@@ -62,6 +64,9 @@
 					$count++;		
 				endforeach; ?>
 			</ul>
+			<div class="see_more">
+				<a href="<?php echo esc_url($cat_link); ?>">Ver más</a>
+			</div>
 		</section>
 <?php		
 	endif;?>
