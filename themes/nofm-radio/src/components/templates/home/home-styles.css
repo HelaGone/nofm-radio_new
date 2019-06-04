@@ -17,3 +17,12 @@
 .home_section{margin-bottom:32px;}
 .home_section .section_title{display: inline-block;border-bottom: 2px solid black;padding:0 16px;margin-bottom:16px;}
 .see_more{width:100%;background-color:yellow;padding:16px 0;text-align: center;}
+
+@media screen and (min-width: 1024px){
+	.desk_container .fig_object:first-child{text-align: right;}
+	.desk_container .fig_object img{max-width: 768px; max-height: 768px;}
+	.desk_container .fig_object .fig_caption{left:420px;top:0;background-image: none;color:#000;padding-top:32px;}
+	.desk_container .fig_object .fig_caption .fig_title{text-shadow: none;}
+
+	.barra_list .fig_object img{max-width: 80px;max-height: 80px;}
+}

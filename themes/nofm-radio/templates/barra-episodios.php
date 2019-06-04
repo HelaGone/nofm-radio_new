@@ -1,5 +1,5 @@
 <?php
-	$args = array("post_type"=>"episodios","posts_per_page"=>12,"post_status"=>"publish","orderby"=>"date","order"=>"DESC");
+	$args = array("post_type"=>"episodios","posts_per_page"=>-1,"post_status"=>"publish","orderby"=>"date","order"=>"DESC");
 	$episodios = new WP_Query($args);
 	$queryed_obj_post_type = ucfirst($episodios->query_vars["post_type"]);
 	if($episodios->have_posts()): ?>

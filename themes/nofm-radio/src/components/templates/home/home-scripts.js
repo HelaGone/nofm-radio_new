@@ -54,10 +54,10 @@ $(document).ready(function(){
 		pager: false,
 		auto: true,
 		minSlides: 1,
-		maxSlides: 12,
+		maxSlides: 7,
 		moveSlides: 1,
 		slideWidth: 150,
 		touchEnabled: false,
-		keyboardEnabled:true
+		keyboardEnabled:true,
 	});
 });
