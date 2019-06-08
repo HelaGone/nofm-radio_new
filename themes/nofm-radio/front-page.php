@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
-<section id="home_section">
-
+<section id="main_home_section" class="container">
 	<figure id="envivo_figure" class="fig_object">
 		<img class="day_main_background" src="<?php echo esc_url(bt_get_imageby_id(30967, 'square_small')); ?>" alt="EN VIVO">
 		<figcaption class="fig_caption">

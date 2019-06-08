@@ -3,7 +3,7 @@
 	$episodios = new WP_Query($args);
 	$queryed_obj_post_type = ucfirst($episodios->query_vars["post_type"]);
 	if($episodios->have_posts()): ?>
-		<section id="barra_episodios" class="home_section">
+		<section id="barra_episodios" class="home_section container">
 			<h2 class="section_title"><?php echo esc_html($queryed_obj_post_type); ?></h2>
 			<ul class="episodios_list_carousel">
 			<?php	
@@ -15,11 +15,7 @@
 							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 							<?php
 								if(has_post_thumbnail()):
-									if(wp_is_mobile()):
-										the_post_thumbnail("thumbnail");
-									else:
-										the_post_thumbnail("square_small");
-									endif;
+									the_post_thumbnail("square_small");
 								endif; ?>
 							</a>
 							<figcaption class="fig_caption">

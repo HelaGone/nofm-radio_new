@@ -54,7 +54,7 @@
 			</div>
 		</div>
 
-		<div id="central_header">
+		<div id="central_header" class="container">
 			<div id="btn_menu" class="btn_menu_container header_item">
 				<div class="bar1"></div>
 				<div class="bar2"></div>
@@ -65,7 +65,7 @@
 			</div>
 		</div>
 
-		<nav id="type_menu">
+		<nav id="type_menu" class="container">
 			<?php wp_nav_menu( array( 'theme_location' => 'type-menu' ) ); ?>
 		</nav>
 	</header>

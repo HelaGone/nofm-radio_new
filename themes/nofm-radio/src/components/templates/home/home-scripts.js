@@ -56,7 +56,7 @@ $(document).ready(function(){
 		minSlides: 1,
 		maxSlides: 7,
 		moveSlides: 1,
-		slideWidth: 150,
+		slideWidth: 320,
 		touchEnabled: false,
 		keyboardEnabled:true,
 	});

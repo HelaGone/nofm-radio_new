@@ -3,7 +3,7 @@
 	$cover_posts_b = bt_get_co_posts('co_barra_b_option');
 	if(is_array($cover_posts_b)&&!empty($cover_posts_b)): 
 		$cat = get_the_category($cover_posts_b[0]->ID); ?>
-		<section id="barra_b_section" class="home_section">
+		<section id="barra_b_section" class="home_section container">
 			<h2 class="section_title">
 				<a href="<?php echo get_category_link($cat[0]->term_id); ?>">
 					Columnas
@@ -15,12 +15,17 @@
 					$p_cat = get_the_category($post->ID);
 					$cat_link = get_category_link($p_cat[0]->term_id);
 					if($count==0): ?>
-						<figure class="fig_object">
+						<figure class="fig_object big_post">
 							<a href="<?php echo get_permalink($post->ID); ?>">
 								<?php 
-									if(has_post_thumbnail($post->ID)): ?>
-										<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'square_small'); ?>">
+									if(has_post_thumbnail($post->ID)):
+										if(wp_is_mobile()): ?>
+											<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'square_small'); ?>">
 								<?php 
+										else: ?>
+											<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">		
+								<?php
+										endif;			
 									else: ?>
 										<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>">
 								<?php		
@@ -32,7 +37,6 @@
 										<?php echo esc_html($post->post_title); ?>
 									</a>
 								</h3>
-								<p><?php echo get_the_excerpt($post->ID); ?></p>
 							</figcaption>
 						</figure>
 			<ul class="barra_list">

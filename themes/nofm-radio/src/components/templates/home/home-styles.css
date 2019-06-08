@@ -1,28 +1,69 @@
-#home_section{background-color:#eee;}
+#main_home_section{background-color:#eee;}
 #envivo_figure .fig_caption{top:0;}
 #envivo_figure .fig_caption div{position:absolute;bottom:0;display: flex;flex-direction: row;justify-content: flex-start;}
 #envivo_figure .day_main_background{width:100%;height:80vh;object-fit: cover;object-position: 75% 50%;}
-#envivo_figure .logo_day{position:relative;top:80px;width:50%;object-fit: contain;}
+#envivo_figure .logo_day{position:relative;top:13vh;width:50%;object-fit: contain;}
 
 #envivo_figure .btn_play_live{width:120px; height: 120px;background-color: transparent;border:none; background-size: contain;background-repeat: no-repeat;background-position: center;}
 
 #barra_episodios{padding:32px 0 0 0;}
 .bx-wrapper{border:none!important;}
-.episodios_list .episodio_list_item{margin-right:12px;}
+.episodios_list_carousel .episodio_list_item .fig_caption{background-color:#000;}
+.episodios_list_carousel .episodio_list_item .fig_caption .fig_title{color:#f0e569;}
 
 /*Barras*/
-.barra_list{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: flex-start;}
-.barra_list li{width:calc(100% / 2);}
-.barra_list li .fig_title{font-size: 1rem;line-height: 18px;}
+.barra_list{display: flex;flex-direction: row;justify-content: flex-start;}
+.barra_list .barra_item{width:calc(100% / 2);}
+.barra_list .fig_object .fig_caption .fig_title{font-size: 1rem;line-height: 18px;}
 .home_section{margin-bottom:32px;}
 .home_section .section_title{display: inline-block;border-bottom: 2px solid black;padding:0 16px;margin-bottom:16px;}
-.see_more{width:100%;background-color:yellow;padding:16px 0;text-align: center;}
+.home_section .fig_object .fig_caption .fig_title{display: inline;background-color: black;}
+/*
+	verde: #87b97c
+	morado: #947eb2
+	guinda: #9c4551
+	amarill0: #f0e569
+	morado 2: #c48cb7
+	naranja: #c37e63
+*/
 
+.see_more{width:100%;background-color:yellow;padding:16px 0;text-align: center;font-weight: 700;}
+.home_section .fig_object.big_post .fig_caption .fig_title{line-height: 29px;}
+
+@media screen and (min-width: 568px){
+	#envivo_figure .day_main_background{object-position: 75% 0%;}
+	#envivo_figure .logo_day{top:0;}
+}
+@media screen and (min-width: 768px){
+	.see_more{font-size: 2rem;}
+	#envivo_figure .logo_day{top:13vh;}
+	#envivo_figure .btn_play_live{width:200px;height: 200px;}
+	#envivo_figure .fig_title{font-size: 7rem;}
+	#envivo_figure .fig_caption div{padding:32px;}
+	.home_section .section_title{font-size: 2.8rem;}
+	.home_section .fig_object.big_post  .fig_caption .fig_title{line-height: 66px;font-size: 3.6rem;}
+	.home_section .fig_object .fig_caption .fig_title{font-size: 2rem;line-height: 2.3rem;}
+	.home_section .fig_object .fig_caption p{display: block;font-size: 1.6rem;}
+}
 @media screen and (min-width: 1024px){
+	#barra_a_section{border-bottom:2px solid #9c4551;}
+	.see_more{width:20%;margin:0 auto;border-radius: 2px;}
+	#barra_a_section .see_more{margin:60px auto;}
+	#barra_b_section .fig_object.big_post .fig_caption, #barra_c_section .fig_object.big_post .fig_caption{text-align: right;background-image: none;}
+	#barra_b_section .fig_object.big_post img, #barra_c_section .fig_object.big_post img{max-width: 420px;}
+	#barra_b_section .barra_list, #barra_c_section .barra_list{justify-content: space-evenly;margin:70px 0;}
 	.desk_container .fig_object:first-child{text-align: right;}
 	.desk_container .fig_object img{max-width: 768px; max-height: 768px;}
-	.desk_container .fig_object .fig_caption{left:420px;top:0;background-image: none;color:#000;padding-top:32px;}
+	.desk_container .fig_object .fig_caption{left:420px;top:0;background-image: none;color:#fff;padding-top:32px;}
+	.desk_container .fig_object.right_align .fig_caption{right:420px;left: 0;}
 	.desk_container .fig_object .fig_caption .fig_title{text-shadow: none;}
-
-	.barra_list .fig_object img{max-width: 80px;max-height: 80px;}
+}
+@media screen and (min-width: 1280px){
+	.see_more{width:10%;font-size: 1.2rem;transition: background-color .2s, box-shadow .2s;}
+	.see_more:hover{background-color:orange; box-shadow: 1px 2px 4px rgba(0,0,0,0.4);}
+	.fig_object .fig_caption{bottom:-5px;}
+	#envivo_figure .logo_day{top:4vh;}
+	.barra_list{justify-content: space-evenly;margin:60px auto;}
+	.barra_list .barra_item{max-width: 420px;}
+	#barra_b_section .fig_object.big_post img, #barra_c_section .fig_object.big_post img{max-width: 720px;}
 }
