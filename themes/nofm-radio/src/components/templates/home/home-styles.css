@@ -5,20 +5,16 @@
 #envivo_figure .logo_day{position:relative;top:13vh;width:50%;object-fit: contain;}
 
 #envivo_figure .btn_play_live{width:120px; height: 120px;background-color: transparent;border:none; background-size: contain;background-repeat: no-repeat;background-position: center;}
+#envivo_figure .btn_play_live:hover{cursor: pointer;}
 
-#barra_episodios{padding:32px 0 0 0;}
+#barra_programas{padding:32px 0 0 0;}
 .bx-wrapper{border:none!important;}
-.episodios_list_carousel .episodio_list_item .fig_caption{background-color:#000;}
-.episodios_list_carousel .episodio_list_item .fig_caption .fig_title{color:#f0e569;}
+.programas_list_carousel .programa_list_item .fig_caption{background-color:#000;}
+.programas_list_carousel .programa_list_item .fig_caption .fig_title{color:#f0e569;}
 
-/*Barras*/
-.barra_list{display: flex;flex-direction: row;justify-content: flex-start;}
-.barra_list .barra_item{width:calc(100% / 2);}
-.barra_list .fig_object .fig_caption .fig_title{font-size: 1rem;line-height: 18px;}
-.home_section{margin-bottom:32px;}
-.home_section .section_title{display: inline-block;border-bottom: 2px solid black;padding:0 16px;margin-bottom:16px;}
-.home_section .fig_object .fig_caption .fig_title{display: inline;background-color: black;}
+/*BARRAS*/
 /*
+Colores Fontano
 	verde: #87b97c
 	morado: #947eb2
 	guinda: #9c4551
@@ -27,8 +23,23 @@
 	naranja: #c37e63
 */
 
+.barra_list{display: flex;flex-direction: row;justify-content: flex-start;}
+.barra_list .barra_item{width:calc(100% / 2);}
+.barra_list .fig_object .fig_caption .fig_title{font-size: 1rem;line-height: 1.2rem;}
+.home_section{margin-bottom:32px;}
+.home_section .section_title{display: inline-block;border-bottom: 2px solid black;padding:0 16px;margin-bottom:16px;}
+.home_section .fig_object .fig_caption .fig_title{display: inline;background-color: black;}
+
 .see_more{width:100%;background-color:yellow;padding:16px 0;text-align: center;font-weight: 700;cursor: pointer;}
 .home_section .fig_object.big_post .fig_caption .fig_title{line-height: 29px;}
+
+#barra_tema_section .bottom_list, 
+#barra_tema_section .middle_list .fig_object{display: flex;flex-direction: row;justify-content: space-between;align-items: center;border-bottom:1px solid black;}
+#barra_tema_section .middle_list li:last-child > .fig_object{flex-direction: row-reverse;border-bottom:none;}
+#barra_tema_section .middle_list .fig_object img{max-width: 33.33%;flex-shrink: 0;}
+#barra_tema_section .middle_list .fig_object figcaption{padding:0 8px;}
+#barra_tema_section .bottom_list .fig_object .fig_caption .fig_title{font-size: 1rem;line-height: 1.2rem;}
+
 
 @media screen and (min-width: 568px){
 	#envivo_figure .day_main_background{object-position: 75% 0%;}
@@ -44,10 +55,13 @@
 	.home_section .fig_object.big_post  .fig_caption .fig_title{line-height: 66px;font-size: 3.6rem;}
 	.home_section .fig_object .fig_caption .fig_title{font-size: 2rem;line-height: 2.3rem;}
 	.home_section .fig_object .fig_caption p{display: block;font-size: 1.6rem;}
+
+	#barra_tema_section .middle_list .fig_object .fig_title{font-size: 2rem;}
+	#barra_tema_section .bottom_list .fig_object .fig_caption .fig_title{font-size: 2.2rem;line-height: 2.4rem;}
 }
 @media screen and (min-width: 1024px){
-	#barra_a_section{border-bottom:2px solid #9c4551;}
 	.see_more{width:20%;margin:0 auto;border-radius: 2px;}
+	#barra_a_section{border-bottom:2px solid #9c4551;}
 	#barra_a_section .see_more{margin:60px auto;}
 	#barra_b_section .fig_object.big_post .fig_caption, #barra_c_section .fig_object.big_post .fig_caption{text-align: right;background-image: none;}
 	#barra_b_section .fig_object.big_post img, #barra_c_section .fig_object.big_post img{max-width: 420px;}
@@ -57,6 +71,15 @@
 	.desk_container .fig_object .fig_caption{left:420px;top:0;background-image: none;color:#fff;padding-top:32px;}
 	.desk_container .fig_object.right_align .fig_caption{right:420px;left: 0;}
 	.desk_container .fig_object .fig_caption .fig_title{text-shadow: none;}
+
+	#barra_tema_section .middle_list{margin:40px auto;}
+	#barra_tema_section .middle_list li{margin:24px 0;}
+	#barra_tema_section .bottom_list, 
+	#barra_tema_section .middle_list .fig_object{border-bottom: none;}
+	#barra_tema_section .bottom_list{justify-content: space-around;}
+	#barra_tema_section .middle_list .fig_object figcaption{padding:0 32px;}
+	#barra_tema_section.home_section .fig_object .fig_caption .fig_title{font-size: 5rem; line-height: 5.3rem;}
+	#barra_tema_section .bottom_list .fig_object .fig_caption .fig_title{font-size: 2.2rem;line-height: 2.4rem;}
 }
 @media screen and (min-width: 1280px){
 	.see_more{width:10%;font-size: 1.2rem;transition: background-color .2s, box-shadow .2s;}

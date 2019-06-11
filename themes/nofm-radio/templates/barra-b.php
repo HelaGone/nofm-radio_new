@@ -6,7 +6,7 @@
 		<section id="barra_b_section" class="home_section container">
 			<h2 class="section_title">
 				<a href="<?php echo get_category_link($cat[0]->term_id); ?>">
-					Columnas
+					<?php echo esc_html($cat[0]->name); ?>
 				</a>
 			</h2>
 		<?php		
@@ -20,7 +20,7 @@
 								<?php 
 									if(has_post_thumbnail($post->ID)):
 										if(wp_is_mobile()): ?>
-											<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'square_small'); ?>">
+											<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'square_mid'); ?>">
 								<?php 
 										else: ?>
 											<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">		
@@ -47,7 +47,7 @@
 								<a href="<?php echo get_permalink($post->ID); ?>">
 									<?php 
 										if(has_post_thumbnail($post->ID)): ?>
-											<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'square_small'); ?>">
+											<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'square_mid'); ?>">
 									<?php 
 										else: ?>
 											<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>">

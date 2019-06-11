@@ -222,10 +222,12 @@
 	 * Define custom image sizes for wordpress media images
 	*/
 	if ( function_exists('add_image_size') ){
+		add_image_size( 'rect_big', 1280, 720, true );
+		add_image_size( 'rect_mid', 853, 480, true);
+		add_image_size( 'rect_small', 420, 236, true );
 		add_image_size( 'square_big', 768, 768, true );
-		add_image_size( 'square_small', 420, 420, true );
-		add_image_size( 'square_xsmall', 80, 80, true );
-		// add_image_size( 'poster', 300, 200, true );
+		add_image_size( 'square_mid', 420, 420, true );
+		add_image_size( 'square_small', 80, 80, true );
 	}
 
 // POST TYPES, METABOXES, TAXONOMIES AND CUSTOM PAGES ////////////////////////////////
@@ -410,6 +412,27 @@
 			foreach($ft_posts as $key => $post_id){
 				if($post_id != 0){
 					$post = get_post($post_id);
+					array_push($posts_object, $post);
+				}
+			}
+		}
+		return $posts_object;
+	}
+
+	/**
+	 * COVER OPTIONS FOR THEME
+	 * co_barra_temas_option 
+	*/
+	function bt_get_co_tema_posts($option_bar = 'co_barra_temas_option'){
+		$tema_posts = get_option($option_bar);
+		$posts_object = array();
+		if(is_array($tema_posts)&&!empty($tema_posts)){
+			foreach ($tema_posts as $key => $_id) {
+				if($key == 'co_select_tema'){
+					$term = get_term($_id);
+					array_push($posts_object, $term);
+				}else{
+					$post = get_post($_id);
 					array_push($posts_object, $post);
 				}
 			}

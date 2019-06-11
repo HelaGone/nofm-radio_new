@@ -2,7 +2,7 @@
 
 <section id="main_home_section" class="container">
 	<figure id="envivo_figure" class="fig_object">
-		<img class="day_main_background" src="<?php echo esc_url(bt_get_imageby_id(30967, 'square_small')); ?>" alt="EN VIVO">
+		<img class="day_main_background" src="<?php echo esc_url(bt_get_imageby_id(30967, 'square_mid')); ?>" alt="EN VIVO">
 		<figcaption class="fig_caption">
 			<img class="logo_day" src="">
 			<div>
@@ -13,10 +13,11 @@
 	</figure>
 
 </section>
-<?php get_template_part('templates/barra', 'episodios'); ?>
+<?php get_template_part('templates/barra', 'programas'); ?>
 <?php get_template_part('templates/barra', 'a'); ?>
 <?php get_template_part('templates/barra', 'b'); ?>
 <?php get_template_part('templates/barra', 'c'); ?>
+<?php get_template_part('templates/barra', 'tema'); ?>
 
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -9,7 +9,7 @@
 */
 	if(have_posts()): 
 		$type = $wp_query->queried_object->label; 
-		$attach = bt_get_imageby_id(30994, 'square_small'); ?>
+		$attach = bt_get_imageby_id(30994, 'square_mid'); ?>
 		<section id="archive_episodios">
 			<figure class="fig_object">
 				<img src="<?php echo $attach; ?>" alt="category cover">
@@ -24,10 +24,7 @@
 						$show_id = get_post_meta($post->ID, '_episodio_show', true);
 						$programa = get_post($show_id); ?>
 						<li class="episode_item">
-							<a href="<?php the_permalink(); ?>">
-								<?php the_post_thumbnail('square_xsmall'); ?>
-							</a>
-
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('square_small'); ?></a>
 							<div class="ep_info">
 								<h2>
 									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -36,7 +33,6 @@
 									<a href="<?php echo get_the_permalink($programa->ID); ?>"><?php echo esc_html($programa->post_title); ?></a>
 								</h4>
 							</div>
-
 						</li>
 				<?php		
 					endwhile; ?>

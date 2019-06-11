@@ -50,7 +50,7 @@ $(document).ready(function(){
 	$(dom_logo_day).attr("src", setLiveImages()[1]);
 	$(dom_day_btn).css("background-image", `url(${setLiveImages()[2]})`);
 
-	$(".episodios_list_carousel").bxSlider({
+	$(".programas_list_carousel").bxSlider({
 		pager: false,
 		auto: true,
 		minSlides: 1,

@@ -19,9 +19,9 @@
 	            );
 	    $posts = get_posts($args);
 	    foreach ($posts as $post) {
+	        $square_big = get_the_post_thumbnail_url($post->ID, 'square_big');
 	        $square_mid = get_the_post_thumbnail_url($post->ID, 'square_mid');
 	        $square_small = get_the_post_thumbnail_url($post->ID, 'square_small');
-	        $square_xsmall = get_the_post_thumbnail_url($post->ID, 'square_xsmall');
 	        $medium = get_the_post_thumbnail_url($post->ID, 'medium');
 	        $large = get_the_post_thumbnail_url($post->ID, 'large');
 	        $thumbnail = get_the_post_thumbnail_url($post->ID, 'thumbnail');
@@ -31,9 +31,9 @@
 	            'r_name'=>$post->post_title,
 	            'r_content'=>wp_strip_all_tags($post->post_content, false),
 	            'r_thumbnails'=> array(
-	            	'square_xsmall'=>$square_xsmall,
 	            	'square_small'=>$square_small,
 	            	'square_mid'=>$square_mid,
+	            	'square_big'=>$square_big,
 	            	'medium'=>$medium,
 	            	'large'=>$large,
 	            	'thumbnail'=>$thumbnail
@@ -57,9 +57,9 @@
 	    $args = array('post_type'=>array('glosario'),'posts_per_page'=>12,'orderby'=>'date','order'=>'DESC');
 	    $posts = get_posts($args);
 	    foreach ($posts as $post) {
+	        $square_big = get_the_post_thumbnail_url($post->ID, 'square_big');
 	        $square_mid = get_the_post_thumbnail_url($post->ID, 'square_mid');
 	        $square_small = get_the_post_thumbnail_url($post->ID, 'square_small');
-	        $square_xsmall = get_the_post_thumbnail_url($post->ID, 'square_xsmall');
 	        $medium = get_the_post_thumbnail_url($post->ID, 'medium');
 	        $large = get_the_post_thumbnail_url($post->ID, 'large');
 	        $thumbnail = get_the_post_thumbnail_url($post->ID, 'thumbnail');
@@ -69,9 +69,9 @@
 	            'r_name'=>$post->post_title,
 	            'r_content'=>wp_strip_all_tags($post->post_content, false),
 	            'r_thumbnails'=> array(
-	            	'square_xsmall'=>$square_xsmall,
 	            	'square_small'=>$square_small,
 	            	'square_mid'=>$square_mid,
+	            	'square_big'=>$square_big,
 	            	'medium'=>$medium,
 	            	'large'=>$large,
 	            	'thumbnail'=>$thumbnail
