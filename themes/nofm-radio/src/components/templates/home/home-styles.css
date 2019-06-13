@@ -28,16 +28,18 @@ Colores Fontano
 .barra_list .fig_object .fig_caption .fig_title{font-size: 1rem;line-height: 1.2rem;}
 .home_section{margin-bottom:32px;}
 .home_section .section_title{display: inline-block;border-bottom: 2px solid black;padding:0 16px;margin-bottom:16px;}
-.home_section .fig_object .fig_caption .fig_title{display: inline;background-color: black;}
+.home_section .fig_object .fig_caption .fig_title{display: inline;}
 
 .see_more{width:100%;background-color:yellow;padding:16px 0;text-align: center;font-weight: 700;cursor: pointer;}
 .home_section .fig_object.big_post .fig_caption .fig_title{line-height: 29px;}
 
+#barra_tema_section{margin-bottom:0;}
 #barra_tema_section .bottom_list, 
-#barra_tema_section .middle_list .fig_object{display: flex;flex-direction: row;justify-content: space-between;align-items: center;border-bottom:1px solid black;}
+#barra_tema_section .middle_list .fig_object{display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
 #barra_tema_section .middle_list li:last-child > .fig_object{flex-direction: row-reverse;border-bottom:none;}
 #barra_tema_section .middle_list .fig_object img{max-width: 33.33%;flex-shrink: 0;}
 #barra_tema_section .middle_list .fig_object figcaption{padding:0 8px;}
+#barra_tema_section .middle_list .fig_object figcaption .fig_title{font-family: 'Lora';font-size: 1rem;}
 #barra_tema_section .bottom_list .fig_object .fig_caption .fig_title{font-size: 1rem;line-height: 1.2rem;}
 
 
