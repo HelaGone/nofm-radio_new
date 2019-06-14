@@ -131,8 +131,6 @@
 				wp_enqueue_style('base-theme-page-style', get_template_directory_uri().'/dist/page.css', array(), '1.0.0.' );
 				wp_enqueue_script('base-theme-page');
 			}
-		}else{
-
 		}
 
 	});

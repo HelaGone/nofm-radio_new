@@ -7,9 +7,13 @@
 			<div class="single_post_container">
 				<?php 
 					if(has_post_thumbnail()):
-						the_post_thumbnail();
+						the_post_thumbnail('rect_mid');
 					endif; ?>
 				<h1 class="single_title archivo_single_title"><?php the_title(); ?></h1>
+				<div class="single_post_data">
+					<time class="post_data_item"><?php echo get_the_date('D d, m Y', $post->ID); ?></time>
+					<span class="post_data_item"> - Por: <strong><?php echo get_the_author_link(); ?></strong></span>
+				</div>
 				<div class="single_content archivo_single_content">
 					<?php the_content(); ?>
 				</div>

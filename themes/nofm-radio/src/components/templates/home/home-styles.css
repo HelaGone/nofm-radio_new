@@ -28,7 +28,7 @@ Colores Fontano
 .barra_list .fig_object .fig_caption .fig_title{font-size: 1rem;line-height: 1.2rem;}
 .home_section{margin-bottom:32px;}
 .home_section .section_title{display: inline-block;border-bottom: 2px solid black;padding:0 16px;margin-bottom:16px;}
-.home_section .fig_object .fig_caption .fig_title{display: inline;}
+.home_section .fig_object .fig_caption .fig_title{display: inline;background-color: #000;}
 
 .see_more{width:100%;background-color:yellow;padding:16px 0;text-align: center;font-weight: 700;cursor: pointer;}
 .home_section .fig_object.big_post .fig_caption .fig_title{line-height: 29px;}
