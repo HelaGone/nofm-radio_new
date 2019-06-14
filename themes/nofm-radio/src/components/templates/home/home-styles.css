@@ -1,6 +1,14 @@
+/*
+ Dark palete +pink
+ #000a12
+ #263238
+ #4f5b62
+ #f50057
+*/
 #main_home_section{background-color:#eee;}
 #envivo_figure .fig_caption{top:0;}
 #envivo_figure .fig_caption div{position:absolute;bottom:0;display: flex;flex-direction: row;justify-content: flex-start;}
+#envivo_figure .fig_caption .fig_title{font-size: 4.5rem;}
 #envivo_figure .day_main_background{width:100%;height:80vh;object-fit: cover;object-position: 75% 50%;}
 #envivo_figure .logo_day{position:relative;top:13vh;width:50%;object-fit: contain;}
 
@@ -9,8 +17,8 @@
 
 #barra_programas{padding:32px 0 0 0;}
 .bx-wrapper{border:none!important;}
-.programas_list_carousel .programa_list_item .fig_caption{background-color:#000;}
-.programas_list_carousel .programa_list_item .fig_caption .fig_title{color:#f0e569;}
+.programas_list_carousel .programa_list_item .fig_caption{background-color:#000a12;}
+.programas_list_carousel .programa_list_item .fig_caption .fig_title{color:#f50057;}
 
 /*BARRAS*/
 /*
@@ -27,10 +35,9 @@ Colores Fontano
 .barra_list .barra_item{width:calc(100% / 2);}
 .barra_list .fig_object .fig_caption .fig_title{font-size: 1rem;line-height: 1.2rem;}
 .home_section{margin-bottom:32px;}
-.home_section .section_title{display: inline-block;border-bottom: 2px solid black;padding:0 16px;margin-bottom:16px;}
-.home_section .fig_object .fig_caption .fig_title{display: inline;background-color: #000;}
+.home_section .section_title{display: inline-block;border-bottom: 2px solid #000a12;padding:0 16px;margin-bottom:16px;}
+.home_section .fig_object .fig_caption .fig_title{display: inline;background-color:#000a12;}
 
-.see_more{width:100%;background-color:yellow;padding:16px 0;text-align: center;font-weight: 700;cursor: pointer;}
 .home_section .fig_object.big_post .fig_caption .fig_title{line-height: 29px;}
 
 #barra_tema_section{margin-bottom:0;}

@@ -28,10 +28,12 @@
 }
 .single_page .single_post_container .single_content p{
 	margin:16px 0;
+	word-wrap:break-word;
 }
 .single_page .single_post_container .single_content img, 
-.single_page .single_post_container .single_content .wp-embedded-content{
-	width:100%;
+.single_page .single_post_container .single_content .wp-embedded-content,
+.single_page .single_post_container .single_content .wp-caption.aligncenter{
+	width:100%!important;
 	height:auto;
 	max-width:853px;
 	margin: 0 auto;

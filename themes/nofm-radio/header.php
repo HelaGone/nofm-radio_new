@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1, height=device-height">
 	<meta name="HandheldFriendly" content="true"/>
 	<meta http-equiv="cleartype" content="on"/>
-	<meta name="theme-color" content="#000"/>
+	<meta name="theme-color" content="#000a12"/>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!-- Start wp_head -->
