@@ -1,6 +1,8 @@
-<?php get_header(); ?>
+<?php get_header(); global $wp_query; 
+	$type = ucfirst($wp_query->query['post_type']); ?>
 <section id="section_archivo">
-	<ul class="arhivo_list">
+	<h1><?php echo esc_html($type); ?></h1>
+	<ul class="archivo_list">
 		<?php
 			if(have_posts()):
 				while(have_posts()):

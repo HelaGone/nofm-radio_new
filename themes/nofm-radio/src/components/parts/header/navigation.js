@@ -4,6 +4,7 @@ $(document).ready(function(){
 	let btnMenu = document.getElementById('btn_menu');
 	btnMenu.addEventListener('click', ()=>{
 		btnMenu.classList.toggle('change');
+		console.log('click menu');
 	});
 
 });

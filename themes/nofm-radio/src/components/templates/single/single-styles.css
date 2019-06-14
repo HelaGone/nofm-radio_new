@@ -1,1 +1,17 @@
-#single_section h2{color:orange;}
+#single_section{font-family: 'Lora';padding:80px 0;}
+.single_page{
+	width:100%;
+	max-width: 666px;
+	margin:80px auto;
+}
+.single_page .single_post_container{
+	padding:8px;
+}
+.single_page .single_post_container .single_title{
+	border-bottom: 2px solid black;
+	font-size: 2rem;
+	margin-bottom:32px;
+	padding-right: 8px;
+	padding-bottom: 8px;
+}
+.single_page .single_post_container .single_content{}
