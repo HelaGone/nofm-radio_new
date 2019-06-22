@@ -1,5 +1,5 @@
 <?php get_header(); global $wp_query; ?>
-<section id="archive_programas">
+<section id="archive_programas" class="archive_section_wrapper">
 	<h1><?php echo esc_html(ucfirst($wp_query->query["post_type"])); ?></h1>
 <?php
 	if(have_posts()):

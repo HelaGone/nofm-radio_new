@@ -21,24 +21,14 @@
 .programas_list_carousel .programa_list_item .fig_caption .fig_title{color:#f50057;}
 
 /*BARRAS*/
-/*
-Colores Fontano
-	verde: #87b97c
-	morado: #947eb2
-	guinda: #9c4551
-	amarill0: #f0e569
-	morado 2: #c48cb7
-	naranja: #c37e63
-*/
-
 .barra_list{display: flex;flex-direction: row;justify-content: flex-start;}
 .barra_list .barra_item{width:calc(100% / 2);}
 .barra_list .fig_object .fig_caption .fig_title{font-size: 1rem;line-height: 1.2rem;}
 .home_section{margin-bottom:32px;}
-.home_section .section_title{display: inline-block;border-bottom: 2px solid #000a12;padding:0 16px;margin-bottom:16px;}
+.home_section .section_title{display: inline-block;border-bottom: 2px solid #000a12;padding:0 16px;margin-bottom:16px;font-size: 3em;}
 .home_section .fig_object .fig_caption .fig_title{display: inline;background-color:#000a12;}
 
-.home_section .fig_object.big_post .fig_caption .fig_title{line-height: 29px;}
+.home_section .fig_object.big_post .fig_caption .fig_title{font-size:1.6em;line-height: 29px;}
 
 #barra_tema_section{margin-bottom:0;}
 #barra_tema_section .bottom_list, 
@@ -58,7 +48,7 @@ Colores Fontano
 	.see_more{font-size: 2rem;}
 	#envivo_figure .logo_day{top:13vh;}
 	#envivo_figure .btn_play_live{width:200px;height: 200px;}
-	#envivo_figure .fig_title{font-size: 7rem;}
+	#envivo_figure .fig_caption .fig_title{font-size: 7em;}
 	#envivo_figure .fig_caption div{padding:32px;}
 	.home_section .section_title{font-size: 2.8rem;}
 	.home_section .fig_object.big_post  .fig_caption .fig_title{line-height: 66px;font-size: 3.6rem;}

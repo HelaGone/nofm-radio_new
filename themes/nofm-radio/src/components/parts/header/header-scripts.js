@@ -4,7 +4,7 @@ $(document).ready(function(){
 	$("#close_social").on("click", function(){
 		// console.log('click');
 		$(".social_network_header").hide("fast");
-		localStorage.setItem("shouldHideElem", "true");
+		localStorage.setItem("shouldHideElem", true);
 		// $('#main_site_header').css({position:'fixed'});
 	});
 
@@ -12,11 +12,8 @@ $(document).ready(function(){
 		console.log("click");
 	});
 
-	$(window).on("load", function(){
-		let should_hide_elem = localStorage.getItem("shouldHideElem");
-		if(should_hide_elem==="true"){
-			$(".social_network_header").hide("fast");
-		}
-	});
-
+	let should_hide_elem = localStorage.getItem("shouldHideElem");
+	if(typeof Storage !== "undefined" && should_hide_elem){
+		$(".social_network_header").css({display: "none"});
+	}
 });

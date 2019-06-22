@@ -10,7 +10,7 @@
 				if($key>0):
 					$attachment_meta = bt_get_attachment(get_post_thumbnail_id($post->ID));
 					if($count == 1): ?>
-						<figure class="fig_object">
+						<figure class="fig_object big_post">
 							<?php
 								$image_size = (wp_is_mobile()) ? 'rect_mid' : 'rect_large';
 								if(has_post_thumbnail()): ?>
