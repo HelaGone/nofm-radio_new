@@ -1,14 +1,14 @@
 #menu-type_menu, #social_subheader, #main_site_header div.social_network_header ul{display: flex;justify-content: space-between;flex-wrap: wrap;}
 #central_header{display: flex;justify-content: flex-start;flex-wrap: wrap;}
 #social_subheader{justify-content: center;}
-#central_header, #type_menu{padding:0 16px;}
+#central_header{padding:0 16px;}
+#type_menu{padding:8px 16px;}
 #main_site_header{margin:0 auto;}
 #main_site_header div.social_network_header{background-color: #000a12;padding: 8px 8px 24px 8px;color:#eee;}
 #main_site_header div.social_network_header h2{text-align: center;font-size: 1.2em;}
 #main_site_header div.social_network_header ul{padding:0 8px;}
 #central_header .header_item{vertical-align: middle;}
 .md-48{font-size: 48px;line-height: 70px;}
-
 
 #social_subheader{padding:8px 0 16px;}
 #social_subheader button{color:#eee;}

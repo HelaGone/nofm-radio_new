@@ -1,4 +1,14 @@
+/*
+ Dark palete +pink
+ #000a12
+ #263238
+ #4f5b62
+ #f50057
+*/
 .episode_list{padding:8px;}
 .episode_list .episode_item{display: flex;flex-direction: row;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.3);}
 .episode_list .episode_item img{margin-right:8px;border-radius: 3px;}
 .episode_list .episode_item a{display:block;vertical-align: middle;flex-wrap: wrap;}
+.episode_list .episode_item .ep_info h2{font-size: 1.2em;font-weight: 700;line-height: 1.4em;}
+.episode_list .episode_item .ep_info h3{font-size: .9em; font-weight: normal;color:#f50057;display: inline-block;background-color:#263238;padding: 6px 10px;border-radius: 3px;}
+.episode_list .episode_item .ep_info time{font-size: .7em; color:#565656;display: block;margin-top:8px;}

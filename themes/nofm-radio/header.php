@@ -54,7 +54,7 @@
 			</div>
 		</div>
 
-		<div id="central_header" class="container">
+		<div id="central_header">
 			<div id="btn_menu" class="btn_menu_container header_item">
 				<div class="bar1"></div>
 				<div class="bar2"></div>
