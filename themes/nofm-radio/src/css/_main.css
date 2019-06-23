@@ -34,7 +34,10 @@ a{color:inherit;text-decoration:none;}
 
 .fig_object{position:relative;}
 .fig_object img{width:100%;height: auto;}
-.fig_object .fig_caption{position: absolute;left: 0; right: 0; bottom: 0;background-image:linear-gradient(transparent, black);color:#fff;padding:8px;}
+.fig_object .fig_caption{position: absolute;left: 0; right: 0; bottom: 0;background-image:linear-gradient(transparent, #000a12);color:#fff;padding:8px;}
 .fig_object .fig_caption .fig_title{text-transform: uppercase;font-weight: 700;}
+
+.fig_object.type_figure .fig_caption{top:0;text-align: center;}
+.fig_object.type_figure .fig_caption .fig_title{font-weight: 700;display: inline-block;font-size: 3em;border-bottom: 3px solid #f50057;color:#f50057;position: relative;top: 50%;transform:translateY(-50%);}
 
 .see_more{width:100%;background-color:#f50057;padding:16px 0;text-align: center;font-weight: 700;cursor: pointer;}

@@ -8,8 +8,8 @@
 		$type = $wp_query->queried_object->label; 
 		$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_big';
 		$attach = bt_get_imageby_id(31621, $img_size); ?>
-		<section id="archive_episodios" class="archive_section_wrapper">
-			<figure class="fig_object">
+		<section id="archive_episodios" class="archive_section_wrapper container">
+			<figure class="fig_object type_figure">
 				<img src="<?php echo $attach; ?>" alt="category cover">
 				<figcaption class="fig_caption">
 					<h1 class="fig_title"><?php echo esc_html($type); ?></h1>
@@ -40,6 +40,7 @@
 					endwhile; ?>
 			</ul>
 		</section>
-<?php			
+<?php
+		echo bt_print_pagination();
 	endif; ?>
 <?php get_footer(); ?>

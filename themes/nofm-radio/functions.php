@@ -271,8 +271,13 @@
 			if(is_post_type_archive('programas')){
 				$query->set('orderby', 'name');
 				$query->set('order', 'ASC');
+				$query->set('posts_per_page', 12);
 			}
-			// $query->set( 'cat', '123' );
+
+			if(is_post_type_archive('episodios')){
+				$query->set('posts_per_page', 9);	
+			}
+			
 		}
 		return $query;
 	});
