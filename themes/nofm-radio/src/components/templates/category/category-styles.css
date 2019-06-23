@@ -1,1 +1,13 @@
-#category_section h2{color:red;}
+/*
+ Dark palete +pink
+ #000a12
+ #263238
+ #4f5b62
+ #f50057
+*/
+#category_section .fig_object.type_figure .fig_caption .fig_title{font-size: 1.5em;}
+
+#category_section .posts_pool .fig_object .fig_caption{background-color:rgba(0,10,18, 0.8);}
+#category_section .posts_pool .fig_object .fig_caption .fig_title{color:#f50057;line-height: 1.3em;}
+#category_section .posts_pool .fig_object .fig_caption p{font-size: .7em;font-weight: 300;line-height: 1.4em;}
+#category_section .posts_pool .fig_object .fig_caption time{font-size: .7em;}
