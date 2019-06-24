@@ -8,10 +8,6 @@
 
 #archive_programas .shows_pool .fig_object .fig_caption .fig_title{font-size: 1.2em;}
 
-/*PAGINATION LINKS*/
-.page-numbers{display: flex;flex-direction: row;justify-content: center;background-color: #000a12;}
-.page-numbers li{margin: 0 8px;padding:8px;color:#f50057;}
-
 @media screen and (min-width: 768px){
 	#archive_programas .shows_pool{display: flex;flex-direction: row;flex-wrap: wrap;margin:32px 0;}
 	#archive_programas .shows_pool .fig_object{width:calc(100% / 2 - 16px);margin-right: 32px;margin-bottom:32px;}

@@ -14,10 +14,6 @@
 .episode_list .episode_item .ep_info h3{font-size:.9em; font-weight:normal;display:inline-block;}
 .episode_list .episode_item .ep_info time{font-size:.8em; color:#565656;display: block;margin-top:8px;}
 
-/*PAGINATION LINKS*/
-.page-numbers{display: flex;flex-direction: row;justify-content: center;background-color: #000a12;}
-.page-numbers li{margin: 0 8px;padding:8px;color:#f50057;}
-
 @media screen and (min-width:768px){
 	.archive_section_wrapper h1{font-size: 5em;}
 	.episode_list{display:flex;flex-wrap:wrap;}

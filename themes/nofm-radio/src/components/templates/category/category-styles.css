@@ -5,9 +5,28 @@
  #4f5b62
  #f50057
 */
-#category_section .fig_object.type_figure .fig_caption .fig_title{font-size: 1.5em;}
+#category_section .fig_object.type_figure .fig_caption .fig_title{font-size: 1.8em;}
 
 #category_section .posts_pool .fig_object .fig_caption{background-color:rgba(0,10,18, 0.8);}
 #category_section .posts_pool .fig_object .fig_caption .fig_title{color:#f50057;line-height: 1.3em;}
 #category_section .posts_pool .fig_object .fig_caption p{font-size: .7em;font-weight: 300;line-height: 1.4em;}
 #category_section .posts_pool .fig_object .fig_caption time{font-size: .7em;}
+
+@media screen and (min-width: 380px){
+	#category_section .posts_pool .fig_object .fig_caption{font-size: 125%;}
+}
+
+@media screen and (min-width: 768px){
+	#category_section .posts_pool .fig_object .fig_caption{font-size: 200%;}
+	#category_section .fig_object.type_figure .fig_caption .fig_title{font-size: 300%;}
+	#category_section .posts_pool{display: flex;flex-direction: row;flex-wrap: wrap;margin:32px 0;}
+	#category_section .posts_pool .fig_object{width:calc(100% / 2 - 16px);margin:0 32px 32px 0;}
+	#category_section .posts_pool .fig_object:nth-of-type(2n){margin:0 0 32px 0;}
+}
+
+@media screen and (min-width: 1280px){
+	#category_section .posts_pool .fig_object{width:calc(100% / 3 - 16px);margin:0 24px 24px 0;}
+	#category_section .posts_pool .fig_object:nth-of-type(2n){margin:0 24px 24px 0;}
+	#category_section .posts_pool .fig_object:nth-of-type(3n){margin:0 0 24px 0;}
+
+}

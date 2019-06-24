@@ -16,7 +16,7 @@
 				endwhile;
 			endif; ?>
 	</ul>
-	<?php echo bt_print_pagination(); ?>
 </section>
-
-<?php get_footer(); ?>
+<?php 
+	echo bt_print_pagination(); 
+	get_footer(); ?>

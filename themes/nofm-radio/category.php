@@ -5,7 +5,7 @@
 		$count = 0;
 		while(have_posts()):
 			the_post(); 
-			$image_size = (wp_is_mobile()) ? 'rect_small' : 'rect_big';
+			$image_size = (wp_is_mobile()) ? 'square_mid' : 'rect_big';
 			$image_size_pool = (wp_is_mobile()) ? 'square_mid' : 'square_big';
 			if($count < 1): ?>
 				<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object type_figure">
@@ -45,4 +45,6 @@
 <?php
 	endif; ?>
 </section>
-<?php get_footer(); ?>
+<?php 
+	echo bt_print_pagination();
+	get_footer(); ?>

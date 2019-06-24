@@ -21,7 +21,7 @@
 						the_post();
 						$show_id = get_post_meta($post->ID, '_episodio_show', true);
 						$programa = get_post($show_id); 
-						$image_size = (wp_is_mobile()) ? 'square_small' : 'square_big'; ?>
+						$image_size = (wp_is_mobile()) ? 'rect_mid' : 'rect_big'; ?>
 						<li class="episode_item">
 							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr(get_post_meta(get_post_thumbnail_id($post->ID), '_wp_attachment_image_alt', true)); ?>">
 								<?php the_post_thumbnail($image_size); ?>
