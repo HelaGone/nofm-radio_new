@@ -1,3 +1,3 @@
 $(document).ready(function(){
-	console.log('navigation');
+	console.log('taxonomy js');
 });

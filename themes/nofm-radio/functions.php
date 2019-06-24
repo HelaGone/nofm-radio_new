@@ -71,6 +71,10 @@
 		wp_register_script('base-theme-archive-archivo', get_template_directory_uri().'/dist/archive_archivo.js', array('jquery'), '1.0.0');
 		wp_register_script('base-theme-archive-programas', get_template_directory_uri().'/dist/archive_programas.js', array('jquery'), '1.0.0');
 		wp_register_script('base-theme-archive-episodios', get_template_directory_uri().'/dist/archive_episodios.js', array('jquery'), '1.0.0');
+
+		//Taxonomy
+		wp_register_script('base-theme-taxonomy-temas', get_template_directory_uri().'/dist/taxonomy_temas.js', array('jquery'), '1.0.0');
+
 		wp_register_script('base-theme-single', get_template_directory_uri().'/dist/single.js', array('jquery'), '1.0.0');
 
 		wp_register_script('base-theme-archivo', get_template_directory_uri().'/dist/single_archivo.js', array('jquery'), '1.0.0');
@@ -113,6 +117,14 @@
 				wp_enqueue_style('base-theme-category-style', get_template_directory_uri().'/dist/archive_archivo.css', array(), '1.0.0.' );
 				wp_enqueue_script('base-theme-archive-archivo');
 			}
+
+			//LOAD CSS & JS FOR TAXONOMY TEMAS
+			if(is_tax('temas')){
+				wp_enqueue_style('base-theme-taxonomy-temas-style', get_template_directory_uri().'/dist/taxonomy_temas.css', array(), '1.0.0' );
+				wp_enqueue_script('base-theme-taxonomy-temas');
+			}
+
+
 		}elseif(is_single()){
 			//Load single general styling and scripting
 			wp_enqueue_style('base-theme-single-style', get_template_directory_uri().'/dist/single.css', array(), '1.0.0.' );
@@ -323,6 +335,18 @@
 			$names = wp_list_pluck($terms ,'name');
 			echo implode(', ', $names);
 		}
+	}
+
+	function bt_print_term_cloud($post_id, $taxonomy = 'category'){
+		$terms = get_the_terms( $post_id, $taxonomy );
+		$html = '<div class="term_pool">';
+		if($terms&&!is_wp_error($terms)){
+			foreach($terms as $key => $term){
+				$html .= '<span><a href="'.get_term_link($term->term_id, $taxonomy).'">'.esc_html($term->name).'</a></span>';
+			}
+		}
+		$html .= '</div>';
+		return $html;
 	}
 
 	function register_rest_images(){
