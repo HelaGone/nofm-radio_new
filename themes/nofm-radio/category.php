@@ -1,5 +1,5 @@
 <?php get_header(); global $wp_query;?>
-<section id="category_section">
+<section id="category_section" class="container">
 <?php
 	if(have_posts()):
 		$count = 0;

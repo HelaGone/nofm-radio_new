@@ -1,48 +1,37 @@
-<?php get_header(); global $wp_query; ?>
-	<section id="tax_section">
-	<?php 
-		$queried_obj = $wp_query->queried_object; 
-		// echo '<pre>';
-		// 	print_r($queried_obj);
-		// echo '</pre>';
-		?>
-		<h1><?php echo esc_html($queried_obj->name); ?></h1>
-		<div class="tax_posts_pool">
-		<?php
-			if(have_posts()):
-				while(have_posts()):
-					the_post(); 
-					$img_size = (wp_is_mobile()) ? 'suquare_mid' : 'suqare_big'; 
-					// $schedule_day = get_post_meta($post->ID, '_prog_horario_dias', true);
-					// $shcedule_hour = get_post_meta($post->ID, '_prog_hora', true);
-					?>
-					<figure class="fig_object">
-						<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-							<?php (has_post_thumbnail()) ? the_post_thumbnail($img_size) : ''; ?>
-						</a>
-						<figcaption class="fig_caption">
-							<?php 
-								$terms = get_the_terms($post->ID, $queried_obj->taxonomy);
-								foreach ($terms as $key => $term): ?>
-									<span>
-										<a href="<?php echo esc_url(get_term_link($term->term_id)); ?>" title="<?php echo esc_attr($term->name); ?>">
-											<?php echo esc_html($term->name); ?>
-										</a>
-									</span>
-							<?php
-								endforeach; ?>
-							<h2 class="fig_title">
-								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-							</h2>
-							<time>
-								<?php echo get_the_date('D, d.m.Y'); ?>
-							</time>
-						</figcaption>
-					</figure>
+<?php get_header(); 
+	global $wp_query;
+	if(have_posts()): 
+		$type = $wp_query->queried_object; 
+		$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_big';
+		$attach = bt_get_imageby_id(31717, $img_size); ?>
+		<section id="tax_archive" class="archive_section_wrapper container">
+			<figure class="fig_object type_figure">
+				<img src="<?php echo $attach; ?>" alt="category cover">
+				<figcaption class="fig_caption">
+					<h1 class="fig_title"><?php echo esc_html($type->name); ?></h1>
+				</figcaption>
+			</figure>
+			<ul class="taxonomy_list container">
 				<?php
-				endwhile;
-			endif;
-		?>
-		</div>
-	</section>
+					while(have_posts()):
+						the_post();
+						$image_size = (wp_is_mobile()) ? 'rect_mid' : 'rect_big'; ?>
+						<li class="taxonomy_list_item">
+							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr(get_post_meta(get_post_thumbnail_id($post->ID), '_wp_attachment_image_alt', true)); ?>">
+								<?php the_post_thumbnail($image_size); ?>
+							</a>
+							<div class="item_info">
+								<h2>
+									<a href="<?php the_permalink(); ?>" rel="follow" title="<?php echo esc_attr($post->post_title); ?>"><?php the_title(); ?></a>
+								</h2>
+								<time><?php echo get_the_date('D, d.m.Y'); ?></time>
+							</div>
+						</li>
+				<?php		
+					endwhile; ?>
+			</ul>
+		</section>
+<?php
+		echo bt_print_pagination();
+	endif; ?>
 <?php get_footer(); ?>

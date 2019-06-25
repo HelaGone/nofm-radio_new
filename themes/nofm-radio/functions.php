@@ -73,6 +73,7 @@
 		wp_register_script('base-theme-archive-episodios', get_template_directory_uri().'/dist/archive_episodios.js', array('jquery'), '1.0.0');
 
 		//Taxonomy
+		wp_register_script('base-theme-taxonomy-scripts', get_template_directory_uri().'/dist/taxonomy.js', array('jquery'), '1.0.0');
 		wp_register_script('base-theme-taxonomy-temas', get_template_directory_uri().'/dist/taxonomy_temas.js', array('jquery'), '1.0.0');
 
 		wp_register_script('base-theme-single', get_template_directory_uri().'/dist/single.js', array('jquery'), '1.0.0');
@@ -82,6 +83,7 @@
 		wp_register_script('base-theme-programas', get_template_directory_uri().'/dist/single_programas.js', array('jquery'), '1.0.0');
 		wp_register_script('base-theme-episodios', get_template_directory_uri().'/dist/single_episodios.js', array('jquery'), '1.0.0');
 		wp_register_script('base-theme-page', get_template_directory_uri().'/dist/page.js', array('jquery'), '1.0.0');
+
 		wp_register_script('bx-slider-scripts', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array('jquery'), '4.2.12');
 
 		//Load site-wide general styling and scripting
@@ -118,10 +120,14 @@
 				wp_enqueue_script('base-theme-archive-archivo');
 			}
 
-			//LOAD CSS & JS FOR TAXONOMY TEMAS
-			if(is_tax('temas')){
-				wp_enqueue_style('base-theme-taxonomy-temas-style', get_template_directory_uri().'/dist/taxonomy_temas.css', array(), '1.0.0' );
-				wp_enqueue_script('base-theme-taxonomy-temas');
+			if(is_tax()){
+				wp_enqueue_style('base-theme-taxonomy-style', get_template_directory_uri().'/dist/taxonomy.css', array(), '1.0.0' );
+				wp_enqueue_script('base-theme-taxonomy-scripts');
+				//LOAD CSS & JS FOR TAXONOMY TEMAS
+				if(is_tax('temas')){
+					wp_enqueue_style('base-theme-taxonomy-temas-style', get_template_directory_uri().'/dist/taxonomy_temas.css', array(), '1.0.0' );
+					wp_enqueue_script('base-theme-taxonomy-temas');
+				}
 			}
 
 
