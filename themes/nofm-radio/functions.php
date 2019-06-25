@@ -295,6 +295,10 @@
 			if(is_post_type_archive('episodios')){
 				$query->set('posts_per_page', 9);	
 			}
+
+			if(is_category()){
+				$query->set('posts_per_page', 7);
+			}
 			
 		}
 		return $query;

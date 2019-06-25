@@ -5,3 +5,29 @@
  #4f5b62
  #f50057
 */
+.category_section .fig_object.type_figure .fig_caption .fig_title{font-size: 2em;}
+.category_section .fig_object img{max-width: 420px;object-fit: cover;}
+
+@media screen and (min-width: 480px){
+	.category_section .fig_object:not(.type_figure){max-width: 420px;}
+	.category_section .fig_object.type_figure .fig_caption{background-color: transparent;background-image: none;text-align: right;}
+	.category_section .fig_object.type_figure .fig_caption .fig_title{background-color: #000a12;display: inline;}
+
+	.category_section .posts_pool .list_row, 
+	.category_section .posts_pool .duo_row {display: flex;flex-direction: row;align-items: flex-start;}
+	.category_section .fig_object.last_figure{max-width: 100%;}
+	.category_section .fig_object.last_figure img{margin-left: calc(100% - 420px)}
+	.category_section .fig_object.last_figure .fig_caption{background-image: none;background-color: transparent;text-align: left;bottom: 32px;}
+	.category_section .fig_object.last_figure .fig_caption time,
+	.category_section .fig_object.last_figure .fig_caption h2,
+	.category_section .fig_object.last_figure .fig_caption p{background-color: #000a12;display: inline-block;}
+}
+
+@media screen and (min-width: 1280px){
+	.category_section .fig_object.type_figure .fig_caption{text-align: center;}
+	.category_section .fig_object img{max-width: 100%;max-height: 680px;}
+	.category_section .fig_object:not(.type_figure){max-width: 720px;}
+	.category_section .fig_object.last_figure{max-width: 100%;}
+	.category_section .posts_pool .duo_row .fig_object{max-width: 100%;}
+	.category_section .fig_object.last_figure img{margin:0;}
+}
