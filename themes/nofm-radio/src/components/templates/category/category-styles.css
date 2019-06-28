@@ -3,24 +3,43 @@
  #000a12
  #263238
  #4f5b62
+ #CAE8FA
  #f50057
 */
-.category_section .fig_object.type_figure .fig_caption .fig_title{font-size: 2em;}
+.category_section .fig_object .fig_caption br{display: none;}
+.category_section .fig_object.type_figure .fig_caption, 
+.category_section .fig_object.last_figure .fig_caption{padding:8px 0;}
+.category_section .fig_object.type_figure .fig_caption .fig_title, 
+.category_section .fig_object.last_figure .fig_caption .fig_title{font-size: 180%;padding:0 8px;}
+.category_section .fig_object.type_figure .fig_caption time,
+.category_section .fig_object.last_figure .fig_caption time{padding:4px 8px;}
+.category_section .fig_object.last_figure .fig_caption p{padding:0 8px;}
 .category_section .fig_object img{max-width: 420px;object-fit: cover;}
+.category_section .posts_pool .fig_object .fig_caption .fig_title{font-size: 150%;} 
 
-@media screen and (min-width: 480px){
+.category_section .fig_object.last_figure .fig_caption time{color:#CAE8FA;}
+
+@media screen and (min-width: 480px){	
 	.category_section .fig_object:not(.type_figure){max-width: 420px;}
 	.category_section .fig_object.type_figure .fig_caption{background-color: transparent;background-image: none;text-align: right;}
 	.category_section .fig_object.type_figure .fig_caption .fig_title{background-color: #000a12;display: inline;}
 
+	.category_section .posts_pool .fig_object .fig_caption .fig_title{font-size:120%;}
+
+	/*.category_section .fig_object .fig_caption .fig_title:not(.type_figure .fig_title){font-size:120%;}*/
 	.category_section .posts_pool .list_row, 
 	.category_section .posts_pool .duo_row {display: flex;flex-direction: row;align-items: flex-start;}
+	.category_section .posts_pool .list_row .fig_object .fig_caption p{display: none;}
 	.category_section .fig_object.last_figure{max-width: 100%;}
 	.category_section .fig_object.last_figure img{margin-left: calc(100% - 420px)}
 	.category_section .fig_object.last_figure .fig_caption{background-image: none;background-color: transparent;text-align: left;bottom: 32px;}
 	.category_section .fig_object.last_figure .fig_caption time,
 	.category_section .fig_object.last_figure .fig_caption h2,
 	.category_section .fig_object.last_figure .fig_caption p{background-color: #000a12;display: inline-block;}
+}
+
+@media screen and (min-width: 667px){
+	/*.category_section .fig_object.type_figure .fig_caption .fig_title{font-size: 160%;}*/
 }
 
 @media screen and (min-width: 1280px){
