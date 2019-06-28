@@ -60,7 +60,6 @@
 }
 @media screen and (min-width: 1024px){
 	.see_more{width:20%;margin:0 auto;border-radius: 2px;}
-	#barra_a_section{border-bottom:2px solid #9c4551;}
 	#barra_a_section .see_more{margin:60px auto;}
 	#barra_b_section .fig_object.big_post .fig_caption, #barra_c_section .fig_object.big_post .fig_caption{text-align: right;background-image: none;}
 	#barra_b_section .fig_object.big_post img, #barra_c_section .fig_object.big_post img{max-width: 420px;}

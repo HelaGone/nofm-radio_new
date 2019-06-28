@@ -29,7 +29,7 @@
 	            'r_id'=>$post->ID,
 	            'r_date'=>$post->post_date,
 	            'r_name'=>$post->post_title,
-	            'r_content'=>wp_strip_all_tags($post->post_content, false),
+	            'r_content'=>apply_filters('the_content', $post->post_content),
 	            'r_thumbnails'=> array(
 	            	'square_small'=>$square_small,
 	            	'square_mid'=>$square_mid,
@@ -67,7 +67,7 @@
 	            'r_id'=>$post->ID,
 	            'r_date'=>$post->post_date,
 	            'r_name'=>$post->post_title,
-	            'r_content'=>wp_strip_all_tags($post->post_content, false),
+	            'r_content'=>apply_filters('the_content', $post->post_content),
 	            'r_thumbnails'=> array(
 	            	'square_small'=>$square_small,
 	            	'square_mid'=>$square_mid,
