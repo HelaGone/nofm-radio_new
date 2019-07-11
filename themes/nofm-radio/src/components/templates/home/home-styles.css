@@ -5,27 +5,18 @@
  #4f5b62
  #f50057
 */
-#main_home_section{background-color:#eee;}
-#envivo_figure .fig_caption{top:0;}
-#envivo_figure .fig_caption div{position:absolute;bottom:0;display: flex;flex-direction: row;justify-content: flex-start;}
-#envivo_figure .fig_caption .fig_title{font-size: 4.5rem;}
-#envivo_figure .day_main_background{width:100%;height:80vh;object-fit: cover;object-position: 75% 50%;}
-#envivo_figure .logo_day{position:relative;top:13vh;width:50%;object-fit: contain;}
-
-#envivo_figure .btn_play_live{width:120px; height: 120px;background-color: transparent;border:none; background-size: contain;background-repeat: no-repeat;background-position: center;}
-#envivo_figure .btn_play_live:hover{cursor: pointer;}
-
-#barra_programas{padding:32px 0 0 0;}
+.wide_wrapper{background-image:linear-gradient(black, transparent, transparent, red);}
+/*#barra_programas{padding:32px 0 0 0;}
 .bx-wrapper{border:none!important;}
 .programas_list_carousel .programa_list_item .fig_caption{background-color:#000a12;}
-.programas_list_carousel .programa_list_item .fig_caption .fig_title{color:#f50057;}
+.programas_list_carousel .programa_list_item .fig_caption .fig_title{color:#f50057;}*/
 
 /*BARRAS*/
 .barra_list{display: flex;flex-direction: row;justify-content: flex-start;}
 .barra_list .barra_item{width:calc(100% / 2);}
 .barra_list .fig_object .fig_caption .fig_title{font-size: 1rem;line-height: 1.2rem;}
 .home_section{margin-bottom:32px;}
-.home_section .section_title{display: inline-block;border-bottom: 2px solid #000a12;padding:0 16px;margin-bottom:16px;font-size: 3em;}
+.home_section .section_title{display: inline-block;border-bottom: 2px solid #fff;padding:0 16px;margin-bottom:16px;font-size: 3em;color:#fff;}
 .home_section .fig_object .fig_caption .fig_title{display: inline;background-color:#000a12;}
 
 .home_section .fig_object.big_post .fig_caption .fig_title{font-size:1.6em;line-height: 29px;}

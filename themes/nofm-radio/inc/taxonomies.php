@@ -6,9 +6,8 @@
 
 	function custom_taxonomies_callback(){
 
-		// AUTORES
+		// PROYECTOS
 		if( ! taxonomy_exists('proyecto')){
-
 			$labels = array(
 				'name'              => 'Proyectos',
 				'singular_name'     => 'Proyecto',
@@ -34,33 +33,6 @@
 			);
 
 			register_taxonomy( 'proyecto', 'episodios', $args );
-
-
-			$labels = array(
-				'name'              => 'Temas',
-				'singular_name'     => 'Tema',
-				'search_items'      => 'Buscar',
-				'all_items'         => 'Todos',
-				'edit_item'         => 'Editar Tema',
-				'update_item'       => 'Actualizar Tema',
-				'add_new_item'      => 'Nuevo Tema',
-				'new_item_name'     => 'Nombre Nuevo Tema',
-				'menu_name'         => 'Temas'
-			);
-
-			$args = array(
-				'hierarchical'      => true,
-				'labels'            => $labels,
-				'show_ui'           => true,
-				'show_admin_column' => true,
-				'show_in_nav_menus' => true,
-				'show_in_rest'			=> true,
-				'public'						=> true,
-				'query_var'         => true,
-				'rewrite'           => array( 'slug' => 'temas' ),
-			);
-
-			register_taxonomy( 'temas', 'programas', $args );
 		}
 		
 		

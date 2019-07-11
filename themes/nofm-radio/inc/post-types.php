@@ -25,14 +25,14 @@
 			'publicly_queryable' => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
-			'show_in_rest'		 	 => true,
+			'show_in_rest'		 => true,
 			'query_var'          => true,
 			'rewrite'            => array( 'slug' => 'archivo' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 4,
-			'menu_icon'					 => 'dashicons-archive',
+			'menu_icon'			 => 'dashicons-archive',
 			'taxonomies'         => array(),
 			'supports'           => array( 'title', 'editor', 'custom-fields' )
 		);
@@ -67,7 +67,7 @@
 			'hierarchical'       => false,
 			'menu_position'      => 5,
 			'menu_icon'			 => 'dashicons-microphone',
-			'taxonomies'         => array( 'temas' ),
+			'taxonomies'         => array( 'category', 'post_tag' ),
 			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
 		);
 		register_post_type( 'programas', $args );
@@ -93,7 +93,7 @@
 			'publicly_queryable' => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
-			'show_in_rest'		   => true,
+			'show_in_rest'		 => true,
 			'query_var'          => true,
 			'rewrite'            => array( 'slug' => 'episodios' ),
 			'capability_type'    => 'post',
@@ -127,14 +127,14 @@
 			'publicly_queryable' => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
-			'show_in_rest'		   => true,
+			'show_in_rest'		 => true,
 			'query_var'          => true,
 			'rewrite'            => array( 'slug' => 'glosario' ),
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
 			'menu_position'      => 7,
-			'menu_icon'					 => 'dashicons-playlist-audio',
+			'menu_icon'			 => 'dashicons-playlist-audio',
 			'taxonomies'         => array(),
 			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'excerpt')
 		);

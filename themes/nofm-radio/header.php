@@ -16,11 +16,7 @@
 </head>
 <body <?php body_class(); ?>>
 	<header id="main_site_header">
-		<div class="social_network_header">
-			<div id="social_subheader">
-				<h2>Conecta con nosotros</h2>
-				<button id="close_social" class="">X</button>
-			</div>
+		<div class="social_network_header container">
 			<ul>
 				<li>
 					<a href="https://www.facebook.com/todomenosmiedo/">
@@ -43,6 +39,7 @@
 					</a>
 				</li>
 			</ul>
+			<h2>TODO MENOS MIEDO</h2>
 			<div class="voscast_script_players">
 				<!--VosCast.com Playlist Files-->
 				<script type="text/javascript" src="//cdn.voscast.com/resources/?key=d3b9d948ce2a095ad198b852a44fa999&c=playlist"></script>
@@ -54,23 +51,31 @@
 			</div>
 		</div>
 
-		<div id="central_header">
+		<section id="main_header_section" class="container">
+			<figure id="envivo_figure" class="fig_object">
+				<img class="day_main_background" src="<?php echo esc_url(bt_get_imageby_id(30967, 'square_mid')); ?>" alt="EN VIVO">
+				<figcaption class="fig_caption">
+					<img class="logo_day" src="">
+					<div>
+						<h1 class="fig_title">EN<br/>VIVO</h1>
+						<button class="btn_play_live"></button>
+					</div>
+				</figcaption>
+			</figure>
+		</section>
+
+		<div id="central_header" class="container">
 			<div id="btn_menu" class="btn_menu_container header_item">
 				<div class="bar1"></div>
 				<div class="bar2"></div>
 				<div class="bar3"></div>
 			</div>
-			<div id="logo" class="header_item">
-				<a href="<?php echo esc_url(home_url()); ?>"></a>
-			</div>
+			<nav id="type_menu" class="header_item">
+				<?php wp_nav_menu( array( 'theme_location' => 'type-menu' ) ); ?>
+			</nav>
 		</div>
 
-		<nav id="type_menu" class="container">
-			<?php wp_nav_menu( array( 'theme_location' => 'type-menu' ) ); ?>
-		</nav>
 	</header>
 	<!-- <nav class="main_navigation">
 		<?php //wp_nav_menu( array( 'theme_location' => 'my-custom-menu', 'container_class' => 'custom-menu-class' ) ); ?>
 	</nav> -->
-		
-			
