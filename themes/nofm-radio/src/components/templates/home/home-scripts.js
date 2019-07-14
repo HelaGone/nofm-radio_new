@@ -44,7 +44,7 @@ $(document).ready(function(){
 		return day_set;
 	}
 
-	console.log(setLiveImages()[0]);
+	//console.log(setLiveImages()[0]);
 
 	$(dom_figure).find('.day_main_background').attr("src", setLiveImages()[0]);
 	$(dom_logo_day).attr("src", setLiveImages()[1]);

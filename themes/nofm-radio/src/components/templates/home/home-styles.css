@@ -30,17 +30,8 @@
 #barra_tema_section .middle_list .fig_object figcaption .fig_title{font-family: 'Lora';font-size: 1rem;}
 #barra_tema_section .bottom_list .fig_object .fig_caption .fig_title{font-size: 1rem;line-height: 1.2rem;}
 
-
-@media screen and (min-width: 568px){
-	#envivo_figure .day_main_background{object-position: 75% 0%;}
-	#envivo_figure .logo_day{top:0;}
-}
 @media screen and (min-width: 768px){
 	.see_more{font-size: 2rem;}
-	#envivo_figure .logo_day{top:13vh;}
-	#envivo_figure .btn_play_live{width:200px;height: 200px;}
-	#envivo_figure .fig_caption .fig_title{font-size: 7em;}
-	#envivo_figure .fig_caption div{padding:32px;}
 	.home_section .section_title{font-size: 2.8rem;}
 	.home_section .fig_object.big_post  .fig_caption .fig_title{line-height: 66px;font-size: 3.6rem;}
 	.home_section .fig_object .fig_caption .fig_title{font-size: 2rem;line-height: 2.3rem;}

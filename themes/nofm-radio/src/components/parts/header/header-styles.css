@@ -1,17 +1,21 @@
-#central_header{display: flex;justify-content: space-between;flex-wrap: wrap;padding:0 16px;}
+#central_header{display: flex;justify-content: space-between;padding:0 8px;align-items: center;}
 #central_header .header_item{vertical-align: middle;}
-#type_menu{padding:8px 16px;width:90%;}
+#type_menu{padding:8px 0 8px 12px;width:90%;}
+
+.fix-header{position: fixed;left:0;right:0;top:0;z-index: 9;background-color:rgba(0,0,0,0.75);border-bottom:2px solid white;}
+.paddingTop{padding-top:70px;}
 
 #main_site_header{margin:0 auto;background-color: #000;color:#fff;}
-#main_site_header .social_network_header{padding: 0px 8px;display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;position: fixed;top:0;left: 0;right: 0;z-index: 1;}
-#main_site_header .social_network_header ul{padding:0 8px;display: flex;flex-wrap: wrap;flex-direction: row;}
-#main_site_header .social_network_header ul li{padding:0 8px;}
-#main_site_header .social_network_header .voscast_script_players a{margin:8px;}
-#main_site_header .social_network_header h2{text-align: center;font-size: 170%;font-weight: bold;}
+#main_site_header .social_network_header{padding:0;display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;position: absolute;top:0;left: 0;right: 0;z-index: 1;}
+#main_site_header .social_network_header ul{display: flex;flex-wrap: wrap;flex-direction: row;}
+#main_site_header .social_network_header ul li{padding:0;}
+/*#main_site_header .social_network_header ul li:first-child{padding-left:0;}*/
+#main_site_header .social_network_header ul li .social_logos{width: 14px;height: 14px;}
+#main_site_header .social_network_header h2{text-align: center;/*font-size: 170%;*/font-weight: bold;}
 
 #main_header_section{background-color:#eee;}
 #envivo_figure .fig_caption{top:0;background-image: url(../../../img/granulado.png);background-color: rgba(0,0,0,0.3);}
-#envivo_figure .fig_caption div{position:absolute;top:165px;display: flex;flex-direction: row;justify-content: flex-start;left:8vw;}
+#envivo_figure .fig_caption div{position:absolute;top:115px;left:0;display: flex;flex-direction: row;justify-content: flex-start;}
 #envivo_figure .fig_caption .fig_title{font-size: 4.5rem;color:red;}
 #envivo_figure .day_main_background{width:100%;height:50vh;object-fit: cover;object-position: 75% 50%;}
 #envivo_figure .logo_day{position:relative;left:8vh;width:30%;object-fit: contain;}
@@ -31,13 +35,30 @@
 
 /*Hamburguer button*/
 .btn_menu_container{display: inline-block;cursor: pointer;}
-.bar1, .bar2, .bar3 {width: 35px;height: 5px;background-color: #fff;margin: 6px 0;transition: 0.4s;}
-.change .bar1 {-webkit-transform: rotate(-45deg) translate(-9px, 6px);transform: rotate(-45deg) translate(-9px, 6px);}
+.bar1, .bar2, .bar3 {width: 24px;height: 3px;background-color: red;margin: 3px 0;transition: 0.4s;}
+.change .bar1 {-webkit-transform: rotate(-25deg) translate(-2px, 5px);transform: rotate(-25deg) translate(-2px, 5px);}
 .change .bar2 {opacity: 0;}
-.change .bar3 {-webkit-transform: rotate(45deg) translate(-8px, -8px);transform: rotate(45deg) translate(-8px, -8px);}
+.change .bar3 {-webkit-transform: rotate(25deg) translate(-3px, -6px);transform: rotate(25deg) translate(-3px, -6px);}
 
 /*MEDIA QUERIES*/
+@media screen and (min-width: 375px){
+	#main_site_header .social_network_header ul li{padding:0 4px;}
+	#main_site_header .social_network_header ul li .social_logos{width: 16px;height: 16px;}
+	#main_site_header .social_network_header .voscast_script_players a{margin:0 4px;}
+	#main_site_header .social_network_header .voscast_script_players a img{width:16px;height: 16px;}
+}
+
+@media screen and (min-width: 568px){
+	#envivo_figure .day_main_background{object-position: 75% 0%;}
+	#envivo_figure .logo_day{top:0;}
+}
+
 @media screen and (min-width: 768px){
 	#menu-type_menu .menu-item{font-size:24px; }
 	#logo{width:260px;}
+	
+	#envivo_figure .logo_day{top:13vh;}
+	#envivo_figure .fig_caption div{top:165px;left:8vw;padding:32px;}
+	#envivo_figure .fig_caption .fig_title{font-size: 7em;}
+	#envivo_figure .btn_play_live{width:200px;height: 200px;}
 }

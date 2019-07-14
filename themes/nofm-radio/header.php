@@ -14,7 +14,7 @@
 	<?php wp_head(); ?>
 	<!-- End wp_head -->
 </head>
-<body <?php body_class(); ?>>
+	<body <?php body_class(); ?>>
 	<header id="main_site_header">
 		<div class="social_network_header container">
 			<ul>
