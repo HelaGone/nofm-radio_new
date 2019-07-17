@@ -21,6 +21,8 @@
 
 .home_section .fig_object.big_post .fig_caption .fig_title{font-size:1.6em;line-height: 29px;}
 
+#barra_noticias .desk_container{padding-top: 40px;}
+
 #barra_tema_section{margin-bottom:0;}
 #barra_tema_section .bottom_list, 
 #barra_tema_section .middle_list .fig_object{display: flex;flex-direction: row;justify-content: space-between;align-items: center;}

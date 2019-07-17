@@ -16,7 +16,7 @@
 </head>
 	<body <?php body_class(); ?>>
 	<header id="main_site_header">
-		<div class="social_network_header container">
+		<div class="social_network_header">
 			<div class="social_flex_container">	
 				<ul>
 					<li>

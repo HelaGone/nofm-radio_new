@@ -1,7 +1,6 @@
 #central_header{display: flex;justify-content: space-between;padding:0 8px;align-items: center;}
 #central_header .header_item{vertical-align: middle;}
 #type_menu{padding:8px 0 8px 12px;width:90%;}
-
 .fix-header{position: fixed;left:0;right:0;top:0;z-index: 9;background-color:rgba(0,0,0,0.75);border-bottom:2px solid white;}
 .paddingTop{padding-top:34px;}
 
@@ -47,8 +46,8 @@
 @media screen and (min-width: 375px){
 	#main_site_header .social_network_header ul li{padding:0 4px;}
 	#main_site_header .social_network_header ul li .social_logos{width: 16px;height: 16px;}
-	#main_site_header .social_network_header .voscast_script_players a{margin:0 4px;}
-	#main_site_header .social_network_header .voscast_script_players a img{width:16px;height: 16px;}
+	/*#main_site_header .social_network_header .voscast_script_players a{margin:0 4px;}*/
+	/*#main_site_header .social_network_header .voscast_script_players a img{width:16px;height: 16px;}*/
 }
 
 @media screen and (min-width: 568px){
@@ -60,7 +59,11 @@
 	#menu-type_menu .menu-item{font-size:24px; }
 	#logo{width:260px;}
 	#envivo_figure .logo_day{top:6vh;left:2vw;width:40%;}
-	#envivo_figure .fig_caption div{top:8vh;left:0;padding:32px;}
-	#envivo_figure .fig_caption .fig_title{font-size: 7em;}
+	#envivo_figure .fig_caption div{top:6vh;left:0;padding:32px;}
+	#envivo_figure .fig_caption .fig_title{font-size: 6em;}
 	#envivo_figure .btn_play_live{width:200px;height: 200px;}
+}
+
+@media screen and (min-width: 768px){
+	#main_site_header .social_network_header ul li .social_logos{width: 32px;height: 32px;}
 }
