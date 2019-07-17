@@ -176,7 +176,7 @@
 		<script type="text/javascript">
 			WebFontConfig = {
 				google: {
-					families: ['Lora:400,400i,700', 'Nanum+Gothic:300,300,i,400,400i,500,500i,600,600i,700,700i']
+					families: ['Lora:400,400i,700', 'Nanum+Gothic:300,300,i,400,400i,500,500i,600,600i,700,700i', 'Notable:400', 'Inconsolata:400']
 				}
 			};
 

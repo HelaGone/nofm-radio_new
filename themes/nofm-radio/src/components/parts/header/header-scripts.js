@@ -15,7 +15,7 @@ $(document).ready(function(){
 	});
 
 	if('IntersectionObserver' in window){
-		const observer_options = {root:null,rootMargin:'50% 0px 0px 0px',threshold:1.0}
+		const observer_options = {root:null,rootMargin:'275px 0px 0px 0px',threshold:1.0}
 		const oberver_target = document.querySelector('#main_header_section');
 		let check = false;
 		let observer = new IntersectionObserver((entries, observer)=>{ 
@@ -37,5 +37,11 @@ $(document).ready(function(){
 
 		observer.observe(oberver_target);
 	}
+
+	const bg_url = "../nofm-radio.com/wp-content/themes/nofm-radio/src/img/week/sample_player_bg.jpg";
+
+	const dom_figure = document.getElementById('envivo_figure');
+	$(dom_figure).find('.day_main_background').attr("src", bg_url);
+	console.log(bg_url);
 
 });

@@ -32,7 +32,7 @@ a{color:inherit;text-decoration:none;}
 .social_logos{width:24px; height: 24px;}
 
 
-.fig_object{position:relative;}
+.fig_object{position:relative;overflow: hidden;}
 .fig_object img{width:100%;height: auto;}
 .fig_object .fig_caption{position: absolute;left: 0; right: 0; bottom: 0;background-image:linear-gradient(transparent, #000a12);color:#fff;padding:8px;}
 .fig_object .fig_caption .fig_title{text-transform: uppercase;font-weight: 700;}

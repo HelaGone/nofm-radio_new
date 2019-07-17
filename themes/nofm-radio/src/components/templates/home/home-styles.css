@@ -16,7 +16,7 @@
 .barra_list .barra_item{width:calc(100% / 2);}
 .barra_list .fig_object .fig_caption .fig_title{font-size: 1rem;line-height: 1.2rem;}
 .home_section{margin-bottom:32px;}
-.home_section .section_title{display: inline-block;border-bottom: 2px solid #fff;padding:0 16px;margin-bottom:16px;font-size: 3em;color:#fff;}
+.home_section .section_title{display: inline-block;border-bottom: 2px solid #fff;padding:0 16px;margin-bottom:16px;font-size: 1.5em;color:#fff;font-family: 'Notable';}
 .home_section .fig_object .fig_caption .fig_title{display: inline;background-color:#000a12;}
 
 .home_section .fig_object.big_post .fig_caption .fig_title{font-size:1.6em;line-height: 29px;}
