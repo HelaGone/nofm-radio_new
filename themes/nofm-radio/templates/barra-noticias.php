@@ -2,15 +2,7 @@
 	global $wp_query, $post;
 	$noticias = wp_cache_get('barra_noticias_wpcache');
 	if($noticias===false){
-		$args = array(
-			"post_type"=>"post",
-			"post_status"=>"publish",
-			"posts_per_page"=>4,
-			"orderby"=>"date",
-			"order"=>"DESC",
-			"category_name"=>"noticias"
-		);
-		$noticias = new WP_Query($args);
+		$noticias = bt_get_posts_by_categ('noticias');
 		wp_cache_set('barra_noticias_wpcache', $noticias, '', 120);
 	}
 	if($noticias->have_posts()):
@@ -39,21 +31,24 @@
 									</a>
 								</figcaption>
 							</figure>
-					<?php 
-						else: ?>
 							<ul class="updated_list">
+					<?php 
+							// echo ($count==1) ? '<ul class="updated_list">' : '';
+						else: ?>
+							
 								<li>
 									<a href="<?php the_permalink(); ?>">
 										<?php the_title(); ?>
 									</a>
 								</li>
-							</ul>
+							
 					<?php		
 						endif; ?>
-					</div>
 			<?php 
 				$count++;
 				endwhile; ?>
+							</ul>
+			</div>
 		</section>
 <?php
 	endif; ?>

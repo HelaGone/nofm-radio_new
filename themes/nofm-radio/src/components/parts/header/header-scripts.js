@@ -37,11 +37,4 @@ $(document).ready(function(){
 
 		observer.observe(oberver_target);
 	}
-
-	const bg_url = "../nofm-radio.com/wp-content/themes/nofm-radio/src/img/week/sample_player_bg.jpg";
-
-	const dom_figure = document.getElementById('envivo_figure');
-	$(dom_figure).find('.day_main_background').attr("src", bg_url);
-	console.log(bg_url);
-
 });

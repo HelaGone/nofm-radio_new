@@ -172,7 +172,7 @@
 		wp_enqueue_style( 'admin-css', CSSPATH.'admin.css' );
 	});
 
-	function bt_load_material_icons(){ ?>
+	function bt_load_google_fonts(){ ?>
 		<script type="text/javascript">
 			WebFontConfig = {
 				google: {
@@ -189,7 +189,7 @@
 		</script>
 <?php
 	}
-	add_action('wp_head', 'bt_load_material_icons');
+	add_action('wp_head', 'bt_load_google_fonts');
 
 	/**
 	 * Menu Widget
@@ -470,7 +470,7 @@
 	}
 
 	/**
-	 * COVER OPTIONS FOR THEME
+	 * COVER OPTIONS
 	 * co_barra_temas_option 
 	*/
 	function bt_get_co_tema_posts($option_bar = 'co_barra_temas_option'){
@@ -514,3 +514,20 @@
 	  	register_rest_route('react/v2','/glosario/', array('methods'=>'GET','callback'=>'bt_feed_for_react_glosario'));
 	}
 	add_action('rest_api_init', 'register_feed_api');
+
+
+	/*
+	 * Get posts by category
+	*/
+	function bt_get_posts_by_categ($input_cat){
+		$args = array(
+			'post_type'=>'post',
+			'post_status'=>'publish',
+			'posts_per_page'=>4,
+			'orderby'=>'date',
+			'order'=>'DESC',
+			'category_name'=>$input_cat
+		);
+		$posts = new WP_Query($args);
+		return $posts;
+	}
