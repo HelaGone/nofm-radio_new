@@ -519,15 +519,21 @@
 	/*
 	 * Get posts by category
 	*/
-	function bt_get_posts_by_categ($input_cat){
+	function bt_get_posts_by_categ($input_type, $input_cat){
 		$args = array(
-			'post_type'=>'post',
+			'post_type'=>$input_type,
 			'post_status'=>'publish',
 			'posts_per_page'=>4,
 			'orderby'=>'date',
-			'order'=>'DESC',
-			'category_name'=>$input_cat
+			'order'=>'DESC'
 		);
+
+		$categ = ($input_cat) ? $args['category_name'] = $input_cat : '';
+
+		// echo '<pre>';
+		// 	print_r($args);
+		// echo '</pre>';
+
 		$posts = new WP_Query($args);
 		return $posts;
 	}

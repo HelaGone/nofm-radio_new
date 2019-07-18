@@ -50,7 +50,11 @@
 					<!--End SHOUTcast Server Stats-->
 				</div>
 			</div>
-			<h3>TODO MENOS MIEDO</h3>
+			<h3>
+				<a href="<?php echo get_site_url(); ?>" title="Todo menos miedo">
+					TODO MENOS MIEDO
+				</a>
+			</h3>
 		</div>
 		<section id="main_header_section">
 			<figure id="envivo_figure" class="fig_object">
@@ -59,7 +63,10 @@
 					<img class="logo_day" src="">
 					<div>
 						<h1 class="fig_title">EN VIVO</h1>
-						<button class="btn_play_live"></button>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+							<path d="M8 5v14l11-7z"/>
+							<path d="M0 0h24v24H0z" fill="none"/>
+						</svg>
 					</div>
 				</figcaption>
 			</figure>

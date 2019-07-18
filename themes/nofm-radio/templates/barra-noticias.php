@@ -2,13 +2,13 @@
 	global $wp_query, $post;
 	$noticias = wp_cache_get('barra_noticias_wpcache');
 	if($noticias===false){
-		$noticias = bt_get_posts_by_categ('noticias');
+		$noticias = bt_get_posts_by_categ('post', 'noticias');
 		wp_cache_set('barra_noticias_wpcache', $noticias, '', 120);
 	}
 	if($noticias->have_posts()):
 		$section_cat_name = $noticias->query_vars['category_name'];
 		$section_cat_id = get_cat_ID($section_cat_name); ?>
-		<section id="barra_noticias" class="home_section">
+		<section id="barra_noticias" class="home_section dynamic_pool">
 			<div class="desk_container">
 				<h2 class="section_title">
 					<a href="<?php echo esc_url(get_category_link($section_cat_id)); ?>">
@@ -36,7 +36,7 @@
 							// echo ($count==1) ? '<ul class="updated_list">' : '';
 						else: ?>
 							
-								<li>
+								<li class="updated_item">
 									<a href="<?php the_permalink(); ?>">
 										<?php the_title(); ?>
 									</a>
