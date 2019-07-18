@@ -1,0 +1,20 @@
+/*
+ Dark palete +pink
+ #000a12
+ #263238
+ #4f5b62
+ #f50057
+*/
+.single_page{/*border:1px solid red;*/padding:32px 8px;}
+.single_page .single_post_container .single_title{color:#fff;font-family: Notable;font-size: 2em;}
+.single_page .single_post_container .single_post_data{color:#f50057;margin-top:16px;}
+.single_page .single_post_container .single_post_data .term_pool{margin:8px 0px;}
+.single_page .single_post_container .single_post_data .term_pool span{padding:8px 0;}
+.single_page .single_post_container .article_content{color:#fff;width:100%;margin:32px 0;}
+.single_page .single_post_container .article_content p{line-height: 28px;font-family: 'Inconsolata';margin:8px 0;font-size: 20px;}
+.single_page .single_post_container .article_content h2{margin:24px 0;font-weight: 700;font-size: 1.7em;}
+.single_page .single_post_container .article_content blockquote,
+.single_page .single_post_container .article_content figure,
+.single_page .single_post_container .article_content iframe{width:100%;}
+.single_page .single_post_container .article_content div.wp-caption.alignnone{width:100%!important;height: auto;}
+.single_page .single_post_container .article_content div.wp-caption.alignnone img{width:100%;height: auto!important;}
