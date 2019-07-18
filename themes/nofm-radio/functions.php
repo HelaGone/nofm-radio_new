@@ -516,8 +516,12 @@
 	add_action('rest_api_init', 'register_feed_api');
 
 
-	/*
-	 * Get posts by category
+	/**
+	 * Get posts by post type & category
+	 * @param $input_type [String] post type to query 
+	 * @param $input_cat [String] post category to query
+	 * @return $posts [Array] returns an array of posts
+	 * Used in template parts at home
 	*/
 	function bt_get_posts_by_categ($input_type, $input_cat){
 		$args = array(
@@ -529,11 +533,6 @@
 		);
 
 		$categ = ($input_cat) ? $args['category_name'] = $input_cat : '';
-
-		// echo '<pre>';
-		// 	print_r($args);
-		// echo '</pre>';
-
 		$posts = new WP_Query($args);
 		return $posts;
 	}

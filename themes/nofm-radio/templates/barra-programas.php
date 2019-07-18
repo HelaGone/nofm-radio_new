@@ -5,30 +5,31 @@
 	if($episodios->have_posts()): ?>
 		<section id="barra_programas" class="home_section container">
 			<h2 class="section_title"><?php echo esc_html($queryed_obj_post_type); ?></h2>
-			<ul class="programas_list_carousel">
-			<?php	
-				while($episodios->have_posts()):
-					$episodios->the_post();
-					setup_postdata($post); ?>
-					<li class="programa_list_item">
-						<figure class="fig_object">
-							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-							<?php
-								if(has_post_thumbnail()):
-									the_post_thumbnail('square_mid');
-								endif; ?>
-							</a>
-							<figcaption class="fig_caption">
-								<h5 class="fig_title">
-									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>"><?php the_title(); ?></a>
-								</h5>
-							</figcaption>
-						</figure>
-						<!-- <p><?php the_excerpt(); ?></p> -->
-					</li>
-				<?php
-				endwhile; ?>
-			</ul>
+			<div class="flex_bar_container">
+				<ul class="programas_list_carousel">
+					<?php	
+						while($episodios->have_posts()):
+							$episodios->the_post();
+							setup_postdata($post); ?>
+							<li class="programa_list_item">
+								<figure class="fig_object">
+									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+										<?php
+											if(has_post_thumbnail()):
+												the_post_thumbnail('square_mid');
+											endif; ?>
+									</a>
+									<figcaption class="fig_caption">
+										<h5 class="fig_title">
+											<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>"><?php the_title(); ?></a>
+										</h5>
+									</figcaption>
+								</figure>
+							</li>
+					<?php
+						endwhile; ?>
+				</ul>
+			</div>
 		</section>
 	<?php	
 		wp_reset_postdata();

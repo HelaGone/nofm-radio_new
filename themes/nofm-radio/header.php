@@ -87,3 +87,4 @@
 	<!-- <nav class="main_navigation">
 		<?php //wp_nav_menu( array( 'theme_location' => 'my-custom-menu', 'container_class' => 'custom-menu-class' ) ); ?>
 	</nav> -->
+	<section class="wide_wrapper">

@@ -1,5 +1,5 @@
 #section_archivo{max-width:666px;margin:0 auto;font-family: 'Lora';padding:40px 0;}
-.archive_section_wrapper h1{font-weight: 700;display: inline-block;border-bottom:3px solid black;padding:0 8px;font-size: 3em;}
+.archive_section_wrapper h1{font-weight: 700;display: inline-block;border-bottom:3px solid #fff;padding:0 8px;font-size: 3em;color:#fff;}
 #section_archivo .archivo_list{margin-top:40px;background-color:#f2eecb;}
 #section_archivo .archivo_item{border-bottom:2px solid grey;padding:8px 4px;margin:8px 4px;position:relative;}
 #section_archivo .archivo_item time{color:#444;}

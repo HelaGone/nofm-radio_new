@@ -8,13 +8,14 @@
 	if($noticias->have_posts()):
 		$section_cat_name = $noticias->query_vars['category_name'];
 		$section_cat_id = get_cat_ID($section_cat_name); ?>
-		<section id="barra_noticias" class="home_section dynamic_pool">
+		<section id="barra_noticias" class="home_section dynamic_pool container">
 			<div class="desk_container">
-				<h2 class="section_title">
+				<h2 id="enterate" class="section_title">
 					<a href="<?php echo esc_url(get_category_link($section_cat_id)); ?>">
 						<?php echo esc_html(ucfirst($section_cat_name)); ?>
 					</a>
 				</h2>
+				<div class="flex_bar_container">
 			<?php
 				$count = 0;
 				while($noticias->have_posts()):
@@ -48,6 +49,7 @@
 				$count++;
 				endwhile; ?>
 							</ul>
+				</div>
 			</div>
 		</section>
 <?php

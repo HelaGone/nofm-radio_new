@@ -12,42 +12,43 @@
 		// echo '</pre>';
 		$section_tag_name = $posts_arr->query_vars['tag_slug__in'][0];
 		$section_tag_id = get_cat_ID($section_tag_name); ?>
-		<section id="barra_recomendaciones" class="home_section dynamic_pool">
+		<section id="barra_recomendaciones" class="home_section dynamic_pool container">
 			<div class="desk_container">
-				<h2 class="section_title">
+				<h2 id="lee" class="section_title">
 					<a href="<?php echo esc_url(get_tag_link($section_tag_id)); ?>">
 						<?php echo esc_html(ucfirst($section_tag_name)); ?>
 					</a>
 				</h2>
-
-						<ul class="updated_list">
-			<?php
-				$count = 0;
-				while($posts_arr->have_posts()):
-					$posts_arr->the_post(); 
-					if($count<3): ?>
-							<li class="updated_item">
-								<a href="<?php the_permalink(); ?>">
-									<?php the_title(); ?>
-								</a>
-							</li>
-				<?php		
-					elseif($count==3): ?>
-						</ul>
-						<figure class="fig_object">
+				<div class="flex_bar_container">
+					<ul class="updated_list">
+						<?php
+							$count = 0;
+							while($posts_arr->have_posts()):
+								$posts_arr->the_post(); 
+								if($count<3): ?>
+									<li class="updated_item">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_title(); ?>
+										</a>
+									</li>
+						<?php		
+								elseif($count==3): ?>
+					</ul>
+					<figure class="fig_object">
+						<a href="<?php the_permalink(); ?>">
+							<?php (has_post_thumbnail()) ? the_post_thumbnail('medium') : ''; ?>
+						</a>
+						<figcaption class="fig_caption">
 							<a href="<?php the_permalink(); ?>">
-								<?php (has_post_thumbnail()) ? the_post_thumbnail('medium') : ''; ?>
+								<h2 class="fig_title"><?php the_title(); ?></h2>
 							</a>
-							<figcaption class="fig_caption">
-								<a href="<?php the_permalink(); ?>">
-									<h2 class="fig_title"><?php the_title(); ?></h2>
-								</a>
-							</figcaption>
-						</figure>
-				<?php		
-					endif;
-				$count++;
-				endwhile; ?>
+						</figcaption>
+					</figure>
+						<?php		
+								endif;
+								$count++;
+							endwhile; ?>
+				</div>
 			</div>
 		</section>
 <?php

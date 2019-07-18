@@ -8,47 +8,46 @@
 	if($posts_arr->have_posts()):
 		$section_cat_name = $posts_arr->query_vars['post_type'];
 		$section_cat_id = get_cat_ID($section_cat_name); ?>
-		<section id="barra_podcasts" class="home_section dynamic_pool">
+		<section id="barra_podcasts" class="home_section dynamic_pool container">
 			<div class="desk_container">
-				<h2 class="section_title">
+				<h2 id="escucha" class="section_title">
 					<a href="<?php echo esc_url(get_category_link($section_cat_id)); ?>">
 						<?php echo esc_html(ucfirst($section_cat_name)); ?>
 					</a>
 				</h2>
-			<?php
-				$count = 0;
-				while($posts_arr->have_posts()):
-					$posts_arr->the_post(); ?>
-					<?php 
-						if($count<1): ?>
-							<figure class="fig_object">
-								<a href="<?php the_permalink(); ?>">
-									<?php (has_post_thumbnail()) ? the_post_thumbnail('medium') : ''; ?>
-								</a>
-								<figcaption class="fig_caption">
+				<div class="flex_bar_container">
+					<?php
+						$count = 0;
+						while($posts_arr->have_posts()):
+							$posts_arr->the_post();
+							if($count<1): ?>
+								<figure class="fig_object">
 									<a href="<?php the_permalink(); ?>">
-										<h2 class="fig_title"><?php the_title(); ?></h2>
+										<?php (has_post_thumbnail()) ? the_post_thumbnail('medium') : ''; ?>
 									</a>
-								</figcaption>
-							</figure>
-							<ul class="updated_list">
+									<figcaption class="fig_caption">
+										<a href="<?php the_permalink(); ?>">
+											<h2 class="fig_title"><?php the_title(); ?></h2>
+										</a>
+									</figcaption>
+								</figure>
+								<ul class="updated_list">
 					<?php 
-							// echo ($count==1) ? '<ul class="updated_list">' : '';
-						else: ?>
-							
-								<li class="updated_item">
-									<a href="<?php the_permalink(); ?>" title="<?php echo get_the_title($post->ID); ?>">
-										<?php the_title(); ?>
-									</a>
-									<span><?php the_excerpt(); ?></span>
-								</li>
+							else: ?>	
+									<li class="updated_item">
+										<a href="<?php the_permalink(); ?>" title="<?php echo get_the_title($post->ID); ?>">
+											<?php the_title(); ?>
+										</a>
+										<span><?php the_excerpt(); ?></span>
+									</li>
 							
 					<?php		
-						endif; ?>
+							endif; ?>
 			<?php 
-				$count++;
-				endwhile; ?>
-							</ul>
+					$count++;
+					endwhile; ?>
+								</ul>
+				</div>
 			</div>
 		</section>
 <?php
