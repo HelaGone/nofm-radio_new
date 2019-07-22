@@ -2,7 +2,7 @@
 	global $wp_query, $post;
 	$posts_arr = wp_cache_get('barra_podcasts_wpcache');
 	if($posts_arr===false){
-		$posts_arr = bt_get_posts_by_categ('podcasts', null);
+		$posts_arr = bt_get_posts_by_categ('episodios', null);
 		wp_cache_set('barra_podcasts_wpcache', $posts_arr, '', 120);
 	}
 	if($posts_arr->have_posts()):
