@@ -21,8 +21,7 @@ module.exports = {
 		image: './src/components/templates/image/index.js',
 		tag: './src/components/templates/tag/index.js',
 		page: './src/components/templates/page/index.js',
-		taxonomy: './src/components/templates/taxonomy/index.js',
-		taxonomy_temas: './src/components/templates/taxonomy_temas/index.js'
+		taxonomy: './src/components/templates/taxonomy/index.js'
 	},
 	output: {
 		filename: '[name].js',

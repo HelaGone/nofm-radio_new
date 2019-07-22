@@ -3,17 +3,14 @@
 #type_menu{padding:8px 0 8px 12px;width:90%;}
 .fix-header{position: fixed;left:0;right:0;top:0;z-index: 9;background-color:rgba(0,0,0,0.75);border-bottom:2px solid white;}
 .paddingTop{padding-top:34px;}
-
 .bg_url{background-image: url("../../../img/week/sample_player_bg.jpg");}
-
 #main_site_header{margin:0 auto;background-color: #000;color:#fff;}
 #main_site_header .social_network_header{padding:0;position: absolute;top:0;left: 0;right: 0;z-index: 1;}
 #main_site_header .social_network_header .social_flex_container{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;}
 #main_site_header .social_network_header ul{display: flex;flex-wrap: wrap;flex-direction: row;}
 #main_site_header .social_network_header ul li{padding:0 8px;}
-/*#main_site_header .social_network_header ul li:first-child{padding-left:0;}*/
 #main_site_header .social_network_header ul li .social_logos{width: 14px;height: 14px;}
-#main_site_header .social_network_header h3{text-align: center;/*font-size: 170%;*/font-weight: bold;margin-top:40px;font-family: 'Inconsolata';letter-spacing: 8px;}
+#main_site_header .social_network_header h3{text-align: center;font-weight: bold;margin-top:40px;font-family: 'Inconsolata';letter-spacing: 8px;}
 #main_site_header .social_network_header .voscast_script_players a{margin:0 8px;}
 
 #main_header_section{background-color:#eee;}
@@ -21,7 +18,7 @@
 #envivo_figure .fig_caption{top:0;background-image: url(../../../img/granulado.png);background-color: rgba(0,0,0,0.3);}
 #envivo_figure .fig_caption div{position:absolute;top:115px;left:0;display: flex;flex-direction: row;justify-content: flex-start;align-items: center;}
 #envivo_figure .fig_caption .fig_title{font-size: 4.5rem;color:red;font-family: 'Notable';}
-#envivo_figure .day_main_background{width:100%;height:275px;object-fit: cover;/*object-position: 75% 50%;*/}
+#envivo_figure .day_main_background{width:100%;height:275px;object-fit: cover;}
 #envivo_figure .logo_day{position:relative;left:0;top:5vh;width:50%;object-fit: contain;}
 
 #envivo_figure svg{width:120px; height: 120px;background-color: transparent;border:none; background-size: contain;background-repeat: no-repeat;background-position: center;background-image: url('../../../img/player/play_arrow.svg');flex-shrink: 0;fill:#f00;transition: width .25s, height .25s;}
@@ -33,9 +30,11 @@
 .md-48{font-size: 48px;line-height: 70px;}
 
 /*Main NavigationDrawer*/
-.menu-main-menu{width:0;border:1px solid blue;position: relative;}
-.main_navigation div{position: absolute;right: 0;top:40px;}
-.main_navigation div ul.menu li{padding:8px 24px;border:1px solid cyan;margin-bottom:8px;}
+#close_main_menu{position: relative;bottom: 30vh;left: 50vw;width: 60px;height: 60px;font-size:32px;margin-left:-30px;}
+.main_navigation{position:fixed;left:0;top:0;right:0;bottom:0;z-index: 9;overflow: hidden;width:0;}
+.main_navigation .main_menu{width:100%;height: 100%; text-align: center;position:relative;background-color: rgba(255,255,255,0.95);}
+.main_navigation .main_menu .menu{position: absolute;top:50%;left:10%;margin-top:-50%;width:80%;}
+.main_navigation .main_menu .menu li{margin:24px 0;border-bottom:1px solid #263238;padding-bottom: 4px;}
 
 /*Hamburguer button*/
 .btn_menu_container{display: inline-block;cursor: pointer;}
@@ -48,12 +47,9 @@
 @media screen and (min-width: 375px){
 	#main_site_header .social_network_header ul li{padding:0 4px;}
 	#main_site_header .social_network_header ul li .social_logos{width: 16px;height: 16px;}
-	/*#main_site_header .social_network_header .voscast_script_players a{margin:0 4px;}*/
-	/*#main_site_header .social_network_header .voscast_script_players a img{width:16px;height: 16px;}*/
 }
 
 @media screen and (min-width: 568px){
-	/*#envivo_figure .day_main_background{object-position: 75% 0%;}*/
 	#envivo_figure .logo_day{top:0;}
 }
 

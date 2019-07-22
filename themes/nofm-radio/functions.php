@@ -74,7 +74,6 @@
 
 		//Taxonomy
 		wp_register_script('base-theme-taxonomy-scripts', get_template_directory_uri().'/dist/taxonomy.js', array('jquery'), '1.0.0');
-		wp_register_script('base-theme-taxonomy-temas', get_template_directory_uri().'/dist/taxonomy_temas.js', array('jquery'), '1.0.0');
 
 		wp_register_script('base-theme-single', get_template_directory_uri().'/dist/single.js', array('jquery'), '1.0.0');
 
@@ -93,8 +92,8 @@
 		if(is_front_page()){
 			wp_enqueue_style('base-theme-home-style', get_template_directory_uri().'/dist/home.css', array(), '1.0.0.' );
 			wp_enqueue_script('base-theme-home');
-			wp_enqueue_style('bx-slider-style', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css', array(), '4.2.12');
-			wp_enqueue_script('bx-slider-scripts');
+			/*wp_enqueue_style('bx-slider-style', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css', array(), '4.2.12');
+			wp_enqueue_script('bx-slider-scripts');*/
 		}elseif(is_author()){
 			wp_enqueue_style('base-theme-author-style', get_template_directory_uri().'/dist/author.css', array(), '1.0.0.' );
 			wp_enqueue_script('base-theme-author');
@@ -123,11 +122,6 @@
 			if(is_tax()){
 				wp_enqueue_style('base-theme-taxonomy-style', get_template_directory_uri().'/dist/taxonomy.css', array(), '1.0.0' );
 				wp_enqueue_script('base-theme-taxonomy-scripts');
-				//LOAD CSS & JS FOR TAXONOMY TEMAS
-				if(is_tax('temas')){
-					wp_enqueue_style('base-theme-taxonomy-temas-style', get_template_directory_uri().'/dist/taxonomy_temas.css', array(), '1.0.0' );
-					wp_enqueue_script('base-theme-taxonomy-temas');
-				}
 			}
 
 
@@ -139,16 +133,16 @@
 			if(is_singular('episodios')){
 				wp_enqueue_style('base-theme-episodios-style', get_template_directory_uri().'/dist/single_episodios.css', array(), '1.0.0.' );
 				wp_enqueue_script('base-theme-episodios');
-			}elseif(is_singular('programas')){
+			}elseif(is_singular('podcasts')){
 				wp_enqueue_style('base-theme-programas-style', get_template_directory_uri().'/dist/single_programas.css', array(), '1.0.0.' );
 				wp_enqueue_script('base-theme-programas');
 			}elseif(is_singular('archivo')){
 				wp_enqueue_style('base-theme-archivo-style', get_template_directory_uri().'/dist/single_archivo.css', array(), '1.0.0.' );
 				wp_enqueue_script('base-theme-archivo');
-			}elseif( is_page()&&!is_front_page() ){
-				wp_enqueue_style('base-theme-page-style', get_template_directory_uri().'/dist/page.css', array(), '1.0.0.' );
-				wp_enqueue_script('base-theme-page');
 			}
+		}elseif(is_page()&&!is_front_page()){
+			wp_enqueue_style('base-theme-page-style', get_template_directory_uri().'/dist/page.css', array(), '1.0.0.' );
+			wp_enqueue_script('base-theme-page');
 		}
 
 	});

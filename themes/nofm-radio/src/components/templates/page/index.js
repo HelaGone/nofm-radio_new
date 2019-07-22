@@ -6,5 +6,5 @@ import './page-styles.css';
 import './page-scripts';
 
 /*Components*/
-import '../../parts/header/index';
-import '../../parts/footer/index';
+import '../../parts/header/index.js';
+import '../../parts/footer/index.js';

@@ -61,7 +61,7 @@
 				<img class="day_main_background" src="<?php echo esc_url(bt_get_imageby_id(30967, 'square_mid')); ?>" alt="EN VIVO">
 				<figcaption class="fig_caption">
 					<img class="logo_day" src="">
-					<div>
+					<div class="player_container">
 						<h1 class="fig_title">EN VIVO</h1>
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 							<path d="M8 5v14l11-7z"/>
@@ -84,7 +84,8 @@
 		</div>
 
 	</header>
-	<!-- <nav class="main_navigation">
-		<?php //wp_nav_menu( array( 'theme_location' => 'my-custom-menu', 'container_class' => 'custom-menu-class' ) ); ?>
-	</nav> -->
+	<nav class="main_navigation clearfix">
+		<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'main_menu' ) ); ?>
+		<button id="close_main_menu">X</button>
+	</nav>
 	<section class="wide_wrapper">

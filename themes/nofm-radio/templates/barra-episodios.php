@@ -6,13 +6,13 @@
 		wp_cache_set('barra_podcasts_wpcache', $posts_arr, '', 120);
 	}
 	if($posts_arr->have_posts()):
-		$section_cat_name = $posts_arr->query_vars['post_type'];
-		$section_cat_id = get_cat_ID($section_cat_name); ?>
+		$section_pt_name = $posts_arr->query_vars['post_type'];
+		$pt_link = get_post_type_archive_link($section_pt_name); ?>
 		<section id="barra_podcasts" class="home_section dynamic_pool container">
 			<div class="desk_container">
 				<h2 id="escucha" class="section_title">
-					<a href="<?php echo esc_url(get_category_link($section_cat_id)); ?>">
-						<?php echo esc_html(ucfirst($section_cat_name)); ?>
+					<a href="<?php echo $pt_link; ?>">
+						<?php echo esc_html(ucfirst($section_pt_name)); ?>
 					</a>
 				</h2>
 				<div class="flex_bar_container">
