@@ -7,15 +7,12 @@
 		wp_cache_set('barra_recom_wpcache', $posts_arr, '', 120);
 	}
 	if($posts_arr->have_posts()):
-		// echo '<pre>';
-		// 	print_r($posts_arr->query_vars);
-		// echo '</pre>';
 		$section_tag_name = $posts_arr->query_vars['tag_slug__in'][0];
-		$section_tag_id = get_cat_ID($section_tag_name); ?>
+		$tag_link = get_term_link($section_tag_name, 'post_tag'); ?>
 		<section id="barra_recomendaciones" class="home_section dynamic_pool container">
 			<div class="desk_container">
 				<h2 id="lee" class="section_title">
-					<a href="<?php echo esc_url(get_tag_link($section_tag_id)); ?>">
+					<a href="<?php echo esc_url($tag_link); ?>">
 						<?php echo esc_html(ucfirst($section_tag_name)); ?>
 					</a>
 				</h2>
