@@ -5,8 +5,8 @@ $(document).ready(function(){
 	// Hace la animación del botón menú
 	let btnMenu = document.getElementById('btn_menu');
 	btnMenu.addEventListener('click', ()=>{
-		btnMenu.classList.toggle('change');
-		console.log('click menu');
+		// btnMenu.classList.toggle('change');
+		// console.log('click menu');
 		$('.main_navigation').animate({width:'100%'});
 	});
 

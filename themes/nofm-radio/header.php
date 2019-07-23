@@ -85,6 +85,9 @@
 
 	</header>
 	<nav class="main_navigation clearfix">
+		<a href="" title="">
+			<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>" alt="NoFm-Radio Logotipo">
+		</a>
 		<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'main_menu' ) ); ?>
 		<button id="close_main_menu">X</button>
 	</nav>

@@ -30,10 +30,11 @@
 .md-48{font-size: 48px;line-height: 70px;}
 
 /*Main NavigationDrawer*/
-#close_main_menu{position: relative;bottom: 30vh;left: 50vw;width: 60px;height: 60px;font-size:32px;margin-left:-30px;}
-.main_navigation{position:fixed;left:0;top:0;right:0;bottom:0;z-index: 9;overflow: hidden;width:0;}
-.main_navigation .main_menu{width:100%;height: 100%; text-align: center;position:relative;background-color: rgba(255,255,255,0.95);}
-.main_navigation .main_menu .menu{position: absolute;top:50%;left:10%;margin-top:-50%;width:80%;}
+#close_main_menu{position: relative;bottom: 40vh;left: 50vw;width: 60px;height: 60px;font-size:32px;margin-left:-30px;}
+.main_navigation{position:fixed;left:0;top:0;right:0;bottom:0;z-index: 9;overflow: hidden;width:0;background-color: rgba(255,255,255,0.95);}
+.main_navigation img{width:40%;max-width: 128px;height: auto;position:relative;top:10vh;left:50%;margin-left: calc(-128px / 2);}
+.main_navigation .main_menu{width:100%;height: 100%; text-align: center;position:relative;}
+.main_navigation .main_menu .menu{position: absolute;top:10vh;left:10%;width:80%;}
 .main_navigation .main_menu .menu li{margin:24px 0;border-bottom:1px solid #263238;padding-bottom: 4px;}
 
 /*Hamburguer button*/
