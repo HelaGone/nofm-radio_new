@@ -1,0 +1,12 @@
+.section_tag .fig_object{margin-bottom:32px;max-width: 420px;}
+.section_tag .section_title{font-family: 'Notable'; color:#fff;font-size: 1.5em;margin-bottom:24px;}
+
+@media screen and (min-width: 768px){
+	.section_tag .posts_pool{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:center; }
+	.section_tag .fig_object{width: calc(100% / 2 - 16px);border-radius: 5px;}
+	.section_tag .fig_object img{border-radius: 5px;}
+}
+
+@media screen and (min-width: 1024px){
+	.section_tag .fig_object{width: calc(100% / 3 - 16px);}
+}

@@ -292,6 +292,7 @@
 
 			if(is_category()){
 				$query->set('posts_per_page', 7);
+				$query->set('post_type', array('post', 'podcasts', 'episodios'));
 			}
 			
 		}

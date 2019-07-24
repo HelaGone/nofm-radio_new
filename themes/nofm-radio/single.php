@@ -25,6 +25,5 @@
 		endif; ?>
 
 	<?php //(wp_is_mobile()) ? '' : get_sidebar(); ?>
-
 </section>
 <?php get_footer(); ?>

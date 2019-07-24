@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	console.log('wp functions js');
+	console.log('main src functions js');
 	$('body :not(.wp-embedded-content)').fitVids();
 
 	// Hace la animación del botón menú
@@ -15,9 +15,10 @@ $(document).ready(function(){
 		$('.main_navigation').animate({width:'0'});
 	});
 
-	// $(".player_container").on("click", function(){
-	// 	console.log("open player click");
-	// 	$('.audio6_html5_sticky_div').show('fast');
-	// });
+	$(".player_container svg").on("click", function(){
+		console.log("open player click");
+
+		window.open("http://localhost/~rizika/nofm-radio.com/player/", "_blank", "menubar=0,status=0");
+	});
 
 });
