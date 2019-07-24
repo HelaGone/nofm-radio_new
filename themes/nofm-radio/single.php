@@ -20,6 +20,10 @@
 						</div>
 					</div>
 				</article>
+
+				<div>
+					<button class="close_player_window">CLOSE PLAYER</button>
+				</div>
 	<?php
 			endwhile;
 		endif; ?>

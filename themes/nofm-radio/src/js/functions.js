@@ -15,10 +15,25 @@ $(document).ready(function(){
 		$('.main_navigation').animate({width:'0'});
 	});
 
+	let player = null;
 	$(".player_container svg").on("click", function(){
 		console.log("open player click");
+		openWindow();
+	});
 
-		window.open("http://localhost/~rizika/nofm-radio.com/player/", "_blank", "menubar=0,status=0");
+	const openWindow = ()=>{
+		player = window.open("http://localhost/~rizika/nofm-radio.com/player/", "_blank", "menubar=0,status=0");
+	}
+
+	const closeWindow = ()=>{
+		if(player!=null){
+			player.close();	
+		}
+	}
+
+	$('.close_player_window').on('click', function(){
+		console.log('close player');
+		closeWindow();
 	});
 
 });
