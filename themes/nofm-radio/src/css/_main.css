@@ -5,7 +5,7 @@
  #4f5b62
  #f50057
 */
-body{background-color:#222; background-image:url(../img/granulado.png);font-family: 'Nanum Gothic', sans-serif;background-repeat: repeat;background-position: center top;}
+body{background-color:#222; background-image:url(../img/granulado.jpg);background-size:70%; font-family: 'Nanum Gothic', sans-serif;background-repeat: repeat;background-position: center top;}
 a{color:inherit;text-decoration:none;}
 button{border-style: none;background-color: transparent;outline: none;}
 .clearfix:before, .clearfix:after {content:"";display:table;}
@@ -17,7 +17,7 @@ button{border-style: none;background-color: transparent;outline: none;}
 
 .hidden{display:none;}
 .container{max-width:1280px;margin:0 auto;position:relative;}
-.wide_wrapper{background-image:linear-gradient(black, transparent, transparent, red);}
+.wide_wrapper{background-image:linear-gradient(black, rgba(255,255,255, 0.7), red);}
 
 .white_parr{color:#efefef;}
 .black_parr{color:#222;}

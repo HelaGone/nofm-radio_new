@@ -10,8 +10,11 @@
 						<div class="article_header">
 							<h1 class="single_title"><?php the_title(); ?></h1>
 							<div class="single_post_data">
-								<?php echo bt_print_term_cloud($post->ID, ); ?>
-								<time class="post_data_item"><?php echo get_the_date('D, d.m.Y'); ?></time>
+								<?php echo bt_print_term_cloud($post->ID, 'category'); ?>
+								<time class="post_date_item"><?php echo get_the_date('D, d.m.Y'); ?></time>
+								<span class="post_author_item">
+									Por: <?php echo get_the_author_link(); ?>
+								</span>
 							</div>
 						</div>
 						<?php (wp_is_mobile()) ? the_post_thumbnail('rect_small') : the_post_thumbnail('rect_big'); ?>
@@ -20,10 +23,6 @@
 						</div>
 					</div>
 				</article>
-
-				<div>
-					<button class="close_player_window">CLOSE PLAYER</button>
-				</div>
 	<?php
 			endwhile;
 		endif; ?>
