@@ -21,7 +21,8 @@
 						<?php
 							$count = 0;
 							while($posts_arr->have_posts()):
-								$posts_arr->the_post(); 
+								$posts_arr->the_post();
+								$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_medium'; 
 								if($count<3): ?>
 									<li class="updated_item">
 										<a href="<?php the_permalink(); ?>">
@@ -33,7 +34,7 @@
 					</ul>
 					<figure class="fig_object">
 						<a href="<?php the_permalink(); ?>">
-							<?php (has_post_thumbnail()) ? the_post_thumbnail('medium') : ''; ?>
+							<?php (has_post_thumbnail()) ? the_post_thumbnail($img_size) : ''; ?>
 						</a>
 						<figcaption class="fig_caption">
 							<a href="<?php the_permalink(); ?>">

@@ -1,10 +1,12 @@
 <?php 
 	global $wp_query, $post;
 	$posts_arr = wp_cache_get('barra_podcasts_wpcache');
+
 	if($posts_arr===false){
 		$posts_arr = bt_get_posts_by_categ('episodios', null);
 		wp_cache_set('barra_podcasts_wpcache', $posts_arr, '', 120);
 	}
+
 	if($posts_arr->have_posts()):
 		$section_pt_name = $posts_arr->query_vars['post_type'];
 		$pt_link = get_post_type_archive_link($section_pt_name); ?>
@@ -20,10 +22,11 @@
 						$count = 0;
 						while($posts_arr->have_posts()):
 							$posts_arr->the_post();
+							$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_medium'; 
 							if($count<1): ?>
 								<figure class="fig_object">
 									<a href="<?php the_permalink(); ?>">
-										<?php (has_post_thumbnail()) ? the_post_thumbnail('medium') : ''; ?>
+										<?php (has_post_thumbnail()) ? the_post_thumbnail($img_size) : ''; ?>
 									</a>
 									<figcaption class="fig_caption">
 										<a href="<?php the_permalink(); ?>">

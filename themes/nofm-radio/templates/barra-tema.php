@@ -14,7 +14,9 @@
 							<?php
 								$image_size = (wp_is_mobile()) ? 'rect_mid' : 'rect_large';
 								if(has_post_thumbnail()): ?>
-									<img src="<?php bt_post_attachment_image_url($post->ID, $image_size); ?>" alt="<?php echo esc_attr($attachment_meta['alt']); ?>">
+									<a href="<?php echo get_permalink($post->ID); ?>">
+										<img src="<?php bt_post_attachment_image_url($post->ID, $image_size); ?>" alt="<?php echo esc_attr($attachment_meta['alt']); ?>">
+									</a>
 							<?php
 								endif; ?>
 							<figcaption class="fig_caption">
@@ -49,7 +51,9 @@
 									<?php 
 										$bottom_image_size = (wp_is_mobile()) ? 'square_mid' : 'square_big';
 										if(has_post_thumbnail()): ?>
-											<img src="<?php bt_post_attachment_image_url($post->ID, $bottom_image_size); ?>" alt="<?php echo esc_attr($attachment_meta['alt']); ?>">
+											<a href="<?php echo get_permalink($post->ID); ?>">
+												<img src="<?php bt_post_attachment_image_url($post->ID, $bottom_image_size); ?>" alt="<?php echo esc_attr($attachment_meta['alt']); ?>">
+											</a>
 									<?php
 										endif; ?>
 									<figcaption class="fig_caption">

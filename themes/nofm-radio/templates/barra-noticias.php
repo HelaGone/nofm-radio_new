@@ -19,12 +19,13 @@
 			<?php
 				$count = 0;
 				while($noticias->have_posts()):
-					$noticias->the_post(); ?>
+					$noticias->the_post();
+					$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_medium'; ?>
 					<?php 
 						if($count<1): ?>
 							<figure class="fig_object">
 								<a href="<?php the_permalink(); ?>">
-									<?php (has_post_thumbnail()) ? the_post_thumbnail('medium') : ''; ?>
+									<?php (has_post_thumbnail()) ? the_post_thumbnail($img_size) : ''; ?>
 								</a>
 								<figcaption class="fig_caption">
 									<a href="<?php the_permalink(); ?>">

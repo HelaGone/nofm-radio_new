@@ -17,7 +17,7 @@ button{border-style: none;background-color: transparent;outline: none;}
 
 .hidden{display:none;}
 .container{max-width:1280px;margin:0 auto;position:relative;}
-.wide_wrapper{background-image:linear-gradient(black, rgba(255,255,255, 0.7), red);}
+.wide_wrapper{background-image:linear-gradient(rgba(0,0,0,0.97), rgba(255,255,255, 0.7), red);}
 
 .white_parr{color:#efefef;}
 .black_parr{color:#222;}
