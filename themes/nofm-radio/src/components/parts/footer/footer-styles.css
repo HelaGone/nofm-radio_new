@@ -5,5 +5,8 @@
  #4f5b62
  #f50057
 */
-.site-footer{background-color:red;padding:24px;}
+.site-footer{background-color:red;padding:24px 8px;color:black;}
+.site-footer p{font-size: 80%;font-family: 'Inconsolata';}
+.site-footer .disclosure{display: flex;flex-direction: row;justify-content: flex-start;align-items: center; }
+.site-footer .disclosure img{max-width: 90px;margin:0 16px 16px 0;}
 /*.audio6_html5_sticky_div{display: none;}*/

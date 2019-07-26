@@ -16,7 +16,7 @@
 					$image_size = (wp_is_mobile()) ? 'square_mid' : 'square_big';
 					if($count==0): ?>
 						<figure class="fig_object big_post">
-							<a href="<?php echo get_permalink($post->ID); ?>">
+							<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 								<?php 
 									if(has_post_thumbnail($post->ID)): ?>
 										<img src="<?php echo get_the_post_thumbnail_url($post->ID, $image_size); ?>">
@@ -40,7 +40,7 @@
 					elseif($count > 0 && $count < 3): ?>
 						<li class="barra_item">
 							<figure class="fig_object">
-								<a href="<?php echo get_permalink($post->ID); ?>">
+								<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 									<?php 
 										if(has_post_thumbnail($post->ID)): ?>
 											<img src="<?php echo get_the_post_thumbnail_url($post->ID, $image_size); ?>">
@@ -64,7 +64,7 @@
 			</ul>
 			<div class="desk_container">
 						<figure class="fig_object big_post right_align">
-							<a href="<?php echo get_permalink($post->ID); ?>">
+							<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 								<?php 
 									if(has_post_thumbnail($post->ID)):
 										$image_size = (wp_is_mobile()) ? 'square_mid' : 'full'; ?>
@@ -88,7 +88,7 @@
 					$count++;			
 				endforeach; ?>
 				<div class="see_more">
-					<a href="<?php echo esc_url($cat_link); ?>">Ver más</a>
+					<a href="<?php echo esc_url($cat_link); ?>" title="Ver Más">Ver más</a>
 				</div>
 			</div>
 		</section>

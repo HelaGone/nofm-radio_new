@@ -13,7 +13,7 @@
 		<section id="barra_podcasts" class="home_section dynamic_pool container">
 			<div class="desk_container">
 				<h2 id="escucha" class="section_title">
-					<a href="<?php echo $pt_link; ?>">
+					<a href="<?php echo $pt_link; ?>" title="<?php echo esc_attr($section_pt_name); ?>">
 						<?php echo esc_html(ucfirst($section_pt_name)); ?>
 					</a>
 				</h2>
@@ -25,11 +25,11 @@
 							$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_medium'; 
 							if($count<1): ?>
 								<figure class="fig_object">
-									<a href="<?php the_permalink(); ?>">
+									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 										<?php (has_post_thumbnail()) ? the_post_thumbnail($img_size) : ''; ?>
 									</a>
 									<figcaption class="fig_caption">
-										<a href="<?php the_permalink(); ?>">
+										<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 											<h2 class="fig_title"><?php the_title(); ?></h2>
 										</a>
 									</figcaption>
@@ -38,7 +38,7 @@
 					<?php 
 							else: ?>	
 									<li class="updated_item">
-										<a href="<?php the_permalink(); ?>" title="<?php echo get_the_title($post->ID); ?>">
+										<a href="<?php the_permalink(); ?>" title="<?php echo get_the_title($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 											<?php the_title(); ?>
 										</a>
 										<span><?php the_excerpt(); ?></span>

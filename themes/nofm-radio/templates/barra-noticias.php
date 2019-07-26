@@ -11,7 +11,7 @@
 		<section id="barra_noticias" class="home_section dynamic_pool container">
 			<div class="desk_container">
 				<h2 id="enterate" class="section_title">
-					<a href="<?php echo esc_url(get_category_link($section_cat_id)); ?>">
+					<a href="<?php echo esc_url(get_category_link($section_cat_id)); ?>" title="<?php echo esc_attr($section_cat_name); ?>">
 						<?php echo esc_html(ucfirst($section_cat_name)); ?>
 					</a>
 				</h2>
@@ -24,11 +24,11 @@
 					<?php 
 						if($count<1): ?>
 							<figure class="fig_object">
-								<a href="<?php the_permalink(); ?>">
+								<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 									<?php (has_post_thumbnail()) ? the_post_thumbnail($img_size) : ''; ?>
 								</a>
 								<figcaption class="fig_caption">
-									<a href="<?php the_permalink(); ?>">
+									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 										<h2 class="fig_title"><?php the_title(); ?></h2>
 									</a>
 								</figcaption>
@@ -39,7 +39,7 @@
 						else: ?>
 							
 								<li class="updated_item">
-									<a href="<?php the_permalink(); ?>">
+									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 										<?php the_title(); ?>
 									</a>
 								</li>

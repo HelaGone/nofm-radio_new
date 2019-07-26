@@ -12,7 +12,7 @@
 		<section id="barra_recomendaciones" class="home_section dynamic_pool container">
 			<div class="desk_container">
 				<h2 id="lee" class="section_title">
-					<a href="<?php echo esc_url($tag_link); ?>">
+					<a href="<?php echo esc_url($tag_link); ?>" title="<?php echo esc_attr($section_tag_name); ?>">
 						<?php echo esc_html(ucfirst($section_tag_name)); ?>
 					</a>
 				</h2>
@@ -25,7 +25,7 @@
 								$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_medium'; 
 								if($count<3): ?>
 									<li class="updated_item">
-										<a href="<?php the_permalink(); ?>">
+										<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 											<?php the_title(); ?>
 										</a>
 									</li>
@@ -33,11 +33,11 @@
 								elseif($count==3): ?>
 					</ul>
 					<figure class="fig_object">
-						<a href="<?php the_permalink(); ?>">
+						<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 							<?php (has_post_thumbnail()) ? the_post_thumbnail($img_size) : ''; ?>
 						</a>
 						<figcaption class="fig_caption">
-							<a href="<?php the_permalink(); ?>">
+							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 								<h2 class="fig_title"><?php the_title(); ?></h2>
 							</a>
 						</figcaption>

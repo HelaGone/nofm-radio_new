@@ -16,7 +16,7 @@
 					$cat_link = get_category_link($p_cat[0]->term_id);
 					if($count==0): ?>
 						<figure class="fig_object big_post">
-							<a href="<?php echo get_permalink($post->ID); ?>">
+							<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 								<?php 
 									if(has_post_thumbnail($post->ID)):
 										if(wp_is_mobile()): ?>
@@ -44,7 +44,7 @@
 					elseif($count > 0 && $count < count($cover_posts_b)): ?>
 						<li>
 							<figure class="fig_object">
-								<a href="<?php echo get_permalink($post->ID); ?>">
+								<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 									<?php 
 										if(has_post_thumbnail($post->ID)): ?>
 											<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'square_mid'); ?>">
@@ -69,7 +69,7 @@
 				endforeach; ?>
 			</ul>
 			<div class="see_more">
-				<a href="<?php echo esc_url($cat_link); ?>">Ver más</a>
+				<a href="<?php echo esc_url($cat_link); ?>" title="Ver Más">Ver más</a>
 			</div>
 		</section>
 <?php		
