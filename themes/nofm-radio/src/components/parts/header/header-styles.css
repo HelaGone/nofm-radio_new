@@ -1,7 +1,7 @@
 #central_header{display: flex;justify-content: space-between;padding:0 8px;align-items: center;}
 #central_header .header_item{vertical-align: middle;}
 #type_menu{padding:8px 0 8px 12px;width:90%;}
-.fix-header{position: fixed;left:0;right:0;top:0;z-index: 9;background-color:rgba(0,0,0,0.75);border-bottom:2px solid white;}
+.fix-header{position: fixed;left:0;right:0;top:0;z-index: 9;background-color:rgba(0,0,0,0.75);border-bottom:2px solid red;}
 .paddingTop{padding-top:34px;}
 .bg_url{background-image: url("../../../img/week/sample_player_bg.jpg");}
 #main_site_header{margin:0 auto;background-color: #000;color:#fff;}

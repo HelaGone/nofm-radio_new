@@ -311,7 +311,16 @@
 
 			if(is_category()){
 				$query->set('posts_per_page', 7);
-				$query->set('post_type', array('post', 'podcasts', 'episodios'));
+			}
+
+			if(is_category()||is_tag()){
+				$post_type = get_query_var('post_type');
+				if($post_type){
+					$post_type = $post_type;
+				}else{
+					$post_type = array('post', 'podcasts', 'episodios');
+				}
+				$query->set('post_type', $post_type);
 			}
 			
 		}

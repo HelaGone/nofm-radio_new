@@ -22,12 +22,15 @@
 						</div>
 
 						<div class="share_buttons">
-							<div class="whatsapp-share-button share_button">
-								<a href="whatsapp://send?text=<?php echo the_permalink(); ?>" data-action="share/whatsapp/share">
-									<img src="<?php echo get_template_directory_uri().'/images/ic_social/WhatsApp_Logo_1.png'; ?>" alt="Whatsapp">
-								</a>
-							</div>
-
+							<?php 
+								if(wp_is_mobile()): ?>
+									<div class="whatsapp-share-button share_button">
+										<a href="whatsapp://send?text=<?php echo the_permalink(); ?>" data-action="share/whatsapp/share">
+											<img src="<?php echo get_template_directory_uri().'/images/ic_social/WhatsApp_Logo_1.png'; ?>" alt="Whatsapp">
+										</a>
+									</div>
+							<?php 
+								endif; ?>
 							<div class="fb-share-button share_button" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-size="small">
 								<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
 									Share
