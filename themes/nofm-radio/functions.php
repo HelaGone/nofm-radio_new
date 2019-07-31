@@ -546,11 +546,11 @@
 	 * @return $posts [Array] returns an array of posts
 	 * Used in template parts at home
 	*/
-	function bt_get_posts_by_categ($input_type, $input_cat){
+	function bt_get_posts_by_categ($input_type, $input_cat, $per_page = 4){
 		$args = array(
 			'post_type'=>$input_type,
 			'post_status'=>'publish',
-			'posts_per_page'=>4,
+			'posts_per_page'=>$per_page,
 			'orderby'=>'date',
 			'order'=>'DESC'
 		);
@@ -558,4 +558,30 @@
 		$categ = ($input_cat) ? $args['category_name'] = $input_cat : '';
 		$posts = new WP_Query($args);
 		return $posts;
+	}
+
+	/**
+	 * bt_seconds_to_time converts seconds to time in format
+	 * hh:mm:ss it's used to represent human readable time in episodios
+	 * @param $segs [int] time in seconds
+	 * @return $duration [String] Formatted time string
+	*/
+	function bt_seconds_to_time($segs){
+		$s = $segs % 60;
+		$min = floor(($segs % 3600) / 60);
+		$h = floor(($segs % 86400) / 3600);
+
+		$s = $s < 10 ? '0'.$s : $s;
+		$min = $min < 10 ? '0'.$min : $min;
+		$h = $h < 10 ? '0'.$h : $h;
+
+		$duration = ($h == 0) ? "$min:$s" : "$h:$min:$s";
+
+		return $duration;
+	}
+
+	function debugger($bug){
+		echo '<pre>';
+			print_r($bug);
+		echo '</pre>';
 	}

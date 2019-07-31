@@ -1,6 +1,6 @@
 <?php 
 	global $post;
-	$cover_posts_a = bt_get_co_posts();
+	$cover_posts_a = bt_get_co_posts('co_barra_a_option');
 	if(is_array($cover_posts_a)&&!empty($cover_posts_a)):
 		$cat = get_the_category($cover_posts_a[0]->ID); ?>
 		<section id="barra_a_section" class="home_section container">

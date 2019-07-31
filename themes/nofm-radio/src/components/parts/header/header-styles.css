@@ -55,6 +55,7 @@
 }
 
 @media screen and (min-width: 768px){
+	#main_site_header .social_network_header h3{margin-top:0;position: relative;top:-23px;}
 	#menu-type_menu .menu-item{font-size:24px; }
 	#logo{width:260px;}
 	#envivo_figure .logo_day{top:6vh;left:2vw;width:40%;}

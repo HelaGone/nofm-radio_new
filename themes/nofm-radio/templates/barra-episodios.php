@@ -1,16 +1,16 @@
 <?php 
 	global $wp_query, $post;
-	$posts_arr = wp_cache_get('barra_podcasts_wpcache');
+	$posts_arr = wp_cache_get('barra_episodios_wpcache');
 
 	if($posts_arr===false){
-		$posts_arr = bt_get_posts_by_categ('episodios', null);
-		wp_cache_set('barra_podcasts_wpcache', $posts_arr, '', 120);
+		$posts_arr = bt_get_posts_by_categ('episodios', null, 8);
+		wp_cache_set('barra_episodios_wpcache', $posts_arr, '', 120);
 	}
 
 	if($posts_arr->have_posts()):
 		$section_pt_name = $posts_arr->query_vars['post_type'];
 		$pt_link = get_post_type_archive_link($section_pt_name); ?>
-		<section id="barra_podcasts" class="home_section dynamic_pool container">
+		<section id="barra_episodios" class="home_section dynamic_pool container">
 			<div class="desk_container">
 				<h2 id="escucha" class="section_title">
 					<a href="<?php echo $pt_link; ?>" title="<?php echo esc_attr($section_pt_name); ?>">
@@ -22,6 +22,14 @@
 						$count = 0;
 						while($posts_arr->have_posts()):
 							$posts_arr->the_post();
+							setup_postdata($post);
+
+							$ep_meta_dur = get_post_meta($post->ID, '_episodio_duration', true);
+							$ep_meta_url = get_post_meta($post->ID, '_episodio_url', true);
+							$ep_meta_pod = get_post_meta($post->ID, '_episodio_show', true);
+
+							$pod_owner = get_the_title($ep_meta_pod);
+
 							$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_medium'; 
 							if($count<1): ?>
 								<figure class="fig_object">
@@ -32,6 +40,16 @@
 										<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 											<h2 class="fig_title"><?php the_title(); ?></h2>
 										</a>
+										<div class="ep_detail">
+											<span class="podcast_owner">
+												<a href="<?php echo esc_url(get_permalink($ep_meta_pod)); ?>">
+													<?php echo esc_html($pod_owner); ?>
+												</a>
+											</span>
+											<span class="ep_duration">
+												| <?php echo esc_html(bt_seconds_to_time($ep_meta_dur)); ?>
+											</span>
+										</div>
 									</figcaption>
 								</figure>
 								<ul class="updated_list">
@@ -41,14 +59,24 @@
 										<a href="<?php the_permalink(); ?>" title="<?php echo get_the_title($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 											<?php the_title(); ?>
 										</a>
-										<span><?php the_excerpt(); ?></span>
+										<div class="ep_detail">
+											<span class="podcast_owner">
+												<a href="<?php echo esc_url(get_permalink($ep_meta_pod)); ?>">
+													<?php echo esc_html($pod_owner); ?>
+												</a>
+											</span>
+											<span class="ep_duration">
+												| <?php echo esc_html(bt_seconds_to_time($ep_meta_dur)); ?>
+											</span>
+										</div>
 									</li>
 							
 					<?php		
 							endif; ?>
 			<?php 
 					$count++;
-					endwhile; ?>
+					endwhile;
+					wp_reset_postdata(); ?>
 								</ul>
 				</div>
 			</div>

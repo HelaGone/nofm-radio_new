@@ -1,14 +1,11 @@
 /*
- Dark palete +pink
+ #ff0000
  #000a12
  #263238
  #4f5b62
  #f50057
+ #FF530D
 */
-/*#barra_programas{padding:32px 0 0 0;}
-.bx-wrapper{border:none!important;}
-.programas_list_carousel .programa_list_item .fig_caption{background-color:#000a12;}
-.programas_list_carousel .programa_list_item .fig_caption .fig_title{color:#f50057;}*/
 
 /*BARRAS*/
 .barra_list{display: flex;flex-direction: row;justify-content: flex-start;}
@@ -18,7 +15,7 @@
 .home_section .section_title{
 	display: inline-block;
 	margin-bottom:16px;
-	font-size: 1.5em;
+	font-size: 160%;
 	color:#fff;
 	font-family: 'Notable';
 	background-image: url(../../../img/titles_bg/manchas.svg);
@@ -29,12 +26,17 @@
 }
 .home_section .fig_object .fig_caption .fig_title{display: inline;background-color:#000a12;}
 
-.home_section .fig_object.big_post .fig_caption .fig_title{font-size:1.6em;line-height: 29px;}
+.home_section .fig_object.big_post .fig_caption .fig_title{font-size:130%;line-height: 24px;}
 
 .dynamic_pool .desk_container{padding-top: 40px;}
 .dynamic_pool .desk_container .updated_list{background-image:linear-gradient(to bottom, #000, transparent); padding:16px 0;}
 .dynamic_pool .desk_container .updated_list .updated_item{color:#fff;margin:16px 0;border-bottom:1px solid red;padding:0 16px 8px 16px;text-shadow: 1px 2px 4px rgba(0,0,0,0.5);}
+.dynamic_pool .flex_bar_container .ep_detail{margin-top:8px;}
+.dynamic_pool .flex_bar_container .ep_detail .podcast_owner{color:#FF530D;}
+.dynamic_pool .flex_bar_container .fig_object .fig_caption .fig_title{font-size: 130%;line-height:24px;}
+.dynamic_pool .flex_bar_container .fig_object .fig_caption .ep_detail .podcast_owner{color:red;}
 #barra_recomendaciones .desk_container .updated_list{background-image:linear-gradient(to top, #000, transparent);}
+
 
 
 #barra_tema_section{margin-bottom:0;}
@@ -43,7 +45,7 @@
 #barra_tema_section .middle_list li:last-child > .fig_object{flex-direction: row-reverse;border-bottom:none;}
 #barra_tema_section .middle_list .fig_object img{max-width: 33.33%;flex-shrink: 0;}
 #barra_tema_section .middle_list .fig_object figcaption{padding:0 8px;}
-#barra_tema_section .middle_list .fig_object figcaption .fig_title{font-family: 'Lora';font-size: 1rem;}
+#barra_tema_section .middle_list .fig_object figcaption .fig_title{font-size: 1rem;font-weight: 700;color: #fff;background-color: #000;display: inline;padding: 0 4px;line-height: 19px;}
 #barra_tema_section .bottom_list .fig_object .fig_caption .fig_title{font-size: 1rem;line-height: 1.2rem;}
 
 @media screen and (min-width: 768px){
@@ -89,6 +91,7 @@
 @media screen and (min-width: 1280px){
 	.see_more{width:10%;font-size: 1.2rem;transition: background-color .2s, box-shadow .2s;}
 	.see_more:hover{background-color:#263238; box-shadow: 1px 2px 4px rgba(0,0,0,0.4);color:#f50057;}
+	.dynamic_pool .flex_bar_container .fig_object .fig_caption .ep_detail .podcast_owner:hover{color:white;}
 	.fig_object .fig_caption{bottom:-5px;}
 	#envivo_figure .logo_day{top:4vh;}
 	.barra_list{justify-content: space-evenly;margin:60px auto;}

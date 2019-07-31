@@ -41,7 +41,7 @@ button{border-style: none;background-color: transparent;outline: none;}
 .fig_object.type_figure .fig_caption{top:0;text-align: center;}
 .fig_object.type_figure .fig_caption .fig_title{font-weight: 700;display: inline-block;font-size: 3em;border-bottom: 3px solid #f50057;color:#f50057;position: relative;top: 50%;transform:translateY(-50%);}
 
-.see_more{width:100%;background-color:#f50057;padding:16px 0;text-align: center;font-weight: 700;cursor: pointer;}
+.see_more{width:100%;background-color:#FF530D;padding:16px 0;text-align: center;font-weight: 700;cursor: pointer;}
 .expand_menu{width:100%!important;}
 
 /*PAGINATION LINKS*/
