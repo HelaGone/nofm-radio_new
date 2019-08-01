@@ -42,7 +42,7 @@
 			<ul class="barra_list">
 		<?php
 					elseif($count > 0 && $count < count($cover_posts_b)): ?>
-						<li>
+						<li class="barra_item">
 							<figure class="fig_object">
 								<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 									<?php 

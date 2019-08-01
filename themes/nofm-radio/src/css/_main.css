@@ -4,6 +4,7 @@
  #263238
  #4f5b62
  #f50057
+ #FF530D
 */
 body{background-color:#222; background-image:url(../img/granulado.jpg);background-size:70%; font-family: 'Nanum Gothic', sans-serif;background-repeat: repeat;background-position: center top;}
 a{color:inherit;text-decoration:none;}
@@ -33,9 +34,9 @@ button{border-style: none;background-color: transparent;outline: none;}
 .social_network{padding: 24px 0;}
 .social_logos{width:24px; height: 24px;}
 
-.fig_object{position:relative;overflow: hidden;}
+.fig_object{position:relative;overflow: hidden;background-color: #FF530D;}
 .fig_object img{width:100%;height: auto;}
-.fig_object .fig_caption{position: absolute;left: 0; right: 0; bottom: 0;background-image:linear-gradient(transparent, #000a12);color:#fff;padding:8px;}
+.fig_object .fig_caption{position: absolute;left: 0; right: 0; bottom: 0;color:#fff;padding:8px;}
 .fig_object .fig_caption .fig_title{text-transform: uppercase;font-weight: 700;}
 
 .fig_object.type_figure .fig_caption{top:0;text-align: center;}

@@ -38,15 +38,15 @@
 										endif; ?>
 									<figcaption>
 										<h5 class="fig_title">
-											<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>"><?php echo esc_html($post->post_title); ?></a>
+											<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>"><?php echo esc_html(strtoupper($post->post_title)); ?></a>
 										</h5>
 									</figcaption>
 								</figure>
 							</li>
 				<?php
 					elseif($count > 3 ):
-						echo ($count==4) ? '</ul><ul class="bottom_list">' : ''; ?>
-							<li>
+						echo ($count==4) ? '</ul><ul class="bottom_list barra_list">' : ''; ?>
+							<li class="barra_item">
 								<figure class="fig_object">
 									<?php 
 										$bottom_image_size = (wp_is_mobile()) ? 'square_mid' : 'square_big';
