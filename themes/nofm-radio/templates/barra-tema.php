@@ -6,7 +6,7 @@
 		<?php
 			$count = 0;
 			foreach($posts_barra_temas as $key => $post):
-				echo ($key == 0) ? '<h2 class="section_title">'.esc_html($post->name).'</h2>' : '';
+				echo ($key == 0) ? '<h2 class="section_title fjalla_font">'.esc_html(strtoupper($post->name)).'</h2>' : '';
 				if($key>0):
 					$attachment_meta = bt_get_attachment(get_post_thumbnail_id($post->ID));
 					if($count == 1): ?>
@@ -20,8 +20,10 @@
 							<?php
 								endif; ?>
 							<figcaption class="fig_caption">
-								<h3 class="fig_title">
-									<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>"><?php echo esc_html($post->post_title); ?></a>
+								<h3 class="fig_title fjalla_font">
+									<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+										<?php echo esc_html(strtoupper($post->post_title)); ?>
+									</a>
 								</h3>
 							</figcaption>
 						</figure>
@@ -37,8 +39,10 @@
 									<?php
 										endif; ?>
 									<figcaption>
-										<h5 class="fig_title">
-											<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>"><?php echo esc_html(strtoupper($post->post_title)); ?></a>
+										<h5 class="fig_title fjalla_font">
+											<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+												<?php echo esc_html(strtoupper($post->post_title)); ?>
+											</a>
 										</h5>
 									</figcaption>
 								</figure>
@@ -57,8 +61,10 @@
 									<?php
 										endif; ?>
 									<figcaption class="fig_caption">
-										<h4 class="fig_title">
-											<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>"><?php echo esc_html($post->post_title); ?></a>
+										<h4 class="fig_title fjalla_font">
+											<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+												<?php echo esc_html(strtoupper($post->post_title)); ?>
+											</a>
 										</h4>
 									</figcaption>
 								</figure>

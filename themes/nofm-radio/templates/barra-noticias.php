@@ -10,9 +10,9 @@
 		$section_cat_id = get_cat_ID($section_cat_name); ?>
 		<section id="barra_noticias" class="home_section dynamic_pool container">
 			<div class="desk_container">
-				<h2 id="enterate" class="section_title">
+				<h2 id="enterate" class="section_title title_noticias fjalla_font">
 					<a href="<?php echo esc_url(get_category_link($section_cat_id)); ?>" title="<?php echo esc_attr($section_cat_name); ?>">
-						<?php echo esc_html(ucfirst($section_cat_name)); ?>
+						<?php echo esc_html(strtoupper($section_cat_name)); ?>
 					</a>
 				</h2>
 				<div class="flex_bar_container">
@@ -29,7 +29,7 @@
 								</a>
 								<figcaption class="fig_caption">
 									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-										<h2 class="fig_title"><?php the_title(); ?></h2>
+										<h2 class="fig_title fjalla_font"><?php the_title(); ?></h2>
 									</a>
 								</figcaption>
 							</figure>

@@ -14,7 +14,6 @@
 	margin-bottom:16px;
 	font-size: 8vw;
 	color:#fff;
-	font-family: 'Notable';
 	background-image: url(../../../img/titles_bg/manchas.svg);
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -26,8 +25,8 @@
 .barra_list .barra_item .fig_object .fig_caption .fig_title{font-size: 5vw;}
 
 .dynamic_pool .desk_container{padding-top: 40px;}
-.dynamic_pool .desk_container .updated_list{background-image:linear-gradient(to bottom, #000, transparent); padding:16px 0;}
-.dynamic_pool .desk_container .updated_list .updated_item{color:#fff;margin:16px 0;border-bottom:1px solid red;padding:0 16px 8px 16px;text-shadow: 1px 2px 4px rgba(0,0,0,0.5);}
+.dynamic_pool .desk_container .updated_list{background-image:linear-gradient(to bottom, #000, transparent); padding:16px 0;margin-left:16px;}
+.dynamic_pool .desk_container .updated_list .updated_item{color:#fff;margin-bottom:4px;padding-bottom:4px;padding-top: 4px; border-bottom:1px solid red;text-shadow: 1px 2px 4px rgba(0,0,0,0.5);}
 .dynamic_pool .flex_bar_container .ep_detail{margin-top:8px;}
 .dynamic_pool .flex_bar_container .ep_detail .podcast_owner{color:#FF530D;}
 .dynamic_pool .flex_bar_container .fig_object .fig_caption .ep_detail .podcast_owner{color:red;}

@@ -12,9 +12,9 @@
 		$pt_link = get_post_type_archive_link($section_pt_name); ?>
 		<section id="barra_episodios" class="home_section dynamic_pool container">
 			<div class="desk_container">
-				<h2 id="escucha" class="section_title">
+				<h2 id="escucha" class="section_title title_eps fjalla_font">
 					<a href="<?php echo $pt_link; ?>" title="<?php echo esc_attr($section_pt_name); ?>">
-						<?php echo esc_html(ucfirst($section_pt_name)); ?>
+						<?php echo esc_html(strtoupper($section_pt_name)); ?>
 					</a>
 				</h2>
 				<div class="flex_bar_container">
@@ -38,7 +38,7 @@
 									</a>
 									<figcaption class="fig_caption">
 										<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-											<h2 class="fig_title"><?php the_title(); ?></h2>
+											<h2 class="fig_title fjalla_font"><?php the_title(); ?></h2>
 										</a>
 										<div class="ep_detail">
 											<span class="podcast_owner">
@@ -56,7 +56,7 @@
 					<?php 
 							else: ?>	
 									<li class="updated_item">
-										<a href="<?php the_permalink(); ?>" title="<?php echo get_the_title($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+										<a href="<?php the_permalink(); ?>" title="<?php echo get_the_title($post->ID); ?>" class="fjalla_font">
 											<?php the_title(); ?>
 										</a>
 										<div class="ep_detail">

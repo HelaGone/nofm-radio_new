@@ -6,7 +6,7 @@
  #f50057
  #FF530D
 */
-body{background-color:#222; background-image:url(../img/granulado.jpg);background-size:70%; font-family: 'Nanum Gothic', sans-serif;background-repeat: repeat;background-position: center top;}
+body{background-color:#222; background-image:url(../img/granulado.jpg);background-size:70%; font-family: 'Inconsolata';background-repeat: repeat;background-position: center top;}
 a{color:inherit;text-decoration:none;}
 button{border-style: none;background-color: transparent;outline: none;}
 .clearfix:before, .clearfix:after {content:"";display:table;}
@@ -24,12 +24,11 @@ button{border-style: none;background-color: transparent;outline: none;}
 .black_parr{color:#222;}
 /*#wpadminbar {z-index:999999999;}*/
 
+.fjalla_font{font-family: 'Fjalla One', sans-serif;}
+.consol_font{font-family: 'Inconsolata';}
+
 #logo{background-image:url(../img/logo_nofm.png);background-size: contain;width: 200px;height: auto;background-position: center;background-repeat: no-repeat;position: relative;margin-left:24px;}
 #logo a{position: absolute;top: 0;left: 0;bottom: 0;right: 0;}
-#facebook{background-image: url(../img/picons06.png);background-size: contain;background-position: center;background-repeat: no-repeat; }
-#twitter{background-image: url(../img/picons03.png);background-size: contain;background-position: center;background-repeat: no-repeat; }
-#instagram{background-image: url(../img/picons02.png);background-size: contain;background-position: center;background-repeat: no-repeat; }
-#feedburner{background-image: url(../img/picons20.png);background-size: contain;background-position: center;background-repeat: no-repeat; }
 
 .social_network{padding: 24px 0;}
 .social_logos{width:24px; height: 24px;}

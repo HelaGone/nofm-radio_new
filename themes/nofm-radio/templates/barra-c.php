@@ -4,9 +4,9 @@
 	if(is_array($cover_posts_c)&&!empty($cover_posts_c)): 
 		$cat = get_the_category($cover_posts_c[0]->ID); ?>
 		<section id="barra_c_section" class="home_section container">
-			<h2 class="section_title">
+			<h2 class="section_title fjalla_font">
 				<a href="<?php echo get_category_link($cat[0]->term_id); ?>" title="<?php echo esc_attr($cat[0]->name); ?>">
-					<?php echo esc_html($cat[0]->name); ?>
+					<?php echo esc_html(strtoupper($cat[0]->name)); ?>
 				</a>
 			</h2>
 		<?php		
@@ -32,9 +32,9 @@
 									endif; ?>
 							</a>
 							<figcaption class="fig_caption">
-								<h3 class="fig_title">
+								<h3 class="fig_title fjalla_font">
 									<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-										<?php echo esc_html($post->post_title); ?>
+										<?php echo esc_html(strtoupper($post->post_title)); ?>
 									</a>
 								</h3>
 							</figcaption>
@@ -57,7 +57,7 @@
 								<figcaption class="fig_caption">
 									<h3 class="fig_title">
 										<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-											<?php echo esc_html($post->post_title); ?>
+											<?php echo esc_html(strtoupper($post->post_title)); ?>
 										</a>
 									</h3>
 								</figcaption>
@@ -68,7 +68,7 @@
 					$count++;		
 				endforeach; ?>
 			</ul>
-			<div class="see_more">
+			<div class="see_more fjalla_font">
 				<a href="<?php echo esc_url($cat_link); ?>">Ver más</a>
 			</div>
 		</section>

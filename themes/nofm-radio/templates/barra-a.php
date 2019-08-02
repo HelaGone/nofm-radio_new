@@ -5,8 +5,10 @@
 		$cat = get_the_category($cover_posts_a[0]->ID); ?>
 		<section id="barra_a_section" class="home_section container">
 			<div class="desk_container">
-				<h2 class="section_title">
-					<a href="<?php echo get_category_link($cat[0]->term_id); ?>"><?php echo esc_html($cat[0]->name); ?></a>
+				<h2 class="section_title fjalla_font">
+					<a href="<?php echo get_category_link($cat[0]->term_id); ?>">
+						<?php echo esc_html(strtoupper($cat[0]->name)); ?>
+					</a>
 				</h2>
 			<?php
 				$count=0;
@@ -27,9 +29,9 @@
 									endif; ?>
 							</a>
 							<figcaption class="fig_caption">
-								<h3 class="fig_title">
+								<h3 class="fig_title fjalla_font">
 									<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-										<?php echo esc_html($post->post_title); ?>
+										<?php echo esc_html(strtoupper($post->post_title)); ?>
 									</a>
 								</h3>
 							</figcaption>
@@ -51,9 +53,9 @@
 										endif; ?>
 								</a>
 								<figcaption class="fig_caption">
-									<h3 class="fig_title">
+									<h3 class="fig_title fjalla_font">
 										<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-											<?php echo esc_html($post->post_title); ?>
+											<?php echo esc_html(strtoupper($post->post_title)); ?>
 										</a>
 									</h3>
 								</figcaption>
@@ -76,9 +78,9 @@
 									endif; ?>
 							</a>
 							<figcaption class="fig_caption">
-								<h3 class="fig_title">
+								<h3 class="fig_title fjalla_font">
 									<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-										<?php echo esc_html($post->post_title); ?>
+										<?php echo esc_html(strtoupper($post->post_title)); ?>
 									</a>
 								</h3>
 							</figcaption>
@@ -87,7 +89,7 @@
 					endif;
 					$count++;			
 				endforeach; ?>
-				<div class="see_more">
+				<div class="see_more fjalla_font">
 					<a href="<?php echo esc_url($cat_link); ?>" title="Ver Más">Ver más</a>
 				</div>
 			</div>
