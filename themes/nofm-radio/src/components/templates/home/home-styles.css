@@ -36,10 +36,11 @@
 #barra_tema_section .bottom_list, 
 #barra_tema_section .middle_list .fig_object{display: flex;flex-direction: row;justify-content:flex-start;align-items: center;}
 #barra_tema_section .bottom_list{margin-bottom: 0;}
+#barra_tema_section .middle_list li{background-color:#000a12;border-radius: 5px;}
 #barra_tema_section .middle_list li:last-child > .fig_object{flex-direction: row-reverse;border-bottom:none;}
 #barra_tema_section .middle_list .fig_object img{max-width: 33.33%;flex-shrink: 0;}
 #barra_tema_section .middle_list .fig_object figcaption{margin:0 8px;}
-#barra_tema_section .middle_list .fig_object figcaption .fig_title{font-size: 3vh;font-weight: 700;color: #fff;background-color: #000;display: inline;padding: 0 4px;}
+#barra_tema_section .middle_list .fig_object figcaption .fig_title{font-size: 3vh;font-weight: 700;color: #fff;display: inline;padding: 0 4px;}
 
 @media screen and (min-width: 768px){
 	.see_more{font-size: 2rem;}

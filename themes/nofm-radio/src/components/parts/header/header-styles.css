@@ -3,7 +3,6 @@
 #type_menu{padding:8px 0 8px 12px;width:90%;}
 .fix-header{position: fixed;left:0;right:0;top:0;z-index: 9;background-color:rgba(0,0,0,0.75);border-bottom:2px solid red;}
 .paddingTop{padding-top:34px;}
-.bg_url{background-image: url("../../../img/week/sample_player_bg.jpg");}
 #main_site_header{margin:0 auto;background-color: #000;color:#fff;}
 #main_site_header .social_network_header{padding:0;position: absolute;top:0;left: 0;right: 0;z-index: 1;}
 #main_site_header .social_network_header .social_flex_container{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;}

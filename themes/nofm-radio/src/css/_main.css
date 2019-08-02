@@ -33,8 +33,8 @@ button{border-style: none;background-color: transparent;outline: none;}
 .social_network{padding: 24px 0;}
 .social_logos{width:24px; height: 24px;}
 
-.fig_object{position:relative;overflow: hidden;background-color: #FF530D;}
-.fig_object img{width:100%;height: auto;}
+.fig_object{position:relative;overflow: hidden;border-radius: 5px;}
+.fig_object img{width:100%;height: auto;border-radius: 5px;}
 .fig_object .fig_caption{position: absolute;left: 0; right: 0; bottom: 0;color:#fff;padding:8px;}
 .fig_object .fig_caption .fig_title{text-transform: uppercase;font-weight: 700;}
 
