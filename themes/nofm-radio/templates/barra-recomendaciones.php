@@ -16,7 +16,7 @@
 						<?php echo esc_html(strtoupper($section_tag_name)); ?>
 					</a>
 				</h2>
-				<div class="flex_bar_container">
+				<div class="flex_bar_container flex_space">
 					<ul class="updated_list">
 						<?php
 							$count = 0;
