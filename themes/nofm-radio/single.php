@@ -7,7 +7,7 @@
 				<article class="single_post_container">
 					<div class="single_content_wrapper">
 						<div class="article_header">
-							<h1 class="single_title"><?php the_title(); ?></h1>
+							<h1 class="single_title fjalla_font"><?php the_title(); ?></h1>
 							<div class="single_post_data">
 								<?php echo bt_print_term_cloud($post->ID, 'category'); ?>
 								<time class="post_date_item"><?php echo get_the_date('D, d.m.Y'); ?></time>
@@ -41,12 +41,14 @@
 								Tweet
 							</a>
 						</div>
+						<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-width="766" data-numposts="5" data-colorscheme="dark"></div>
 					</div>
 				</article>
 	<?php
 			endwhile;
 		endif; ?>
 
-	<?php //(wp_is_mobile()) ? '' : get_sidebar(); ?>
+	<?php
+	 //(wp_is_mobile()) ? '' : get_sidebar(); ?>
 </section>
 <?php get_footer(); ?>

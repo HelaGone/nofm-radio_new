@@ -5,20 +5,19 @@
  #4f5b62
  #f50057
 */
-.single_page{/*border:1px solid red;*/padding:32px 8px;background-color: rgba(0,0,0,0.7);}
+.single_page{padding:32px 8px;background-color: rgba(0,0,0,0.7);}
 .single_page .single_post_container{max-width: 1280px;margin:0 auto;}
 .single_page .single_post_container img{width: 100%; height: auto;margin:24px 0 0 0;}
-.single_page .single_post_container .single_content_wrapper{max-width: 666px;margin:0 auto;}
+.single_page .single_post_container .single_content_wrapper{max-width: 766px;margin:0 auto;}
 
-.single_page .single_post_container .single_title{color:#fff;font-family: Notable;font-size: 2em;}
+.single_page .single_post_container .single_title{color:#fff;font-size: 200%;}
 .single_page .single_post_container .single_post_data{color:#f50057;margin-top:16px;}
 .single_page .single_post_container .single_post_data .term_pool{margin:8px 0px;}
 .single_page .single_post_container .single_post_data time{color:#efefef;}
 .single_page .single_post_container .single_post_data .post_author_item a{color:#efefef;}
-/*.single_page .single_post_container .single_post_data span{margin:8px 0;}*/
 .single_page .single_post_container .article_content{color:#fff;width:100%;margin:32px 0;}
 .single_page .single_post_container .article_content p{line-height: 28px;font-family: 'Inconsolata';margin:8px 0;font-size: 20px;}
-.single_page .single_post_container .article_content h2{margin:24px 0;font-weight: 700;font-size: 1.7em;}
+.single_page .single_post_container .article_content h2{margin:24px 0;font-weight: 700;font-size: 180%;font-family: Fjalla One, sans-serif;}
 .single_page .single_post_container .article_content blockquote,
 .single_page .single_post_container .article_content figure,
 .single_page .single_post_container .article_content iframe{width:100%;background-color: white;}

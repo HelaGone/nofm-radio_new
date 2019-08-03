@@ -46,9 +46,9 @@ button{border-style: none;background-color: transparent;outline: none;}
 .expand_menu{width:100%!important;}
 
 /*PAGINATION LINKS*/
-.page-numbers{display: flex;flex-direction: row;justify-content: center;background-color: red;}
+.page-numbers{display: flex;flex-direction: row;justify-content: center;background-color: #000a12;max-width: 33%; color:#cae8fa;margin:16px auto;border-radius: 5px;}
 .page-numbers li{padding:12px;color:#000;}
-.page-numbers.current{color:#4f5b62;}
+.page-numbers.current, .page-numbers .prev, .page-numbers .next {color:#FF530D;}
 
 @media screen and (min-width: 768px){
 	.see_more{font-size: 2rem;}

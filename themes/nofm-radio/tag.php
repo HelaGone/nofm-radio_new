@@ -4,7 +4,7 @@
 	if(have_posts()):
 		$tag_name = $wp_query->query_vars['tag'];
 		$tag_name_clean = str_replace('-', ' ', $tag_name);?>
-		<h2 class="section_title"><?php echo esc_html( ucfirst($tag_name_clean) ); ?></h2>
+		<h2 class="section_title fjalla_font"><?php echo esc_html( strtoupper($tag_name_clean) ); ?></h2>
 		<div class="posts_pool">
 		<?php 
 			while(have_posts()):

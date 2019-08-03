@@ -33,13 +33,13 @@
 								<?php the_post_thumbnail($image_size); ?>
 							</a>
 							<figcaption class="fig_caption">
-								<time><?php echo get_the_date('D, d.m.Y'); ?></time>
 								<h2 class="fig_title fjalla_font">
 									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 										<?php the_title(); ?>
 									</a>
 								</h2>
-								<span><?php echo get_the_author_meta('display_name'); ?></span>
+								<span><?php echo get_the_author_meta('display_name').'. '; ?></span>
+								<time><?php echo get_the_date('D, d.m.Y'); ?></time>
 							</figcaption>
 						</figure>
 			<?php
@@ -51,13 +51,13 @@
 								<?php the_post_thumbnail($image_size_duo); ?>
 							</a>
 							<figcaption class="fig_caption">
-								<time><?php echo get_the_date('D, d.m.Y'); ?></time>
 								<h2 class="fig_title fjalla_font">
 									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 										<?php the_title(); ?>
 									</a>
 								</h2>
-								<span><?php echo get_the_author_meta('display_name'); ?></span>
+								<span><?php echo get_the_author_meta('display_name').'. '; ?></span>
+								<time><?php echo get_the_date('D, d.m.Y'); ?></time>
 							</figcaption>
 						</figure>
 			<?php
@@ -68,13 +68,13 @@
 								<?php the_post_thumbnail($image_size); ?>
 							</a>
 							<figcaption class="fig_caption">
-								<time><?php echo get_the_date('D, d.m.Y'); ?></time>
 								<h2 class="fig_title fjalla_font">
 									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 										<?php the_title(); ?>
 									</a>
 								</h2>
-								<span><?php echo get_the_author_meta('display_name'); ?></span>
+								<span><?php echo get_the_author_meta('display_name').'. '; ?></span>
+								<time><?php echo get_the_date('D, d.m.Y'); ?></time>
 							</figcaption>
 						</figure>
 			<?php
