@@ -3,29 +3,33 @@
  #000a12
  #263238
  #4f5b62
+ #CAE8FA | 202, 232, 250
  #f50057
+ #FF530D | 255, 83, 13
 */
-/*.episode_list{padding:8px;}
-.episode_list .episode_item{display: flex;flex-direction: row;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.3);}
-.episode_list .episode_item img{margin-right:8px;border-radius: 3px;object-fit: cover;width:100%;height: auto;}
-.episode_list .episode_item a{display:block;vertical-align: middle;flex-wrap: wrap;}
-.episode_list .episode_item .ep_info{margin-left: 8px;}
-.episode_list .episode_item .ep_info h2{font-size:1.2em;font-weight:700;line-height:1.4em;display:inline-block;}
-.episode_list .episode_item .ep_info h3{font-size:.9em; font-weight:normal;display:inline-block;}
-.episode_list .episode_item .ep_info time{font-size:.8em; color:#565656;display: block;margin-top:8px;}
-
-@media screen and (min-width:768px){
-	.archive_section_wrapper h1{font-size: 5em;}
-	.episode_list{display:flex;flex-wrap:wrap;}
-	.episode_list .episode_item{justify-content:flex-start;width:calc(100% / 2 - 16px);border-bottom:none;}
+#archive_episodios .posts_pool{padding: 16px 8px 0 8px;}
+#archive_episodios .posts_pool .fig_object{
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content:space-between;
+	align-items: center;
+	border-radius:5px;
+	background-color:rgba(202, 232, 250, 0.7);
+	margin-bottom:16px;
+	box-shadow: 4px 4px 16px #000;
+	-webkit-transition:box-shadow .3s;
+	transition: box-shadow .3s;
 }
-
-@media screen and (min-width:1024px){
-	#archive_episodios .fig_object img{max-height: 570px;object-fit: cover;}
-	.episode_list{padding:24px 0;}
-	.episode_list .episode_item{width:calc(100% / 3 - 16px);display:block;justify-content:space-between;margin-right:24px;margin-bottom:24px;position:relative;padding:0;}
-	.episode_list .episode_item:nth-of-type(3n){margin-right:0;}
-	.episode_list .episode_item .ep_info{position: absolute;bottom:3px;left: 0;right: 0;padding:16px;font-size: 180%;background-image:linear-gradient(transparent, #f50057);color:#fff;margin:0;}
-	.episode_list .episode_item .ep_info time{color:#fff;}
-	.episode_list .episode_item .ep_info h2, .episode_list .episode_item .ep_info h3{text-shadow: 1px 2px 3px rgba(0,0,0,0.3)}
-}*/
+#archive_episodios .posts_pool .fig_object img{border-radius: 5px;max-width: 210px;}
+#archive_episodios .posts_pool .fig_object .fig_caption{position: relative;display: inline-block;background-color:transparent;}
+#archive_episodios .posts_pool .fig_object .fig_caption time{color:#000a12;}
+#archive_episodios .posts_pool .fig_object .fig_caption .fig_title{font-size: 130%;}
+#archive_episodios .posts_pool .fig_object .fig_caption .ep_info{color:#000a12;display: flex;flex-direction: row; justify-content: flex-start;align-items:top;margin-top: 4px;}
+#archive_episodios .posts_pool .fig_object .fig_caption .ep_info h3{color:#FF530D;/*line-height: 10px;*/}
+@media screen and (min-width: 760px){
+	#archive_episodios .posts_pool{margin:0;display: block;max-width: 666px;margin:0 auto;}
+	#archive_episodios .posts_pool .fig_object{width:100%;}
+}
+@media screen and (min-width: 1280px){
+	#archive_episodios .posts_pool .fig_object:hover{box-shadow: 2px 2px 4px #000;}
+}

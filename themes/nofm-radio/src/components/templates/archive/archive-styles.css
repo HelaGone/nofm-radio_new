@@ -10,7 +10,6 @@
 .archive_section .posts_pool .fig_object .fig_caption{background-color:rgba(0,10,18, 0.8);}
 .archive_section .posts_pool .fig_object .fig_caption .fig_title{color:#f50057;line-height: 1.3em;}
 .archive_section .posts_pool .fig_object .fig_caption p{font-size: .7em;font-weight: 300;line-height: 1.4em;}
-.archive_section .posts_pool .fig_object .fig_caption time{font-size: .7em;}
 
 @media screen and (min-width: 380px){
 	.archive_section .posts_pool .fig_object .fig_caption{font-size: 125%;}

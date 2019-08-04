@@ -316,6 +316,9 @@
 			if(is_category()||is_tag()){
 				$post_type = array('post', 'podcasts', 'episodios');
 				$query->set('post_type', $post_type);
+				if(is_tag()){
+					$query->set('posts_per_page', 12);
+				}
 			}
 			
 		}
