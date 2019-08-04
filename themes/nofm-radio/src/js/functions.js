@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	console.log('main src functions js');
+	// console.log('main src functions js');
 	$('body :not(.wp-embedded-content)').fitVids();
 
 	// Hace la animación del botón menú
@@ -15,7 +15,8 @@ $(document).ready(function(){
 		$('.main_navigation').animate({width:'0'});
 	});
 
-	let player = null;
+
+	/*let player = null;
 	$(".player_container svg").on("click", function(){
 		console.log("open player click");
 		openWindow();
@@ -34,6 +35,6 @@ $(document).ready(function(){
 	$('.close_player_window').on('click', function(){
 		console.log('close player');
 		closeWindow();
-	});
+	});*/
 
 });

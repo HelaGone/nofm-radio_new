@@ -2,7 +2,7 @@
 
 	"use strict";
 	$(function(){
-		console.log('hello from functions.js');
+		// console.log('hello from functions.js');
 
 		const today = new Date();
 		const bg_url = `${window.location.origin}/~rizika/nofm-radio.com/wp-content/themes/nofm-radio/images/week/${today.getDay()}.jpg` ; //DEV

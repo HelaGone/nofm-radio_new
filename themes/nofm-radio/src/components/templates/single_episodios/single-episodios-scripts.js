@@ -25,24 +25,24 @@ $(document).ready(function(){
 
 	let audio_url = $('#btn_ep_play').attr('data-source');
 	let audioPlayed = false;
+
 	let audio = new Howl({
 		src: [audio_url],
-		html5:true,
+		html5:false,
 		onplay: ()=>{
 			console.log('PLAYING...');
 			audioPlayed = true;
 			let time = Math.round(audio.duration);
-			$('#btn_ep_play').html('PAUSE');
-
+			$('#leading_player_icon').find('use').attr('href', '#ic_pause');
 		},
 		onpause:()=>{
 			console.log('PAUSED...');
-			$('#btn_ep_play').html('PLAY');
+			$('#leading_player_icon').find('use').attr('href', '#ic_play');
 
 		},
 		onend:()=>{
 			console.log('ENDED...');
-
+			$('#leading_player_icon').find('use').attr('href', '#ic_play');
 		}
 	});
 

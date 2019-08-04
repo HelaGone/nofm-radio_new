@@ -1,5 +1,5 @@
 <?php get_header(); global $wp_query; ?>
-<section id="single_section" class="single_page">
+<section id="single_post" class="single_page">
 	<?php
 		if(have_posts()):
 			while(have_posts()):
@@ -47,8 +47,5 @@
 	<?php
 			endwhile;
 		endif; ?>
-
-	<?php
-	 //(wp_is_mobile()) ? '' : get_sidebar(); ?>
 </section>
 <?php get_footer(); ?>
