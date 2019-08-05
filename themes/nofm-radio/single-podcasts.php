@@ -1,6 +1,6 @@
 <?php get_header(); global $wp_query; ?>
 
-<section id="single_section" class="single_page">
+<section id="single_podcasts" class="single_page">
 	<?php
 		if(have_posts()):
 			while(have_posts()):
@@ -28,41 +28,7 @@
 						<div class="article_content">
 							<?php the_content(); ?>
 						</div>
-						<?php 
-							$args = array(
-								'post_type'=>'episodios',
-								'post_status'=>'publish',
-								'posts_per_page'=>13,
-								'orderby'=>'date',
-								'order'=>'DESC',
-								'meta_value'=>$post->ID
-							);
-							$episodios = new WP_Query($args);
-							if($episodios->have_posts()): ?>
-								<div class="episode_pool">
-								<?php
-									while($episodios->have_posts()):
-										$episodios->the_post();
-										setup_postdata($post);
-										$eps_img_size = (wp_is_mobile()) ? 'thumbnail' : 'square_mid'; ?>
-										<figure class="fig_object">
-											<a href="<?php echo the_permalink(); ?>">
-												<?php (has_post_thumbnail()) ? the_post_thumbnail($eps_img_size): ''; ?>
-											</a>
-											<figcaption class="fig_caption">
-												<h3 class="fig_title">
-													<a href="<?php echo the_permalink(); ?>">
-														<?php the_title(); ?>
-													</a>
-												</h3>
-											</figcaption>
-										</figure>
-								<?php
-									endwhile; ?>
-								</div>
-						<?php
-							wp_reset_postdata();
-							endif; ?>
+						<?php get_template_part('templates/barra', 'related'); ?>
 					</div>
 				</article>
 	<?php

@@ -46,19 +46,3 @@
 <?php 
 	echo bt_print_pagination();
 	get_footer(); ?>
-
-
-<!-- 
-	<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object type_figure">
-		<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-			<?php the_post_thumbnail($image_size); ?>
-		</a>
-		<figcaption class="fig_caption">
-			<h2 class="fig_title">
-				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-					<?php the_title(); ?>
-				</a>
-			</h2>
-		</figcaption>
-	</figure>
- -->

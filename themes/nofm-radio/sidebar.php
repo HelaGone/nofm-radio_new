@@ -1,10 +1,10 @@
-<?php global $wp_query; ?>
+<?php global $wp_query, $post; ?>
 
 <?php 
 	$type = $wp_query->query_vars['post_type'];
 	$from_same_podcast;
 	$sidebar_title;
-	$args = array('post_type'=>$type,'post_status'=>'publish','posts_per_page'=>13,'orderby'=>'date','order'=>'DESC',);
+	$args = array('post_type'=>$type,'post_status'=>'publish','posts_per_page'=>13,'orderby'=>'date','order'=>'DESC','post__not_in'=>array($post->ID));
 	if($type != 'episodios'):
 		$cat_obj = get_the_category($wp_query->queried_object->ID);
 		$args['cat'] = $cat_obj[0]->term_id;
