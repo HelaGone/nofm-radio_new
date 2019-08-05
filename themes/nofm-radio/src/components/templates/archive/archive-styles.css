@@ -18,7 +18,7 @@
 @media screen and (min-width: 768px){
 	.archive_section .posts_pool .fig_object .fig_caption{font-size: 200%;}
 	.archive_section .fig_object.type_figure .fig_caption .fig_title{font-size: 300%;}
-	.archive_section .posts_pool{display: flex;flex-direction: row;flex-wrap: wrap;margin:32px 0;}
+	.archive_section .posts_pool{display: flex;flex-direction: row;flex-wrap: wrap;padding:32px 0;}
 	.archive_section .posts_pool .fig_object{width:calc(100% / 2 - 16px);margin:0 32px 32px 0;}
 	.archive_section .posts_pool .fig_object:nth-of-type(2n){margin:0 0 32px 0;}
 }

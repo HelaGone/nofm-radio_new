@@ -21,7 +21,7 @@
 								<p class="ep_info_item"><span class="info_prefix">Duración:</span> <?php echo esc_html(bt_seconds_to_time($episode_duration)); ?> </p>
 								<!-- Show info -->
 								<div class="podcast_info ep_info_item">
-									<span class="info_prefix">Por: </span>
+									<span class="info_prefix">Transmitido en: </span>
 									<h3 class="fjalla_font ep_info_item">
 										<a href="<?php echo get_the_permalink($podcast->ID); ?>" title="<?php echo esc_attr($podcast->post_title); ?>">
 											<?php echo esc_html($podcast->post_title); ?>
@@ -55,6 +55,28 @@
 						<div class="article_content episode_content">
 							<?php the_content(); ?>
 						</div>
+
+						<div class="share_buttons">
+							<?php 
+								if(wp_is_mobile()): ?>
+									<div class="whatsapp-share-button share_button">
+										<a href="whatsapp://send?text=<?php echo the_permalink(); ?>" data-action="share/whatsapp/share">
+											<img src="<?php echo get_template_directory_uri().'/images/ic_social/WhatsApp_Logo_1.png'; ?>" alt="Whatsapp">
+										</a>
+									</div>
+							<?php 
+								endif; ?>
+							<div class="fb-share-button share_button" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-size="small">
+								<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+									Share
+								</a>
+							</div>
+
+							<a id="twitter-wjs" class="twitter-share-button share_button" href="https://twitter.com/intent/tweet?text=#porNoFM" data-size="small">
+								Tweet
+							</a>
+						</div>
+						<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-width="766" data-numposts="5" data-colorscheme="dark"></div>
 					</div>
 				</article>
 	<?php

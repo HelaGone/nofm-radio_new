@@ -7,15 +7,12 @@
  #f50057
  #FF530D | 255, 83, 13
 */
-
 .category_section .fig_object.type_figure{max-height: 315px;}
 .category_section .fig_object.type_figure .fig_caption{background-color: rgba(0,10,18,0.8);top:0;}
 .category_section .fig_object.type_figure .fig_caption .fig_title{text-align:center;}
 .category_section .fig_object, .category_section .fig_object img{border-radius:0;}
 .category_section .fig_object .fig_caption br{display: none;}
 .category_section .fig_object .fig_caption{background-color:rgba(202, 232, 250, 0.7);}
-
-
 .category_section .fig_object.type_figure .fig_caption {padding:8px 0;}
 .category_section .fig_object.type_figure .fig_caption .fig_title {font-size: 180%;padding:0 8px;position: relative;top: 50%;margin-top:-14px;}
 .category_section .fig_object.type_figure .fig_caption time{padding:4px 8px;}
