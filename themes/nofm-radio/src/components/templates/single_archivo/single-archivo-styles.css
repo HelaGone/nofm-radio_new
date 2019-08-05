@@ -1,42 +1,11 @@
 #single_archivo{font-family: 'Lora';}
-/*#single_section{font-family: 'Lora';padding:80px 0;}*/
-.single_page{
-	max-width: 1280px;
-	margin:0px auto;
-	padding:40px 8px;
-}
-.single_page .single_post_container{
-	background-color:#f2eecb;
-	padding:8px;
-	border:1px solid rgba(0,0,0,0.2);
-	border-radius: 3px;
-}
-.single_page .single_post_container .single_title{
-	border-bottom: 2px solid black;
-	font-size: 2rem;
-	font-weight: 700;
-	margin-bottom:8px;
-	padding-right: 8px;
-	padding-bottom: 8px;
-	color:#000;
-}
-.single_page .single_post_container .single_post_data .post_data_item{
-	color:#666;
-}
-.single_page .single_post_container .single_content{
-	max-width: 640px;
-	font-size: 1rem;
-	line-height: 1.6rem;
-}
-.single_page .single_post_container .single_content p{
-	margin:16px 0;
-	word-wrap:break-word;
-}
+#single_archivo.single_page{background-color:transparent;}
+.single_page{max-width: 1280px;margin:0px auto;padding:40px 8px;}
+.single_page .single_post_container{background-color:#f2eecb;background-image: url('../../../img/assets/textura_archivo.png');background-size: 50%;background-repeat-x: no-repeat;background-position: right;padding:8px;border:1px solid rgba(0,0,0,0.2);border-radius: 3px;}
+.single_page .single_post_container .single_title{border-bottom: 2px solid black;font-size: 2rem;font-weight: 700;margin-bottom:8px;padding-right: 8px;padding-bottom: 8px;color:#000;}
+.single_page .single_post_container .single_post_data .post_data_item{color:#666;}
+.single_page .single_post_container .single_content{max-width: 640px;font-size: 1rem;line-height: 1.6rem;}
+.single_page .single_post_container .single_content p{margin:16px 0;word-wrap:break-word;}
 .single_page .single_post_container .single_content img, 
 .single_page .single_post_container .single_content .wp-embedded-content,
-.single_page .single_post_container .single_content .wp-caption.aligncenter{
-	width:100%!important;
-	height:auto;
-	max-width:853px;
-	margin: 0 auto;
-}
+.single_page .single_post_container .single_content .wp-caption.aligncenter{width:100%!important;height:auto;max-width:853px;margin: 0 auto;}

@@ -2,7 +2,7 @@
 import '../../../css/style.css';
 
 /*Local Styles*/
-import './archive-programas-styles.css';
+import './archive-podcasts-styles.css';
 // import './archive-programas-scripts';
 
 /*Components*/
