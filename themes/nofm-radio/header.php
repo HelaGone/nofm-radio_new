@@ -143,6 +143,9 @@
 					<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>" alt="NoFm-Radio Logotipo">
 				</a>
 				<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'main_menu' ) ); ?>
+				<!-- <ul class="support_list">
+					<li></li>
+				</ul> -->
 				<button id="close_main_menu">X</button>
 			</nav>
 			<section class="wide_wrapper">
