@@ -1,14 +1,15 @@
 /*
- #ff0000
- #000a12
- #263238
- #4f5b62
- #f50057
- #FF530D
+ primary_red: {hex: "ff0000", rgb: 255, 0, 0},
+ secondary_orange: {hex: "#ff5722" rgb: 255, 87, 34},
+ hover_orange200: {hex: "#ff8a50" rgb: 255, 138, 80},
+ dark: {hex: "#000a12" rgb: 0, 10, 18},
+ darklight: {hex: "#4f5b62" rgb: 79, 91, 98},
+ dark_red: {hex: "#870000" rgb: 135, 0, 0},
+ white: {hex: "#ffffff" rgb: 255, 255, 255},
 */
 .archive_section .fig_object.type_figure .fig_caption .fig_title{font-size: 1.8em;}
 .archive_section .posts_pool .fig_object .fig_caption{background-color:rgba(0,10,18, 0.8);}
-.archive_section .posts_pool .fig_object .fig_caption .fig_title{color:#f50057;line-height: 1.3em;}
+.archive_section .posts_pool .fig_object .fig_caption .fig_title{color:#ff5722;line-height: 1.3em;}
 .archive_section .posts_pool .fig_object .fig_caption p{font-size: .7em;font-weight: 300;line-height: 1.4em;}
 
 @media screen and (min-width: 380px){

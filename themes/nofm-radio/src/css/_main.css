@@ -1,5 +1,6 @@
-body{background-color:#222; background-image:url(../img/granulado.jpg);background-size:70%; font-family: 'Inconsolata';background-repeat: repeat;background-position: center top;}
-a{color:inherit;text-decoration:none;}
+body{background-color:#000A12; background-image:url(../img/granulado.jpg);background-size:70%; font-family: 'Inconsolata';background-repeat: repeat;background-position: center top;}
+a{color:inherit;text-decoration:none;transition:color .3s;}
+a:hover{color:#ff8a50;}
 button{border-style: none;background-color: transparent;outline: none;}
 .clearfix:before, .clearfix:after {content:"";display:table;}
 .clearfix:after {clear:both;}
@@ -8,9 +9,9 @@ button{border-style: none;background-color: transparent;outline: none;}
 .last{margin-right:0;padding-right:0;}
 .hidden{display:none;}
 .container{max-width:1280px;margin:0 auto;position:relative;}
-.wide_wrapper{background-image:linear-gradient(rgba(0,0,0,0.97), rgba(255,255,255, 0.7), red);padding-bottom:8px;}
-.white_parr{color:#efefef;}
-.black_parr{color:#222;}
+.wide_wrapper{background-image:linear-gradient(#000a12, rgba(255,255,255, 0.7), red);padding-bottom:8px;}
+.white_parr{color:#fff;}
+.black_parr{color:#000a12;}
 .fjalla_font{font-family: 'Fjalla One', sans-serif;}
 .consol_font{font-family: 'Inconsolata';}
 #logo{background-image:url(../img/logo_nofm.png);background-size: contain;width: 200px;height: auto;background-position: center;background-repeat: no-repeat;position: relative;margin-left:24px;}
@@ -21,13 +22,15 @@ button{border-style: none;background-color: transparent;outline: none;}
 .fig_object img{width:100%;height: auto;}
 .fig_object .fig_caption{position: absolute;left: 0; right: 0; bottom: 0;color:#fff;padding:8px;}
 .fig_object .fig_caption .fig_title{text-transform: uppercase;}
-.see_more{width:100%;background-color:#000a12;padding:16px 0;text-align: center;font-weight: 700;cursor: pointer;color:#f00;}
+.see_more{width:100%;background-color:#000a12;padding:16px 0;text-align: center;font-weight: 700;cursor: pointer;color:#fff;}
 .expand_menu{width:100%!important;}
-.page-numbers{display: flex;flex-direction: row;justify-content: center;background-color: #000a12;color:#cae8fa;}
-.page-numbers li{padding:12px;color:#000;}
-.page-numbers.current, .page-numbers .prev, .page-numbers .next {color:#FF530D;}
+ul.page-numbers{display: flex;flex-direction: row;justify-content: center;background-color: #000a12;margin-top:32px;border-radius:5px 5px 0 0;}
+ul.page-numbers li{padding:12px;color:#000a12;}
+ul.page-numbers li .page-numbers:not(.next){color:#ff5722;}
+ul.page-numbers li .page-numbers.current, 
+.page-numbers .prev, .page-numbers .next {color:#fff;}
 .bar1, .bar2, .bar3 {width: 24px;height: 3px;background-color: red;margin: 3px 0;transition: 0.4s;}
-.fix-header{position: fixed;left:0;right:0;top:0;z-index: 9;background-color:rgba(0,0,0,0.75);border-bottom:2px solid red;}
+.fix-header{position: fixed;left:0;right:0;top:0;z-index: 9;background-color:rgba(0,10,18,0.75);border-bottom:2px solid red;}
 @media screen and (min-width: 768px){
 	.see_more{font-size: 2rem;}
 }
@@ -37,5 +40,5 @@ button{border-style: none;background-color: transparent;outline: none;}
 @media screen and (min-width: 1280px){
 	.fig_object img, .fig_object{border-radius: 5px;}
 	.see_more{width:10%;font-size: 1.2rem;box-shadow: 2px 2px 8px rgba(0,0,0,0.5);transition: background-color .33s, box-shadow .33s, color .33s;}
-	.see_more:hover{background-color:#f00;color:#000a12;box-shadow: 1px 1px 2px rgba(0,0,0,0.4);}
+	.see_more:hover{background-color:#4f5b62;box-shadow: 1px 1px 2px rgba(0,0,0,0.4);color:#ff8a50;}
 }

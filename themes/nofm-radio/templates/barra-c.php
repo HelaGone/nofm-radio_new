@@ -55,7 +55,7 @@
 										endif; ?>
 								</a>
 								<figcaption class="fig_caption">
-									<h3 class="fig_title">
+									<h3 class="fig_title fjalla_font">
 										<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 											<?php echo esc_html(strtoupper($post->post_title)); ?>
 										</a>

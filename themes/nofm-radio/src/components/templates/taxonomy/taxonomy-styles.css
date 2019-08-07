@@ -1,11 +1,11 @@
 .taxonomy_list{padding:8px;}
-.taxonomy_list .taxonomy_list_item{display: flex;flex-direction: row;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.3);}
+.taxonomy_list .taxonomy_list_item{display: flex;flex-direction: row;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid rgba(0,10,18,0.3);}
 .taxonomy_list .taxonomy_list_item img{margin-right:8px;border-radius: 3px;object-fit: cover;width:100%;height: auto;}
 .taxonomy_list .taxonomy_list_item a{display:block;vertical-align: middle;flex-wrap: wrap;}
 .taxonomy_list .taxonomy_list_item .item_info{margin-left: 8px;}
 .taxonomy_list .taxonomy_list_item .item_info h2{font-size:1.2em;font-weight:700;line-height:1.4em;display:inline-block;}
 .taxonomy_list .taxonomy_list_item .item_info h3{font-size:.9em; font-weight:normal;display:inline-block;}
-.taxonomy_list .taxonomy_list_item .item_info time{font-size:.8em; color:#565656;display: block;margin-top:8px;}
+.taxonomy_list .taxonomy_list_item .item_info time{font-size:.8em; color:#4f5b62;display: block;margin-top:8px;}
 
 @media screen and (min-width:768px){
 	.taxonomy_section_wrapper h1{font-size: 5em;}
@@ -18,7 +18,7 @@
 	.taxonomy_list{padding:24px 0;}
 	.taxonomy_list .taxonomy_list_item{width:calc(100% / 3 - 16px);display:block;justify-content:space-between;margin-right:24px;margin-bottom:24px;position:relative;padding:0;}
 	.taxonomy_list .taxonomy_list_item:nth-of-type(3n){margin-right:0;}
-	.taxonomy_list .taxonomy_list_item .item_info{position: absolute;bottom:3px;left: 0;right: 0;padding:16px;font-size: 180%;background-image:linear-gradient(transparent, #f50057);color:#fff;margin:0;}
+	.taxonomy_list .taxonomy_list_item .item_info{position: absolute;bottom:3px;left: 0;right: 0;padding:16px;font-size: 180%;background-image:linear-gradient(transparent, #ff5722);color:#fff;margin:0;}
 	.taxonomy_list .taxonomy_list_item .item_info time{color:#fff;}
 	.taxonomy_list .taxonomy_list_item .item_info h2, .taxonomy_list .taxonomy_list_item .item_info h3{text-shadow: 1px 2px 3px rgba(0,0,0,0.3)}
 }
