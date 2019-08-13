@@ -2,7 +2,7 @@
 	global $wp_query, $post;
 	$noticias = wp_cache_get('barra_noticias_wpcache');
 	if($noticias===false){
-		$noticias = bt_get_posts_by_categ('post', 'noticias');
+		$noticias = bt_get_posts_by_categ('post', 'noticias', 8);
 		wp_cache_set('barra_noticias_wpcache', $noticias, '', 120);
 	}
 	if($noticias->have_posts()):
