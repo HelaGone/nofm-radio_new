@@ -24,7 +24,8 @@ get_header();
 	#sumo_abolengo .sumo_head .header_image img{width:66%;}
 	#sumo_abolengo .sumo_navigation{max-width: 666px;margin:auto;}
 	#sumo_abolengo .sumo_navigation ul{display:flex;justify-content:space-between;flex-wrap: wrap;padding:16px;}
-	#sumo_abolengo .sumo_navigation ul li{width:calc(100% / 3 - 16px);max-width:80px;margin-bottom:4px;box-shadow:4px 4px 8px #000;border-radius: 5px;padding:4px;}
+	#sumo_abolengo .sumo_navigation ul li{width:calc(100% / 3 - 16px);max-width:80px;margin-bottom:4px;box-shadow:4px 4px 8px #000;border-radius: 5px;padding:4px;transition: box-shadow .3s;}
+	#sumo_abolengo .sumo_navigation ul li:hover{box-shadow: 2px 2px 4px #ff5722;}
 	#sumo_abolengo .sumo_navigation ul li img{width:100%;height: auto;border-radius: 5px;}
 	#sumo_abolengo section.section_figure{margin:40px 0;padding-bottom:80px;border-bottom:3px solid #FF530D;}
 	#sumo_abolengo section.section_figure figure img{width:50%;}
