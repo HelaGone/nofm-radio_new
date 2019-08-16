@@ -1,13 +1,10 @@
-<?php get_header(); global $wp_query;?>
+<?php get_header(); global $wp_query;
 
-<?php 
 	$category_name = $wp_query->query_vars["category_name"];
 	$raw_posts = $wp_query->posts;
 	$latest_post_id = $raw_posts[0]->ID;
 	$cat_img_size = (wp_is_mobile()) ? 'rect_mid' : 'rect_big';
-	$cat_img_url = get_the_post_thumbnail_url($latest_post_id, $cat_img_size);
-	debugger($category_name);
-?>
+	$cat_img_url = get_the_post_thumbnail_url($latest_post_id, $cat_img_size); ?>
 
 <section class="container category_section">
 	<figure id="<?php echo 'fig_'.$latest_post_id ?>" class="fig_object type_figure">

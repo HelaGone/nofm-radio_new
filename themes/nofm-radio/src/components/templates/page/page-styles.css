@@ -1,1 +1,9 @@
-.the_wrapper{margin:0 auto;}
+.page_section_wrapper{color:#fff;background-color: rgba(0,0,0,0.5);}
+.page_section_wrapper .fig_object img{width:100%; height: auto;}
+.page_section_wrapper .fig_title{font-size:200%;font-weight: 700;text-shadow: 4px 4px 8px #000;}
+.page_section_wrapper .wrapper{max-width: 766px; margin:0 auto;padding:8px;}
+.page_section_wrapper .wrapper .page_content{margin-top:24px;}
+.page_section_wrapper .wrapper .page_content p{margin-bottom: 16px;line-height: 1.46em;font-size: 22px;}
+@media screen and (min-width: 760px){
+	.page_section_wrapper .fig_title{font-size: 72px;}
+}
