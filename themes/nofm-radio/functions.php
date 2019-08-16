@@ -145,6 +145,8 @@
 		}elseif(is_page()&&!is_front_page()){
 			wp_enqueue_style('base-theme-page-style', get_template_directory_uri().'/dist/page.css', array(), '1.0.0.' );
 			wp_enqueue_script('base-theme-page');
+		}elseif(is_404()){
+			wp_enqueue_style('base-theme-404', get_template_directory_uri().'/dist/fof.css', array(), '1.0.0');
 		}
 
 	});
