@@ -3,27 +3,31 @@
 <?php 
 	$type = $wp_query->query_vars['post_type'];
 	$from_same_podcast;
-	$sidebar_title;
-	$args = array('post_type'=>$type,'post_status'=>'publish','posts_per_page'=>13,'orderby'=>'date','order'=>'DESC','post__not_in'=>array($post->ID));
-	if($type != 'episodios'):
-		$cat_obj = get_the_category($wp_query->queried_object->ID);
-		$args['cat'] = $cat_obj[0]->term_id;
-		$sidebar_title = $cat_obj[0]->name;
-		// debugger($sidebar_title);
-		$from_same_podcast = new WP_Query($args);
-	else:
-		$podcast_id = get_post_meta($post->ID, '_episodio_show', true);
-		$sidebar_title = get_the_title($podcast_id);
-		// debugger($podcast_id);
-		$args['meta_value'] = $podcast_id;
-		$from_same_podcast = new WP_Query($args); 
+	$sidebar_title = $wp_query->query_vars['category_name'];
+	$args = array('post_type'=>$type,'post_status'=>'publish','posts_per_page'=>13,'orderby'=>'date','order'=>'DESC');
+
+	//debugger($wp_query);
+
+	if(!is_404()):
+		$args['post__not_in'] = array($post->ID);
+		if($type != 'episodios'):
+			$cat_obj = get_the_category($wp_query->queried_object->ID);
+			$args['cat'] = $cat_obj[0]->term_id;
+			$sidebar_title = $cat_obj[0]->name;
+		else:
+			$podcast_id = get_post_meta($post->ID, '_episodio_show', true);
+			$sidebar_title = get_the_title($podcast_id);
+			$args['meta_value'] = $podcast_id;
+			 
+		endif;
 	endif;
 
+	$from_same_podcast = new WP_Query($args);
 	if($from_same_podcast->have_posts()): ?>
 		<aside class="sidebar">
 			<h2 class="fjalla_font">
 				<a href="<?php echo get_permalink($podcast_id); ?>">
-					<?php echo strtoupper('MÁS DE ESTO: '.$sidebar_title); ?>
+					<?php echo (is_404()) ? 'ESTO TE PUEDE INTERESAR:' : strtoupper('MÁS DE ESTO: '.$sidebar_title); ?>
 				</a>
 			</h2>
 			<ul class="sidebar_list">
