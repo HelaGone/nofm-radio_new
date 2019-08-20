@@ -145,13 +145,28 @@
 				</div>
 			</header>
 			<nav class="main_navigation clearfix">
-				<a href="" title="">
-					<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>" alt="NoFm-Radio Logotipo">
+				<a href="<?php echo site_url(); ?>" title="NoFMradio">
+					<img class="logo_redondo" src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>" alt="NoFm-Radio Logotipo">
 				</a>
 				<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'main_menu' ) ); ?>
-				<!-- <ul class="support_list">
-					<li></li>
-				</ul> -->
+				<ul class="support_list">
+					<li>
+					    <a href="https://www.patreon.com/NoFMradio" target="_blank" rel="noopener">
+					        <img src="<?php echo get_template_directory_uri().'/images/patreon.png'; ?>">
+					    </a>
+					</li>
+					<li>
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+						    <input type="hidden" name="cmd" value="_s-xclick">
+						    <input type="hidden" name="hosted_button_id" value="8KBZCV9NSWUQU">
+						    <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea." style="margin-left:20px; margin-top:10px;">
+						    <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1" >
+						</form>
+					</li>
+					<li>
+						Tel: <a href="tel:+5215562748323">62748323</a>
+					</li>
+				</ul>
 				<button id="close_main_menu">X</button>
 			</nav>
 			<section class="wide_wrapper">
