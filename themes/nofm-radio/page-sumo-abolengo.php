@@ -223,5 +223,6 @@ get_header();
 			</figure>
 		</section>
 	</div>
+	<?php get_sidebar(); ?>
 </section>
 <?php get_footer(); ?>

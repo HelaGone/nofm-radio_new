@@ -1,3 +1,4 @@
 #section_404{padding:32px 0;}
+#section_404 .fig_object{max-width: 666px; max-height: 375px;margin:0 auto 32px auto;}
 #section_404 h1{text-align: center;font-weight:bold;font-size: 200%;margin:32px 0;color:#fff;text-shadow: 4px 4px 8px #000;line-height: 1.46em;}
-#section_404 img{width:100%;height:auto;margin-bottom:32px;}
+#section_404 img{width:100%;height:auto;margin:0 auto 32px auto;object-fit: cover;object-position: center;}
