@@ -89,3 +89,38 @@
 	    }
 	    return $post_package;
 	}
+
+	function bt_feed_for_react_radio($data){
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, "http://s2.voscast.com:8162/7.html");
+		curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla');
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+		$data = curl_exec($ch);
+		curl_close($ch);
+
+		$data = str_replace('</body></html>', "", $data);
+		$split = explode(',', $data); 
+
+		$artist_name = '';
+		$album_name = '';
+		$track_name = '';
+
+		$titles = "";
+
+		if (empty($split[6])) { 
+			$titles = ["The current song is not available "];
+		} else {
+			//print_r($split);
+			$fullTitle = $split[6];
+			$splited = explode(' - ', $fullTitle);
+			$titles = $splited;
+		}
+
+		$last_title = "";
+		foreach($titles as $title){
+			html_entity_decode($title);
+		}
+
+		return array("title" => html_entity_decode(join(", ", $titles)));
+	}

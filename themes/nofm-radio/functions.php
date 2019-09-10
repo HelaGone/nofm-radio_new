@@ -502,14 +502,18 @@
 		$tema_posts = get_option($option_bar);
 		$posts_object = array();
 		if(is_array($tema_posts)&&!empty($tema_posts)){
+			$count = 0;
 			foreach ($tema_posts as $key => $_id) {
 				if($key == 'co_select_tema'){
 					$term = get_term($_id);
 					array_push($posts_object, $term);
 				}else{
-					$post = get_post($_id);
-					array_push($posts_object, $post);
+					if($_id!=null||($_id!=''&&$_id!='0')){
+						$post = get_post($_id);
+						array_push($posts_object, $post);
+					}
 				}
+				$count++;
 			}
 		}
 		return $posts_object;
@@ -537,6 +541,7 @@
 	function register_feed_api(){
 	  	register_rest_route('react/v2','/desigualdad/', array('methods'=>'GET','callback'=>'bt_feed_for_react'));
 	  	register_rest_route('react/v2','/glosario/', array('methods'=>'GET','callback'=>'bt_feed_for_react_glosario'));
+	  	register_rest_route('react/v2', '/radio/',array('methods'=>'GET','callback'=>'bt_feed_for_react_radio'));
 	}
 	add_action('rest_api_init', 'register_feed_api');
 
