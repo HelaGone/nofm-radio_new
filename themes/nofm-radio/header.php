@@ -12,9 +12,9 @@
 		<link rel="manifest" href="<?php echo site_url().'/manifest.json'; ?>">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-		<!-- Start wp_head -->
+		<!-- START wp_head -->
 		<?php wp_head(); ?>
-		<!-- End wp_head -->
+		<!-- END wp_head -->
 	</head>
 		<body <?php body_class(); ?>>
 			<!-- FACEBOOK SDK -->
