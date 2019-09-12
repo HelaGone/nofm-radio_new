@@ -1,0 +1,22 @@
+.episode_pool{padding: 16px 8px 0 8px;max-width: 666px;margin:0 auto;}
+.episode_pool .fig_object{
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content:space-between;
+	align-items: center;
+	border-radius:5px;
+	background-color:rgba(0, 10, 18, 0.7);
+	margin-bottom:16px;
+	box-shadow: 4px 4px 16px #000;
+	-webkit-transition:box-shadow .3s;
+	transition: box-shadow .3s;
+}
+.related_title{font-size: 200%; color:#ff5722;text-shadow: 4px 4px 8px #000;margin-bottom: 24px;}
+.episode_pool .fig_object img{border-radius: 5px;max-width: 150px;margin:0;}
+.episode_pool .fig_object .fig_caption{position: relative;display: inline-block;background-color:transparent;}
+.episode_pool .fig_object .fig_caption .fig_title{font-size: 130%;}
+.episode_pool .fig_object .fig_caption .ep_info{color:#fff;display: flex;flex-direction: row; justify-content: flex-start;align-items:top;margin-top: 4px;}
+.episode_pool .fig_object .fig_caption .ep_info h3{color:#FF5722;}
+@media screen and (min-width: 1270px){
+	.episode_pool .fig_object:hover{box-shadow: 1px 1px 4px #000;}
+}

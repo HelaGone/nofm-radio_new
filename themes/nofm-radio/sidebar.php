@@ -8,7 +8,7 @@
 
 	if(!is_404()):
 		$args['post__not_in'] = array($post->ID);
-		if($type == 'episodios'):
+		if($type == 'podcasts'):
 			$podcast_id = get_post_meta($post->ID, '_episodio_show', true);
 			$sidebar_title = get_the_title($podcast_id);
 			$args['meta_value'] = $podcast_id;

@@ -1,16 +1,16 @@
 <?php 
 	global $wp_query, $post;
-	$posts_arr = wp_cache_get('barra_episodios_wpcache');
+	$posts_arr = wp_cache_get('barra_podcasts_wpcache');
 
 	if($posts_arr===false){
-		$posts_arr = bt_get_posts_by_categ('episodios', null, 8);
-		wp_cache_set('barra_episodios_wpcache', $posts_arr, '', 120);
+		$posts_arr = bt_get_posts_by_categ('podcasts', null, 8);
+		wp_cache_set('barra_podcasts_wpcache', $posts_arr, '', 120);
 	}
 
 	if($posts_arr->have_posts()):
 		$section_pt_name = $posts_arr->query_vars['post_type'];
 		$pt_link = get_post_type_archive_link($section_pt_name); ?>
-		<section id="barra_episodios" class="home_section dynamic_pool container">
+		<section id="barra_podcasts" class="home_section dynamic_pool container">
 			<div class="desk_container">
 				<h2 id="escucha" class="section_title title_eps fjalla_font">
 					<a href="<?php echo $pt_link; ?>" title="<?php echo esc_attr($section_pt_name); ?>">

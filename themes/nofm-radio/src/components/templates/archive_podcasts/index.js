@@ -3,7 +3,7 @@ import '../../../css/style.css';
 
 /*Local Styles*/
 import './archive-podcasts-styles.css';
-// import './archive-programas-scripts';
+import './archive-podcasts-scripts';
 
 /*Components*/
 import '../../parts/header/index';

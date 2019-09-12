@@ -1,4 +1,3 @@
 $(document).ready(function(){
-	"use strict";
-	console.log('programas');
+	console.log('single podcasts js');
 });

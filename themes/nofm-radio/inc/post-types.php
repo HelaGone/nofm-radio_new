@@ -38,6 +38,40 @@
 		);
 		register_post_type( 'archivo', $args );
 
+		// Programas
+		$labels = array(
+			'name'          => 'Programas',
+			'singular_name' => 'Programa',
+			'add_new'       => 'Nuevo Programa',
+			'add_new_item'  => 'Nuevo Programa',
+			'edit_item'     => 'Editar Programa',
+			'new_item'      => 'Nuevo Programa',
+			'all_items'     => 'Todos',
+			'view_item'     => 'Ver Programa',
+			'search_items'  => 'Buscar Programa',
+			'not_found'     => 'No se encontro',
+			'menu_name'     => 'Programas'
+		);
+
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'show_in_rest'		 => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'programas' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => 5,
+			'menu_icon'			 => 'dashicons-microphone',
+			'taxonomies'         => array( 'category', 'post_tag' ),
+			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
+		);
+		register_post_type( 'programas', $args );
+
 		// Podcasts
 		$labels = array(
 			'name'          => 'Podcasts',
@@ -65,46 +99,12 @@
 			'capability_type'    => 'post',
 			'has_archive'        => true,
 			'hierarchical'       => false,
-			'menu_position'      => 5,
-			'menu_icon'			 => 'dashicons-microphone',
-			'taxonomies'         => array( 'category', 'post_tag' ),
-			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
-		);
-		register_post_type( 'podcasts', $args );
-
-		// Episodios
-		$labels = array(
-			'name'          => 'Episodios',
-			'singular_name' => 'Episodio',
-			'add_new'       => 'Nuevo Episodio',
-			'add_new_item'  => 'Nuevo Episodio',
-			'edit_item'     => 'Editar Episodio',
-			'new_item'      => 'Nuevo Episodio',
-			'all_items'     => 'Todos',
-			'view_item'     => 'Ver Episodio',
-			'search_items'  => 'Buscar Episodio',
-			'not_found'     => 'No se encontro',
-			'menu_name'     => 'Episodios'
-		);
-
-		$args = array(
-			'labels'             => $labels,
-			'public'             => true,
-			'publicly_queryable' => true,
-			'show_ui'            => true,
-			'show_in_menu'       => true,
-			'show_in_rest'		 => true,
-			'query_var'          => true,
-			'rewrite'            => array( 'slug' => 'episodios' ),
-			'capability_type'    => 'post',
-			'has_archive'        => true,
-			'hierarchical'       => false,
 			'menu_position'      => 6,
 			'menu_icon'			 => 'dashicons-megaphone',
 			'taxonomies'         => array('proyecto', 'category'),
 			'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'excerpt')
 		);
-		register_post_type( 'episodios', $args );
+		register_post_type( 'podcasts', $args );
 
 		// Glosario
 		$labels = array(

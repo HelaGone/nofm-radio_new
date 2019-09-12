@@ -5,7 +5,7 @@
 	function bt_feed_for_react($post){
 	    $post_package = array();
 	    $args = array(
-	            'post_type'=>array('episodios'),
+	            'post_type'=>array('podcasts'),
 	            'posts_per_page'=>12,
 	            'orderby'=>'date',
 	            'order'=>'DESC',

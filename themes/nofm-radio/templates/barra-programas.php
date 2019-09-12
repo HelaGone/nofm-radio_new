@@ -1,15 +1,15 @@
 <?php
 	$args = array("post_type"=>"programas","posts_per_page"=>-1,"post_status"=>"publish","orderby"=>"date","order"=>"DESC");
-	$episodios = new WP_Query($args);
-	$queryed_obj_post_type = ucfirst($episodios->query_vars["post_type"]);
-	if($episodios->have_posts()): ?>
+	$podcasts = new WP_Query($args);
+	$queryed_obj_post_type = ucfirst($podcasts->query_vars["post_type"]);
+	if($podcasts->have_posts()): ?>
 		<section id="barra_programas" class="home_section container">
 			<h2 class="section_title"><?php echo esc_html($queryed_obj_post_type); ?></h2>
 			<div class="flex_bar_container">
 				<ul class="programas_list_carousel">
 					<?php	
-						while($episodios->have_posts()):
-							$episodios->the_post();
+						while($podcasts->have_posts()):
+							$podcasts->the_post();
 							setup_postdata($post); ?>
 							<li class="programa_list_item">
 								<figure class="fig_object">

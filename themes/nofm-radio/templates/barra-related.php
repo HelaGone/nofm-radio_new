@@ -3,16 +3,16 @@
 	$podcast_id = $post->ID;
 	$podcast_name = $post->post_title;
 	$args = array(
-		'post_type'=>'episodios',
+		'post_type'=>'podcasts',
 		'post_status'=>'publish',
 		'posts_per_page'=>7,
 		'orderby'=>'date',
 		'order'=>'DESC',
 		'meta_value'=>$post->ID
 	);
-	$episodios = new WP_Query($args);
-	if($episodios->have_posts()):  
-		$type = $episodios->query_vars['post_type'] ?>
+	$podcasts = new WP_Query($args);
+	if($podcasts->have_posts()):  
+		$type = $podcasts->query_vars['post_type'] ?>
 		<h2 class="fjalla_font related_title">
 			<a href="<?php echo get_post_type_archive_link($type); ?>">
 				<?php echo esc_html(strtoupper($type)); ?>
@@ -20,8 +20,8 @@
 		</h2>
 		<div class="episode_pool">
 		<?php
-			while($episodios->have_posts()):
-				$episodios->the_post();
+			while($podcasts->have_posts()):
+				$podcasts->the_post();
 				setup_postdata($post);
 				$eps_img_size = (wp_is_mobile()) ? 'square_small' : 'thumbnail'; 
 				$ep_meta_dur = get_post_meta($post->ID, '_episodio_duration', true); ?>

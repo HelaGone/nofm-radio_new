@@ -2,7 +2,7 @@
 	global $wp_query, $post;
 	$posts_arr = wp_cache_get('barra_recom_wpcache');
 	if($posts_arr===false){
-		$args = array('post_type' => array('post', 'podcasts'),'post_status'=>'publish','posts_per_page'=>8,'orderby'=>'date','order'=>'DESC','tag'=>'recomendaciones');
+		$args = array('post_type' => array('post', 'programas'),'post_status'=>'publish','posts_per_page'=>8,'orderby'=>'date','order'=>'DESC','tag'=>'recomendaciones');
 		$posts_arr = new WP_Query($args);
 		wp_cache_set('barra_recom_wpcache', $posts_arr, '', 120);
 	}

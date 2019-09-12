@@ -32,7 +32,7 @@
 				'rewrite'           => array( 'slug' => 'proyectos' ),
 			);
 
-			register_taxonomy( 'proyecto', 'episodios', $args );
+			register_taxonomy( 'proyecto', 'podcasts', $args );
 		}
 		
 		

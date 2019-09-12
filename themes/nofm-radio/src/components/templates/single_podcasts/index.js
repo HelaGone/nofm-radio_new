@@ -3,6 +3,7 @@ import '../../../css/style.css';
 
 /*Local Styles*/
 import './single-podcasts-styles.css';
+import './single-podcasts-scripts';
 
 /*Components*/
 import '../../parts/header/index';

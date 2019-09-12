@@ -2,8 +2,8 @@
 import '../../../css/style.css';
 
 /*Local Styles*/
-import './single-episodios-styles.css';
-import './single-episodios-scripts';
+import './archive-programas-styles.css';
+// import './archive-programas-scripts';
 
 /*Components*/
 import '../../parts/header/index';

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php get_template_part('templates/barra', 'noticias'); ?>
 <?php get_template_part('templates/barra', 'recomendaciones'); ?>
-<?php get_template_part('templates/barra', 'episodios'); ?>
+<?php get_template_part('templates/barra', 'podcasts'); ?>
 
 <?php get_template_part('templates/barra', 'a'); ?>
 <?php get_template_part('templates/barra', 'b'); ?>
