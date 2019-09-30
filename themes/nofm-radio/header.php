@@ -114,7 +114,7 @@
 				</div>
 				<section id="main_header_section">
 					<figure id="envivo_figure" class="fig_object">
-						<img class="day_main_background" src="<?php echo esc_url(bt_get_imageby_id(30967, 'square_mid')); ?>" alt="EN VIVO">
+						<img class="day_main_background" src="<?php //echo esc_url(bt_get_imageby_id(30967, 'square_mid')); ?>" alt="EN VIVO">
 						<figcaption class="fig_caption">
 							<div class="player_container">
 								<h1 class="fig_title" style="font-weight: bold;">EN<br>VIVO</h1>

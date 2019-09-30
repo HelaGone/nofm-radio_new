@@ -26,7 +26,7 @@
 .main_navigation img.logo_redondo{width:40%;max-width: 128px;height: auto;position:relative;top:0;left:50%;margin-left: calc(-128px / 2);}
 .main_navigation .main_menu{width:60%;text-align: center;margin:16px auto;}
 .main_navigation .main_menu .menu li{margin:24px 0;border-bottom:1px solid #4f5b62;padding-bottom: 4px;}
-.support_list{display: flex;flex-direction: row;justify-content: flex-start; width: 100%;margin:0 auto;align-items: center;}
+.support_list{display: flex;flex-direction: row;justify-content: flex-start; width: 100%;max-width:320px;margin:0 auto;align-items: center;}
 .support_list li{margin:0 4px 0 0;}
 .support_list li img{max-width: 100px;}
 .btn_menu_container{display: inline-block;cursor: pointer;}
