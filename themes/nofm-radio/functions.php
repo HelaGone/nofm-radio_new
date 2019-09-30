@@ -3,12 +3,10 @@
 	 * Condiciona la vista del home solo para usuarios con sesión
 	 * Si el usuario no tiene sesión, se envía al landing page
 	*/
-	// if( is_user_logged_in() ) {
-	    
-	// }else{
-	// 	$page = get_page_by_title( 'Mantenimiento' );
-	// 	update_option( 'page_on_front', $page->ID );
-	// 	update_option( 'show_on_front', 'page' );
+	// if( !is_user_logged_in() ) {
+	//     $page = get_page_by_title( 'Mantenimiento' );
+	//     update_option( 'page_on_front', $page->ID );
+	//     update_option( 'show_on_front', 'page' );
 	// }
 
 // LIMPIAR EL HEADER DE CÓDIGO INNECESARIO ///////////////////////////////////////////

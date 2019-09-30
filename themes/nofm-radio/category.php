@@ -4,7 +4,7 @@
 	$raw_posts = $wp_query->posts;
 	$latest_post_id = $raw_posts[0]->ID;
 	$cat_img_size = (wp_is_mobile()) ? 'rect_mid' : 'rect_big';
-	$cat_img_url = get_the_post_thumbnail_url($latest_post_id, $cat_img_size); ?>
+	$cat_img_url = (has_post_thumbnail()) ? get_the_post_thumbnail_url($latest_post_id, $cat_img_size) : get_template_directory_uri().'/images/logo_nofm.jpg'; ?>
 
 <section class="container category_section">
 	<figure id="<?php echo 'fig_'.$latest_post_id ?>" class="fig_object type_figure">
@@ -27,7 +27,7 @@
 						$image_size = (wp_is_mobile()) ? 'square_mid' : 'square_big'; ?>
 						<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object">
 							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-								<?php the_post_thumbnail($image_size); ?>
+								<?php echo (has_post_thumbnail()) ? the_post_thumbnail($image_size) : '<img style="width:480px;" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
 							</a>
 							<figcaption class="fig_caption">
 								<h2 class="fig_title fjalla_font">
@@ -45,7 +45,7 @@
 						$image_size_duo = (wp_is_mobile()) ? 'square_mid' : 'rect_big'; ?>
 						<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object">
 							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-								<?php the_post_thumbnail($image_size_duo); ?>
+								<?php echo (has_post_thumbnail()) ? the_post_thumbnail($image_size_duo) : '<img style="width:480px;" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
 							</a>
 							<figcaption class="fig_caption">
 								<h2 class="fig_title fjalla_font">
@@ -62,7 +62,7 @@
 					else: ?>
 						<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object">
 							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-								<?php the_post_thumbnail($image_size); ?>
+								<?php echo (has_post_thumbnail()) ? the_post_thumbnail($image_size) : '<img style="width:480px;" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
 							</a>
 							<figcaption class="fig_caption">
 								<h2 class="fig_title fjalla_font">

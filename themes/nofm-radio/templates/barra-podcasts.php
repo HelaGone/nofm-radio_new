@@ -24,9 +24,9 @@
 							$posts_arr->the_post();
 							setup_postdata($post);
 
-							$ep_meta_dur = get_post_meta($post->ID, '_episodio_duration', true);
-							$ep_meta_url = get_post_meta($post->ID, '_episodio_url', true);
-							$ep_meta_pod = get_post_meta($post->ID, '_episodio_show', true);
+							$ep_meta_dur = get_post_meta($post->ID, '_podcasts_duration', true);
+							$ep_meta_url = get_post_meta($post->ID, '_podcasts_url', true);
+							$ep_meta_pod = get_post_meta($post->ID, '_podcasts_show', true);
 
 							$pod_owner = get_the_title($ep_meta_pod);
 
@@ -34,7 +34,7 @@
 							if($count<1): ?>
 								<figure class="fig_object">
 									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-										<?php (has_post_thumbnail()) ? the_post_thumbnail($img_size) : ''; ?>
+										<?php echo (has_post_thumbnail()) ? the_post_thumbnail($img_size) : '<img style="width:480px;" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
 									</a>
 									<figcaption class="fig_caption">
 										<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">

@@ -19,7 +19,7 @@
 #envivo_figure .logo_day{position:relative;left:0;top:5vh;width:50%;object-fit: contain;}
 #envivo_figure svg{width:120px;height: 120px;background-color: transparent;border:none;flex-shrink: 0;transition: width .25s, height .25s;}
 #envivo_figure svg:hover{cursor: pointer;}
-#menu-type_menu{display: flex;justify-content: space-between;flex-wrap: wrap;align-items: center;}
+#menu-type-menu{display: flex;justify-content: space-between;flex-wrap: wrap;align-items: center;}
 .md-48{font-size: 48px;line-height: 70px;}
 #close_main_menu{position: relative;bottom:0vh;left: 50vw;width: 60px;height: 60px;font-size:32px;margin-left:-30px;}
 .main_navigation{position:fixed;left:0;top:0;right:0;bottom:0;z-index:9;overflow:hidden;width:0;background-color:rgba(255,255,255,0.95);}
@@ -38,7 +38,7 @@
 }
 @media screen and (min-width: 768px){
 	#main_site_header .social_network_header h3{margin-top:0;position: relative;top:-23px;max-width: 666px; left:50%;margin-left: -333px;}
-	#menu-type_menu .menu-item{font-size:24px; }
+	#menu-type-menu .menu-item{font-size:24px; }
 	#logo{width:260px;}
 	#envivo_figure .logo_day{top:6vh;left:2vw;width:40%;}
 	#envivo_figure .fig_caption div{top:6vh;left:0;padding:32px;}

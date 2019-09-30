@@ -25,7 +25,7 @@
 						if($count<1): ?>
 							<figure class="fig_object">
 								<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-									<?php (has_post_thumbnail()) ? the_post_thumbnail($img_size) : ''; ?>
+									<?php echo (has_post_thumbnail()) ? the_post_thumbnail($img_size) : '<img style="width:480px;" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
 								</a>
 								<figcaption class="fig_caption">
 									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">

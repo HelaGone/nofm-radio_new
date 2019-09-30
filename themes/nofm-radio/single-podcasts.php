@@ -4,9 +4,9 @@
 		if(have_posts()):
 			while(have_posts()):
 				the_post(); 
-				$episode_duration = get_post_meta($post->ID, '_episodio_duration', true);
-				$episode_url = get_post_meta($post->ID, '_episodio_url', true);
-				$episode_show_id = get_post_meta($post->ID, '_episodio_show', true);
+				$episode_duration = get_post_meta($post->ID, '_podcasts_duration', true);
+				$episode_url = get_post_meta($post->ID, '_podcasts_url', true);
+				$episode_show_id = get_post_meta($post->ID, '_podcasts_show', true);
 				$img_size = (wp_is_mobile()) ? 'rect_small' : 'rect_mid';
 				$podcast = get_post($episode_show_id); ?>
 				<article id="<?php echo esc_attr($post->ID); ?>" class="single_post_container">
