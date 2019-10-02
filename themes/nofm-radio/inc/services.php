@@ -42,9 +42,9 @@
 	            'r_slug'=>get_post_field('post_name', $post->ID, 'raw'),
 	            'r_link_to'=>get_the_permalink($post->ID),
 	            'r_meta'=>array(
-	            	'_episodio_url'=>get_post_meta($post->ID, '_episodio_url', true),
-	            	'_episodio_show'=>get_post_meta($post->ID, '_episodio_show', true),
-	            	'_episodio_duration'=>get_post_meta($post->ID, '_episodio_duration', true)
+	            	'_episodio_url'=>get_post_meta($post->ID, '_podcasts_url', true),
+	            	'_episodio_show'=>get_post_meta($post->ID, '_podcasts_show', true),
+	            	'_episodio_duration'=>get_post_meta($post->ID, '_podcasts_duration', true)
 	            )
 	        );
 	        array_push($post_package, $post_item);
@@ -80,9 +80,9 @@
 	            'r_slug'=>get_post_field('post_name', $post->ID, 'raw'),
 	            'r_link_to'=>get_the_permalink($post->ID),
 	            'r_meta'=>array(
-	            	'_episodio_url'=>get_post_meta($post->ID, '_episodio_url', true),
-	            	'_episodio_show'=>get_post_meta($post->ID, '_episodio_show', true),
-	            	'_episodio_duration'=>get_post_meta($post->ID, '_episodio_duration', true)
+	            	'_episodio_url'=>get_post_meta($post->ID, '_podcasts_url', true),
+	            	'_episodio_show'=>get_post_meta($post->ID, '_podcasts_show', true),
+	            	'_episodio_duration'=>get_post_meta($post->ID, '_podcasts_duration', true)
 	            )
 	        );
 	        array_push($post_package, $post_item);
