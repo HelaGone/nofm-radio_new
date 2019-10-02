@@ -1,3 +1,3 @@
 $(document).ready(function(){
-	console.log("load home js");
+	//console.log("load home js");
 });

@@ -81,7 +81,7 @@
 		wp_register_script('base-theme-archive-podcasts', get_template_directory_uri().'/dist/archive_podcasts.js', array('jquery'), '1.0.0');
 
 		//Howler
-		wp_register_script('howler-js', 'https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.core.min.js', array('jquery'), '2.1.2');
+		//wp_register_script('howler-js', 'https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.core.min.js', array('jquery'), '2.1.2');
 
 		//Taxonomy
 		wp_register_script('base-theme-taxonomy-scripts', get_template_directory_uri().'/dist/taxonomy.js', array('jquery'), '1.0.0');
@@ -217,6 +217,19 @@
 <?php
 	}
 	add_action('wp_head', 'bt_load_google_fonts');
+
+	function bt_add_header_stuff(){ 
+		//Google analytics ?>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-91771961-6"></script>
+		<script>
+		  	window.dataLayer = window.dataLayer || [];
+		  	function gtag(){dataLayer.push(arguments);}
+		  	gtag('js', new Date());
+		  	gtag('config', 'UA-91771961-6');
+		</script>
+<?php
+	}
+	add_action('wp_head', 'bt_add_header_stuff');
 
 	/**
 	 * Menu Widget

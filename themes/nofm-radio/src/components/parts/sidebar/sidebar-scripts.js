@@ -1,1 +1,1 @@
-console.log('sidebar here');
+//console.log('sidebar here');
