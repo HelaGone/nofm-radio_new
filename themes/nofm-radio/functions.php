@@ -81,7 +81,7 @@
 		wp_register_script('base-theme-archive-podcasts', get_template_directory_uri().'/dist/archive_podcasts.js', array('jquery'), '1.0.0');
 
 		//Howler
-		//wp_register_script('howler-js', 'https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.core.min.js', array('jquery'), '2.1.2');
+		wp_register_script('howler-js', 'https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.core.min.js', array('jquery'), '2.1.2');
 
 		//Taxonomy
 		wp_register_script('base-theme-taxonomy-scripts', get_template_directory_uri().'/dist/taxonomy.js', array('jquery'), '1.0.0');
