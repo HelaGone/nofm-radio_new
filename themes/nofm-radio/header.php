@@ -17,6 +17,11 @@
 		<!-- END wp_head -->
 	</head>
 		<body <?php body_class(); ?>>
+		<!--
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8411953701698334" data-ad-slot="8253374863" data-ad-format="auto" data-full-width-responsive="true"></ins>
+			<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+		-->
 			<!-- FACEBOOK SDK -->
 			<div id="fb-root"></div>
 			<script>

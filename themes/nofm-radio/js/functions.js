@@ -9,5 +9,11 @@
 
 		const dom_figure = document.getElementById('envivo_figure');
 		$(dom_figure).find('.day_main_background').attr("src", bg_url);
+
+		if ('serviceWorker' in navigator) {
+		  window.addEventListener('load', function() {
+		    navigator.serviceWorker.register('/sw.js');
+		  });
+		}
 	});
 })(jQuery);
