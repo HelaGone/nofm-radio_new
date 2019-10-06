@@ -7,10 +7,9 @@
 			while(have_posts()):
 				the_post(); 
 				$image_size_pool = (wp_is_mobile()) ? 'thumbnail' : 'square_mid';
-				$ep_meta_dur = get_post_meta($post->ID, '_episodio_duration', true);
-				$ep_meta_url = get_post_meta($post->ID, '_episodio_url', true);
-				$ep_meta_pod = get_post_meta($post->ID, '_episodio_show', true); 
-				$pod_owner = get_the_title($ep_meta_pod); ?>
+				$ep_meta_dur = get_post_meta($post->ID, '_podcasts_duration', true);
+				$ep_meta_pod = get_post_meta($post->ID, '_podcasts_show', true); 
+				$pod_owner = ($ep_meta_pod!='') ? get_the_title($ep_meta_pod) : ''; ?>
 				<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object">
 					<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 						<?php the_post_thumbnail($image_size_pool); ?>

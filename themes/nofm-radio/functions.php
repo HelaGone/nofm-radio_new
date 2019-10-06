@@ -597,6 +597,9 @@
 	 * @return $duration [String] Formatted time string
 	*/
 	function bt_seconds_to_time($segs){
+		if($segs==''){
+			return;
+		}
 		$s = $segs % 60;
 		$min = floor(($segs % 3600) / 60);
 		$h = floor(($segs % 86400) / 3600);
