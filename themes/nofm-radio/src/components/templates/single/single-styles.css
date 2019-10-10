@@ -9,6 +9,7 @@
 .single_page .single_post_container .single_post_data .post_author_item a{color:#fff;}
 .single_page .single_post_container .article_content{color:#fff;width:100%;margin:32px 0;}
 .single_page .single_post_container .article_content p{margin:8px 0;line-height: 28px;}
+.single_page .single_post_container .article_content a{color:#ff5722;}
 .single_page .single_post_container .article_content h2{margin:24px 0;font-weight: 700;font-size: 180%;font-family: Fjalla One, sans-serif;}
 .single_page .single_post_container .article_content blockquote,
 .single_page .single_post_container .article_content figure,
@@ -18,5 +19,6 @@
 .single_page .single_post_container .article_content div.wp-caption.alignnone img{width:100%;height: auto!important;}
 .single_page .single_post_container .share_buttons{display: flex;flex-direction: row;align-items: center;justify-content: flex-end;}
 .single_page .single_post_container .share_buttons img{width:24px;height: 24px;margin:0;}
-.single_page .single_post_container .share_buttons .share_button{margin:16px;}
+.single_page .single_post_container .share_buttons .share_button{margin:16px 24px;}
 .single_page .single_post_container .share_buttons .share_button:first-child{margin-right: 0;}
+.fb_iframe_widget iframe{top:-3px;}

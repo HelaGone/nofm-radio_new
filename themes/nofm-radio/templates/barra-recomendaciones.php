@@ -23,14 +23,14 @@
 							while($posts_arr->have_posts()):
 								$posts_arr->the_post();
 								$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_medium'; 
-								if($count<3): ?>
+								if($count<7): ?>
 									<li class="updated_item">
 										<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 											<?php the_title(); ?>
 										</a>
 									</li>
 						<?php		
-								elseif($count==3): ?>
+								elseif($count==7): ?>
 					</ul>
 					<figure class="fig_object">
 						<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">

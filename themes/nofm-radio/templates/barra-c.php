@@ -68,9 +68,9 @@
 					$count++;		
 				endforeach; ?>
 			</ul>
-			<div class="see_more fjalla_font">
-				<a href="<?php echo esc_url($cat_link); ?>">Ver más</a>
-			</div>
 		</section>
+		<div class="see_more fjalla_font">
+			<a href="<?php echo esc_url($cat_link); ?>">Ver más</a>
+		</div>
 <?php		
 	endif;?>

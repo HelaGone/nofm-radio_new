@@ -8,7 +8,18 @@
 				$episode_url = get_post_meta($post->ID, '_podcasts_url', true);
 				$episode_show_id = get_post_meta($post->ID, '_podcasts_show', true);
 				$img_size = (wp_is_mobile()) ? 'rect_small' : 'rect_mid';
-				$podcast = get_post($episode_show_id); ?>
+				$podcast = get_post($episode_show_id);
+				$terms = get_the_terms($post->ID, 'proyecto');
+				//debugger($terms);
+				$is_decir = false;
+				$decir_name = '';
+				foreach ($terms as $term) {
+					if($term->slug == 'decir-desigualdad'){
+						$is_decir = true;
+						$decir_name = $term->name;
+					}
+				}
+				 ?>
 				<article id="<?php echo esc_attr($post->ID); ?>" class="single_post_container">
 					<div class="single_content_wrapper">
 						<?php (has_post_thumbnail()) ? the_post_thumbnail($img_size) : ''; ?>
@@ -23,9 +34,19 @@
 								<div class="podcast_info ep_info_item">
 									<span class="info_prefix">Transmitido en: </span>
 									<h3 class="fjalla_font ep_info_item">
-										<a href="<?php echo get_the_permalink($podcast->ID); ?>" title="<?php echo esc_attr($podcast->post_title); ?>">
-											<?php echo esc_html($podcast->post_title); ?>
-										</a>
+										<?php
+											if($is_decir): ?>
+												<a href="<?php echo get_home_url().'/desirdesigualdades'?>" title="Decir Desigualdad Es">
+													<?php echo esc_html($decir_name); ?>
+												</a>
+										<?php
+											else: ?>
+												<a href="<?php echo get_the_permalink($podcast->ID); ?>" title="<?php echo esc_attr($podcast->post_title); ?>">
+													<?php echo esc_html($podcast->post_title); ?>
+												</a>
+										<?php
+											endif;
+										?>
 									</h3>
 									<p class="ep_info_item"><?php echo get_the_excerpt($podcast->ID); ?></p>
 								</div>

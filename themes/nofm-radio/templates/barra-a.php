@@ -89,10 +89,10 @@
 					endif;
 					$count++;			
 				endforeach; ?>
-				<div class="see_more fjalla_font">
-					<a href="<?php echo esc_url($cat_link); ?>" title="Ver Más">Ver más</a>
-				</div>
 			</div>
 		</section>
+		<div class="see_more fjalla_font" height="60">
+			<a href="<?php echo esc_url($cat_link); ?>" title="Ver Más">Ver más</a>
+		</div>
 <?php		
 	endif;?>

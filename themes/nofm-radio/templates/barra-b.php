@@ -19,15 +19,13 @@
 							<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 								<?php 
 									if(has_post_thumbnail($post->ID)):
-										if(wp_is_mobile()): ?>
-											<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'square_mid'); ?>">
-								<?php 
-										else: ?>
-											<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>">		
-								<?php
+										if(wp_is_mobile()): 
+											the_post_thumbnail('square_mid');
+										else: 
+											the_post_thumbnail('full');
 										endif;			
 									else: ?>
-										<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>">
+										<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>" alt="Default image">
 								<?php		
 									endif; ?>
 							</a>
@@ -68,9 +66,9 @@
 					$count++;		
 				endforeach; ?>
 			</ul>
-			<div class="see_more fjalla_font">
-				<a href="<?php echo esc_url($cat_link); ?>" title="Ver Más">Ver más</a>
-			</div>
 		</section>
+		<div class="see_more fjalla_font">
+			<a href="<?php echo esc_url($cat_link); ?>" title="Ver Más">Ver más</a>
+		</div>
 <?php		
 	endif;?>
