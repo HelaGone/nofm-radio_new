@@ -30,6 +30,17 @@
 
 							$pod_owner = get_the_title($ep_meta_pod);
 
+							$terms = get_the_terms($post->ID, 'proyecto');
+							//debugger($terms);
+							$is_decir = false;
+							$decir_name = '';
+							foreach ($terms as $term) {
+								if($term->slug == 'decir-desigualdad'){
+									$is_decir = true;
+									$decir_name = $term->name;
+								}
+							}
+
 							$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_medium'; 
 							if($count<1): ?>
 								<figure class="fig_object">
@@ -42,9 +53,18 @@
 										</a>
 										<div class="ep_detail">
 											<span class="podcast_owner">
-												<a href="<?php echo esc_url(get_permalink($ep_meta_pod)); ?>">
-													<?php echo esc_html($pod_owner); ?>
-												</a>
+												<?php
+													if($is_decir): ?>
+														<a href="<?php echo get_home_url().'/decirdesigualdades'?>" title="Decir Desigualdad Es">
+															<?php echo esc_html($decir_name); ?>
+														</a>
+												<?php
+													else: ?>
+														<a href="<?php echo esc_url(get_permalink($ep_meta_pod)); ?>">
+															<?php echo esc_html($pod_owner); ?>
+														</a>
+												<?php
+													endif; ?>
 											</span>
 											<span class="ep_duration">
 												| <?php echo esc_html(bt_seconds_to_time($ep_meta_dur)); ?>
@@ -61,9 +81,18 @@
 										</a>
 										<div class="ep_detail">
 											<span class="podcast_owner">
-												<a href="<?php echo esc_url(get_permalink($ep_meta_pod)); ?>">
-													<?php echo esc_html($pod_owner); ?>
-												</a>
+												<?php
+													if($is_decir): ?>
+														<a href="<?php echo get_home_url().'/decirdesigualdades'?>" title="Decir Desigualdad Es">
+															<?php echo esc_html($decir_name); ?>
+														</a>
+												<?php
+													else: ?>
+														<a href="<?php echo esc_url(get_permalink($ep_meta_pod)); ?>">
+															<?php echo esc_html($pod_owner); ?>
+														</a>
+												<?php
+													endif; ?>
 											</span>
 											<span class="ep_duration">
 												| <?php echo esc_html(bt_seconds_to_time($ep_meta_dur)); ?>

@@ -36,7 +36,7 @@
 									<h3 class="fjalla_font ep_info_item">
 										<?php
 											if($is_decir): ?>
-												<a href="<?php echo get_home_url().'/desirdesigualdades'?>" title="Decir Desigualdad Es">
+												<a href="<?php echo get_home_url().'/decirdesigualdades'?>" title="Decir Desigualdad Es">
 													<?php echo esc_html($decir_name); ?>
 												</a>
 										<?php
