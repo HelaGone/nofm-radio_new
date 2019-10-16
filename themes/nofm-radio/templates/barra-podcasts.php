@@ -34,10 +34,12 @@
 							//debugger($terms);
 							$is_decir = false;
 							$decir_name = '';
-							foreach ($terms as $term) {
-								if($term->slug == 'decir-desigualdad'){
-									$is_decir = true;
-									$decir_name = $term->name;
+							if(is_array($terms)&&count($terms)>0){
+								foreach ($terms as $term) {
+									if($term->slug == 'decir-desigualdad'){
+										$is_decir = true;
+										$decir_name = $term->name;
+									}
 								}
 							}
 
