@@ -1,7 +1,7 @@
 <?php 
 	global $wp_query, $post;
 	$posts_arr = wp_cache_get('barra_recom_wpcache');
-	$rev_arr;
+	//$rev_arr;
 	if($posts_arr===false){
 		$args = array('post_type' => array('post', 'programas'),'post_status'=>'publish','posts_per_page'=>8,'orderby'=>'date','order'=>'DESC','tag'=>'recomendaciones');
 		$posts_arr = new WP_Query($args);
@@ -11,8 +11,10 @@
 	if($posts_arr->have_posts()):
 		$section_tag_name = $posts_arr->query_vars['tag_slug__in'][0];
 		$tag_link = get_term_link($section_tag_name, 'post_tag'); 
+		/*
 		$rev_arr = array_reverse($posts_arr->posts);
-		$posts_arr->posts = $rev_arr; ?>
+		$posts_arr->posts = $rev_arr;
+		*/ ?>
 		<section id="barra_recomendaciones" class="home_section dynamic_pool container">
 			<div class="desk_container">
 				<h2 id="lee" class="section_title title_recomend fjalla_font">
