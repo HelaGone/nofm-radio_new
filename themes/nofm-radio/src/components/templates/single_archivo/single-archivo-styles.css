@@ -1,4 +1,4 @@
-#single_archivo{font-family: 'Inconsolata';}
+#single_archivo{font-family: 'Roboto Mono', monospace;}
 #single_archivo.single_page{background-color:transparent;}
 .single_page{max-width: 1280px;margin:0px auto;padding:40px 8px;}
 .single_page .single_post_container{background-color:#f2eecb;background-image: url('../../../img/assets/textura_archivo.png');background-size: 50%; -moz-background-repeat-x:no-repeat; background-repeat-x: no-repeat;-moz-background-position:right; background-position: right;padding:8px;border:1px solid rgba(0,10,18,0.2);border-radius: 3px;}

@@ -184,7 +184,7 @@
 		<script type="text/javascript">
 			WebFontConfig = {
 				google: {
-					families: ['Fjalla+One:400', 'Inconsolata:400, 700']
+					families: ['Fjalla+One:400', 'Roboto+Mono:300,300i,700,700i']
 				}
 			};
 

@@ -47,6 +47,7 @@
 				</article>
 	<?php
 			endwhile;
+			get_sidebar();
 		endif; ?>
 </section>
 <?php get_footer(); ?>
