@@ -150,6 +150,13 @@
 				<a href="<?php echo site_url(); ?>" title="NoFMradio">
 					<img class="logo_redondo" src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>" alt="NoFm-Radio Logotipo">
 				</a>
+				<div style="text-align:center;">
+					<form role="search" method="get" id="searchform" action="<?php echo esc_url(home_url("/search_gcse/")); ?>">
+						<label class="screen-reader-text" for="s">Buscar:</label>
+						<input type="text" value="" name="q" id="s" placeholder="Busca en Noticieros Televisa" autocomplete="off">
+						<input type="submit" id="searchsubmit" value="Buscar">
+					</form>
+				</div>
 				<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'main_menu' ) ); ?>
 				<ul class="support_list">
 					<li>
