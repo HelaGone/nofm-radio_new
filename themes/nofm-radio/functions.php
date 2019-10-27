@@ -519,6 +519,18 @@
 
 	/**
 	 * COVER OPTIONS
+	 * co_get_banner_options
+	*/
+	function co_get_nofm_custom_banner(){
+		$ad_options = get_option('co_banner_option');
+		$ad_link = $ad_options['co_banner_input_link'];
+		$ad_banner_link = $ad_options['co_banner_input_url'];
+		$html = '<a href="'.$ad_link.'" target="_blank" rel="noopener follow"><img src="'.$ad_banner_link.'" title="Banner NoFM"></a>';
+		return $html;
+	}
+
+	/**
+	 * COVER OPTIONS
 	 * co_barra_temas_option 
 	*/
 	function bt_get_co_tema_posts($option_bar = 'co_barra_temas_option'){
