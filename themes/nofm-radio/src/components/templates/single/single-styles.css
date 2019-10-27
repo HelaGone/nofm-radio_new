@@ -1,3 +1,4 @@
+.self_ad_cotainer, .self_ad_cotainer img{width:100%;min-height: 40px;object-fit: cover;}
 .single_page{padding:32px 8px;background-color: rgba(0,10,18,0.7);}
 .single_page .single_post_container{max-width: 1280px;margin:0 auto;}
 .single_page .single_post_container img{width: 100%; height: auto;margin:24px 0 0 0;}

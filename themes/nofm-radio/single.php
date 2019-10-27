@@ -1,4 +1,5 @@
 <?php get_header(); global $wp_query; ?>
+<?php get_template_part('templates/barra', 'nofm-banner'); ?>
 <section id="single_post" class="single_page">
 	<?php
 		if(have_posts()):
