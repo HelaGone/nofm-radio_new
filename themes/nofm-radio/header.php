@@ -153,7 +153,7 @@
 				<div style="text-align:center;">
 					<form role="search" method="get" id="searchform" action="<?php echo esc_url(home_url("/search_gcse/")); ?>">
 						<label class="screen-reader-text" for="s">Buscar:</label>
-						<input type="text" value="" name="q" id="s" placeholder="Busca en Noticieros Televisa" autocomplete="off">
+						<input type="text" value="" name="q" id="s" placeholder="Busca sin miedo" autocomplete="off">
 						<input type="submit" id="searchsubmit" value="Buscar">
 					</form>
 				</div>
