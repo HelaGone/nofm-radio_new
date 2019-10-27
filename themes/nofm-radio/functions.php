@@ -526,7 +526,7 @@
 		$ad_link = $ad_options['co_banner_input_link'];
 		$ad_banner_link = $ad_options['co_banner_input_url'];
 		$html = '<a href="'.$ad_link.'" target="_blank" rel="noopener follow"><img src="'.$ad_banner_link.'" title="Banner NoFM"></a>';
-		return $html;
+		return ($ad_banner_link!=''&&$ad_link!='') ? $html : '';
 	}
 
 	/**
