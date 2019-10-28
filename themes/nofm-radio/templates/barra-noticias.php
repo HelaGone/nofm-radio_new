@@ -52,11 +52,18 @@
 							</ul>
 				</div>
 			</div>
-			<!-- ADS, UNCOMMENT FOR PRODUCTION !!!!!!
-			<div class="adS_container" style="text-align:center;margin-top:102px;">
+			<!-- ADS, UNCOMMENT FOR PRODUCTION !!!!!! -->
+			<!-- <div class="adS_container" style="text-align:center;margin-top:102px;">
 				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8411953701698334" data-ad-slot="8253374863" data-ad-format="auto" data-full-width-responsive="true"></ins>
-				<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+				<ins class="adsbygoogle"
+				     style="display:block"
+				     data-ad-client="ca-pub-8411953701698334"
+				     data-ad-slot="8253374863"
+				     data-ad-format="auto"
+				     data-full-width-responsive="true"></ins>
+				<script>
+				     (adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
 			</div> -->
 		</section>
 <?php
