@@ -11,7 +11,6 @@
 		<meta name="theme-color" content="#000a12"/>
 		<link rel="manifest" href="<?php echo site_url().'/manifest.json'; ?>">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<!-- START wp_head -->
 		<?php wp_head(); ?>
 		<!-- END wp_head -->

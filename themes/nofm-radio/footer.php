@@ -13,9 +13,6 @@
 			tipo de descarga gratuita ni bajo ningún tipo de cobro. 
 		</p>
 	</footer>
-	<script>
-	     (adsbygoogle = window.adsbygoogle || []).push({});
-	</script>
 	<?php wp_footer(); ?>
 </body>
 </html>
