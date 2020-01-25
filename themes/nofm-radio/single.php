@@ -11,10 +11,10 @@
 							<h1 class="single_title fjalla_font"><?php the_title(); ?></h1>
 							<div class="single_post_data">
 								<?php echo bt_print_term_cloud($post->ID, 'category'); ?>
-								<time class="post_date_item"><?php echo get_the_date('D, d.m.Y'); ?></time>
-								<span class="post_author_item">
-									Por: <?php echo get_the_author_link(); ?>
-								</span>
+								<div class="time_author_info">
+									<time class="post_date_item"><?php echo get_the_date('D, d.m.Y'); ?></time>
+									<span class="post_author_item">Por: <?php echo get_the_author_link(); ?></span>
+								</div>
 							</div>
 						</div>
 						<?php (wp_is_mobile()) ? the_post_thumbnail('rect_small') : the_post_thumbnail('rect_big'); ?>
@@ -23,14 +23,14 @@
 						</div>
 
 						<div class="share_buttons">
-							<?php 
+							<?php
 								if(wp_is_mobile()): ?>
 									<div class="whatsapp-share-button share_button">
 										<a href="whatsapp://send?text=<?php echo the_permalink(); ?>" data-action="share/whatsapp/share">
 											<img src="<?php echo get_template_directory_uri().'/images/ic_social/WhatsApp_Logo_1.png'; ?>" alt="Whatsapp">
 										</a>
 									</div>
-							<?php 
+							<?php
 								endif; ?>
 							<div class="fb-share-button share_button" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-size="small">
 								<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
