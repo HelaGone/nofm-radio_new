@@ -14,7 +14,9 @@ plugins/hello.php
 themes/nofm-radio/node_modules/
 themes/nofm-radio/dist/
 
-plugins/
+plugins/remove-category-url/
+plugins/wordpress-importer/
+plugins/wordpress-seo/
 
 /.htaccess
 /license.txt

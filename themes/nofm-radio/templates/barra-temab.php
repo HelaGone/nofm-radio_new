@@ -1,6 +1,6 @@
 <?php
 	// global $post;
-	$posts_barra_temas = bt_get_co_tema_posts('co_barra_temas_option');
+	$posts_barra_temas = bt_get_co_tema_posts('co_barra_temas_b_option');
 	if(is_array($posts_barra_temas)&&!empty($posts_barra_temas)): ?>
 		<section id="barra_tema_section" class="home_section container">
 		<?php

@@ -22,9 +22,9 @@
 		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 		remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 		remove_action( 'wp_print_styles', 'print_emoji_styles' );
-		remove_action( 'admin_print_styles', 'print_emoji_styles' );	
+		remove_action( 'admin_print_styles', 'print_emoji_styles' );
 		remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-		remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );	
+		remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 		remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 		add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
 	}
@@ -32,8 +32,8 @@
 
 	/**
 	 * Filter function used to remove the tinymce emoji plugin.
-	 * 
-	 * @param    array  $plugins  
+	 *
+	 * @param    array  $plugins
 	 * @return   array             Difference betwen the two arrays
 	 */
 	function disable_emojis_tinymce( $plugins ) {
@@ -218,7 +218,7 @@
 	}
 	add_action('wp_head', 'bt_load_google_fonts');
 
-	function bt_add_header_stuff(){ 
+	function bt_add_header_stuff(){
 		//Google analytics ?>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-91771961-6"></script>
 		<script>
@@ -258,7 +258,7 @@
 			add_theme_support( 'wp-block-styles' );
 			add_editor_style( 'style-editor.css' );
 
-	    /*add_theme_support( 'editor-color-palette', 
+	    /*add_theme_support( 'editor-color-palette',
 	    	array(
 	        array(
 	            'name' => __( 'strong magenta', 'themeLangDomain' ),
@@ -287,7 +287,7 @@
 	add_action( 'after_setup_theme', 'bt_setup_theme_supported_features' );
 
 	/**
-	 * [add_image_size] 
+	 * [add_image_size]
 	 * Define custom image sizes for wordpress media images
 	*/
 	if ( function_exists('add_image_size') ){
@@ -316,7 +316,7 @@
 	if(!validate_file('inc/services.php')){
 		require_once('inc/services.php');
 	}
-	
+
 // MODIFICAR EL MAIN QUERY ///////////////////////////////////////////////////////////
 
 	add_action( 'pre_get_posts', function($query){
@@ -333,7 +333,7 @@
 			}
 
 			if(is_post_type_archive('podcasts')){
-				$query->set('posts_per_page', 9);	
+				$query->set('posts_per_page', 9);
 			}
 
 			if(is_category()){
@@ -347,7 +347,7 @@
 					$query->set('posts_per_page', 12);
 				}
 			}
-			
+
 		}
 		return $query;
 	});
@@ -363,7 +363,7 @@
 		if(!$post){
 			return "...";
 		}
-		
+
 		$permalink = get_the_permalink($post->ID);
 		$title = $post->post_title;
 		return "<a href='$permalink' title='$title' class='li-link'></a>";
@@ -418,7 +418,7 @@
 	    );
 	}
 	add_action('rest_api_init', 'register_rest_images' );
-	
+
 	function get_rest_featured_image( $object, $field_name, $request ) {
 	    if( $object['featured_media'] ){
 	        $img = wp_get_attachment_image_src( $object['featured_media'], 'app-thumb' );
@@ -440,7 +440,7 @@
 	}
 
 	/**
-	 * Regresa la url del attachment de la publicación 
+	 * Regresa la url del attachment de la publicación
 	 * especificando POST ID & TAMAÑO
 	 * @param  int     $att_id
 	 * @param  string  $size
@@ -531,15 +531,16 @@
 
 	/**
 	 * COVER OPTIONS
-	 * co_barra_temas_option 
+	 * co_barra_temas_option
+	 * co_barra_temas_b_option
 	*/
-	function bt_get_co_tema_posts($option_bar = 'co_barra_temas_option'){
+	function bt_get_co_tema_posts($option_bar){
 		$tema_posts = get_option($option_bar);
 		$posts_object = array();
 		if(is_array($tema_posts)&&!empty($tema_posts)){
 			$count = 0;
 			foreach ($tema_posts as $key => $_id) {
-				if($key == 'co_select_tema'){
+				if($key == 'co_select_tema'OR$key == 'co_select_tema_b'){
 					$term = get_term($_id);
 					array_push($posts_object, $term);
 				}else{
@@ -583,7 +584,7 @@
 
 	/**
 	 * Get posts by post type & category
-	 * @param $input_type [String] post type to query 
+	 * @param $input_type [String] post type to query
 	 * @param $input_cat [String] post category to query
 	 * @return $posts [Array] returns an array of posts
 	 * Used in template parts at home

@@ -9,5 +9,6 @@
 <?php get_template_part('templates/barra', 'c'); ?>
 
 <?php get_template_part('templates/barra', 'tema'); ?>
+<?php get_template_part('templates/barra', 'temab'); ?>
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>
