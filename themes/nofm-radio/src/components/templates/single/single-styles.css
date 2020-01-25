@@ -4,15 +4,15 @@
 .single_page .single_post_container img:not(.wp-block-image img){width: 100%; height: auto;margin:24px 0 0 0;}
 .wp-block-image img{display: block;min-height: 100%;}
 .single_content_wrapper{max-width: 766px;margin:0 auto;font-family: 'Roboto Mono';font-size: 24px;}
-.single_title{color:#fff;font-size: 200%;}
+.single_title{color:#fff;font-size: 200%;line-height: 1.2em;}
 .single_post_data{color:#ff5722;margin-top:16px;}
 .single_post_data .term_pool{margin:8px 0px;}
 .time_author_info{font-size: 16px;margin-bottom:16px;}
 .single_post_data .post_author_item a{color:#fff;}
 .article_content{color:#fff;width:100%;margin:32px 0;}
-.article_content p{margin:8px 0;line-height: 32px;}
+.article_content p{margin:8px 0;font-size: 16px;line-height: 22px;}
 .article_content a{color:#ff5722;}
-.article_content h2{margin:24px 0;font-weight: 700;font-size: 180%;font-family: Fjalla One, sans-serif;}
+.article_content h2{margin:24px 0;font-weight: 700;font-size: 180%;font-family: Fjalla One, sans-serif;line-height: 1.2em;}
 .article_content figure, .article_content iframe{width:100%;background-color: #fff;}
 .article_content blockquote{font-style:italic;}
 .article_content blockquote cite{color:#ff5722;}
