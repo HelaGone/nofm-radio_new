@@ -1,13 +1,19 @@
 $(document).ready(function(){
-	// console.log('main src functions js');
 	$('body :not(.wp-embedded-content)').fitVids();
 
 	// Hace la animación del botón menú
 	let btnMenu = document.getElementById('btn_menu');
 	btnMenu.addEventListener('click', ()=>{
-		// btnMenu.classList.toggle('change');
-		// console.log('click menu');
-		$('.main_navigation').animate({width:'100%'});
+		let width_pecent = "0%";
+		let screen_width = window.screen.width;
+		if(screen_width >= 1024 ){
+			width_pecent = "40%";
+		}else if(screen_width >= 768 && screen_width < 1024){
+			width_pecent = "60%";
+		}else{
+			width_pecent = "100%";
+		}
+		$('.main_navigation').animate({width:width_pecent});
 	});
 
 	let btnCloseMenu = document.getElementById('close_main_menu')
@@ -28,7 +34,7 @@ $(document).ready(function(){
 
 	const closeWindow = ()=>{
 		if(player!=null){
-			player.close();	
+			player.close();
 		}
 	}
 

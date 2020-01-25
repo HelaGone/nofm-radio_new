@@ -32,7 +32,7 @@
 			<!-- END FACEBOOK SDK -->
 			<header id="main_site_header">
 				<div class="social_network_header">
-					<div class="social_flex_container">	
+					<div class="social_flex_container">
 						<ul>
 							<li>
 								<a href="https://www.facebook.com/todomenosmiedo/" title="Facebook" target="_blank">
@@ -93,8 +93,8 @@
 							</li>
 							<li>
 								<a href="//cdn.voscast.com/resources/?key=d3b9d948ce2a095ad198b852a44fa999&c=realplayer" target="_blank" title="Real Player">
-									<svg version="1.1" id="svg2" xmlns:svg="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="149.899 107.938 24 24" enable-background="new 149.899 107.938 24 24" xml:space="preserve" 
-										width="24" 
+									<svg version="1.1" id="svg2" xmlns:svg="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="149.899 107.938 24 24" enable-background="new 149.899 107.938 24 24" xml:space="preserve"
+										width="24"
 										height="24">
 										<g>
 											<path fill="#FFFFFF" d="M172.03,114.217c-2.805-2.489-8.086-3.137-10.14-3.137c-5.56,0-11.991,2.548-11.991,6.713c0,4.904,9.169,6.982,11.58,6.899c0.83-0.028,0.344,0.515,0.146,0.847c-0.635,1.074-1.361,2.432-1.527,2.697c-0.154,0.257-0.029,0.705,0.328,0.51c0.473-0.253,7.381-4.439,8.414-5.049C170.786,122.412,176.966,119.096,172.03,114.217z M168.226,121.91c-1.024,0.552-4.759,2.447-4.759,2.447c-0.718,0.419-0.871,0.17-0.693-0.107c0.091-0.138,0.357-0.594,0.66-1.179c0.17-0.328-0.004-0.369-0.108-0.373c-5.821,0-10.393-2.158-10.393-4.743c0-3.029,5.028-4.763,9.003-4.763c2.971,0,5.145,0.415,6.604,1.174C175.474,117.65,168.226,121.91,168.226,121.91z"/>
@@ -142,6 +142,7 @@
 				</div>
 			</header>
 			<nav class="main_navigation clearfix">
+				<button id="close_main_menu">X</button>
 				<a href="<?php echo site_url(); ?>" title="NoFMradio">
 					<img class="logo_redondo" src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>" alt="NoFm-Radio Logotipo">
 				</a>
@@ -171,6 +172,5 @@
 						Tel: <a href="tel:+5215562748323">62748323</a>
 					</li>
 				</ul>
-				<button id="close_main_menu">X</button>
 			</nav>
 			<section class="wide_wrapper">
