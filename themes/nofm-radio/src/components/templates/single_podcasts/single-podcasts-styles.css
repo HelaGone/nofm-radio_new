@@ -11,6 +11,8 @@
 .single_title{margin-top:24px;}
 .article_content{margin:0 0 32px 0;}
 .player_container{border-bottom:1px solid #ff5722;padding:16px 0;}
-.player_container button{color:#ff5722;cursor: pointer;}
-.player_container button svg{fill:#fff;width:40px;height: 40px;}
-.episode_title span{color:#ff5722;font-size: 32px;margin-left:16px;}
+.player_container button{color:#ff5722;cursor: pointer;border:2px solid #4f5b62;border-radius: 5px;background-color: #4f5b62;box-shadow: 1px 3px 8px rgba(0,0,0,0.3);}
+.player_container button:first-child{background-color: #000a12;border:1px solid #000a12;}
+.player_container button svg{fill:#ff8a50;width:40px;height: 40px;}
+.episode_title span{color:#ff5722;font-size: 32px;margin-left:0px;}
+.transport_controls{padding-bottom:16px;}
