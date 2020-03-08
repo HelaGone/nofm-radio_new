@@ -1,4 +1,4 @@
-<?php 
+<?php
 	global $post;
 	$podcast_id = $post->ID;
 	$podcast_name = $post->post_title;
@@ -11,7 +11,7 @@
 		'meta_value'=>$post->ID
 	);
 	$podcasts = new WP_Query($args);
-	if($podcasts->have_posts()):  
+	if($podcasts->have_posts()):
 		$type = $podcasts->query_vars['post_type'] ?>
 		<h2 class="fjalla_font related_title">
 			<a href="<?php echo get_post_type_archive_link($type); ?>">
@@ -23,7 +23,7 @@
 			while($podcasts->have_posts()):
 				$podcasts->the_post();
 				setup_postdata($post);
-				$eps_img_size = (wp_is_mobile()) ? 'square_small' : 'thumbnail'; 
+				$eps_img_size = (wp_is_mobile()) ? 'square_small' : 'thumbnail';
 				$ep_meta_dur = get_post_meta($post->ID, '_episodio_duration', true); ?>
 				<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object">
 					<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
@@ -42,7 +42,7 @@
 									<?php echo esc_html(strtoupper($podcast_name)); ?>
 								</a>
 							</h3>
-							 | 
+							 |
 							<span>
 								<?php echo esc_html(bt_seconds_to_time($ep_meta_dur)); ?>
 							</span>

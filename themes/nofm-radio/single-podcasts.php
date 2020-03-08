@@ -1,4 +1,20 @@
 <?php get_header(); ?>
+<svg style="display: none;">
+	<defs>
+		<g id="ic_play">
+			<path d="M8 5v14l11-7z" fill="#fff"/><path d="M0 0h24v24H0z" fill="none"/>
+		</g>
+		<g id="ic_pause">
+			<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" fill="#fff"/><path d="M0 0h24v24H0z" fill="none"/>
+		</g>
+		<g id="ic_rewind">
+			<path d="M11 18V6l-8.5 6 8.5 6zm.5-6l8.5 6V6l-8.5 6z"/><path d="M0 0h24v24H0z" fill="none"/>
+		</g>
+		<g id="ic_forward">
+			<path d="M4 18l8.5-6L4 6v12zm9-12v12l8.5-6L13 6z"/><path d="M0 0h24v24H0z" fill="none"/>
+		</g>
+	</defs>
+</svg>
 <section id="single_podcasts" class="single_page">
 	<?php
 		if(have_posts()):
@@ -58,21 +74,21 @@
 						<!-- Player -->
 						<div class="player_container">
 							<button id="btn_ep_play" data-source="<?php echo esc_attr($episode_url); ?>">
-								<svg style="display: none;">
-									<defs>
-										<g id="ic_play">
-											<path d="M8 5v14l11-7z" fill="#fff"/><path d="M0 0h24v24H0z" fill="none"/>
-										</g>
-										<g id="ic_pause">
-											<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" fill="#fff"/><path d="M0 0h24v24H0z" fill="none"/>
-										</g>
-									</defs>
-								</svg>
-								<svg id="leading_player_icon" class="button_item" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-									<use xlink:href="#ic_play">
-								</svg>
-								<span class="button_item fjalla_font">ESCUCHA <?php echo strtoupper($post->post_title); ?></span>
+								<svg id="leading_player_icon" class="button_item" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><use xlink:href="#ic_play"></svg>
 							</button>
+							<button id="btn_ep_rwd" type="button" name="button">
+								<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+									<use xlink:href="#ic_rewind">
+								</svg>
+							</button>
+							<button id="btn_ep_fwd" type="button" name="button">
+								<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+									<use xlink:href="#ic_forward">
+								</svg>
+							</button>
+							<div class="episode_title">
+								<span class="button_item fjalla_font">ESCUCHA <?php echo strtoupper($post->post_title); ?></span>
+							</div>
 						</div>
 
 						<div class="article_content episode_content">

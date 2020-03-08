@@ -1,6 +1,6 @@
 <?php global $wp_query, $post; ?>
 
-<?php 
+<?php
 	$type = $wp_query->query_vars['post_type'];
 	$from_same_podcast;
 	$sidebar_title = $wp_query->query_vars['category_name'];
@@ -15,7 +15,7 @@
 		elseif($type == ''):
 			//For pages don't have post type
 			$sidebar_title = null;
-		else:
+		elseif($type != 'programas'):
 			$cat_obj = get_the_category($wp_query->queried_object->ID);
 			$args['cat'] = $cat_obj[0]->term_id;
 			$sidebar_title = $cat_obj[0]->name;
