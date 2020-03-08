@@ -3,20 +3,22 @@
 	<?php
 		if(have_posts()):
 			while(have_posts()):
-				the_post(); 
+				the_post();
 				$episode_duration = get_post_meta($post->ID, '_podcasts_duration', true);
 				$episode_url = get_post_meta($post->ID, '_podcasts_url', true);
 				$episode_show_id = get_post_meta($post->ID, '_podcasts_show', true);
 				$img_size = (wp_is_mobile()) ? 'rect_small' : 'rect_mid';
 				$podcast = get_post($episode_show_id);
 				$terms = get_the_terms($post->ID, 'proyecto');
-				//debugger($terms);
+				debugger($terms);
 				$is_decir = false;
 				$decir_name = '';
-				foreach ($terms as $term) {
-					if($term->slug == 'decir-desigualdad'){
-						$is_decir = true;
-						$decir_name = $term->name;
+				if(is_array($terms) && !empty($terms)){
+					foreach ($terms as $term) {
+						if($term->slug == 'decir-desigualdad'){
+							$is_decir = true;
+							$decir_name = $term->name;
+						}
 					}
 				}
 				 ?>
@@ -25,7 +27,7 @@
 						<?php (has_post_thumbnail()) ? the_post_thumbnail($img_size) : ''; ?>
 						<div class="article_header">
 							<!-- Episode title -->
-							<h1 class="single_title fig_title fjalla_font"><?php the_title(); ?></h1>	
+							<h1 class="single_title fig_title fjalla_font"><?php the_title(); ?></h1>
 							<!-- Episode Info -->
 							<div class="single_post_data episode_info">
 								<time class="post_date_item ep_info_item"><?php echo esc_html(get_the_date()); ?></time>
@@ -78,14 +80,14 @@
 						</div>
 
 						<div class="share_buttons">
-							<?php 
+							<?php
 								if(wp_is_mobile()): ?>
 									<div class="whatsapp-share-button share_button">
 										<a href="whatsapp://send?text=<?php echo the_permalink(); ?>" data-action="share/whatsapp/share">
 											<img src="<?php echo get_template_directory_uri().'/images/ic_social/WhatsApp_Logo_1.png'; ?>" alt="Whatsapp">
 										</a>
 									</div>
-							<?php 
+							<?php
 								endif; ?>
 							<div class="fb-share-button share_button" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-size="small">
 								<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">

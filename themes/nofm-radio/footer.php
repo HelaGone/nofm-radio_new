@@ -1,5 +1,6 @@
 	</section>
 	<footer class="site-footer" role="contentinfo">
+		<script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
 		<div class="disclosure">
 			<a href="<?php echo home_url(); ?>" title="NoFm Radio">
 				<img src="<?php echo get_template_directory_uri().'/images/logo blanco.png'; ?>" alt="NoFm Radio">
@@ -9,8 +10,8 @@
 			</p>
 		</div>
 		<p>
-			Este sitio no tiene fines de lucro con la reproducción o explotación de los fonogramas. No ofrece ningún 
-			tipo de descarga gratuita ni bajo ningún tipo de cobro. 
+			Este sitio no tiene fines de lucro con la reproducción o explotación de los fonogramas. No ofrece ningún
+			tipo de descarga gratuita ni bajo ningún tipo de cobro.
 		</p>
 	</footer>
 	<?php wp_footer(); ?>
