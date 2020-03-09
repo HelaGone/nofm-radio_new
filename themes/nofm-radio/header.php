@@ -117,7 +117,7 @@
 						<figcaption class="fig_caption">
 							<div class="player_container">
 								<h1 class="fig_title" style="font-weight: bold;">EN<br>VIVO</h1>
-								<a href="https://r.nofm-radio.com/" title="Abrir Aplicación" target="_blank" rel="follow">
+								<a href="http://r.nofm-radio.com/" title="Abrir Aplicación" target="_blank" rel="follow">
 									<svg xmlns="http://www.w3.org/2000/svg" width="144px" height="144px" viewBox="0 0 144 144">
 										<g>
 											<path fill="#FFFFFF" d="M43.5,138.277c-0.298,0-0.599-0.054-0.889-0.164c-0.97-0.369-1.61-1.299-1.61-2.336V8.222c0-1.038,0.641-1.967,1.61-2.336c0.29-0.11,0.591-0.164,0.889-0.164c0.7,0,1.383,0.294,1.867,0.837l56.806,63.778c0.844,0.948,0.844,2.377,0,3.326L45.367,137.44C44.883,137.983,44.199,138.277,43.5,138.277z"/>
