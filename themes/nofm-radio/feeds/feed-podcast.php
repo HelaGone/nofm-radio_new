@@ -20,19 +20,11 @@
 	 * De esta forma evita que el resto del documento falle
 	*/
 	$args = array(
-		'post_type'=>'podcast',
+		'post_type'=>'podcasts',
 		'posts_per_page'=>20,
 		'post_status'=>'publish',
 		'orderby'=>'date',
-		'order'=>'DESC',
-		'post__not_in'=>array(852751,852761,852767,852770),
-		'meta_query'=>array(
-			'key'=>'pod_type_meta',
-			'value'=>'resumen',
-			'compare'=>'='
-		),
-		'meta_key'=>'p_shows',
-		'meta_compare'=>'NOT EXISTS'
+		'order'=>'DESC'
 	);
 
 	$p_cover = $podcast_cover ? $podcast_cover : 'https://i0.wp.com/noticieros.televisa.com/wp-content/uploads/2018/12/nt.png?quality=95&ssl=1';
