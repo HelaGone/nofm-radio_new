@@ -2,20 +2,17 @@
 .single_episode_figure img{width:100%;height: auto;object-fit: cover;}
 .single_episode_figure figcaption{position:absolute;bottom:0;left:0;}
 .single_episode_figure figcaption h2{font-size:3em;font-weight: 700;color:#fff;background-color: rgba(0,10,18,0.5);padding:0 8px;}
-#single_podcasts.single_page .single_post_container img{margin:0;}
-#single_podcasts.single_page .single_post_container .single_post_data time,
-#single_podcasts.single_page .single_post_container .single_post_data .info_prefix{color:#000a12;}
-#single_podcasts.single_page .single_post_container .single_post_data.episode_info{background-color:#fff;padding:24px 8px;border-radius: 5px;}
-#single_podcasts.single_page .single_post_container .single_post_data.episode_info .ep_info_item{padding:4px 0px;}
-#single_podcasts.single_page .single_post_container .single_post_data.episode_info .ep_info_item h3{display: inline-block;}
-#single_podcasts.single_page .single_post_container .single_title{margin-top:24px;}
-#single_podcasts.single_page .single_post_container .article_content{margin:0 0 32px 0;}
-#single_podcasts.single_page .single_post_container .player_container{border-bottom:1px solid #ff5722;padding:16px 0;}
-#single_podcasts.single_page .single_post_container .player_container .button_item{vertical-align: middle;font-size: 180%;}
-#single_podcasts.single_page .single_post_container .player_container button{color:#ff5722;}
-@media screen and (min-width: 760px){
-	#single_podcasts.single_page .single_post_container .single_post_data.episode_info{max-width: 60vw;}
-}
-@media screen and (min-width: 1280px){
-	#single_podcasts.single_page .single_post_container .single_post_data.episode_info{width:calc(100% / 2);}
-}
+.single_post_container img{margin:0;}
+.single_post_data time,
+.single_post_data .info_prefix{color:#000a12;}
+.single_post_data.episode_info{background-color:#fff;padding:24px 8px;border-radius: 5px;}
+.single_post_data.episode_info .ep_info_item{padding:4px 0px;}
+.single_post_data.episode_info .ep_info_item h3{display: inline-block;}
+.single_title{margin-top:24px;}
+.article_content{margin:0 0 32px 0;}
+.player_container{border-bottom:1px solid #ff5722;padding:16px 0;}
+.player_container button{color:#ff5722;cursor: pointer;border:2px solid #4f5b62;border-radius: 5px;background-color: #4f5b62;box-shadow: 1px 3px 8px rgba(0,0,0,0.3);}
+.player_container button:first-child{background-color: #000a12;border:1px solid #000a12;}
+.player_container button svg{fill:#ff8a50;width:40px;height: 40px;}
+.episode_title span{color:#ff5722;font-size: 32px;margin-left:0px;}
+.transport_controls{padding-bottom:16px;}

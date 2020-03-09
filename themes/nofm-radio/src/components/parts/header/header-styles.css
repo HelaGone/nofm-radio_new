@@ -28,6 +28,7 @@
 .main_navigation .main_menu .menu li{margin:24px 0;border-bottom:1px solid #4f5b62;padding-bottom: 4px;}
 .support_list{display: flex;flex-direction: row;justify-content: center; width: 100%;margin:0 auto;align-items: baseline;}
 .support_list li{margin:0 4px 0 0;}
+.support_list li.patreon{position:relative;bottom:-8px;}
 .support_list li img{max-width: 100px;}
 .btn_menu_container{display: inline-block;cursor: pointer;}
 @media screen and (min-width: 375px){

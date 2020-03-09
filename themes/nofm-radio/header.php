@@ -11,9 +11,22 @@
 		<meta name="theme-color" content="#000a12"/>
 		<link rel="manifest" href="<?php echo site_url().'/manifest.json'; ?>">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script data-ad-client="ca-pub-8411953701698334" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<!-- START wp_head -->
 		<?php wp_head(); ?>
 		<!-- END wp_head -->
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-91771961-6"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-91771961-6');
+		</script>
+
 	</head>
 		<body <?php body_class(); ?>>
 			<!-- FACEBOOK SDK -->
@@ -155,12 +168,12 @@
 				</div>
 				<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'main_menu' ) ); ?>
 				<ul class="support_list">
-					<li>
+					<li class="mone_item patreon">
 					    <a href="https://www.patreon.com/NoFMradio" target="_blank" rel="noopener">
 					        <img src="<?php echo get_template_directory_uri().'/images/patreon.png'; ?>">
 					    </a>
 					</li>
-					<li>
+					<li class="mone_item donate">
 						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 						    <input type="hidden" name="cmd" value="_s-xclick">
 						    <input type="hidden" name="hosted_button_id" value="8KBZCV9NSWUQU">
@@ -168,7 +181,7 @@
 						    <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1" >
 						</form>
 					</li>
-					<li>
+					<li class="mone_item telephone">
 						Tel: <a href="tel:+5215562748323">62748323</a>
 					</li>
 				</ul>

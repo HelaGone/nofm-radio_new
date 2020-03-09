@@ -2,7 +2,7 @@ $(document).ready(function(){
 	console.log('single podcasts');
 
 	Howler.autoUnlock = false;
-	
+
 	const utils = {
 		formatTime: function (secs) {
 			var minutes = Math.floor(secs / 60) || 0;
@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 			$('#timer').text(currentTime);
 			progress.style.width = (((seek / self.duration()) * 100) || 0) + '%';
-			
+
 			if (self.playing()) {
 				requestAnimationFrame(utils.updateTimeTracker.bind(self));
 			}
@@ -30,18 +30,14 @@ $(document).ready(function(){
 		src: [audio_url],
 		html5:false,
 		onplay: ()=>{
-			console.log('PLAYING...');
 			audioPlayed = true;
-			let time = Math.round(audio.duration);
 			$('#leading_player_icon').find('use').attr('href', '#ic_pause');
 		},
 		onpause:()=>{
-			console.log('PAUSED...');
 			$('#leading_player_icon').find('use').attr('href', '#ic_play');
 
 		},
 		onend:()=>{
-			console.log('ENDED...');
 			$('#leading_player_icon').find('use').attr('href', '#ic_play');
 		}
 	});
@@ -53,6 +49,22 @@ $(document).ready(function(){
 			audio.play();
 		}else{
 			audio.pause();
+		}
+	});
+
+	$('#btn_ep_rwd').on('click', function(){
+		let current_position = audio.seek();
+		audio.seek(current_position - 10);
+		if(audio.seek() <= 0){
+			audio.seek(0);
+		}
+	});
+
+	$('#btn_ep_fwd').on('click', function(){
+		let current_position = audio.seek();
+		audio.seek(current_position + 30);
+		if(audio.seek() >= audio.duration()){
+			audio.seek(0);
 		}
 	});
 
