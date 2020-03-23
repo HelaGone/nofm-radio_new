@@ -27,9 +27,9 @@
 		'order'=>'DESC'
 	);
 
-	$p_cover = $podcast_cover ? $podcast_cover : 'https://i0.wp.com/noticieros.televisa.com/wp-content/uploads/2018/12/nt.png?quality=95&ssl=1';
+	$p_cover = $podcast_cover ? $podcast_cover : '';
 	$p_title = $show_title ? $show_title : get_bloginfo('name');
-	$p_description = $show_description ? $show_description : 'Resumen de las noticias más importantes del día en Noticieros Televisa.';
+	$p_description = $show_description ? $show_description : '';
 
 	$podcasts = get_posts( $args );
 
@@ -57,12 +57,12 @@
 
 		$channel_node->appendChild($xml->createElement('itunes:author', 'Noticieros Televisa'));
 
-		$channel_category = $xml->createElement('itunes:category', 'News &amp; Politics');
-		$channel_category->setAttribute('text', 'News &amp; Politics');
+		$channel_category = $xml->createElement('itunes:category', ''); //Category
+		$channel_category->setAttribute('text', ''); //Category
 		$channel_node->appendChild($channel_category);
 
 		$channel_owner = $xml->createElement('itunes:owner');
-		$channel_owner->appendChild($xml->createElement('itunes:email', 'webtools@televisa.news'));
+		$channel_owner->appendChild($xml->createElement('itunes:email', '')); //EMAIL
 		$channel_node->appendChild($channel_owner);
 
 		$image_node = $xml->createElement('image');
@@ -82,8 +82,8 @@
 			$pod_duration = get_post_meta($podcast->ID, 'podcast_dur_meta', true);
 			$pod_cover_id = get_post_meta($podcast->ID, 'thumbnail_podcast_image', true);
 
-			$description = ($podcast->post_content) ? $podcast->post_content : 'Descripción genérica cuando no hay excerpt.';
-			$pod_title = ($podcast->post_title) ? $podcast->post_title : 'Título genérico cuando la nota no tiene título.';
+			$description = ($podcast->post_content) ? $podcast->post_content : 'Todo Menos Miedo';
+			$pod_title = ($podcast->post_title) ? $podcast->post_title : 'NoFM Radio';
 			$pod_guid = (get_post_permalink($podcast->ID)) ? get_post_permalink($podcast->ID) : null;
 
 			$pod_guid = $podcast->ID;
