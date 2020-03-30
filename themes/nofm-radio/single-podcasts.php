@@ -26,7 +26,7 @@
 				$img_size = (wp_is_mobile()) ? 'rect_small' : 'rect_mid';
 				$podcast = get_post($episode_show_id);
 				$terms = get_the_terms($post->ID, 'proyecto');
-				debugger($terms);
+				//debugger($terms);
 				$is_decir = false;
 				$decir_name = '';
 				if(is_array($terms) && !empty($terms)){

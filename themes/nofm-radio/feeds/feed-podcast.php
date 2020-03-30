@@ -12,13 +12,7 @@
 	$podcast_cover = false;
 	$show_title = false;
 	$show_description = false;
-	/**
-	 * Comprueba que los parámetros enviados en la url existan y arma un array de argumentos
-	 * para pasarlo a la función get_posts
-	 * De lo contrario, arma otro set de argumentos sin los valores de los parámetros en la url
-	 * por que no los tiene.
-	 * De esta forma evita que el resto del documento falle
-	*/
+
 	$args = array(
 		'post_type'=>'podcasts',
 		'posts_per_page'=>20,
@@ -27,9 +21,9 @@
 		'order'=>'DESC'
 	);
 
-	$p_cover = $podcast_cover ? $podcast_cover : '';
+	$p_cover = $podcast_cover ? $podcast_cover : get_template_directory_uri().'/images/podcasts/podcast.jpeg';
 	$p_title = $show_title ? $show_title : get_bloginfo('name');
-	$p_description = $show_description ? $show_description : '';
+	$p_description = $show_description ? $show_description : get_bloginfo('description');
 
 	$podcasts = get_posts( $args );
 
@@ -55,14 +49,14 @@
 		$channel_node->appendChild($xml->createElement('language', 'es-mx'));
 		$channel_node->appendChild($xml->createElement('itunes:explicit', 'no'));
 
-		$channel_node->appendChild($xml->createElement('itunes:author', 'Noticieros Televisa'));
+		$channel_node->appendChild($xml->createElement('itunes:author', 'NoFM Radio'));
 
-		$channel_category = $xml->createElement('itunes:category', ''); //Category
-		$channel_category->setAttribute('text', ''); //Category
+		$channel_category = $xml->createElement('itunes:category', 'Society and Culture'); //Category
+		$channel_category->setAttribute('text', 'Society and Culture'); //Category
 		$channel_node->appendChild($channel_category);
 
 		$channel_owner = $xml->createElement('itunes:owner');
-		$channel_owner->appendChild($xml->createElement('itunes:email', '')); //EMAIL
+		$channel_owner->appendChild($xml->createElement('itunes:email', 'hola@nofm-radio.com')); //EMAIL
 		$channel_node->appendChild($channel_owner);
 
 		$image_node = $xml->createElement('image');
@@ -75,29 +69,29 @@
 		$count = count($podcasts);
 
 		foreach ($podcasts as $podcast):
+			setup_postdata( $post );
+			$id = $post->ID;
 
-			setup_postdata( $podcast );
+			$audio_url = get_post_meta($id, 'podcast_url_meta', true);
+			$pod_duration = get_post_meta($id, 'podcast_dur_meta', true);
+			$pod_cover_id = get_post_meta($id, 'thumbnail_podcast_image', true);
 
-			$audio_url = get_post_meta($podcast->ID, 'podcast_url_meta', true);
-			$pod_duration = get_post_meta($podcast->ID, 'podcast_dur_meta', true);
-			$pod_cover_id = get_post_meta($podcast->ID, 'thumbnail_podcast_image', true);
+			$description = ($post->post_content) ? get_the_content($id) : 'Todo Menos Miedo';
+			$pod_title = ($post->post_title) ? $post->post_title : 'NoFM Radio';
+			$pod_guid = (get_post_permalink($id)) ? get_post_permalink($id) : null;
 
-			$description = ($podcast->post_content) ? $podcast->post_content : 'Todo Menos Miedo';
-			$pod_title = ($podcast->post_title) ? $podcast->post_title : 'NoFM Radio';
-			$pod_guid = (get_post_permalink($podcast->ID)) ? get_post_permalink($podcast->ID) : null;
-
-			$pod_guid = $podcast->ID;
+			//$pod_guid = $id;
 
 			$file_size = curl_get_file_size($audio_url);
-			$pod_mod = date_create($podcast->post_date_gmt);
+			$pod_mod = date_create($post->post_date_gmt);
 			$pubDate = date_format($pod_mod, 'D, d M Y H:i:s');
 			$pubDate = $pubDate . ' GMT';
-			$season = substr($podcast->post_date_gmt, 0, 4);
-			$thumbnail = $podcast_cover_id ? $podcast_cover : get_the_post_thumbnail_url($podcast->ID, 'podcast-thumbnail');
+			$season = substr($post->post_date_gmt, 0, 4);
+			$thumbnail = $podcast_cover_id ? $podcast_cover : get_the_post_thumbnail_url($id, 'podcast-thumbnail');
 
 			//XML NODES CREATION
 			$item_node = $channel_node->appendChild($xml->createElement('item'));
-			$item_node->setAttribute('xmlns:media', 'http://search.yahoo.com/mrss/');
+			// $item_node->setAttribute('xmlns:media', 'http://search.yahoo.com/mrss/');
 			$item_node->appendChild($xml->createElement('itunes:episodeType', 'full'));
 			$item_node->appendChild($xml->createElement('itunes:episode', $count));
 			$item_node->appendChild($xml->createElement('itunes:season', '1'));

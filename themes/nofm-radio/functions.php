@@ -631,3 +631,14 @@
 			print_r($bug);
 		echo '</pre>';
 	}
+
+	function bt_feed_podcast(){
+		//Feed para google podcasts
+		add_feed('podcast', 'news_podcast_new_feed');
+	}
+	add_action('init', 'bt_feed_podcast');
+
+	function news_podcast_new_feed() {
+	  	add_filter('pre_option_rss_use_excerpt', '__return_zero');
+	  	load_template( TEMPLATEPATH . '/feeds/feed-podcast.php' );
+	}

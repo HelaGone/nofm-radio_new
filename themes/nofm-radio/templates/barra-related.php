@@ -5,7 +5,7 @@
 	$args = array(
 		'post_type'=>'podcasts',
 		'post_status'=>'publish',
-		'posts_per_page'=>7,
+		'posts_per_page'=>-1,
 		'orderby'=>'date',
 		'order'=>'DESC',
 		'meta_value'=>$post->ID
@@ -24,7 +24,7 @@
 				$podcasts->the_post();
 				setup_postdata($post);
 				$eps_img_size = (wp_is_mobile()) ? 'square_small' : 'thumbnail';
-				$ep_meta_dur = get_post_meta($post->ID, '_episodio_duration', true); ?>
+				$ep_meta_dur = get_post_meta($post->ID, '_podcasts_duration', true); ?>
 				<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object">
 					<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 						<?php the_post_thumbnail($eps_img_size); ?>
@@ -42,9 +42,9 @@
 									<?php echo esc_html(strtoupper($podcast_name)); ?>
 								</a>
 							</h3>
-							 |
+							 -
 							<span>
-								<?php echo esc_html(bt_seconds_to_time($ep_meta_dur)); ?>
+								<?php echo bt_seconds_to_time($ep_meta_dur) ? esc_html(bt_seconds_to_time($ep_meta_dur)) : '00:00'; ?>
 							</span>
 						</div>
 					</figcaption>

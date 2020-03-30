@@ -100,7 +100,7 @@
 		curl_close($ch);
 
 		$data = str_replace('</body></html>', "", $data);
-		$split = explode(',', $data); 
+		$split = explode(',', $data);
 
 		$artist_name = '';
 		$album_name = '';
@@ -108,7 +108,7 @@
 
 		$titles = "";
 
-		if (empty($split[6])) { 
+		if (empty($split[6])) {
 			$titles = ["The current song is not available "];
 		} else {
 			//print_r($split);

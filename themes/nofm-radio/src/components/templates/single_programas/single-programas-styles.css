@@ -12,6 +12,7 @@
 	transition: box-shadow .3s;
 }
 .related_title{font-size: 200%; color:#ff5722;text-shadow: 4px 4px 8px #000;margin-bottom: 24px;}
+.episode_pool .fig_object a{flex-shrink: 0;}
 .episode_pool .fig_object img{border-radius: 5px;max-width: 150px;margin:0;}
 .episode_pool .fig_object .fig_caption{position: relative;display: inline-block;background-color:transparent;}
 .episode_pool .fig_object .fig_caption .fig_title{font-size: 130%;}
