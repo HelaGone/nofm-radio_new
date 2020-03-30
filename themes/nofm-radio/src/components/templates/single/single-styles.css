@@ -9,8 +9,8 @@
 .single_post_data .term_pool{margin:8px 0px;}
 .time_author_info{font-size: 16px;margin-bottom:16px;}
 .single_post_data .post_author_item a{color:#fff;}
-.article_content{color:#fff;width:100%;margin:32px 0;}
-.article_content p{margin:8px 0;font-size: 16px;line-height: 22px;}
+.article_content{color:#fff;width:100%;margin:32px 0;font-size: 16px;line-height: 22px;}
+.article_content p, .article_content li{margin:8px 0;}
 .article_content a{color:#ff5722;}
 .article_content h2{margin:24px 0;font-weight: 700;font-size: 180%;font-family: Fjalla One, sans-serif;line-height: 1.2em;}
 .article_content figure, .article_content iframe{width:100%;background-color: #fff;}

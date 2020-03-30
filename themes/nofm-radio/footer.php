@@ -1,6 +1,5 @@
 	</section>
 	<footer class="site-footer" role="contentinfo">
-		<script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
 		<div class="disclosure">
 			<a href="<?php echo home_url(); ?>" title="NoFm Radio">
 				<img src="<?php echo get_template_directory_uri().'/images/logo blanco.png'; ?>" alt="NoFm Radio">
