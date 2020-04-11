@@ -51,12 +51,13 @@
 
 		$channel_node->appendChild($xml->createElement('itunes:author', 'NoFM Radio'));
 
-		$channel_category = $xml->createElement('itunes:category', 'Society and Culture'); //Category
-		$channel_category->setAttribute('text', 'Society and Culture'); //Category
+		$channel_category = $xml->createElement('itunes:category');
+		$channel_category->setAttribute('text', 'Society & Culture'); //Category
+
 		$channel_node->appendChild($channel_category);
 
 		$channel_owner = $xml->createElement('itunes:owner');
-		$channel_owner->appendChild($xml->createElement('itunes:email', 'hola@nofm-radio.com')); //EMAIL
+		$channel_owner->appendChild($xml->createElement('itunes:email', 'hola.nofm@gmail.com')); //EMAIL
 		$channel_node->appendChild($channel_owner);
 
 		$image_node = $xml->createElement('image');
@@ -69,24 +70,20 @@
 		$count = count($podcasts);
 
 		foreach ($podcasts as $podcast):
-			setup_postdata( $post );
-			$id = $post->ID;
+			$id = $podcast->ID;
 
-			$audio_url = get_post_meta($id, 'podcast_url_meta', true);
-			$pod_duration = get_post_meta($id, 'podcast_dur_meta', true);
-			$pod_cover_id = get_post_meta($id, 'thumbnail_podcast_image', true);
+			$audio_url = get_post_meta($id, '_podcasts_url', true);
+			$pod_duration = get_post_meta($id, '_podcasts_duration', true);
 
-			$description = ($post->post_content) ? get_the_content($id) : 'Todo Menos Miedo';
-			$pod_title = ($post->post_title) ? $post->post_title : 'NoFM Radio';
+			$description = ($podcast->post_content) ? get_the_content($id) : 'Todo Menos Miedo';
+			$pod_title = ($podcast->post_title) ? $podcast->post_title : 'NoFM Radio';
 			$pod_guid = (get_post_permalink($id)) ? get_post_permalink($id) : null;
 
-			//$pod_guid = $id;
-
 			$file_size = curl_get_file_size($audio_url);
-			$pod_mod = date_create($post->post_date_gmt);
+			$pod_mod = date_create($podcast->post_date_gmt);
 			$pubDate = date_format($pod_mod, 'D, d M Y H:i:s');
 			$pubDate = $pubDate . ' GMT';
-			$season = substr($post->post_date_gmt, 0, 4);
+			$season = substr($podcast->post_date_gmt, 0, 4);
 			$thumbnail = $podcast_cover_id ? $podcast_cover : get_the_post_thumbnail_url($id, 'podcast-thumbnail');
 
 			//XML NODES CREATION
