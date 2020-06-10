@@ -21,7 +21,7 @@
 		'order'=>'DESC'
 	);
 
-	$p_cover = $podcast_cover ? $podcast_cover : get_template_directory_uri().'/images/podcasts/podcast.jpeg';
+	$p_cover 'http://nofm-radio.com/wp-content/uploads/2020/06/podcast.jpeg';
 	$p_title = $show_title ? $show_title : get_bloginfo('name');
 	$p_description = $show_description ? $show_description : get_bloginfo('description');
 
