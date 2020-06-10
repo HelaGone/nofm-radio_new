@@ -15,7 +15,7 @@
 
 	$args = array(
 		'post_type'=>'podcasts',
-		'posts_per_page'=>20,
+		'posts_per_page'=>-1,
 		'post_status'=>'publish',
 		'orderby'=>'date',
 		'order'=>'DESC'
