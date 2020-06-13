@@ -1,5 +1,5 @@
-.episode_pool{padding: 16px 8px 0 8px;max-width: 666px;margin:0 auto;}
-.episode_pool .fig_object{border-radius:5px;overflow: hidden;background-color:rgba(0, 10, 18, 0.7);margin-bottom:16px;box-shadow: 4px 4px 16px #000;-webkit-transition:box-shadow .3s;transition: box-shadow .3s;}
+.episode_pool{padding: 16px 8px 0 8px;}
+.episode_pool .fig_object{border-radius:5px;overflow: hidden;background-color:#000a12;box-shadow: 4px 4px 16px #000;-webkit-transition:box-shadow .3s;transition: box-shadow .3s;margin-bottom:32px;}
 .related_title{font-size: 200%; color:#ff5722;text-shadow: 4px 4px 8px #000;margin-bottom: 24px;}
 .episode_pool .fig_object a{flex-shrink: 0;}
 .episode_pool .fig_object img{position: absolute;top:0;left:0;opacity: 0.4;}
@@ -9,6 +9,10 @@
 .episode_pool .ep_info{color:#fff;margin-top: 4px;}
 .episode_pool .ep_info span{font-size: 0.8em;}
 .episode_pool .ep_info h3{color:#FF5722;}
+@media only screen and (min-width:768px){
+	.episode_pool{display: flex;flex-wrap: wrap;justify-content: space-between;}
+	.episode_pool .fig_object{width:calc(100% / 2 - 24px);}
+}
 @media screen and (min-width: 1270px){
 	.episode_pool .fig_object:hover{box-shadow: 1px 1px 4px #000;}
 }

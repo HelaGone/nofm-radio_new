@@ -23,7 +23,7 @@
 			while($podcasts->have_posts()):
 				$podcasts->the_post();
 				setup_postdata($post);
-				$eps_img_size = (wp_is_mobile()) ? 'square_small' : 'thumbnail';
+				$eps_img_size = (wp_is_mobile()) ? 'rect_mid' : 'rect_big';
 				$ep_meta_dur = get_post_meta($post->ID, '_podcasts_duration', true); ?>
 				<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object">
 					<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">

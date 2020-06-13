@@ -3,7 +3,7 @@
 .single_page .single_post_container{max-width: 1280px;margin:0 auto;}
 .single_page .single_post_container img:not(.wp-block-image img){width: 100%; height: auto;margin:24px 0 0 0;}
 .wp-block-image img{display: block;min-height: 100%;}
-.single_content_wrapper{max-width: 766px;margin:0 auto;font-family: 'Roboto Mono';font-size: 24px;}
+.single_content_wrapper{max-width: 920px;margin:0 auto;font-family: 'Roboto Mono';font-size: 24px;}
 .single_title{color:#fff;font-size: 200%;line-height: 1.2em;}
 .single_post_data{color:#ff5722;margin-top:16px;}
 .single_post_data .term_pool{margin:8px 0px;}
