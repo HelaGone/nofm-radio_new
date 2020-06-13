@@ -116,7 +116,7 @@
 			wp_enqueue_script('base-theme-category');
 		}elseif(is_archive()){
 			//Load archive general styling and scripting
-			// wp_enqueue_style('base-theme-archive-style', get_template_directory_uri().'/dist/archive.css', array(), '1.0.0.' );
+			wp_enqueue_style('base-theme-archive-style', get_template_directory_uri().'/dist/archive.css', array(), '1.0.0.' );
 			wp_enqueue_script('base-theme-archive');
 			//Load archive-specific styling and scripting
 			if(is_post_type_archive('programas')){

@@ -1,24 +1,22 @@
 .category_section .fig_object.type_figure{max-height: 315px;}
-.category_section .fig_object.type_figure .fig_caption{background-color: rgba(0,10,18,0.8);top:0;}
-.category_section .fig_object.type_figure .fig_caption .fig_title{text-align:center;}
+.category_section .fig_object.type_figure .fig_caption{background-color: rgba(0,10,18,0.8);top:0;padding:8px 0;}
 .category_section .fig_object, .category_section .fig_object img{border-radius:0;}
 .category_section .fig_object .fig_caption br{display: none;}
 .category_section .fig_object .fig_caption{background-color:rgba(255, 255, 255, 0.7);}
-.category_section .fig_object.type_figure .fig_caption {padding:8px 0;}
-.category_section .fig_object.type_figure .fig_caption .fig_title {font-size: 180%;padding:0 8px;position: relative;top: 50%;margin-top:-14px;}
+.category_section .fig_object.type_figure .fig_title {font-size: 4em;padding:0 8px;margin-top:66px;text-align:center;}
 .category_section .fig_object.type_figure .fig_caption time{padding:4px 8px;}
 .category_section .fig_object img{object-fit: cover;object-position: center;}
-.category_section .posts_pool .fig_object .fig_caption{right:25%; border-radius:0 10px 0 0;color:#000a12;}
-.category_section .posts_pool .fig_object .fig_caption .fig_title{margin:4px 0;line-height: 30px;}
+.category_section .posts_pool .fig_caption{right:25%; border-radius:0 10px 0 0;color:#000a12;}
+.category_section .posts_pool .fig_title{margin:4px 0;line-height: 30px;}
 
 @media screen and (min-width: 360px){
-	.category_section .posts_pool .fig_object .fig_caption{font-size: 140%;}
+	.category_section .posts_pool .fig_caption{font-size: 140%;}
 }
 
-@media screen and (min-width: 480px){	
+@media screen and (min-width: 480px){
 	.category_section .fig_object:not(.type_figure){width:calc(100% / 2);}
-	.category_section .posts_pool .fig_object .fig_caption .fig_title{font-size:120%;}
-	.category_section .posts_pool .list_row, 
+	.category_section .posts_pool .fig_title{font-size:120%;}
+	.category_section .posts_pool .list_row,
 	.category_section .posts_pool .duo_row {display: flex;flex-direction: row;align-items: flex-start;}
 	.category_section .posts_pool .list_row .fig_object .fig_caption p{display: none;}
 	.category_section .fig_object.last_figure{max-width: 100%;}
