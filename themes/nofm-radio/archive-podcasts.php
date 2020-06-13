@@ -5,18 +5,20 @@
 		<div class="posts_pool">
 		<?php
 			while(have_posts()):
-				the_post(); 
-				$image_size_pool = (wp_is_mobile()) ? 'thumbnail' : 'square_mid';
+				the_post();
+				$image_size_pool = (wp_is_mobile()) ? 'rect_mid' : 'rect_big';
 				$ep_meta_dur = get_post_meta($post->ID, '_podcasts_duration', true);
-				$ep_meta_pod = get_post_meta($post->ID, '_podcasts_show', true); 
-				$pod_owner = ($ep_meta_pod!='') ? get_the_title($ep_meta_pod) : ''; 
-				$terms = get_the_terms($post->ID, 'proyecto'); 
+				$ep_meta_pod = get_post_meta($post->ID, '_podcasts_show', true);
+				$pod_owner = ($ep_meta_pod!='') ? get_the_title($ep_meta_pod) : '';
+				$terms = get_the_terms($post->ID, 'proyecto');
 				$is_decir = false;
 				$decir_name = '';
-				foreach ($terms as $term) {
-					if($term->slug == 'decir-desigualdad'){
-						$is_decir = true;
-						$decir_name = $term->name;
+				if(is_array($terms) && !empty($terms)){
+					foreach ($terms as $term) {
+						if($term->slug == 'decir-desigualdad'){
+							$is_decir = true;
+							$decir_name = $term->name;
+						}
 					}
 				} ?>
 				<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object">
@@ -39,25 +41,24 @@
 										</a>
 								<?php
 									else: ?>
-										<a href="<?php echo esc_url(get_permalink($ep_meta_pod)); ?>" title="Decir Desigualdad Es" target="_blank" rel="noopener">
+										<a href="<?php echo esc_url(get_permalink($ep_meta_pod)); ?>" title="<?php echo esc_attr($pod_owner); ?>" target="_blank" rel="noopener">
 											<?php echo strtoupper($pod_owner); ?>
 										</a>
 								<?php
 									endif; ?>
 							</h3>
-							 | 
 							<span>
 								<?php echo esc_html(bt_seconds_to_time($ep_meta_dur)); ?>
 							</span>
 						</div>
 					</figcaption>
 				</figure>
-	<?php	
+	<?php
 			endwhile; ?>
 		</div>
 <?php
 	endif; ?>
 </section>
-<?php 
+<?php
 	echo bt_print_pagination();
 	get_footer(); ?>
