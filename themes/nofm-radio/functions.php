@@ -94,10 +94,10 @@
 		wp_register_script('base-theme-podcasts', get_template_directory_uri().'/dist/single_podcasts.js', array('jquery'), '1.0.0');
 		wp_register_script('base-theme-page', get_template_directory_uri().'/dist/page.js', array('jquery'), '1.0.0');
 
-		wp_register_script('bx-slider-scripts', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array('jquery'), '4.2.12');
+		// wp_register_script('bx-slider-scripts', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array('jquery'), '4.2.12');
 
 		//Load site-wide general styling and scripting
-		wp_enqueue_style( 'base-theme-style', get_template_directory_uri() . '/dist/main.css', array(), '1.0.0');
+		// wp_enqueue_style( 'base-theme-style', get_template_directory_uri() . '/dist/main.css', array(), '1.0.0');
 		wp_enqueue_script('base-theme-main');
 
 		if(is_front_page()){
@@ -116,7 +116,7 @@
 			wp_enqueue_script('base-theme-category');
 		}elseif(is_archive()){
 			//Load archive general styling and scripting
-			wp_enqueue_style('base-theme-archive-style', get_template_directory_uri().'/dist/archive.css', array(), '1.0.0.' );
+			// wp_enqueue_style('base-theme-archive-style', get_template_directory_uri().'/dist/archive.css', array(), '1.0.0.' );
 			wp_enqueue_script('base-theme-archive');
 			//Load archive-specific styling and scripting
 			if(is_post_type_archive('programas')){
@@ -153,8 +153,8 @@
 				wp_enqueue_script('base-theme-archivo');
 			}
 		}elseif(is_page()&&!is_front_page()){
-			wp_enqueue_style('base-theme-page-style', get_template_directory_uri().'/dist/page.css', array(), '1.0.0.' );
-			wp_enqueue_script('base-theme-page');
+			// wp_enqueue_style('base-theme-page-style', get_template_directory_uri().'/dist/page.css', array(), '1.0.0.' );
+			// wp_enqueue_script('base-theme-page');
 		}elseif(is_404()){
 			wp_enqueue_style('base-theme-404', get_template_directory_uri().'/dist/fof.css', array(), '1.0.0');
 		}

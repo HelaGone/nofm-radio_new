@@ -1,4 +1,4 @@
-<?php 
+<?php
 	global $wp_query, $post;
 	$noticias = wp_cache_get('barra_noticias_wpcache');
 	if($noticias===false){
@@ -21,7 +21,7 @@
 				while($noticias->have_posts()):
 					$noticias->the_post();
 					$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_medium'; ?>
-					<?php 
+					<?php
 						if($count<1): ?>
 							<figure class="fig_object">
 								<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
@@ -34,37 +34,24 @@
 								</figcaption>
 							</figure>
 							<ul class="updated_list">
-					<?php 
+					<?php
 							// echo ($count==1) ? '<ul class="updated_list">' : '';
 						else: ?>
-							
+
 								<li class="updated_item">
 									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 										<?php the_title(); ?>
 									</a>
 								</li>
-							
-					<?php		
+
+					<?php
 						endif; ?>
-			<?php 
+			<?php
 				$count++;
 				endwhile; ?>
 							</ul>
 				</div>
 			</div>
-			<!-- ADS, UNCOMMENT FOR PRODUCTION !!!!!! -->
-			<!-- <div class="adS_container" style="text-align:center;margin-top:102px;">
-				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<ins class="adsbygoogle"
-				     style="display:block"
-				     data-ad-client="ca-pub-8411953701698334"
-				     data-ad-slot="8253374863"
-				     data-ad-format="auto"
-				     data-full-width-responsive="true"></ins>
-				<script>
-				     (adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-			</div> -->
 		</section>
 <?php
 	endif; ?>

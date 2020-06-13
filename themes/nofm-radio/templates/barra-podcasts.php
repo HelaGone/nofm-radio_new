@@ -1,4 +1,4 @@
-<?php 
+<?php
 	global $wp_query, $post;
 	$posts_arr = wp_cache_get('barra_podcasts_wpcache');
 
@@ -43,7 +43,7 @@
 								}
 							}
 
-							$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_medium'; 
+							$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_medium';
 							if($count<1): ?>
 								<figure class="fig_object">
 									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
@@ -75,8 +75,8 @@
 									</figcaption>
 								</figure>
 								<ul class="updated_list">
-					<?php 
-							else: ?>	
+					<?php
+							else: ?>
 									<li class="updated_item">
 										<a href="<?php the_permalink(); ?>" title="<?php echo get_the_title($post->ID); ?>" class="fjalla_font">
 											<?php the_title(); ?>
@@ -101,31 +101,16 @@
 											</span>
 										</div>
 									</li>
-							
-					<?php		
+
+					<?php
 							endif; ?>
-			<?php 
+			<?php
 					$count++;
 					endwhile;
 					wp_reset_postdata(); ?>
 								</ul>
 				</div>
 			</div>
-			<!--
-				COMMENT FOR DEVELOPMENT 
-				nofm-radio-cam-3 -->
-			<!-- <div class="adS_container" style="text-align:center;margin-top:102px;">
-				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<ins class="adsbygoogle"
-				     style="display:block"
-				     data-ad-client="ca-pub-8411953701698334"
-				     data-ad-slot="8393505892"
-				     data-ad-format="auto"
-				     data-full-width-responsive="true"></ins>
-				<script>
-				     (adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-			</div> -->
 		</section>
 <?php
 	endif; ?>

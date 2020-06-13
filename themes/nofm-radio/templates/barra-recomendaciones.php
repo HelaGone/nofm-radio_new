@@ -1,4 +1,4 @@
-<?php 
+<?php
 	global $wp_query, $post;
 	$posts_arr = wp_cache_get('barra_recom_wpcache');
 	//$rev_arr;
@@ -10,7 +10,7 @@
 
 	if($posts_arr->have_posts()):
 		$section_tag_name = $posts_arr->query_vars['tag_slug__in'][0];
-		$tag_link = get_term_link($section_tag_name, 'post_tag'); 
+		$tag_link = get_term_link($section_tag_name, 'post_tag');
 		/*
 		$rev_arr = array_reverse($posts_arr->posts);
 		$posts_arr->posts = $rev_arr;
@@ -28,14 +28,14 @@
 							$count = 0;
 							while($posts_arr->have_posts()):
 								$posts_arr->the_post();
-								$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_medium'; 
+								$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_medium';
 								if($count<7): ?>
 									<li class="updated_item">
 										<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 											<?php the_title(); ?>
 										</a>
 									</li>
-						<?php		
+						<?php
 								elseif($count==7): ?>
 					</ul>
 					<figure class="fig_object">
@@ -48,26 +48,12 @@
 							</a>
 						</figcaption>
 					</figure>
-						<?php		
+						<?php
 								endif;
 								$count++;
 							endwhile; ?>
 				</div>
 			</div>
-			<!-- COMMENT FOR DEVELOPMENT
-				nofm-radio-cam-2 -->
-			<!-- <div class="adS_container" style="text-align:center;margin-top:102px;">
-				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<ins class="adsbygoogle"
-				     style="display:block"
-				     data-ad-client="ca-pub-8411953701698334"
-				     data-ad-slot="4432427193"
-				     data-ad-format="auto"
-				     data-full-width-responsive="true"></ins>
-				<script>
-				     (adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-			</div> -->
 		</section>
 <?php
 	endif; ?>

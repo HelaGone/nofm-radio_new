@@ -42,9 +42,8 @@
 									<?php echo esc_html(strtoupper($podcast_name)); ?>
 								</a>
 							</h3>
-							 -
 							<span>
-								<?php echo bt_seconds_to_time($ep_meta_dur) ? esc_html(bt_seconds_to_time($ep_meta_dur)) : '00:00'; ?>
+								<?php echo bt_seconds_to_time($ep_meta_dur) ? esc_html( "Duración: ".bt_seconds_to_time($ep_meta_dur)) : '00:00'; ?>
 							</span>
 						</div>
 					</figcaption>
