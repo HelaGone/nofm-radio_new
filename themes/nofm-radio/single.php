@@ -20,7 +20,7 @@
 						<?php (wp_is_mobile()) ? the_post_thumbnail('rect_small') : the_post_thumbnail('rect_big'); ?>
 
 						<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8411953701698334" data-ad-slot="8393505892" data-ad-format="auto" data-full-width-responsive="true"></ins>
-						<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+						<!-- <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
 
 						<div class="article_content">
 							<?php the_content(); ?>
@@ -28,7 +28,7 @@
 
 						<!-- interior-single -->
 						<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8411953701698334" data-ad-slot="4918078474" data-ad-format="auto" data-full-width-responsive="true"></ins>
-						<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+						<!-- <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
 
 						<div class="share_buttons">
 							<?php
@@ -60,6 +60,6 @@
 		<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 		<!-- nofm-radio-cam-3 -->
 		<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8411953701698334" data-ad-slot="8393505892" data-ad-format="auto" data-full-width-responsive="true"></ins>
-		<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+		<!-- <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
 </section>
 <?php get_footer(); ?>
