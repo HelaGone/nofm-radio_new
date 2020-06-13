@@ -16,11 +16,11 @@ self.__precacheManifest = [
     "url": "archive_archivo.js"
   },
   {
-    "revision": "f72fd6704ca8c155cf93",
+    "revision": "cbe38aeb6c23942ecb17",
     "url": "archive_podcasts.css"
   },
   {
-    "revision": "f72fd6704ca8c155cf93",
+    "revision": "cbe38aeb6c23942ecb17",
     "url": "archive_podcasts.js"
   },
   {
