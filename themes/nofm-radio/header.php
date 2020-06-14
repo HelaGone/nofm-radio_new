@@ -48,21 +48,21 @@
 					<div class="social_flex_container">
 						<ul>
 							<li>
-								<a href="https://www.facebook.com/todomenosmiedo/" title="Facebook" target="_blank">
+								<a href="https://www.facebook.com/todomenosmiedo/" title="Facebook" target="_blank" rel="noopener">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 58" width="24" height="24" fill="#ffffff">
 										<path class="cls-fb-w" d="M53.85,0H3.15A3.15,3.15,0,0,0,0,3.15v50.7A3.15,3.15,0,0,0,3.15,57h27.3V35H23V26.33h7.41V20c0-7.37,4.49-11.38,11.06-11.38A62.15,62.15,0,0,1,48.15,9v7.69H43.61c-3.57,0-4.26,1.69-4.26,4.18v5.5H47.9L46.79,35H39.35V57h14.5A3.15,3.15,0,0,0,57,53.85V3.15A3.15,3.15,0,0,0,53.85,0Z"/>
 									</svg>
 								</a>
 							</li>
 							<li>
-								<a href="https://twitter.com/nofm_radio" title="Twitter" target="_blank">
+								<a href="https://twitter.com/nofm_radio" title="Twitter" target="_blank" rel="noopener">
 									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="931 512.833 58 56" enable-background="new 931 512.833 58 56" xml:space="preserve">
 										<path fill="#FFFFFF" d="M949.239,564.398c21.889,0,33.858-18.135,33.858-33.859c0-0.514,0-1.028-0.035-1.538c2.329-1.685,4.34-3.77,5.938-6.16c-2.171,0.962-4.475,1.593-6.835,1.873c2.485-1.488,4.343-3.827,5.232-6.582c-2.336,1.385-4.893,2.362-7.557,2.889c-4.508-4.792-12.046-5.025-16.837-0.517c-3.09,2.906-4.401,7.237-3.443,11.37c-9.567-0.48-18.481-4.999-24.524-12.433c-3.159,5.436-1.545,12.392,3.684,15.884c-1.894-0.055-3.747-0.566-5.401-1.489c0,0.049,0,0.101,0,0.151c0.001,5.664,3.995,10.542,9.547,11.665c-1.752,0.478-3.591,0.548-5.374,0.203c1.559,4.848,6.026,8.168,11.117,8.266c-4.212,3.311-9.419,5.109-14.777,5.102c-0.947,0-1.893-0.059-2.833-0.17c5.442,3.491,11.774,5.344,18.239,5.336"/>
 									</svg>
 								</a>
 							</li>
 							<li>
-								<a href="https://www.instagram.com/nofm_radio/" title="Instagram" target="_blank">
+								<a href="https://www.instagram.com/nofm_radio/" title="Instagram" target="_blank" rel="noopener">
 									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 32 32" version="1.1" fill="#ffffff">
 									  <g id="surface113316">
 									    <path style="fill:none;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke:#fff;stroke-opacity:1;stroke-miterlimit:10;" d="M 7.546875 25 L 18.453125 25 C 22.070312 25 25 22.070312 25 18.453125 L 25 7.546875 C 25 3.929688 22.070312 1 18.453125 1 L 7.546875 1 C 3.929688 1 1 3.929688 1 7.546875 L 1 18.453125 C 1 22.070312 3.929688 25 7.546875 25 Z M 7.546875 25 "/>
@@ -73,7 +73,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="https://feeds.feedburner.com/nofm-radio/HgNX" title="Feedburner" target="_blank">
+								<a href="https://feeds.feedburner.com/nofm-radio/HgNX" title="Feedburner" target="_blank" rel="noopener">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff">
 										<path fill="none" d="M0 0h24v24H0z"/>
 										<circle cx="6.18" cy="17.82" r="2.18"/>
@@ -84,28 +84,28 @@
 						</ul>
 						<ul class="voscast_script_players">
 							<li class="winamp">
-								<a href="//cdn.voscast.com/resources/?key=d3b9d948ce2a095ad198b852a44fa999&c=winamp" target="_blank" title="Winamp">
+								<a href="//cdn.voscast.com/resources/?key=d3b9d948ce2a095ad198b852a44fa999&c=winamp" target="_blank" rel="noopener" title="Winamp">
 									<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24" height="24" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve">
 										<polygon fill="#FFFFFF" points="72,60 72,1 13.083,60 47,60 47,120 106.75,60 "/>
 									</svg>
 								</a>
 							</li>
 							<li>
-								<a href="https://tunein.com/radio/NoFM-Radio-s167908/" target="_blank" title="TuneIn">
+								<a href="https://tunein.com/radio/NoFM-Radio-s167908/" target="_blank" rel="noopener" title="TuneIn">
 									<svg version="1.1" id="logoTSharp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 										<path fill="#FFFFFF" d="M20.431,7.83c0-0.079-0.065-0.143-0.144-0.143l0,0h-0.72c-0.079,0-0.144,0.064-0.144,0.143l0,0v2.696c0,0.043-0.05,0.057-0.064,0.014l-0.986-2.731c-0.022-0.08-0.096-0.133-0.18-0.129h-0.861c-0.08,0-0.145,0.064-0.145,0.145l0,0v4.749c-0.001,0.08,0.062,0.145,0.143,0.146c0,0,0,0,0.002,0h0.719c0.079,0,0.145-0.064,0.145-0.144c0,0,0-0.001-0.002-0.002v-2.485c0-0.043,0.052-0.058,0.066-0.015l0.977,2.517c0.026,0.082,0.108,0.133,0.193,0.121h0.849c0.08,0,0.145-0.063,0.145-0.143c0-0.001,0-0.002,0-0.002V7.83H20.431z M16.396,11.893c0-0.08-0.064-0.144-0.144-0.144l0,0h-0.611c-0.038,0.002-0.07-0.027-0.071-0.064c0-0.003,0-0.005,0-0.008V8.729c-0.002-0.037,0.027-0.069,0.065-0.071c0.001,0,0.003,0,0.006,0h0.54c0.08,0,0.145-0.065,0.145-0.145l0,0V7.83c0-0.079-0.064-0.143-0.145-0.143l0,0h-2.228c-0.081,0-0.145,0.064-0.145,0.143l0,0v0.683c0,0.08,0.063,0.145,0.145,0.145l0,0h0.538c0.038-0.002,0.07,0.027,0.072,0.064c0,0.002,0,0.005,0,0.007v2.948c0.001,0.038-0.027,0.069-0.064,0.072c-0.002,0-0.005,0-0.008,0h-0.611c-0.079,0-0.143,0.064-0.143,0.144l0,0v0.681c-0.002,0.08,0.061,0.145,0.141,0.146c0.002,0,0.002,0,0.002,0h2.372c0.079,0,0.144-0.064,0.144-0.144c0,0,0-0.001,0-0.002V11.893z M9.964,8.765H1.186c-0.048,0-0.087,0.04-0.087,0.09v9.885c0,0.049,0.039,0.091,0.087,0.091h8.688c0.05,0,0.09-0.042,0.09-0.091V8.765z M23.981,4.632v11.142c0,0.299-0.241,0.539-0.538,0.539H11.041v3.056c0,0.299-0.24,0.538-0.538,0.538H0.557c-0.297,0-0.539-0.239-0.539-0.538V8.226c0-0.298,0.242-0.539,0.539-0.539h9.407V4.632c0-0.298,0.24-0.539,0.539-0.539h12.941C23.74,4.093,23.981,4.334,23.981,4.632z M7.027,11.425v0.719c0,0.079-0.064,0.144-0.143,0.144H5.986c-0.038-0.002-0.07,0.027-0.073,0.064c0,0.002,0,0.005,0,0.008v3.81c0,0.079-0.064,0.142-0.143,0.143H5.05c-0.079-0.001-0.142-0.063-0.144-0.143v-3.81c0.003-0.038-0.026-0.07-0.064-0.072c-0.003,0-0.004,0-0.007,0H3.937c-0.081,0-0.145-0.064-0.145-0.144v-0.719c0-0.08,0.064-0.144,0.145-0.144h2.947C6.963,11.281,7.027,11.346,7.027,11.425z"/>
 									</svg>
 								</a>
 							</li>
 							<li>
-								<a href="//cdn.voscast.com/resources/?key=d3b9d948ce2a095ad198b852a44fa999&c=wmp" target="_blank" title="Media Player">
+								<a href="//cdn.voscast.com/resources/?key=d3b9d948ce2a095ad198b852a44fa999&c=wmp" target="_blank" rel="noopener" title="Media Player">
 									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#fff">
 										<path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
 									</svg>
 								</a>
 							</li>
 							<li>
-								<a href="//cdn.voscast.com/resources/?key=d3b9d948ce2a095ad198b852a44fa999&c=realplayer" target="_blank" title="Real Player">
+								<a href="//cdn.voscast.com/resources/?key=d3b9d948ce2a095ad198b852a44fa999&c=realplayer" target="_blank" rel="noopener" title="Real Player">
 									<svg version="1.1" id="svg2" xmlns:svg="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="149.899 107.938 24 24" enable-background="new 149.899 107.938 24 24" xml:space="preserve"
 										width="24"
 										height="24">
@@ -130,7 +130,7 @@
 						<figcaption class="fig_caption">
 							<div class="player_container">
 								<h1 class="fig_title" style="font-weight: bold;">EN<br>VIVO</h1>
-								<a href="http://r.nofm-radio.com/" title="Abrir Aplicación" target="_blank" rel="follow">
+								<a href="http://r.nofm-radio.com/" title="Abrir Aplicación" target="_blank" rel="noopener" rel="follow">
 									<svg xmlns="http://www.w3.org/2000/svg" width="144px" height="144px" viewBox="0 0 144 144">
 										<g>
 											<path fill="#FFFFFF" d="M43.5,138.277c-0.298,0-0.599-0.054-0.889-0.164c-0.97-0.369-1.61-1.299-1.61-2.336V8.222c0-1.038,0.641-1.967,1.61-2.336c0.29-0.11,0.591-0.164,0.889-0.164c0.7,0,1.383,0.294,1.867,0.837l56.806,63.778c0.844,0.948,0.844,2.377,0,3.326L45.367,137.44C44.883,137.983,44.199,138.277,43.5,138.277z"/>
@@ -169,16 +169,16 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'main_menu' ) ); ?>
 				<ul class="support_list">
 					<li class="mone_item patreon">
-					    <a href="https://www.patreon.com/NoFMradio" target="_blank" rel="noopener">
-					        <img src="<?php echo get_template_directory_uri().'/images/patreon.png'; ?>">
+					    <a href="https://www.patreon.com/NoFMradio" target="_blank" rel="noopener" rel="noopener">
+					        <img src="<?php echo get_template_directory_uri().'/images/patreon.png'; ?>" alt="Patreon NoFM">
 					    </a>
 					</li>
 					<li class="mone_item donate">
-						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" rel="noopener">
 						    <input type="hidden" name="cmd" value="_s-xclick">
 						    <input type="hidden" name="hosted_button_id" value="8KBZCV9NSWUQU">
 						    <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea." style="margin-left:20px; margin-top:10px;">
-						    <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1" >
+						    <img alt="Pixel PayPal" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1" >
 						</form>
 					</li>
 					<li class="mone_item telephone">
