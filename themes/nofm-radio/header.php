@@ -11,8 +11,7 @@
 		<meta name="theme-color" content="#000a12"/>
 		<link rel="manifest" href="<?php echo site_url().'/manifest.json'; ?>">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<script data-ad-client="ca-pub-8411953701698334" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8411953701698334" crossorigin="anonymous"></script>
 		<link type="application/rss+xml" rel="alternate" title="No FM Radio - Podcast" href="https://nofm-radio.com/feed/podcast">
 		<!-- START wp_head -->
 		<?php wp_head(); ?>
