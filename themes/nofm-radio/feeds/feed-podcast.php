@@ -76,7 +76,7 @@
 			$pod_duration = get_post_meta($id, '_podcasts_duration', true);
 
 			$description = ($podcast->post_content) ? get_the_content($id) : 'Todo Menos Miedo';
-			$pod_title = ($podcast->post_title) ? $podcast->post_title : 'NoFM Radio';
+			$pod_title = ($podcast->post_title) ? htmlspecialchars($podcast->post_title) : 'NoFM Radio';
 			$pod_guid = (get_post_permalink($id)) ? get_post_permalink($id) : null;
 
 			$file_size = curl_get_file_size($audio_url);
