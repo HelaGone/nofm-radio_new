@@ -53,6 +53,12 @@ module.exports = {
 		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist')
 	}, 
+
+	optimization: {
+		splitChunks: {
+			chunks: "all"
+		}
+	}
 	module: {
 		rules:[{
 			test: /\.js$/,
@@ -74,7 +80,7 @@ module.exports = {
 			]
 		},
 		{
-			test: /\.(png|svg|jpg|jpeg|gif)$/,
+			test: /\.(png|jpg|jpeg|gif)$/,
 			use: {
 				loader: 'file-loader',
 				options: {

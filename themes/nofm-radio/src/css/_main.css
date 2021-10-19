@@ -1,4 +1,4 @@
-body{background-image:url(../img/granulado.jpg);background-size:70%;font-family:'Roboto Mono', monospace;background-repeat:repeat;background-position:center top;}
+body{background-image:url(../img/granulado.png);background-size:70%;font-family:'Roboto Mono', monospace;background-repeat:repeat;background-position:center top;}
 a{color:inherit;text-decoration:none;transition:color.3s;}
 a:hover{color:#ff8a50;}
 button{border-style:none;background-color:transparent;outline:none;}

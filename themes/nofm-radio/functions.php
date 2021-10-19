@@ -181,13 +181,19 @@
 			WebFontConfig = {
 				google: {
 					families: ['Fjalla+One:400', 'Roboto+Mono:300,300i,700,700i']
+				},
+				active: function(){
+					console.log("Fonts activas");
+				},
+				fontloading: function(family, fvd){
+					console.log(`${family} - ${fvd}`);
 				}
 			};
 
 			(function(d){
 				var wf = d.createElement('script'), s = d.scripts[0];
 				wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-				wf.async = true;
+				wf.async = false;
 				s.parentNode.insertBefore(wf, s);
 			})(document);
 		</script>
@@ -239,7 +245,7 @@
 // CAMBIAR EL CONTENIDO DEL FOOTER EN EL DASHBOARD ///////////////////////////////////
 
 	add_filter( 'admin_footer_text', function() {
-		echo 'Creado por <a href="https://cubeinthebox.com">Cubeinthebox®</a>. ';
+		echo 'Creado por <a href="https://hela.dev">Cubeinthebox®</a>. ';
 		echo 'Powered by <a href="http://www.wordpress.org">WordPress</a>';
 	});
 
@@ -638,3 +644,12 @@
 	  	add_filter('pre_option_rss_use_excerpt', '__return_zero');
 	  	load_template( TEMPLATEPATH . '/feeds/feed-podcast.php' );
 	}
+
+
+	function nfm_remove_wp_block_library_css(){
+	    wp_dequeue_style( 'wp-block-library' );
+	    wp_dequeue_style( 'wp-block-library-theme' );
+	    wp_dequeue_style( 'wc-block-style' );
+	    wp_dequeue_style( 'storefront-gutenberg-blocks' );
+	}
+	add_action( 'wp_enqueue_scripts', 'nfm_remove_wp_block_library_css', 10 );
