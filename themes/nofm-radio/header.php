@@ -9,6 +9,17 @@
 		<meta name="HandheldFriendly" content="true"/>
 		<meta http-equiv="cleartype" content="on"/>
 		<meta name="theme-color" content="#000a12"/>
+		<!-- Preconnect -->
+		<link rel="preconnect" href="https://www.google.com/" crossorigin>
+		<link rel="preconnect" href="https://stats.g.doubleclick.net">
+		<link rel="preconnect" href="https://pagead2.googlesyndication.com">
+		<link rel="preconnect" href="https://www.google.com.mx">
+		<link rel="preconnect" href="https://adservice.google.com">
+		<link rel="preconnect" href="https://cm.g.doubleclick.net">
+		<link rel="preconnect" href="https://i.ytimg.com">
+		<link rel="preconnect" href="https://www.youtube.com/">
+		<link rel="preconnect" href="https://twitter.com/">
+
 		<link rel="manifest" href="<?php echo site_url().'/manifest.json'; ?>">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8411953701698334" crossorigin="anonymous"></script>
