@@ -39,20 +39,6 @@
 
 	</head>
 		<body <?php body_class(); ?>>
-			<!-- FACEBOOK SDK -->
-			<div id="fb-root"></div>
-			<script>
-			  window.fbAsyncInit = function() {
-			    FB.init({
-			      appId            : '392828258254470',
-			      autoLogAppEvents : true,
-			      xfbml            : true,
-			      version          : 'v4.0'
-			    });
-			  };
-			</script>
-			<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
-			<!-- END FACEBOOK SDK -->
 			<header id="main_site_header">
 				<div class="social_network_header">
 					<div class="social_flex_container">
@@ -136,7 +122,8 @@
 				</div>
 				<section id="main_header_section">
 					<figure id="envivo_figure" class="fig_object">
-						<img class="day_main_background" src="<?php //echo esc_url(bt_get_imageby_id(30967, 'square_mid')); ?>" alt="EN VIVO">
+						<?php $dayOfWeek = date('N'); ?>
+						<img class="day_main_background" src="<?php echo THEMEPATH . 'images/week/'.$dayOfWeek.'.jpg'; ?>" alt="EN VIVO" width="1920" height="275">
 						<figcaption class="fig_caption">
 							<div class="player_container">
 								<h1 class="fig_title" style="font-weight: bold;">EN<br>VIVO</h1>

@@ -4,6 +4,7 @@ a:hover{color:#ff8a50;}
 button{border-style:none;background-color:transparent;outline:none;}
 img{width:100%;height: auto;}
 ins{text-align: center;}
+h1, h2, h3, h4, h5, h6{font-family:'Fjalla One',sans-serif;}
 .clearfix:before,.clearfix:after{content:"";display:table;}
 .clearfix:after{clear:both;}
 .clearfix{zoom:1;}
@@ -34,6 +35,7 @@ ins{text-align: center;}
 .fix-header{position:fixed;left:0;right:0;top:0;z-index:9;background-color:rgba(0,10,18,0.75);border-bottom:2px solid red;}
 .ad_banners{text-align: center;}
 .adsbygoogle{margin-top:32px;}
+.image_frame{position: relative;}
 @media screen and (min-width:768px){
 	.see_more{font-size:2rem;}
 }

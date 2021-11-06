@@ -1,138 +1,138 @@
 self.__precacheManifest = [
   {
-    "revision": "c953b4942dcbb5f0344c",
+    "revision": "f4785190c063e2ed0db2",
     "url": "automain.css"
   },
   {
-    "revision": "c953b4942dcbb5f0344c",
+    "revision": "f4785190c063e2ed0db2",
     "url": "automain.js"
   },
   {
-    "revision": "a8699ba5c9d7dcb1edef",
+    "revision": "77516912fe3ec5e986ac",
     "url": "autohome.css"
   },
   {
-    "revision": "a8699ba5c9d7dcb1edef",
+    "revision": "77516912fe3ec5e986ac",
     "url": "autohome.js"
   },
   {
-    "revision": "12d35c66710eee31cffc",
+    "revision": "2fcc0c06c51a921e08f9",
     "url": "autosingle.css"
   },
   {
-    "revision": "12d35c66710eee31cffc",
+    "revision": "2fcc0c06c51a921e08f9",
     "url": "autosingle.js"
   },
   {
-    "revision": "ae5a09e34e72ab5940fa",
+    "revision": "21ec9d4a1da892bb9afc",
     "url": "autosingle_programas.css"
   },
   {
-    "revision": "ae5a09e34e72ab5940fa",
+    "revision": "21ec9d4a1da892bb9afc",
     "url": "autosingle_programas.js"
   },
   {
-    "revision": "16dee17c44b80cf44f4f",
+    "revision": "6cfdd0287d951598d082",
     "url": "autosingle_podcasts.css"
   },
   {
-    "revision": "16dee17c44b80cf44f4f",
+    "revision": "6cfdd0287d951598d082",
     "url": "autosingle_podcasts.js"
   },
   {
-    "revision": "54c82ad0fc6d2e01a14f",
+    "revision": "63b4d366852d7f05903c",
     "url": "autosingle_archivo.css"
   },
   {
-    "revision": "54c82ad0fc6d2e01a14f",
+    "revision": "63b4d366852d7f05903c",
     "url": "autosingle_archivo.js"
   },
   {
-    "revision": "fbe85492693c480bb666",
+    "revision": "5e0430eb8e849fc45ad3",
     "url": "autoarchive.css"
   },
   {
-    "revision": "fbe85492693c480bb666",
+    "revision": "5e0430eb8e849fc45ad3",
     "url": "autoarchive.js"
   },
   {
-    "revision": "9fee366e250e0d5de4f1",
+    "revision": "9db8a11d5b2bb02330c7",
     "url": "autoarchive_programas.css"
   },
   {
-    "revision": "9fee366e250e0d5de4f1",
+    "revision": "9db8a11d5b2bb02330c7",
     "url": "autoarchive_programas.js"
   },
   {
-    "revision": "c3997367a7c416d2902b",
+    "revision": "d4fc2fd65fa96f877fdf",
     "url": "autoarchive_podcasts.css"
   },
   {
-    "revision": "c3997367a7c416d2902b",
+    "revision": "d4fc2fd65fa96f877fdf",
     "url": "autoarchive_podcasts.js"
   },
   {
-    "revision": "231f7fc1d7d1d1e86d5b",
+    "revision": "032d68318b3c5a926ace",
     "url": "autoarchive_archivo.css"
   },
   {
-    "revision": "231f7fc1d7d1d1e86d5b",
+    "revision": "032d68318b3c5a926ace",
     "url": "autoarchive_archivo.js"
   },
   {
-    "revision": "b57f58437ee3d51dbd33",
+    "revision": "302efd341d17b21627ac",
     "url": "autocategory.css"
   },
   {
-    "revision": "b57f58437ee3d51dbd33",
+    "revision": "302efd341d17b21627ac",
     "url": "autocategory.js"
   },
   {
-    "revision": "213e2c36ff9f67f73371",
+    "revision": "974ad4b84cff68505322",
     "url": "autoauthor.css"
   },
   {
-    "revision": "213e2c36ff9f67f73371",
+    "revision": "974ad4b84cff68505322",
     "url": "autoauthor.js"
   },
   {
-    "revision": "6c3a0c53baf4fae8cbcc",
+    "revision": "f11622eed1eff702c6c3",
     "url": "autoimage.css"
   },
   {
-    "revision": "6c3a0c53baf4fae8cbcc",
+    "revision": "f11622eed1eff702c6c3",
     "url": "autoimage.js"
   },
   {
-    "revision": "70df9351359ba68d8dcd",
+    "revision": "b48e359ea6b61770b72a",
     "url": "autotag.css"
   },
   {
-    "revision": "70df9351359ba68d8dcd",
+    "revision": "b48e359ea6b61770b72a",
     "url": "autotag.js"
   },
   {
-    "revision": "80d8bd6ed7c02f18c883",
+    "revision": "980fddf59ce3997c04c6",
     "url": "autopage.css"
   },
   {
-    "revision": "80d8bd6ed7c02f18c883",
+    "revision": "980fddf59ce3997c04c6",
     "url": "autopage.js"
   },
   {
-    "revision": "d64d8e9873dc99f39080",
+    "revision": "4801fd8ca6bd705a6de4",
     "url": "autotaxonomy.css"
   },
   {
-    "revision": "d64d8e9873dc99f39080",
+    "revision": "4801fd8ca6bd705a6de4",
     "url": "autotaxonomy.js"
   },
   {
-    "revision": "86f041c0ae507c68a389",
+    "revision": "ea307e6bd4f370f0d468",
     "url": "autofof.css"
   },
   {
-    "revision": "86f041c0ae507c68a389",
+    "revision": "ea307e6bd4f370f0d468",
     "url": "autofof.js"
   }
 ];

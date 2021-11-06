@@ -15,13 +15,13 @@
 
 	$args = array(
 		'post_type'=>'podcasts',
-		'posts_per_page'=>-1,
+		'posts_per_page'=>20,
 		'post_status'=>'publish',
 		'orderby'=>'date',
 		'order'=>'DESC'
 	);
 
-	$p_cover = 'http://nofm-radio.com/wp-content/uploads/2020/06/NoFM-Radio-podcast.jpg';
+	$p_cover = 'https://nofm-radio.com/wp-content/uploads/2021/11/NoFM-Radio-podcast.jpg';
 	$p_title = $show_title ? $show_title : get_bloginfo('name');
 	$p_description = $show_description ? $show_description : get_bloginfo('description');
 
@@ -75,7 +75,7 @@
 			$audio_url = get_post_meta($id, '_podcasts_url', true);
 			$pod_duration = get_post_meta($id, '_podcasts_duration', true);
 
-			$description = ($podcast->post_content) ? get_the_content($id) : 'Todo Menos Miedo';
+			$description = ($podcast->post_exerpt) ? get_the_excerpt($id) : 'Todo Menos Miedo';
 			$pod_title = ($podcast->post_title) ? htmlspecialchars($podcast->post_title) : 'NoFM Radio';
 			$pod_guid = (get_post_permalink($id)) ? get_post_permalink($id) : null;
 
@@ -84,7 +84,7 @@
 			$pubDate = date_format($pod_mod, 'D, d M Y H:i:s');
 			$pubDate = $pubDate . ' GMT';
 			$season = substr($podcast->post_date_gmt, 0, 4);
-			$thumbnail = $podcast_cover_id ? $podcast_cover : get_the_post_thumbnail_url($id, 'podcast-thumbnail');
+			$thumbnail = $podcast_cover_id ? $podcast_cover : get_the_post_thumbnail_url($id, 'thumbnail');
 
 			//XML NODES CREATION
 			$item_node = $channel_node->appendChild($xml->createElement('item'));

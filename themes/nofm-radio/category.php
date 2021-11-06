@@ -7,10 +7,12 @@
 	$cat_img_url = (has_post_thumbnail()) ? get_the_post_thumbnail_url($latest_post_id, $cat_img_size) : get_template_directory_uri().'/images/logo_nofm.jpg'; ?>
 
 <section class="container category_section">
-	<figure id="<?php echo 'fig_'.$latest_post_id ?>" class="fig_object type_figure">
-		<img src="<?php echo esc_url($cat_img_url); ?>" alt="Category Hero Image">
-		<figcaption class="fig_caption">
-			<h2 class="fig_title fjalla_font">
+	<figure id="<?php echo 'fig_'.$latest_post_id ?>" class="type_fig">
+		<div class="image_frame">
+			<img src="<?php echo esc_url($cat_img_url); ?>" alt="Category Hero Image" width="1280" height="120">
+		</div>
+		<figcaption class="type_fig_caption">
+			<h2 class="type_fig_title">
 				<?php echo esc_html($category_name); ?>
 			</h2>
 		</figcaption>
@@ -27,10 +29,10 @@
 						$image_size = (wp_is_mobile()) ? 'square_mid' : 'square_big'; ?>
 						<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object">
 							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-								<?php echo (has_post_thumbnail()) ? the_post_thumbnail($image_size) : '<img style="width:480px;" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
+								<?php echo (has_post_thumbnail()) ? the_post_thumbnail($image_size) : '<img style="width:480px;" width="400" height="400" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
 							</a>
 							<figcaption class="fig_caption">
-								<h2 class="fig_title fjalla_font">
+								<h2 class="fig_title ">
 									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 										<?php the_title(); ?>
 									</a>
@@ -45,10 +47,10 @@
 						$image_size_duo = (wp_is_mobile()) ? 'square_mid' : 'rect_big'; ?>
 						<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object">
 							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-								<?php echo (has_post_thumbnail()) ? the_post_thumbnail($image_size_duo) : '<img style="width:480px;" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
+								<?php echo (has_post_thumbnail()) ? the_post_thumbnail($image_size_duo) : '<img style="width:480px;" width="400" height="400" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
 							</a>
 							<figcaption class="fig_caption">
-								<h2 class="fig_title fjalla_font">
+								<h2 class="fig_title ">
 									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 										<?php the_title(); ?>
 									</a>
@@ -62,10 +64,10 @@
 					else: ?>
 						<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object">
 							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-								<?php echo (has_post_thumbnail()) ? the_post_thumbnail($image_size) : '<img style="width:480px;" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
+								<?php echo (has_post_thumbnail()) ? the_post_thumbnail($image_size) : '<img style="width:480px;" width="400" height="400" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
 							</a>
 							<figcaption class="fig_caption">
-								<h2 class="fig_title fjalla_font">
+								<h2 class="fig_title ">
 									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 										<?php the_title(); ?>
 									</a>
