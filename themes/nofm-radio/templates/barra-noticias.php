@@ -12,7 +12,7 @@
 			<div class="desk_container">
 				<h2 id="enterate" class="section_title title_noticias fjalla_font">
 					<a href="<?php echo esc_url(get_category_link($section_cat_id)); ?>" title="<?php echo esc_attr($section_cat_name); ?>">
-						<?php echo esc_html(strtoupper($section_cat_name)); ?>
+						<?php echo esc_html($section_cat_name); ?>
 					</a>
 				</h2>
 				<div class="flex_bar_container">
@@ -28,22 +28,24 @@
 									<?php echo (has_post_thumbnail()) ? the_post_thumbnail($img_size) : '<img style="width:480px;" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
 								</a>
 								<figcaption class="fig_caption">
-									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-										<h2 class="fig_title fjalla_font"><?php the_title(); ?></h2>
-									</a>
+									<h3 class="fig_title fjalla_font">
+										<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+											<?php the_title(); ?>
+										</a>
+									</h3>
 								</figcaption>
 							</figure>
 							<ul class="updated_list">
 					<?php
 							// echo ($count==1) ? '<ul class="updated_list">' : '';
 						else: ?>
-
 								<li class="updated_item">
-									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-										<?php the_title(); ?>
-									</a>
+									<h4>
+										<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+											<?php the_title(); ?>
+										</a>
+									</h4>
 								</li>
-
 					<?php
 						endif; ?>
 			<?php

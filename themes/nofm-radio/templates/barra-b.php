@@ -6,7 +6,7 @@
 		<section id="barra_b_section" class="home_section container">
 			<h2 class="section_title fjalla_font">
 				<a href="<?php echo get_category_link($cat[0]->term_id); ?>">
-					<?php echo esc_html(strtoupper($cat[0]->name)); ?>
+					<?php echo esc_html($cat[0->name)); ?>
 				</a>
 			</h2>
 		<?php		
@@ -32,7 +32,7 @@
 							<figcaption class="fig_caption">
 								<h3 class="fig_title fjalla_font">
 									<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-										<?php echo esc_html(strtoupper($post->post_title)); ?>
+										<?php echo esc_html($post->post_title); ?>
 									</a>
 								</h3>
 							</figcaption>
@@ -55,7 +55,7 @@
 								<figcaption class="fig_caption">
 									<h3 class="fig_title fjalla_font">
 										<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-											<?php echo esc_html(strtoupper($post->post_title)); ?>
+											<?php echo esc_html($post->post_title); ?>
 										</a>
 									</h3>
 								</figcaption>

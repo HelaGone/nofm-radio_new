@@ -1,21 +1,27 @@
-.self_ad_cotainer, .self_ad_cotainer img{width:100%;min-height: 40px;object-fit: cover;}
+.self_ad_cotainer, .self_ad_cotainer img{width:100%;height: auto;object-fit: cover;}
+
 .barra_list{display: flex;flex-direction: row;justify-content: flex-start;}
 .barra_item{width:calc(100% / 2);}
 .home_section{margin-bottom:32px;}
-.section_title{display: inline-block;margin-bottom:16px;font-size: 12vw;color:#fff;background-image: url(../../../img/titles_bg/manchas.svg);background-size: contain;background-repeat: no-repeat;background-position: 0% 100%;padding:30px 0 5px 0;text-shadow: 4px 4px 8px #000a12;}
+.section_title{
+	text-transform: uppercase;
+	display: inline-block;margin-bottom:16px;font-size: 12vw;color:#fff;
+	background-image: url(../../../img/titles_bg/manchas.svg);
+	background-size: contain;background-repeat: no-repeat;background-position: 0% 100%;
+	padding:30px 0 5px 0;text-shadow: 4px 4px 8px #000a12;
+}
+
 .title_recomend{background-image: url(../../../img/titles_bg/recomendaciones.svg);}
 .title_noticias{background-image: url(../../../img/titles_bg/noticias.svg);}
 .title_eps{background-image: url(../../../img/titles_bg/podcast.svg);}
 
-.fig_object .fig_caption .fig_title{font-size: 9vw;display: inline;text-shadow: 4px 4px 8px rgb(0,0,0);}
-.barra_list .barra_item .fig_object .fig_caption .fig_title{font-size: 6vw;}
-
-.dynamic_pool .desk_container{padding-top: 40px;}
-.dynamic_pool .desk_container .updated_list{background-image:linear-gradient(to bottom, #000a12, transparent); padding:16px;}
-.dynamic_pool .desk_container .updated_list .updated_item{color:#fff;margin-bottom:4px;padding-bottom:4px;padding-top: 4px; border-bottom:1px solid red;text-shadow: 1px 2px 4px rgba(0,10,18,0.5);}
-.dynamic_pool .flex_bar_container .ep_detail{margin-top:8px;}
-.dynamic_pool .flex_bar_container .ep_detail .podcast_owner{color:#FF5722;}
-.dynamic_pool .flex_bar_container .fig_object .fig_caption .ep_detail .podcast_owner{color:red;}
+.fig_title{font-size: 9vw;display: inline;}
+.barra_item .fig_title{font-size: 6vw;}
+.desk_container{padding-top: 0;}
+.updated_list{background-image:linear-gradient(to bottom, #000a12, transparent); padding:16px;}
+.updated_item{color:#fff;margin-bottom:4px;padding-bottom:4px;padding-top: 4px; border-bottom:1px solid red;text-shadow: 1px 2px 4px rgba(0,10,18,0.5);}
+.ep_detail{margin-top:8px;}
+.podcast_owner{color:#FF0000;}
 #barra_recomendaciones .desk_container .updated_list{background-image:linear-gradient(to top, #000a12, transparent);}
 
 #barra_tema_section{margin-bottom:0;}
@@ -37,7 +43,7 @@
 	#barra_tema_section .bottom_list .fig_object .fig_caption .fig_title{font-size: 2.2rem;}
 	.dynamic_pool .desk_container .flex_bar_container{display:flex;flex-direction:row;justify-content: flex-start;align-items: center;}
 	.dynamic_pool .desk_container .flex_bar_container.flex_space{justify-content: space-between;}
-	.dynamic_pool .desk_container .flex_bar_container .fig_object{flex-shrink: 0;}
+	.dynamic_pool .desk_container .flex_bar_container .fig_object{flex-shrink: 0;width: calc(100% / 2);}
 	.dynamic_pool .desk_container .updated_list{margin-left:16px;}
 	.dynamic_pool .desk_container .updated_list .updated_item{font-size: 130%;}
 	.dynamic_pool .desk_container .updated_list,
@@ -68,7 +74,6 @@
 	.barra_list .barra_item .fig_object .fig_caption .fig_title{font-size: 3.4vw;}
 	.home_section .section_title{font-size: 6vw;}
 	.fig_object .fig_caption .fig_title{font-size: 4vw;}
-	/*.dynamic_pool .flex_bar_container .fig_object .fig_caption .ep_detail .podcast_owner:hover{color:#fff;}*/
 	.fig_object .fig_caption{bottom:-5px;}
 	#envivo_figure .logo_day{top:4vh;}
 	.barra_list{justify-content: space-evenly;margin:60px auto;}
