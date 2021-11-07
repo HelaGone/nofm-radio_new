@@ -22,9 +22,12 @@ h1, h2, h3, h4, h5, h6{font-family:'Fjalla One',sans-serif;}
 .social_network{padding:24px 0;}
 .social_logos{width:24px; height:24px;}
 
-.fig_object{position:relative;overflow:hidden;}
+.fig_object{position:relative;overflow:hidden;max-width: 768px;}
+.fig_object img{max-height: 720px;object-fit:cover;}
 .fig_caption{position:absolute;left:0; right:0; bottom:0;color:#fff;padding:8px;}
 .fig_title{text-transform:uppercase;text-shadow: 4px 4px 8px rgb(0,0,0);}
+
+.list_title{font-family: 'Roboto Mono', monospace;font-size: 16px;line-height:22px;}
 
 .see_more{width:100%;background-color:#000a12;padding:16px 0;text-align:center;font-weight:700;cursor:pointer;color:#fff;}
 .expand_menu{width:100%!important;}
@@ -45,6 +48,7 @@ h1, h2, h3, h4, h5, h6{font-family:'Fjalla One',sans-serif;}
 }
 @media screen and (min-width:1024px){
 	.see_more{width:20%;margin:0 auto;border-radius:2px;}
+	.list_title{font-size: 22px;line-height:30px;}
 }
 @media screen and (min-width:1280px){
 	.fig_object img,.fig_object{border-radius:5px;}

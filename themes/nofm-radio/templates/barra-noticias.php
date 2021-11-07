@@ -40,11 +40,11 @@
 							// echo ($count==1) ? '<ul class="updated_list">' : '';
 						else: ?>
 								<li class="updated_item">
-									<h4>
+									<h3 class="list_title">
 										<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 											<?php the_title(); ?>
 										</a>
-									</h4>
+									</h3>
 								</li>
 					<?php
 						endif; ?>

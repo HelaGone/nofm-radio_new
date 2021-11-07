@@ -10,7 +10,7 @@
 		$pt_link = get_post_type_archive_link($section_pt_name); ?>
 		<section id="barra_podcasts" class="home_section dynamic_pool container">
 			<div class="desk_container">
-				<h2 id="escucha" class="section_title title_eps fjalla_font">
+				<h2 id="escucha" class="section_title title_eps">
 					<a href="<?php echo $pt_link; ?>" title="<?php echo esc_attr($section_pt_name); ?>">
 						<?php echo esc_html($section_pt_name); ?>
 					</a>
@@ -44,7 +44,7 @@
 										<?php echo (has_post_thumbnail()) ? the_post_thumbnail($img_size) : '<img style="width:480px;" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
 									</a>
 									<figcaption class="fig_caption">
-										<h3 class="fig_title fjalla_font">
+										<h3 class="fig_title">
 											<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 												<?php the_title(); ?>
 											</a>
@@ -74,11 +74,11 @@
 					<?php
 							else: ?>
 									<li class="updated_item">
-										<h4>
-											<a href="<?php the_permalink(); ?>" title="<?php echo get_the_title($post->ID); ?>" class="fjalla_font">
+										<h3 class="list_title">
+											<a href="<?php the_permalink(); ?>" title="<?php echo get_the_title($post->ID); ?>">
 												<?php the_title(); ?>
 											</a>
-										</h4>
+										</h3>
 										<div class="ep_detail">
 											<span class="podcast_owner">
 												<?php

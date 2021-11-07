@@ -14,7 +14,9 @@
 		<link rel="preconnect" href="https://stats.g.doubleclick.net">
 		<link rel="preconnect" href="https://pagead2.googlesyndication.com">
 		<link rel="preconnect" href="https://adservice.google.com">
-
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto+Mono:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
 		<?php 
 			if(is_singular()&&is_single()): ?>
 				<link rel="preconnect" href="https://i.ytimg.com">
@@ -47,9 +49,9 @@
 			#central_header .header_item{vertical-align: middle;}
 
 			.header_fig{position: relative;}
-			.header_fig_caption{position: absolute;left: 0;bottom: 0;width: 100%;padding: 0 20px;}
+			.header_fig_caption{position: absolute;left: 20px;bottom: 20px;right:20px;}
 			.header_fig_caption .player_container{display: flex;}
-			.header_fig_title{font-size: 34px;line-height:40px;flex-shrink: 0;}
+			.header_fig_title{font-size: 34px;line-height:40px;}
 			.header_fig_caption svg{width:120px;height: 120px;background-color: transparent;border:none;flex-shrink: 0;transition: width .25s, height .25s;}
 			.header_fig_caption svg:hover{cursor: pointer;}
 
@@ -88,7 +90,6 @@
 				#envivo_figure .fig_caption div{top:6vh;left:0;padding:32px;}
 				#envivo_figure svg:hover{width:190px;height: 190px;}
 			}
-			
 		</style>
 
 	</head>

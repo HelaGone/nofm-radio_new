@@ -5,9 +5,9 @@
 		$cat = get_the_category($cover_posts_a[0]->ID); ?>
 		<section id="barra_a_section" class="home_section container">
 			<div class="desk_container">
-				<h2 class="section_title fjalla_font">
+				<h2 class="section_title ">
 					<a href="<?php echo get_category_link($cat[0]->term_id); ?>">
-						<?php echo esc_html($cat[0->name)); ?>
+						<?php echo esc_html($cat[0]->name); ?>
 					</a>
 				</h2>
 			<?php
@@ -21,15 +21,15 @@
 							<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 								<?php 
 									if(has_post_thumbnail($post->ID)): ?>
-										<img src="<?php echo get_the_post_thumbnail_url($post->ID, $image_size); ?>">
+										<img src="<?php echo get_the_post_thumbnail_url($post->ID, $image_size); ?>" width="420" height="420">
 								<?php
 									else: ?>
-										<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>">
+										<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>" width="521" height="521">
 								<?php		
 									endif; ?>
 							</a>
 							<figcaption class="fig_caption">
-								<h3 class="fig_title fjalla_font">
+								<h3 class="fig_title">
 									<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 										<?php echo esc_html($post->post_title); ?>
 									</a>
@@ -37,48 +37,46 @@
 							</figcaption>
 						</figure>
 			</div>
-			<ul class="barra_list">
+			<div class="section_double">
 		<?php
 					elseif($count > 0 && $count < 3): ?>
-						<li class="barra_item">
-							<figure class="fig_object">
-								<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-									<?php 
-										if(has_post_thumbnail($post->ID)): ?>
-											<img src="<?php echo get_the_post_thumbnail_url($post->ID, $image_size); ?>">
-									<?php 
-										else: ?>
-											<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>">
-									<?php		
-										endif; ?>
-								</a>
-								<figcaption class="fig_caption">
-									<h3 class="fig_title fjalla_font">
-										<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-											<?php echo esc_html($post->post_title); ?>
-										</a>
-									</h3>
-								</figcaption>
-							</figure>	
-						</li>
+						<figure class="fig_object">
+							<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+								<?php 
+									if(has_post_thumbnail($post->ID)): ?>
+										<img src="<?php echo get_the_post_thumbnail_url($post->ID, $image_size); ?>" width="420" height="420" >
+								<?php 
+									else: ?>
+										<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>" width="521" height="521">
+								<?php		
+									endif; ?>
+							</a>
+							<figcaption class="fig_caption">
+								<h3 class="fig_title ">
+									<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+										<?php echo esc_html($post->post_title); ?>
+									</a>
+								</h3>
+							</figcaption>
+						</figure>
 		<?php
 					elseif($count == 3): ?>
-			</ul>
+			</div>
 			<div class="desk_container">
 						<figure class="fig_object big_post right_align">
 							<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 								<?php 
 									if(has_post_thumbnail($post->ID)):
-										$image_size = (wp_is_mobile()) ? 'square_mid' : 'full'; ?>
-										<img src="<?php echo get_the_post_thumbnail_url($post->ID, $image_size); ?>">
+										$image_size = (wp_is_mobile()) ? 'square_mid' : 'square_big'; ?>
+										<img src="<?php echo get_the_post_thumbnail_url($post->ID, $image_size); ?>" width="420" height="420">
 								<?php 
 									else: ?>
-										<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>">
+										<img src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>" width="521" height="521">
 								<?php		
 									endif; ?>
 							</a>
 							<figcaption class="fig_caption">
-								<h3 class="fig_title fjalla_font">
+								<h3 class="fig_title ">
 									<a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 										<?php echo esc_html($post->post_title); ?>
 									</a>

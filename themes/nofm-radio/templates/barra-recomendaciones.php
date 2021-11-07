@@ -11,7 +11,7 @@
 		$tag_link = get_term_link($section_tag_name, 'post_tag'); ?>
 		<section id="barra_recomendaciones" class="home_section dynamic_pool container">
 			<div class="desk_container">
-				<h2 id="lee" class="section_title title_recomend fjalla_font">
+				<h2 id="lee" class="section_title title_recomend">
 					<a href="<?php echo esc_url($tag_link); ?>" title="<?php echo esc_attr($section_tag_name); ?>">
 						<?php echo esc_html($section_tag_name); ?>
 					</a>
@@ -25,9 +25,11 @@
 								$img_size = (wp_is_mobile()) ? 'square_mid' : 'rect_medium';
 								if($count<7): ?>
 									<li class="updated_item">
-										<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-											<?php the_title(); ?>
-										</a>
+										<h3 class="list_title">
+											<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+												<?php the_title(); ?>
+											</a>
+										</h3>
 									</li>
 						<?php
 								elseif($count==7): ?>
@@ -37,11 +39,11 @@
 							<?php echo (has_post_thumbnail()) ? the_post_thumbnail($img_size) : '<img style="width:480px;" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
 						</a>
 						<figcaption class="fig_caption">
-							<h2 class="fig_title fjalla_font">
+							<h3 class="fig_title">
 								<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
 									<?php the_title(); ?>
 								</a>
-							</h2>
+							</h3>
 						</figcaption>
 					</figure>
 						<?php

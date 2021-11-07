@@ -215,7 +215,7 @@
 		</script> -->
 <?php
 	}
-	add_action('wp_head', 'bt_load_google_fonts');
+	//add_action('wp_head', 'bt_load_google_fonts');
 
 	function bt_add_header_stuff(){
 		//Google analytics ?>
