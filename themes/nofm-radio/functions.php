@@ -342,9 +342,9 @@
 			if(is_category()||is_tag()){
 				$post_type = array('post', 'programas', 'podcasts');
 				$query->set('post_type', $post_type);
-				if(is_tag()){
-					$query->set('posts_per_page', 12);
-				}
+				$query->set('posts_per_page', 12);
+				// if(is_tag()){
+				// }
 			}
 
 		}
@@ -625,7 +625,7 @@
 		return $duration;
 	}
 
-	function debugger($bug){
+	function debug($bug){
 		echo '<pre>';
 			print_r($bug);
 		echo '</pre>';

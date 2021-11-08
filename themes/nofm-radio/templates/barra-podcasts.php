@@ -94,7 +94,7 @@
 												<?php
 													endif; ?>
 											</span>
-											<span class="ep_duration">
+											<span class="ep_duration fig_date">
 												| <?php echo esc_html(bt_seconds_to_time($ep_meta_dur)); ?>
 											</span>
 										</div>

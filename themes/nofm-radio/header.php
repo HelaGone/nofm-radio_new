@@ -50,7 +50,7 @@
 
 			.header_fig{position: relative;}
 			.header_fig_caption{position: absolute;left: 20px;bottom: 20px;right:20px;}
-			.header_fig_caption .player_container{display: flex;}
+			.header_fig_caption .player_container{display: flex;justify-content: flex-start;align-items: center;}
 			.header_fig_title{font-size: 34px;line-height:40px;}
 			.header_fig_caption svg{width:120px;height: 120px;background-color: transparent;border:none;flex-shrink: 0;transition: width .25s, height .25s;}
 			.header_fig_caption svg:hover{cursor: pointer;}
@@ -80,7 +80,7 @@
 				#main_site_header .social_network_header ul li .social_logos{width: 16px;height: 16px;}
 			}
 			@media screen and (min-width: 568px){
-
+				.header_fig_title{font-size: clamp(3.2rem, 7vw + 1rem, 7rem);line-height: 7rem;}
 			}
 			@media screen and (min-width: 768px){
 				.social_network_header h2{margin-top:0;position: relative;top:-23px;max-width: 666px; left:50%;margin-left: -333px;}
@@ -88,7 +88,7 @@
 				#logo{width:260px;}
 
 				#envivo_figure .fig_caption div{top:6vh;left:0;padding:32px;}
-				#envivo_figure svg:hover{width:190px;height: 190px;}
+				#envivo_figure svg{width:110px;height: 110px;}
 			}
 		</style>
 
@@ -181,7 +181,9 @@
 						<img class="day_main_background" src="<?php echo THEMEPATH . 'images/week/'.$dayOfWeek.'.jpg'; ?>" alt="EN VIVO" width="1920" height="275">
 						<figcaption class="header_fig_caption">
 							<div class="player_container">
-								<h2 class="header_fig_title" style="font-weight: bold;">EN<br>VIVO</h2>
+								<a href="http://r.nofm-radio.com/" title="Abrir Aplicación" target="_blank" rel="noopener" rel="follow">
+									<h2 class="header_fig_title">EN VIVO</h2>
+								</a>
 								<a href="http://r.nofm-radio.com/" title="Abrir Aplicación" target="_blank" rel="noopener" rel="follow">
 									<svg xmlns="http://www.w3.org/2000/svg" width="144" height="144" viewBox="0 0 144 144">
 										<g>

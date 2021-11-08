@@ -12,75 +12,34 @@
 			<img src="<?php echo esc_url($cat_img_url); ?>" alt="Category Hero Image" width="1280" height="120">
 		</div>
 		<figcaption class="type_fig_caption">
-			<h2 class="type_fig_title">
+			<h1 class="type_fig_title">
 				<?php echo esc_html($category_name); ?>
-			</h2>
+			</h1>
 		</figcaption>
 	</figure>
 <?php
 	if(have_posts()): ?>
-		<div class="posts_pool">
-			<div class="list_row">
+		<div class="grid-container">
 			<?php
-				$count = 0;
 				while(have_posts()):
 					the_post(); 
-					if($count < 3):
-						$image_size = (wp_is_mobile()) ? 'square_mid' : 'square_big'; ?>
-						<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object">
-							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-								<?php echo (has_post_thumbnail()) ? the_post_thumbnail($image_size) : '<img style="width:480px;" width="400" height="400" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
-							</a>
-							<figcaption class="fig_caption">
-								<h2 class="fig_title ">
-									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-										<?php the_title(); ?>
-									</a>
-								</h2>
-								<span><?php echo get_the_author_meta('display_name').'. '; ?></span>
-								<time><?php echo get_the_date('D, d.m.Y'); ?></time>
-							</figcaption>
-						</figure>
+					$image_size = (wp_is_mobile()) ? 'square_mid' : 'square_big'; ?>
+					<figure id="<?php echo 'fig_'.$post->ID ?>" class="cat_fig">
+						<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+							<?php echo (has_post_thumbnail()) ? the_post_thumbnail($image_size) : '<img style="width:480px;" width="400" height="400" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
+						</a>
+						<figcaption class="cat_fig_caption">
+							<h2 class="cat_fig_title">
+								<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
+									<?php the_title(); ?>
+								</a>
+							</h2>
+							<span class="cat_fig_author"><?php echo get_the_author_meta('display_name').'. '; ?></span>
+							<time class="cat_fig_date"><?php echo get_the_date('D, d.m.Y'); ?></time>
+						</figcaption>
+					</figure>
 			<?php
-						echo ($count == 2) ? '</div><div class="duo_row">' : '';
-					elseif($count > 2 && $count < 5):
-						$image_size_duo = (wp_is_mobile()) ? 'square_mid' : 'rect_big'; ?>
-						<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object">
-							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-								<?php echo (has_post_thumbnail()) ? the_post_thumbnail($image_size_duo) : '<img style="width:480px;" width="400" height="400" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
-							</a>
-							<figcaption class="fig_caption">
-								<h2 class="fig_title ">
-									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-										<?php the_title(); ?>
-									</a>
-								</h2>
-								<span><?php echo get_the_author_meta('display_name').'. '; ?></span>
-								<time><?php echo get_the_date('D, d.m.Y'); ?></time>
-							</figcaption>
-						</figure>
-			<?php
-						echo ($count == 4) ? '</div><div class="list_row">' : '';
-					else: ?>
-						<figure id="<?php echo 'fig_'.$post->ID ?>" class="fig_object">
-							<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-								<?php echo (has_post_thumbnail()) ? the_post_thumbnail($image_size) : '<img style="width:480px;" width="400" height="400" src="'.get_template_directory_uri().'/images/logo_redondo.png" alt="Default Image">'; ?>
-							</a>
-							<figcaption class="fig_caption">
-								<h2 class="fig_title ">
-									<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr($post->post_title); ?>">
-										<?php the_title(); ?>
-									</a>
-								</h2>
-								<span><?php echo get_the_author_meta('display_name').'. '; ?></span>
-								<time><?php echo get_the_date('D, d.m.Y'); ?></time>
-							</figcaption>
-						</figure>
-			<?php
-					endif;
-					$count++;
 				endwhile; ?>
-			</div>
 		</div>
 <?php
 	endif;
