@@ -11,11 +11,12 @@
 		<meta name="theme-color" content="#000a12"/>
 		<!-- Preconnect -->
 		<link rel="preconnect" href="https://www.google.com/" crossorigin>
-		<link rel="preconnect" href="https://stats.g.doubleclick.net">
+		<!-- <link rel="preconnect" href="https://stats.g.doubleclick.net">
 		<link rel="preconnect" href="https://pagead2.googlesyndication.com">
-		<link rel="preconnect" href="https://adservice.google.com">
+		<link rel="preconnect" href="https://adservice.google.com"> -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto+Mono:ital,wght@0,300;0,700;1,300;1,700&display=swap" as="style" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto+Mono:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
 		<?php 
 			if(is_singular()&&is_single()): ?>
@@ -24,7 +25,7 @@
 		<?php 
 			endif; ?>
 		<link rel="manifest" href="<?php echo site_url().'/manifest.json'; ?>">
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8411953701698334" crossorigin="anonymous"></script>
+		<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8411953701698334" crossorigin="anonymous"></script> -->
 		<link type="application/rss+xml" rel="alternate" title="No FM Radio - Podcast" href="https://nofm-radio.com/feed/podcast/">
 		<!-- START wp_head -->
 		<?php wp_head(); ?>

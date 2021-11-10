@@ -13,7 +13,7 @@
 			tipo de descarga gratuita ni bajo ningún tipo de cobro.
 		</p>
 	</footer>
-	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+	<!-- <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
 	<script type="text/javascript">
 		document.addEventListener("DOMContentLoaded", e => {
 			if('IntersectionObserver' in window){
