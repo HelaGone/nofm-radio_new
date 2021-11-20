@@ -17,4 +17,11 @@ $(document).ready(function(){
 	btnCloseMenu.addEventListener('click', ()=>{
 		$('.main_navigation').animate({width:'0'});
 	});
+
+	if('serviceWorker' in navigator){
+		window.addEventListener('load', function(){
+			console.log("LOAD");
+			navigator.serviceWorker.register('./sw.js');
+		})
+	}
 });
