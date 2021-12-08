@@ -98,7 +98,7 @@
 								if(wp_is_mobile()): ?>
 									<div class="whatsapp-share-button share_button">
 										<a href="whatsapp://send?text=<?php echo the_permalink(); ?>" data-action="share/whatsapp/share">
-											<img src="<?php echo get_template_directory_uri().'/images/ic_social/WhatsApp_Logo_1.png'; ?>" alt="Whatsapp">
+											<img src="<?php echo get_template_directory_uri().'/images/ic_social/WhatsApp_Logo_1.png'; ?>" alt="Whatsapp" loading="lazy" width="48" height="48">
 										</a>
 									</div>
 							<?php

@@ -2,7 +2,7 @@
 	<footer class="site-footer" role="contentinfo">
 		<div class="disclosure">
 			<a href="<?php echo home_url(); ?>" title="NoFm Radio">
-				<img src="<?php echo get_template_directory_uri().'/images/logo-blanco.png'; ?>" alt="NoFm Radio" width="45" height="45">
+				<img src="<?php echo get_template_directory_uri().'/images/logo-blanco.png'; ?>" alt="NoFm Radio" width="45" height="45" loading="lazy">
 			</a>
 			<p>
 				<a href="<?php echo home_url(); ?>" title="nofm-radio.com">2019 nofm-radio.com®</a>
@@ -19,7 +19,7 @@
 			if('IntersectionObserver' in window){
 				// console.log('>>>IO<<<');
 				const observer_options = {root:null,rootMargin:'275px 0px 0px 0px',threshold:1.0}
-				const oberver_target = document.querySelector('#main_header_section');
+				const oberver_target = document.querySelector('#main_site_header');
 				let check = false;
 				let observer = new IntersectionObserver((entries, observer)=>{ 
 					entries.forEach(entry=>{

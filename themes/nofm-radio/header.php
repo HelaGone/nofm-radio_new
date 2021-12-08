@@ -38,7 +38,7 @@
 				margin:0 auto;background-color: #000a12;color:#fff;
 			}
 			.social_flex_container{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;}
-			.social_network_header{position: absolute;z-index: 2;top: 0;left: 0;right: 0;}
+			.social_network_header{position: relative;z-index: 2;top: 0;left: 0;right: 0;}
 			.social_network_header ul{display: flex;flex-wrap: wrap;flex-direction: row;}
 			.social_network_header ul li:nth-of-type(2){margin:0 8px;}
 			.social_network_header ul li:nth-last-child(2){margin-right:8px;}
@@ -176,7 +176,7 @@
 						</a>
 					</h2>
 				</div>
-				<section id="main_header_section">
+<!-- 				<section id="main_header_section">
 					<figure id="envivo_figure" class="header_fig">
 						<?php $dayOfWeek = date('N'); ?>
 						<img class="day_main_background" src="<?php echo THEMEPATH . 'images/week/'.$dayOfWeek.'.jpg'; ?>" alt="EN VIVO" width="1920" height="275">
@@ -196,7 +196,7 @@
 							</div>
 						</figcaption>
 					</figure>
-				</section>
+				</section> -->
 
 				<div id="central_header" class="container">
 					<div id="btn_menu" class="btn_menu_container header_item">
