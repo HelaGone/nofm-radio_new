@@ -23,6 +23,7 @@
 	endif;
 
 	$from_same_podcast = new WP_Query($args);
+
 	if($from_same_podcast->have_posts()): ?>
 		<aside class="sidebar">
 			<h2 class="fjalla_font">
@@ -52,9 +53,8 @@
 				</li>
 		<?php
 			endwhile;
-	wp_reset_postdata();?>
+			wp_reset_postdata();?>
 			</ul>
 		</aside>
 <?php
-	endif;
-?>
+	endif; ?>

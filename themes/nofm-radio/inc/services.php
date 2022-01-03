@@ -92,7 +92,7 @@
 
 	function bt_feed_for_react_radio($data){
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, "http://s2.voscast.com:8162/7.html");
+		curl_setopt($ch, CURLOPT_URL, "https://s2.voscast.com:8162/7.html");
 		curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla');
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);

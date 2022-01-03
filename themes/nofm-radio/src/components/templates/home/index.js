@@ -11,4 +11,4 @@ import '../../parts/footer/index';
 import '../../parts/sidebar/index';
 
 /*Global Scripts*/
-import '../../../js/scripts.js'
+import '../../../js/functions.js'

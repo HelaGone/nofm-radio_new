@@ -5,7 +5,7 @@
 		$tag_name = $wp_query->query_vars['tag'];
 		$tag_name_clean = str_replace('-', ' ', $tag_name);?>
 		<h2 class="section_title fjalla_font"><?php echo esc_html( strtoupper($tag_name_clean) ); ?></h2>
-		<div class="posts_pool">
+		<div class="grid-container">
 		<?php 
 			while(have_posts()):
 				the_post(); 
@@ -17,12 +17,14 @@
 					</a>
 					<figcaption class="fig_caption">
 						<?php echo ($type) ? '<span><a href="'.get_post_type_archive_link(get_post_type($post->ID)).'">'.strtoupper(get_post_type($post->ID)).'</a></span>' : ''; ?>
-						<h2 class="fig_title fjalla_font">
+						<h2 class="fig_title">
 							<a href="<?php the_permalink();?>" title="<?php echo esc_attr($post->post_title); ?>">
 								<?php the_title(); ?>
 							</a>
 						</h2>
-						<time><?php echo get_the_date('D, d.m.Y'); ?></time>
+						<time class="fig_date">
+							<?php echo get_the_date('D, d.m.Y'); ?>
+						</time>
 					</figcaption>
 				</figure>
 		<?php

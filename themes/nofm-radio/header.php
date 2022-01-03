@@ -11,31 +11,87 @@
 		<meta name="theme-color" content="#000a12"/>
 		<!-- Preconnect -->
 		<link rel="preconnect" href="https://www.google.com/" crossorigin>
-		<link rel="preconnect" href="https://stats.g.doubleclick.net">
+		<!-- <link rel="preconnect" href="https://stats.g.doubleclick.net">
 		<link rel="preconnect" href="https://pagead2.googlesyndication.com">
-		<link rel="preconnect" href="https://www.google.com.mx">
-		<link rel="preconnect" href="https://adservice.google.com">
-		<link rel="preconnect" href="https://cm.g.doubleclick.net">
-		<link rel="preconnect" href="https://i.ytimg.com">
-		<link rel="preconnect" href="https://www.youtube.com/">
-		<link rel="preconnect" href="https://twitter.com/">
-
+		<link rel="preconnect" href="https://adservice.google.com"> -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto+Mono:ital,wght@0,300;0,700;1,300;1,700&display=swap" as="style" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto+Mono:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
+		<?php 
+			if(is_singular()&&is_single()): ?>
+				<link rel="preconnect" href="https://i.ytimg.com">
+				<link rel="preconnect" href="https://www.youtube.com/">
+		<?php 
+			endif; ?>
 		<link rel="manifest" href="<?php echo site_url().'/manifest.json'; ?>">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8411953701698334" crossorigin="anonymous"></script>
-		<link type="application/rss+xml" rel="alternate" title="No FM Radio - Podcast" href="https://nofm-radio.com/feed/podcast">
+		<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8411953701698334" crossorigin="anonymous"></script> -->
+		<link type="application/rss+xml" rel="alternate" title="No FM Radio - Podcast" href="https://nofm-radio.com/feed/podcast/">
 		<!-- START wp_head -->
 		<?php wp_head(); ?>
 		<!-- END wp_head -->
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-91771961-6"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		  gtag('config', 'UA-91771961-6');
-		</script>
+		<!-- CRITICAL CSS -->
+		<style type="text/css">
+			#main_site_header{
+				position: relative;
+				margin:0 auto;background-color: #000a12;color:#fff;
+			}
+			.social_flex_container{display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;}
+			.social_network_header{position: absolute;z-index: 2;top: 0;left: 0;right: 0;}
+			.social_network_header ul{display: flex;flex-wrap: wrap;flex-direction: row;}
+			.social_network_header ul li:nth-of-type(2){margin:0 8px;}
+			.social_network_header ul li:nth-last-child(2){margin-right:8px;}
+			.social_flex_container ul li svg{width: 24px;height: 24px;}
+			.social_network_header ul li .social_logos{width: 14px;height: 14px;}
+			.social_network_header h2{text-align: center;margin-top:40px;letter-spacing: 8px;}
+
+			#central_header{display: flex;justify-content: space-between;padding:0 8px;align-items: center;background-color:rgba(0,10,18,0.75);border-bottom:2px solid red;}
+			#central_header .header_item{vertical-align: middle;}
+
+			.header_fig{position: relative;}
+			.header_fig_caption{position: absolute;left: 20px;bottom: 20px;right:20px;}
+			.header_fig_caption .player_container{display: flex;justify-content: flex-start;align-items: center;}
+			.header_fig_title{font-size: 34px;line-height:40px;}
+			.header_fig_caption svg{width:120px;height: 120px;background-color: transparent;border:none;flex-shrink: 0;transition: width .25s, height .25s;}
+			.header_fig_caption svg:hover{cursor: pointer;}
+
+			.day_main_background{width:100%;height:275px;object-fit: cover;}
+
+			#type_menu{padding:8px 0 8px 12px;width:90%;}
+
+			#menu-type-menu{display: flex;justify-content: space-between;flex-wrap: wrap;align-items: center;}
+			#close_main_menu{position: absolute;right:16px;top:16px;font-size:32px;}
+			.main_navigation{position:fixed;left:0;top:0;right:0;bottom:0;z-index:9;overflow:hidden;width:0;background-color:rgba(255,255,255,0.95);}
+			.main_navigation img.logo_redondo{width:40%;max-width: 128px;height: auto;position:relative;top:0;left:50%;margin-left: calc(-128px / 2);}
+			.main_navigation .main_menu{width:60%;text-align: center;margin:16px auto;}
+			.main_navigation .main_menu .menu li{margin:24px 0;border-bottom:1px solid #4f5b62;padding-bottom: 4px;}
+			.support_list{display: flex;flex-direction: row;justify-content: center; width: 100%;margin:0 auto;align-items: baseline;}
+			.support_list li{margin:0 4px 0 0;}
+			.support_list li.patreon{position:relative;bottom:-8px;}
+			.support_list li img{max-width: 100px;}
+			.btn_menu_container{display: inline-block;cursor: pointer;}
+
+			/*FOOTER*/
+			.site-footer{background-color:red;padding:24px 8px;color:black;}
+			.site-footer p{font-size: 80%;font-family: 'Roboto Mono', monospace;}
+			.site-footer .disclosure{display: flex;flex-direction: row;justify-content: flex-start;align-items: center; }
+			.site-footer .disclosure img{max-width: 45px;margin:0 16px 16px 0;}
+			@media screen and (min-width: 375px){
+				#main_site_header .social_network_header ul li .social_logos{width: 16px;height: 16px;}
+			}
+			@media screen and (min-width: 568px){
+				.header_fig_title{font-size: clamp(3.2rem, 7vw + 1rem, 7rem);line-height: 7rem;}
+			}
+			@media screen and (min-width: 768px){
+				.social_network_header h2{margin-top:0;position: relative;top:-23px;max-width: 666px; left:50%;margin-left: -333px;}
+				#menu-type-menu .menu-item{font-size:24px; }
+				#logo{width:260px;}
+
+				#envivo_figure .fig_caption div{top:6vh;left:0;padding:32px;}
+				#envivo_figure svg{width:110px;height: 110px;}
+			}
+		</style>
 
 	</head>
 		<body <?php body_class(); ?>>
@@ -78,7 +134,7 @@
 								</a>
 							</li>
 						</ul>
-						<ul class="voscast_script_players">
+						<ul>
 							<li class="winamp">
 								<a href="//cdn.voscast.com/resources/?key=d3b9d948ce2a095ad198b852a44fa999&c=winamp" target="_blank" rel="noopener" title="Winamp">
 									<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24" height="24" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve">
@@ -114,21 +170,22 @@
 							</li>
 						</ul>
 					</div>
-					<h3>
+					<h2>
 						<a href="<?php echo get_site_url(); ?>" title="Todo menos miedo">
 							TODO MENOS MIEDO
 						</a>
-					</h3>
+					</h2>
 				</div>
 				<section id="main_header_section">
-					<figure id="envivo_figure" class="fig_object">
-						<?php $dayOfWeek = date('N'); ?>
-						<img class="day_main_background" src="<?php echo THEMEPATH . 'images/week/'.$dayOfWeek.'.jpg'; ?>" alt="EN VIVO" width="1920" height="275">
-						<figcaption class="fig_caption">
+					<figure id="envivo_figure" class="header_fig">
+						<img class="day_main_background" src="<?php echo THEMEPATH . 'images/NOFM.svg'; ?>" alt="EN VIVO" width="1920" height="300">
+						<figcaption class="header_fig_caption">
 							<div class="player_container">
-								<h1 class="fig_title" style="font-weight: bold;">EN<br>VIVO</h1>
-								<a href="http://r.nofm-radio.com/" title="Abrir Aplicación" target="_blank" rel="noopener" rel="follow">
-									<svg xmlns="http://www.w3.org/2000/svg" width="144px" height="144px" viewBox="0 0 144 144">
+								<a href="https://nofmradio.web.app/" title="Abrir Aplicación" target="_blank" rel="noopener" rel="follow">
+									<h2 class="header_fig_title">EN VIVO</h2>
+								</a>
+								<a href="https://nofmradio.web.app/" title="Abrir Aplicación" target="_blank" rel="noopener" rel="follow">
+									<svg xmlns="http://www.w3.org/2000/svg" width="144" height="144" viewBox="0 0 144 144">
 										<g>
 											<path fill="#FFFFFF" d="M43.5,138.277c-0.298,0-0.599-0.054-0.889-0.164c-0.97-0.369-1.61-1.299-1.61-2.336V8.222c0-1.038,0.641-1.967,1.61-2.336c0.29-0.11,0.591-0.164,0.889-0.164c0.7,0,1.383,0.294,1.867,0.837l56.806,63.778c0.844,0.948,0.844,2.377,0,3.326L45.367,137.44C44.883,137.983,44.199,138.277,43.5,138.277z"/>
 											<path fill="#92000A" d="M43,8.222L99.806,72L43,135.777V8 M43.499,3.222c-0.597,0-1.449,0.106-2.028,0.327C39.532,4.288,38,6.147,38,8.222v127.555c0,2.075,1.532,3.935,3.471,4.673c0.58,0.221,1.307,0.327,1.903,0.327c1.399,0,2.83-0.588,3.797-1.675l56.836-63.777c1.688-1.896,1.704-4.755,0.016-6.651L47.226,4.896C46.258,3.81,44.898,3.222,43.499,3.222L43.499,3.222z"/>
@@ -156,13 +213,13 @@
 				<a href="<?php echo site_url(); ?>" title="NoFMradio">
 					<img class="logo_redondo" src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>" alt="NoFm-Radio Logotipo">
 				</a>
-				<div style="text-align:center;">
+				<!-- <div style="text-align:center;">
 					<form role="search" method="get" id="searchform" action="<?php echo esc_url(home_url("/search_gcse/")); ?>">
 						<label class="screen-reader-text" for="s">Buscar:</label>
 						<input type="text" value="" name="q" id="s" placeholder="Busca sin miedo" autocomplete="off">
 						<input type="submit" id="searchsubmit" value="Buscar">
 					</form>
-				</div>
+				</div> -->
 				<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'main_menu' ) ); ?>
 				<ul class="support_list">
 					<li class="mone_item patreon">
