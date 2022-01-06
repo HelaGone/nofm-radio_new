@@ -211,7 +211,7 @@
 			<nav class="main_navigation clearfix">
 				<button id="close_main_menu">X</button>
 				<a href="<?php echo site_url(); ?>" title="NoFMradio">
-					<img class="logo_redondo" src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>" alt="NoFm-Radio Logotipo">
+					<img class="logo_redondo" src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>" alt="NoFm-Radio Logotipo" loading="lazy">
 				</a>
 				<!-- <div style="text-align:center;">
 					<form role="search" method="get" id="searchform" action="<?php echo esc_url(home_url("/search_gcse/")); ?>">
@@ -224,7 +224,7 @@
 				<ul class="support_list">
 					<li class="mone_item patreon">
 					    <a href="https://www.patreon.com/NoFMradio" target="_blank" rel="noopener" rel="noopener">
-					        <img src="<?php echo get_template_directory_uri().'/images/patreon.png'; ?>" alt="Patreon NoFM">
+					        <img src="<?php echo get_template_directory_uri().'/images/patreon.png'; ?>" alt="Patreon NoFM" loading="lazy">
 					    </a>
 					</li>
 					<li class="mone_item donate">
