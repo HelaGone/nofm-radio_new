@@ -44,19 +44,20 @@
 			.social_network_header ul li:nth-last-child(2){margin-right:8px;}
 			.social_flex_container ul li svg{width: 24px;height: 24px;}
 			.social_network_header ul li .social_logos{width: 14px;height: 14px;}
-			.social_network_header h2{text-align: center;margin-top:40px;letter-spacing: 8px;}
+			.social_network_header h2{text-align: center;margin-top:66px;letter-spacing: 8px;}
 
 			#central_header{display: flex;justify-content: space-between;padding:0 8px;align-items: center;background-color:rgba(0,10,18,0.75);border-bottom:2px solid red;}
 			#central_header .header_item{vertical-align: middle;}
 
 			.header_fig{position: relative;}
-			.header_fig_caption{position: absolute;left: 20px;bottom: 20px;right:20px;}
+			.header_fig_caption{position: absolute;left: 20px;bottom: 33px;right:20px;}
+			.header_fig_caption a{position: absolute;left:0;top: 0;right: 0;bottom: 0;}
 			.header_fig_caption .player_container{display: flex;justify-content: flex-start;align-items: center;}
-			.header_fig_title{font-size: 34px;line-height:40px;}
-			.header_fig_caption svg{width:120px;height: 120px;background-color: transparent;border:none;flex-shrink: 0;transition: width .25s, height .25s;}
+			.header_fig_title{font-size: 34px;line-height:40px;text-shadow: 2px 4px 12px rgba(0,0,0,0.666);}
+			.header_fig_caption svg{width:66px;height: auto;background-color: transparent;border:none;flex-shrink: 0;transition: width .25s, height .25s;}
 			.header_fig_caption svg:hover{cursor: pointer;}
 
-			.day_main_background{width:100%;height:275px;object-fit: cover;}
+			.day_main_background{width:100%;min-height:300px;object-fit: cover;object-position: 71%;}
 
 			#type_menu{padding:8px 0 8px 12px;width:90%;}
 
@@ -180,18 +181,15 @@
 					<figure id="envivo_figure" class="header_fig">
 						<img class="day_main_background" src="<?php echo THEMEPATH . 'images/NOFM.svg'; ?>" alt="EN VIVO" width="1920" height="300">
 						<figcaption class="header_fig_caption">
+							<a href="https://nofmradio.web.app/" title="Abrir Aplicación" target="_blank" rel="noopener" rel="follow"></a>
 							<div class="player_container">
-								<a href="https://nofmradio.web.app/" title="Abrir Aplicación" target="_blank" rel="noopener" rel="follow">
-									<h2 class="header_fig_title">EN VIVO</h2>
-								</a>
-								<a href="https://nofmradio.web.app/" title="Abrir Aplicación" target="_blank" rel="noopener" rel="follow">
-									<svg xmlns="http://www.w3.org/2000/svg" width="144" height="144" viewBox="0 0 144 144">
-										<g>
-											<path fill="#FFFFFF" d="M43.5,138.277c-0.298,0-0.599-0.054-0.889-0.164c-0.97-0.369-1.61-1.299-1.61-2.336V8.222c0-1.038,0.641-1.967,1.61-2.336c0.29-0.11,0.591-0.164,0.889-0.164c0.7,0,1.383,0.294,1.867,0.837l56.806,63.778c0.844,0.948,0.844,2.377,0,3.326L45.367,137.44C44.883,137.983,44.199,138.277,43.5,138.277z"/>
-											<path fill="#92000A" d="M43,8.222L99.806,72L43,135.777V8 M43.499,3.222c-0.597,0-1.449,0.106-2.028,0.327C39.532,4.288,38,6.147,38,8.222v127.555c0,2.075,1.532,3.935,3.471,4.673c0.58,0.221,1.307,0.327,1.903,0.327c1.399,0,2.83-0.588,3.797-1.675l56.836-63.777c1.688-1.896,1.704-4.755,0.016-6.651L47.226,4.896C46.258,3.81,44.898,3.222,43.499,3.222L43.499,3.222z"/>
-										</g>
-									</svg>
-								</a>
+								<h2 class="header_fig_title">EN VIVO</h2>
+								<svg xmlns="http://www.w3.org/2000/svg" width="144" height="144" viewBox="0 0 144 144">
+									<g>
+										<path fill="#FFFFFF" d="M43.5,138.277c-0.298,0-0.599-0.054-0.889-0.164c-0.97-0.369-1.61-1.299-1.61-2.336V8.222c0-1.038,0.641-1.967,1.61-2.336c0.29-0.11,0.591-0.164,0.889-0.164c0.7,0,1.383,0.294,1.867,0.837l56.806,63.778c0.844,0.948,0.844,2.377,0,3.326L45.367,137.44C44.883,137.983,44.199,138.277,43.5,138.277z"/>
+										<path fill="#92000A" d="M43,8.222L99.806,72L43,135.777V8 M43.499,3.222c-0.597,0-1.449,0.106-2.028,0.327C39.532,4.288,38,6.147,38,8.222v127.555c0,2.075,1.532,3.935,3.471,4.673c0.58,0.221,1.307,0.327,1.903,0.327c1.399,0,2.83-0.588,3.797-1.675l56.836-63.777c1.688-1.896,1.704-4.755,0.016-6.651L47.226,4.896C46.258,3.81,44.898,3.222,43.499,3.222L43.499,3.222z"/>
+									</g>
+								</svg>
 							</div>
 						</figcaption>
 					</figure>
