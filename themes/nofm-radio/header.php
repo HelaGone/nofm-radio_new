@@ -67,7 +67,7 @@
 			.main_navigation img.logo_redondo{width:40%;max-width: 128px;height: auto;position:relative;top:0;left:50%;margin-left: calc(-128px / 2);}
 			.main_navigation .main_menu{width:60%;text-align: center;margin:16px auto;}
 			.main_navigation .main_menu .menu li{margin:24px 0;border-bottom:1px solid #4f5b62;padding-bottom: 4px;}
-			.support_list{display: flex;flex-direction: row;justify-content: center; width: 100%;margin:0 auto;align-items: baseline;}
+			.support_list{display: flex;flex-direction: column;justify-content: center; width: 100%;margin:0 auto;align-items: center;gap: 8px;}
 			.support_list li{margin:0 4px 0 0;}
 			.support_list li.patreon{position:relative;bottom:-8px;}
 			.support_list li img{max-width: 100px;}
@@ -211,30 +211,23 @@
 				<a href="<?php echo site_url(); ?>" title="NoFMradio">
 					<img class="logo_redondo" src="<?php echo get_template_directory_uri().'/images/logo_redondo.png'; ?>" alt="NoFm-Radio Logotipo" loading="lazy">
 				</a>
-				<!-- <div style="text-align:center;">
-					<form role="search" method="get" id="searchform" action="<?php echo esc_url(home_url("/search_gcse/")); ?>">
+				<div style="text-align:center;">
+					<?php get_search_form(); ?>
+					<!-- <form role="search" method="get" id="searchform" action="">
 						<label class="screen-reader-text" for="s">Buscar:</label>
 						<input type="text" value="" name="q" id="s" placeholder="Busca sin miedo" autocomplete="off">
 						<input type="submit" id="searchsubmit" value="Buscar">
-					</form>
-				</div> -->
+					</form> -->
+				</div>
 				<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'main_menu' ) ); ?>
 				<ul class="support_list">
-					<li class="mone_item patreon">
-					    <a href="https://www.patreon.com/NoFMradio" target="_blank" rel="noopener" rel="noopener">
-					        <img src="<?php echo get_template_directory_uri().'/images/patreon.png'; ?>" alt="Patreon NoFM" loading="lazy">
-					    </a>
-					</li>
-					<li class="mone_item donate">
-						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" rel="noopener">
-						    <input type="hidden" name="cmd" value="_s-xclick">
-						    <input type="hidden" name="hosted_button_id" value="8KBZCV9NSWUQU">
-						    <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea." style="margin-left:20px; margin-top:10px;">
-						    <img alt="Pixel PayPal" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1" >
-						</form>
-					</li>
 					<li class="mone_item telephone">
 						Tel: <a href="tel:+5215562748323">62748323</a>
+					</li>
+					<li class="mone_item patreon">
+					    <a href="https://www.patreon.com/todomenosmiedo" target="_blank" rel="noopener" rel="noopener">
+					        <img src="<?php echo get_template_directory_uri().'/images/patreon.png'; ?>" alt="Patreon NoFM" loading="lazy">
+					    </a>
 					</li>
 				</ul>
 			</nav>
