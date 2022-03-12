@@ -18,8 +18,12 @@
 .article_content blockquote cite{color:#ff5722;}
 .wp-block-quote{border-left: 4px solid #ff5722;}
 .article_content .twitter-tweet-rendered{margin-left: auto;margin-right: auto;}
-.share_buttons{display: flex;flex-direction: row;align-items: center;justify-content: flex-end;margin: 20px 0;}
+.share_buttons ul{display: flex;flex-direction: row;align-items: center;justify-content: flex-end;margin: 20px 0;gap: 24px;}
 .share_buttons img{width:24px;height: 24px;margin:0;}
-.share_button{margin:16px 24px;width: 48px;height: 48px;flex-shrink: 0;}
+.share_button{
+	width: 48px;height: 48px;flex-shrink: 0;border-radius: 50%;
+	background-size: 100%;background-repeat: no-repeat;background-position: center;
+	cursor: pointer;
+}
 .share_button:first-child{margin-right: 0;}
 .fb_iframe_widget iframe{top:-3px;}
