@@ -29,15 +29,24 @@
 						<!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8411953701698334" data-ad-slot="4918078474" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
 
 						<div class="share_buttons">
-							<?php
-								if(wp_is_mobile()): ?>
-									<div class="whatsapp-share-button share_button">
-										<a href="whatsapp://send?text=<?php echo the_permalink(); ?>" data-action="share/whatsapp/share">
-											<img src="<?php echo get_template_directory_uri().'/images/ic_social/WhatsApp_Logo_1.png'; ?>" alt="Whatsapp" width="48" height="48" loading="lazy">
-										</a>
-									</div>
-							<?php
-								endif; ?>
+							<ul>
+								<li>
+									<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_the_permalink($post->ID)); ?>src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+								</li>
+								<li>
+									<!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-via="nofm_radio" data-hashtags="#RadioLIBRE" data-show-count="false">Tweet</a> -->
+									<a href="https://twitter.com/intent/tweet?url=<?php echo get_the_permalink($post->ID); ?>" class="twitter-share-button" data-via="nofm_radio" data-hashtags="#RadioLIBRE" data-show-count="false" data-size="large" target="_blank" rel="noopener nofollow">Tweet</a>
+								</li>
+								<?php
+									if(wp_is_mobile()): ?>
+										<li class="whatsapp-share-button share_button">
+											<a href="whatsapp://send?text=<?php echo get_the_permalink($post->ID); ?>" data-action="share/whatsapp/share">
+												<img src="<?php echo get_template_directory_uri().'/images/ic_social/WhatsApp_Logo_1.png'; ?>" alt="Whatsapp" width="48" height="48" loading="lazy">
+											</a>
+										</li>
+								<?php
+									endif; ?>
+							</ul>
 						</div>
 						<!-- <div class="fb-comments" data-href="<?php the_permalink(); ?>" data-width="766" data-numposts="5" data-colorscheme="dark"></div> -->
 					</div>

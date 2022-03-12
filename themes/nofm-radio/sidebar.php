@@ -15,8 +15,8 @@
 		elseif($type == ''):
 			//For pages don't have post type
 			$sidebar_title = null;
-		elseif($type != 'programas'):
-			$cat_obj = get_the_category($wp_query->queried_object->ID);
+		elseif($type != 'programas'||$type != 'any'):
+			$cat_obj = get_the_category();
 			$args['cat'] = $cat_obj[0]->term_id;
 			$sidebar_title = $cat_obj[0]->name;
 		endif;

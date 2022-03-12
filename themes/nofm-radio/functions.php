@@ -106,7 +106,7 @@
 		}elseif(is_category()){
 			wp_enqueue_style('base-theme-category-style', get_template_directory_uri().'/dist/category.css', array(), '1.0.0.' );
 			wp_enqueue_script('base-theme-category');
-		}elseif(is_archive()){
+		}elseif(is_archive() || is_search()){
 			//Load archive general styling and scripting
 			wp_enqueue_style('base-theme-archive-style', get_template_directory_uri().'/dist/archive.css', array(), '1.0.0.' );
 			wp_enqueue_script('base-theme-archive');
@@ -326,8 +326,8 @@
 			}
 
 			if(is_post_type_archive('programas')){
-				$query->set('orderby', 'name');
-				$query->set('order', 'ASC');
+				$query->set('orderby', 'date');
+				$query->set('order', 'DESC');
 				$query->set('posts_per_page', 12);
 			}
 
@@ -626,7 +626,7 @@
 	}
 
 	function debug($bug){
-		echo '<pre>';
+		echo '<pre style="color:tomato;">';
 			print_r($bug);
 		echo '</pre>';
 	}
