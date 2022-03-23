@@ -31,7 +31,9 @@
 						<div class="share_buttons">
 							<ul>
 								<li class="fb-share-button share_button" style="background-color: #3b5998; background-image: url(<?php echo THEMEPATH . 'images/ic_social/f_logo_RGB-White_72.png'; ?>);">
-									<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_the_permalink($post->ID)); ?>src=sdkpreparse"></a>
+									<div class="fb-share-button" data-href="https://nofm-radio.com/columnas/topless-con-8-estrenos-musicales-para-enganarnos/" data-layout="button" data-size="large">
+										<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_the_permalink($post->ID)); ?>src=sdkpreparse"></a>
+									</div>
 								</li>
 								<li class="twitter-share-button share_button" style="background-color: #00acee; background-image: url(<?php echo THEMEPATH . 'images/ic_social/Twitter_Logo_WhiteOnImage.png'; ?>);">
 									<!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-via="nofm_radio" data-hashtags="#RadioLIBRE" data-show-count="false">Tweet</a> -->

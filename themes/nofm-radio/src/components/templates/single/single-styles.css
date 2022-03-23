@@ -23,7 +23,7 @@
 .share_button{
 	width: 48px;height: 48px;flex-shrink: 0;border-radius: 50%;
 	background-size: 100%;background-repeat: no-repeat;background-position: center;
-	cursor: pointer;
+	cursor: pointer;position: relative;
 }
-.share_button:first-child{margin-right: 0;}
+.share_button a{position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
 .fb_iframe_widget iframe{top:-3px;}

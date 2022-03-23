@@ -28,6 +28,7 @@
 		<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8411953701698334" crossorigin="anonymous"></script> -->
 		<link type="application/rss+xml" rel="alternate" title="No FM Radio - Podcast" href="https://nofm-radio.com/feed/podcast/">
 		<!-- START wp_head -->
+		<meta property="fb:app_id" content="394249608167795">
 		<?php wp_head(); ?>
 		<!-- END wp_head -->
 

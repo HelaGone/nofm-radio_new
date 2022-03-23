@@ -5,7 +5,7 @@
 	$from_same_podcast;
 	$sidebar_title = $wp_query->query_vars['category_name'];
 	$args = array('post_type'=>$type,'post_status'=>'publish','posts_per_page'=>13,'orderby'=>'date','order'=>'DESC');
-
+	$podcast_id = 0;
 	if(!is_404()):
 		$args['post__not_in'] = array($post->ID);
 		if($type == 'podcasts'):
@@ -27,7 +27,7 @@
 	if($from_same_podcast->have_posts()): ?>
 		<aside class="sidebar">
 			<h2 class="fjalla_font">
-				<a href="<?php echo get_permalink($podcast_id); ?>">
+				<a href="<?php echo ($podcast_id!=0) ? get_permalink($podcast_id) : ""; ?>">
 					<?php echo (is_404() || $sidebar_title == null) ? 'ESTO TE PUEDE INTERESAR:' : strtoupper('MÁS DE ESTO: '.$sidebar_title); ?>
 				</a>
 			</h2>
