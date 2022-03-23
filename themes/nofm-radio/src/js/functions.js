@@ -21,7 +21,9 @@ $(document).ready(function(){
 	if('serviceWorker' in navigator){
 		window.addEventListener('load', function(){
 			console.log("LOAD");
-			navigator.serviceWorker.register('./sw.js');
+			if(window.location.pathname === "/"){
+				navigator.serviceWorker.register('./sw.js');
+			}
 		})
 	}
 });
