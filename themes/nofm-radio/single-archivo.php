@@ -24,7 +24,7 @@
 				<div class="share_buttons"  style="max-width: 640px;">
 					<ul>
 						<li class="fb-share-button share_button" style="background-color: #3b5998; background-image: url(<?php echo THEMEPATH . 'images/ic_social/f_logo_RGB-White_72.png'; ?>);">
-							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_the_permalink($post->ID)); ?>src=sdkpreparse"></a>
+							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_the_permalink($post->ID)); ?>?src=sdkpreparse"></a>
 						</li>
 						<li class="twitter-share-button share_button" style="background-color: #00acee; background-image: url(<?php echo THEMEPATH . 'images/ic_social/Twitter_Logo_WhiteOnImage.png'; ?>);">
 							<!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-via="nofm_radio" data-hashtags="#RadioLIBRE" data-show-count="false">Tweet</a> -->
